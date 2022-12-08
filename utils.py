@@ -5,6 +5,7 @@ import matplotlib.pyplot as plt
 import holoviews as hv
 from holoviews import opts, dim
 from sklearn.metrics.pairwise import cosine_similarity
+from constants import COLS
 import numpy as np
 
 sns.set_style("darkgrid")
@@ -56,11 +57,11 @@ def create_chord_chart(node_data, encoded_df):
                    labels='nodes', node_color=dim('index').str()))
 
 
-def prepare_risk_count():
-    df = pd.DataFrame([['Depression', 2, 74, 112929, 2971], ['Suicide', 7, 146, 115014, 853]],
-                      columns=['Category', 'Attempt', 'Behavior', 'Ideation', 'Indicator'])
+def prepare_risk_count(dep, sui_data):
+    # df = pd.DataFrame([['Depression', 2, 74, 112929, 2971], ['Suicide', 7, 146, 115014, 853]],
+    #                   columns=['Category', 'Attempt', 'Behavior', 'Ideation', 'Indicator'])
 
-    # plot grouped bar chart
+    df = pd.DataFrame([dep, sui_data], columns=COLS)
     df.plot(x='Category',
             kind='bar',
             log=True,
@@ -71,6 +72,6 @@ def prepare_risk_count():
     plt.title('Suicidal Risk Estimation')
     plt.show()
 
-    vec_1 = np.array([[2, 74, 112929, 2971]])
-    vec_2 = np.array([[7, 146, 115014, 853]])
+    vec_1 = np.array([dep[1:]])
+    vec_2 = np.array([sui_data[1:]])
     return cosine_similarity(vec_1, vec_2)

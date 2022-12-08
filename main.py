@@ -1,10 +1,12 @@
 import pandas as pd
 from sklearn.feature_extraction.text import CountVectorizer
-from preprocess_cleaning import dataset_load_clean_preprocess, generate_equal_class_corpus
-from models import generate_count_vecto_bi_gram, get_best_entities_network, find_best_classifier_optimal_params
-from utils import create_hor_bar_plot, create_scatter_plot, create_chord_chart, prepare_risk_count
+from preprocess_cleaning import dataset_load_clean_preprocess, generate_equal_class_corpus, prepare_dataset_for_predict
+from models import generate_count_vecto_bi_gram, get_best_entities_network, find_best_classifier_optimal_params, \
+    prepare_model, prepare_glove_embedding_matrix, model_train_save
+from utils import create_hor_bar_plot, create_scatter_plot, prepare_risk_count, create_chord_chart
 from constants import CORPUS_DIR, PROCESSED_CORPUS, PICKLED_CORPUS, SCATTERTEXT_FILE, CSSR_DIR, CSSR_DATASET
-from methods import generate_classifier_training_dataset, get_count
+from methods import generate_classifier_training_dataset, get_count, load_dataset, generate_results, \
+    aggregate_output_and_count, get_dataset_for_estimator
 import scattertext as st
 
 
@@ -79,3 +81,16 @@ training_data = generate_classifier_training_dataset(pd.read_csv(CSSR_DIR + CSSR
 classifier, pipe = find_best_classifier_optimal_params(training_data, faster_searching=True)
 count_risk = get_count(pipe, classifier)
 similarity_score = prepare_risk_count()
+
+###########################
+# loading dataset
+data_samples = load_dataset()
+print(data_samples.head())
+train_samples, val_samples, train_labels, val_labels, vect, class_names = get_dataset_for_estimator(data_samples)
+embedding_matrix, n_tokens = prepare_glove_embedding_matrix(vect)
+model = prepare_model(n_tokens, 100, embedding_matrix, class_names)
+predictor = model_train_save(model, vect, train_samples, train_labels, val_samples, val_labels)
+df_prepared = prepare_dataset_for_predict()
+generate_results(df_prepared, class_names, model, vect)
+aggregate_output_and_count()
+

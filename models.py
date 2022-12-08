@@ -13,8 +13,12 @@ from sklearn.model_selection import GridSearchCV
 from sklearn.feature_extraction.text import TfidfTransformer
 from sklearn.model_selection import train_test_split
 from sklearn.metrics import accuracy_score
-from constants import BEST_ENTITIES, CSSR_DIR
+from constants import BEST_ENTITIES, CSSR_DIR, GLOVE_MODEL, MODEL_SAVED
 from sklearn.preprocessing import LabelEncoder
+from tensorflow import keras
+from keras import layers
+from keras.layers import Embedding
+from keras.models import load_model
 from utils import create_chord_chart
 
 encoder = LabelEncoder()
@@ -162,3 +166,80 @@ def find_best_classifier_optimal_params(df, faster_searching=True):
             pickle.dump(clf, open(filename, 'wb'))
 
         return clf, pipeline
+
+def prepare_glove_embedding_matrix(tokenizer):
+    path_to_glove_file = GLOVE_MODEL
+    voc = tokenizer.get_vocabulary()
+    word_index = dict(zip(voc, range(len(voc))))
+    num_tokens = len(voc) + 2
+    embedding_dim = 100
+    hits = 0
+    misses = 0
+
+    embeddings_index = {}
+    with open(path_to_glove_file) as f:
+        for line in f:
+            word, value = line.split(maxsplit=1)
+            value = np.fromstring(value, "f", sep=" ")
+            embeddings_index[word] = value
+    print("Found %s word vectors." % len(embeddings_index))
+
+    # Prepare embedding matrix
+    em_matrix = np.zeros((num_tokens, embedding_dim))
+    for word, index in word_index.items():
+        embedding_vector = embeddings_index.get(word)
+        if embedding_vector is not None:
+            # Words not found in embedding index will be all-zeros.
+            # This includes the representation for "padding" and "OOV"
+            em_matrix[index] = embedding_vector
+            hits += 1
+        else:
+            misses += 1
+    print("Converted %d words (%d misses)" % (hits, misses))
+
+    return em_matrix, num_tokens
+
+
+def prepare_model(num_tokens, embedding_dim, em_matrix, cl_names):
+    embedding_layer = Embedding(num_tokens, embedding_dim,
+                                embeddings_initializer=keras.initializers.Constant(em_matrix), trainable=False, )
+    int_sequences_input = keras.Input(shape=(None,), dtype="int64")
+    embedded_sequences = embedding_layer(int_sequences_input)
+    added_layer = layers.Conv1D(128, 5, activation="relu")(embedded_sequences)
+    added_layer = layers.MaxPooling1D(5)(added_layer)
+    added_layer = layers.Conv1D(128, 5, activation="relu")(added_layer)
+    added_layer = layers.MaxPooling1D(5)(added_layer)
+    added_layer = layers.Conv1D(128, 5, activation="relu")(added_layer)
+    added_layer = layers.GlobalMaxPooling1D()(added_layer)
+    added_layer = layers.Dense(128, activation="relu")(added_layer)
+    added_layer = layers.Dropout(0.5)(added_layer)
+    predictions = layers.Dense(len(cl_names), activation="softmax")(added_layer)
+    estimator = keras.Model(int_sequences_input, predictions)
+    estimator.summary()
+    return estimator
+
+
+def model_train_save(estimator, vec, tr_samples, tr_labels, v_samples, v_labels):
+    if not path.exists(MODEL_SAVED):
+        x_train = vec(np.array([[s] for s in tr_samples])).numpy()
+        x_val = vec(np.array([[s] for s in v_samples])).numpy()
+        y_train = np.array(tr_labels)
+        y_val = np.array(v_labels)
+        estimator.compile(loss="sparse_categorical_crossentropy", optimizer="rmsprop", metrics=["acc"])
+        estimator.fit(x_train, y_train, batch_size=128, epochs=20, validation_data=(x_val, y_val))
+        estimator.save(MODEL_SAVED)
+    else:
+        estimator = load_model(MODEL_SAVED)
+
+    return estimator
+
+
+def predict_class(vec, text, cl_names, mixed_model):
+    string_input = keras.Input(shape=(1,), dtype="string")
+    vector = vec(string_input)
+    output = mixed_model(vector)
+    end_to_end_model = keras.Model(string_input, output)
+    probabilities = end_to_end_model.predict([[text]])
+    return cl_names[np.argmax(probabilities[0])]
+
+
