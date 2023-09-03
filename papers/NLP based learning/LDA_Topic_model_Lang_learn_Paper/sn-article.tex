@@ -266,7 +266,7 @@ followed:
   Cleaned document samples are prepared using python's NLP data mining
   techniques explain in detailed in data reprocessing section. Prepared
   \(T\left( d_{i} \right)\) set of tokens in Documents \(d_{i}\) for
-  \(i^{th}\)document samples in corpus \(D\).
+  \(i^{th}\) document samples in corpus \(D\).
 \item
   Doc to BOW corpus dictionary is prepared with Doc2Bow vector. This
   vector \(x_{d}\) can be represented as where
@@ -292,16 +292,16 @@ followed:
 \begin{subfigure}{0.45\textwidth}
     \includegraphics[width=\textwidth]{cv.png}
     \caption{Coherence for $c_v$ approach}
-    \label{redditdist}
+    \label{cv}
 \end{subfigure}
 \hfill
 \begin{subfigure}{0.45\textwidth}
     \includegraphics[width=\textwidth]{umass.png}
     \caption{Coherence for $u_{mass}$ approach}
-    \label{twitterdist}
+    \label{umass}
 \end{subfigure}       
 \caption{Coherence score to estimate optimal number of Topics}
-\label{redditdist_twitterdist}
+\label{cv_umass}
 \end{figure}
 
 From the chart we can see that six topics are dominant in our provided
@@ -350,7 +350,7 @@ we can visualize relative importance of any keywords in terms of frequency and p
 \begin{figure}[h]
 \centerline{\includegraphics[width=\textwidth]{relative_imp.png}}
 \caption{Word frequency and its relative importance}
-\label{fig}
+\label{fig:Relative_weight}
 \end{figure}
 
 \section{Dominant topic and contribution}
@@ -392,7 +392,11 @@ salient terms \(w\) for a topic \(t\) involves, extraction of top
 \(n\)words that poses the highest probability scores for topic \(t\) in
 the topic-term matrix \(P\lbrack t,w\rbrack\).
 
-\includegraphics[width=6.49861in,height=3.41667in]{vertopal_f9defd9d54744101afe5f0ea96402d61/media/image5.png}
+\begin{figure}[h]
+\centerline{\includegraphics[width=\textwidth]{pyldvis.png}}
+\caption{Topic model co-occurrence visualization with dominant keywords'}
+\label{fig:Relative_weight}
+\end{figure}
 
 Top 30 most salient terms are showed at right in the bar chart histogram
 and left figure shows inter topic distance, their size etc. PCA
@@ -401,6 +405,39 @@ result into a 2D plain scale. Projected the data in lower-dimensional
 subspace by computing eigenvalues reduced the circle overlapping. Topics
 that are closer together in the map are more similar in terms of the
 distribution of words.
+
+\section{Englisher Mobile App}
+A mobile application (Englisher) is being developed with content from the NCTB’s English Textbook for class 9. The extracted keywords are organized into lessons and furthermore quiz is introduced as an exercise. Each sentence's and word's Bengali meaning is provided in accordance with the lesson. Students can take quizzes, and their results are recorded in the history so that history can be reviewed and performance can be improved by more practice in the future. 
+
+\begin{figure}[h!]
+\centering
+\begin{subfigure}{\textwidth}
+	\centering
+    \includegraphics[width=\textwidth]{mobile_app_01.png}
+    \caption{Lesson wise exercise}
+    \label{fig:first}
+\end{subfigure}
+\hfill
+\begin{subfigure}{\textwidth}
+	\centering
+    \includegraphics[width=\textwidth]{mobile_app_02.png}
+    \caption{Quiz with Vocabulary}
+    \label{fig:second}
+\end{subfigure}
+        
+\caption{Englisher Mobile app for Learning LDA based topic model words}
+\label{fig:figures}
+\end{figure}
+
+\section{Qualitative survey}
+In the survey questions, it was indicated whether the students, teachers/instructors, and government organizations would find it acceptable and appreciated if textbook information were made available through a mobile app and presented in interactive format. To demonstrate the mobile app idea during the interrogation survey session prototype app Englisher is prepared. Participants were asked for suggestions on how to make the app better and specify shortcomings. Presumably It provides an insight of teacher’s emotion about inclusion of mobile technology in higher secondary English education system. 
+
+\subsection{Survey Planning}
+The survey was conducted over a period of four weeks, with 50 High schools in Dhaka and Bogura district of Bangladesh. It encompasses only English subject areas Teachers who teaches in high schools from class six to class Ten and teaches regularly in the school. A questionnaire was distributed to teachers allowing us to gather questionnaire answer. 
+\subsubsection{Survey participants}
+During the survey standard participants were chosen emphasizing infrastructure quality, teaching experience, class size etc. At the beginning from 100 institution were selected. Then half of them were excluded since those institutions infrastructure's overall quality and condition were not above average. Among the chosen samples 76\% were good and 26\% considered average institutions. Privately held 45\%, 32\% partially government and 22\% are government institutes.  Over 1000 students study in almost 40\% of these institutions and  sizable number of pupils are present in each section and class. 38\% class have a size greater than 50. So, we can presume that the participating teachers have quite a bit of experience teaching sufficient number of students.  
+\subsection{Survey Results:}
+We have done extensive analysis with the survey data collected. In our data collection highest priority is given for the secondary class student teachers who teach between 6-10th class about 46\%. High school, KG college and KG High school. Details about the statistics are depicted in the following figure. Adjacent chart explains the percentage of teachers who teach in which class. Hence, from these two figures we can get a vivid image of collected dataset resources about the participating teachers. 
 
 
 \subsection{Training Dataset}

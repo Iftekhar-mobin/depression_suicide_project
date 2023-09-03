@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.4) (preloaded format=pdflatex 2023.6.7)  3 SEP 2023 15:05
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.4) (preloaded format=pdflatex 2023.6.3)  3 SEP 2023 18:23
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -787,7 +787,14 @@ File: l3backend-pdftex.def 2023-03-30 L3 backend support: PDF output (pdfTeX)
 LaTeX Warning: Unused global option(s):
     [Numbered].
 
-(sn-article.aux)
+(sn-article.aux
+
+LaTeX Warning: Label `fig:Relative_weight' multiply defined.
+
+
+LaTeX Warning: Label `fig:Relative_weight' multiply defined.
+
+)
 \openout1 = `sn-article.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 81.
@@ -930,7 +937,7 @@ LaTeX Font Info:    Calculating math sizes for size <10.03749> on input line 15
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [1{C:/Users/Teacher/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}
+ [1{C:/Users/iftek/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}
 
 ]
 Underfull \vbox (badness 10000) has occurred while \output is active []
@@ -961,7 +968,7 @@ Overfull \vbox (1.44444pt too high) has occurred while \output is active []
 
 
 [5]
-<Figs/methodology.png, id=177, 2055.68pt x 520.94624pt>
+<Figs/methodology.png, id=197, 2055.68pt x 520.94624pt>
 File: Figs/methodology.png Graphic file (type png)
 <use Figs/methodology.png>
 Package pdftex.def Info: Figs/methodology.png  used on input line 214.
@@ -988,12 +995,12 @@ Overfull \vbox (1.44444pt too high) has occurred while \output is active []
 
 
 [8]
-<Figs/cv.png, id=214, 418.4433pt x 315.8199pt>
+<Figs/cv.png, id=234, 418.4433pt x 315.8199pt>
 File: Figs/cv.png Graphic file (type png)
 <use Figs/cv.png>
 Package pdftex.def Info: Figs/cv.png  used on input line 293.
 (pdftex.def)             Requested size: 152.36346pt x 114.9962pt.
-<Figs/umass.png, id=215, 419.166pt x 315.8199pt>
+<Figs/umass.png, id=235, 419.166pt x 315.8199pt>
 File: Figs/umass.png Graphic file (type png)
 <use Figs/umass.png>
 Package pdftex.def Info: Figs/umass.png  used on input line 299.
@@ -1006,7 +1013,7 @@ Overfull \vbox (1.44444pt too high) has occurred while \output is active []
 
 
 [9 <./Figs/cv.png> <./Figs/umass.png>]
-<Figs/relative_imp.png, id=228, 1302.8675pt x 622.325pt>
+<Figs/relative_imp.png, id=248, 1302.8675pt x 622.325pt>
 File: Figs/relative_imp.png Graphic file (type png)
 <use Figs/relative_imp.png>
 Package pdftex.def Info: Figs/relative_imp.png  used on input line 351.
@@ -1019,6 +1026,29 @@ Overfull \vbox (1.44444pt too high) has occurred while \output is active []
 
 
 [10 <./Figs/relative_imp.png>]
+<Figs/pyldvis.png, id=254, 903.375pt x 478.78876pt>
+File: Figs/pyldvis.png Graphic file (type png)
+<use Figs/pyldvis.png>
+Package pdftex.def Info: Figs/pyldvis.png  used on input line 396.
+(pdftex.def)             Requested size: 338.58778pt x 179.45036pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+<Figs/mobile_app_01.png, id=255, 843.15pt x 494.84875pt>
+File: Figs/mobile_app_01.png Graphic file (type png)
+<use Figs/mobile_app_01.png>
+Package pdftex.def Info: Figs/mobile_app_01.png  used on input line 416.
+(pdftex.def)             Requested size: 338.58778pt x 198.72127pt.
+<Figs/mobile_app_02.png, id=256, 835.12pt x 493.34312pt>
+File: Figs/mobile_app_02.png Graphic file (type png)
+<use Figs/mobile_app_02.png>
+Package pdftex.def Info: Figs/mobile_app_02.png  used on input line 423.
+(pdftex.def)             Requested size: 338.58778pt x 200.02116pt.
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
@@ -1026,41 +1056,22 @@ Overfull \vbox (1.44444pt too high) has occurred while \output is active []
 
 
 [11]
-
-Package natbib Warning: Citation `harvesting_social_media' on page 12 undefined
- on input line 374.
-
-
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 Overfull \vbox (1.44444pt too high) has occurred while \output is active []
 
 
-[12]
-
-Package natbib Warning: Citation `suicidaldepression_online' on page 13 undefin
-ed on input line 379.
-
-
-LaTeX Warning: Reference `fig:res_diagram' on page 13 undefined on input line 3
-81.
-
-
-LaTeX Warning: Reference `features_vis_pro_exp' on page 13 undefined on input l
-ine 393.
-
-
+[12 <./Figs/pyldvis.png>]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 Overfull \vbox (1.44444pt too high) has occurred while \output is active []
 
 
-[13]
+[13 <./Figs/mobile_app_01.png> <./Figs/mobile_app_02.png>]
 
-LaTeX Warning: Reference `Bigram_features_exp' on page 14 undefined on input li
-ne 428.
+LaTeX Warning: Reference `redditdist' on page 14 undefined on input line 447.
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
@@ -1071,18 +1082,8 @@ Overfull \vbox (1.44444pt too high) has occurred while \output is active []
 
 [14]
 
-Package hyperref Warning: Difference (2) between bookmark levels is greater 
-(hyperref)                than one, level fixed on input line 489.
-
-
-LaTeX Warning: Reference `SVMTFIDF' on page 15 undefined on input line 490.
-
-
-LaTeX Warning: Reference `Suicidal_int_vis' on page 15 undefined on input line 
-490.
-
-
-LaTeX Warning: Reference `SVMTFIDF' on page 15 undefined on input line 490.
+Package natbib Warning: Citation `harvesting_social_media' on page 15 undefined
+ on input line 461.
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
@@ -1091,7 +1092,24 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 Overfull \vbox (1.44444pt too high) has occurred while \output is active []
 
 
-[15] (doc_ref.tex
+[15]
+
+Package natbib Warning: Citation `suicidaldepression_online' on page 16 undefin
+ed on input line 466.
+
+
+LaTeX Warning: Reference `fig:res_diagram' on page 16 undefined on input line 4
+68.
+
+
+LaTeX Warning: Reference `redditdist_twitterdist' on page 16 undefined on input
+ line 472.
+
+
+LaTeX Warning: Reference `redditdist_twitterdist' on page 16 undefined on input
+ line 474.
+
+
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
@@ -1099,6 +1117,11 @@ Overfull \vbox (1.44444pt too high) has occurred while \output is active []
 
 
 [16]
+
+LaTeX Warning: Reference `features_vis_pro_exp' on page 17 undefined on input l
+ine 480.
+
+
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
@@ -1106,6 +1129,25 @@ Overfull \vbox (1.44444pt too high) has occurred while \output is active []
 
 
 [17]
+
+LaTeX Warning: Reference `Bigram_features_exp' on page 18 undefined on input li
+ne 515.
+
+
+Package hyperref Warning: Difference (2) between bookmark levels is greater 
+(hyperref)                than one, level fixed on input line 576.
+
+
+LaTeX Warning: Reference `SVMTFIDF' on page 18 undefined on input line 577.
+
+
+LaTeX Warning: Reference `Suicidal_int_vis' on page 18 undefined on input line 
+577.
+
+
+LaTeX Warning: Reference `SVMTFIDF' on page 18 undefined on input line 577.
+
+
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
@@ -1113,6 +1155,34 @@ Overfull \vbox (1.44444pt too high) has occurred while \output is active []
 
 
 [18]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+Overfull \vbox (1.44444pt too high) has occurred while \output is active []
+
+
+[19] (doc_ref.tex
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+Overfull \vbox (1.44444pt too high) has occurred while \output is active []
+
+
+[20]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+Overfull \vbox (1.44444pt too high) has occurred while \output is active []
+
+
+[21]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+Overfull \vbox (1.44444pt too high) has occurred while \output is active []
+
+
+[22]
 Underfull \hbox (badness 1436) in paragraph at lines 202--209
 []\OT1/cmr/m/n/10 Han-Chin Shing, Suraj Nair, Ayah Zirikly, Meir Frieden-berg, 
 Hal
@@ -1125,14 +1195,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 Overfull \vbox (1.44444pt too high) has occurred while \output is active []
 
 
-[19]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
-Overfull \vbox (1.44444pt too high) has occurred while \output is active []
-
-
-[20]
+[23]
 Underfull \hbox (badness 1184) in paragraph at lines 284--289
 []\OT1/cmr/m/n/10 Hamad Zogan, Imran Raz-zak, Shoaib Jameel, and Guan-dong Xu.
  []
@@ -1148,7 +1211,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 Overfull \vbox (1.44444pt too high) has occurred while \output is active []
 
 
-[21] (sn-article.aux)
+[24] (sn-article.aux)
 
 LaTeX Font Warning: Size substitutions with differences
 (Font)              up to 1.28pt have occurred.
@@ -1157,41 +1220,87 @@ LaTeX Font Warning: Size substitutions with differences
 LaTeX Warning: There were undefined references.
 
 
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+LaTeX Warning: There were multiply-defined labels.
 
-Package rerunfilecheck Info: File `sn-article.out' has not changed.
-(rerunfilecheck)             Checksum: 7DD029F1C52A593703E5E6BF15E45A9D;5341.
+
+Package rerunfilecheck Warning: File `sn-article.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `sn-article.out':
+(rerunfilecheck)             Before: 937775C2E20107A5C50967566D8E4871;6524
+(rerunfilecheck)             After:  4A72C377A17385C01B08364034CC49A0;7118.
  ) 
 Here is how much of TeX's memory you used:
- 18349 strings out of 476331
- 290276 string characters out of 5797575
+ 18412 strings out of 476331
+ 291464 string characters out of 5797581
  1865660 words of memory out of 5000000
- 38352 multiletter control sequences out of 15000+600000
+ 38388 multiletter control sequences out of 15000+600000
  537169 words of font info for 132 fonts, out of 8000000 for 9000
  1151 hyphenation exceptions out of 8191
- 90i,11n,131p,2250b,789s stack positions out of 10000i,1000n,20000p,200000b,200000s
- <C:\Users\Teacher\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tc
-rm1000.pk> <C:\Users\Teacher\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/d
-pi600\tcrm0900.pk><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cmextra/
-cmbsy8.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx10.pfb><
-C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Program F
-iles/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx8.pfb><C:/Program Files/MiKTeX/f
-onts/type1/public/amsfonts/cm/cmbx9.pfb><C:/Program Files/MiKTeX/fonts/type1/pu
-blic/amsfonts/cm/cmex10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfont
-s/cm/cmmi10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi5.p
-fb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Progra
-m Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi9.pfb><C:/Program Files/MiKTe
-X/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Program Files/MiKTeX/fonts/type1
-/public/amsfonts/cm/cmr12.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfo
-nts/cm/cmr17.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmr7.p
-fb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Program
- Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmr9.pfb><C:/Program Files/MiKTeX/
-fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files/MiKTeX/fonts/type1/
-public/amsfonts/cm/cmsy7.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfon
-ts/cm/cmti10.pfb>
-Output written on sn-article.pdf (21 pages, 671362 bytes).
+ 90i,11n,131p,2250b,779s stack positions out of 10000i,1000n,20000p,200000b,200000s
+
+pdfTeX warning (dest): name{subsubsection.11.0.1} has been referenced but does 
+not exist, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{subsubsection.10.1.2} has been referenced but does 
+not exist, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{subsection.9.4} has been referenced but does not ex
+ist, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{subsubsection.9.3.4} has been referenced but does n
+ot exist, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{subsubsection.9.3.3} has been referenced but does n
+ot exist, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{subsubsection.9.3.2} has been referenced but does n
+ot exist, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{subsubsection.9.3.1} has been referenced but does n
+ot exist, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{subsection.9.3} has been referenced but does not ex
+ist, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{subsection.9.2} has been referenced but does not ex
+ist, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{subsection.9.1} has been referenced but does not ex
+ist, replaced by a fixed one
+
+ <C:\Users\iftek\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm10
+00.pk> <C:\Users\iftek\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\
+tcrm0900.pk><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cmextra/cmbsy8
+.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Pro
+gram Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Program Files/M
+iKTeX/fonts/type1/public/amsfonts/cm/cmbx8.pfb><C:/Program Files/MiKTeX/fonts/t
+ype1/public/amsfonts/cm/cmbx9.pfb><C:/Program Files/MiKTeX/fonts/type1/public/a
+msfonts/cm/cmex10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/c
+mmi10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi5.pfb><C:
+/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Program File
+s/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi9.pfb><C:/Program Files/MiKTeX/font
+s/type1/public/amsfonts/cm/cmr10.pfb><C:/Program Files/MiKTeX/fonts/type1/publi
+c/amsfonts/cm/cmr12.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm
+/cmr17.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:
+/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Program Files
+/MiKTeX/fonts/type1/public/amsfonts/cm/cmr9.pfb><C:/Program Files/MiKTeX/fonts/
+type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files/MiKTeX/fonts/type1/public
+/amsfonts/cm/cmsy7.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/
+cmti10.pfb>
+Output written on sn-article.pdf (24 pages, 1341076 bytes).
 PDF statistics:
- 456 PDF objects out of 1000 (max. 8388607)
- 116 named destinations out of 1000 (max. 500000)
- 277 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 511 PDF objects out of 1000 (max. 8388607)
+ 140 named destinations out of 1000 (max. 500000)
+ 332 words of extra memory for PDF output out of 10000 (max. 10000000)
 
