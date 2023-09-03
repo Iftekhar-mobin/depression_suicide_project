@@ -1,0 +1,290 @@
+\begin{thebibliography}{10}
+
+\bibitem{aldhyani2022detecting}
+Theyazn~HH Aldhyani, Saleh~Nagi Alsubari, Ali~Saleh Alshebami, Hasan Alkahtani,
+  and Zeyad~AT Ahmed.
+\newblock Detecting and analyzing suicidal ideation on social media using deep
+  learning and machine learning models.
+\newblock {\em International journal of environmental research and public
+  health}, 19(19):12635, 2022.
+
+\bibitem{beck2000weisman}
+A~Beck and M~Kovacs.
+\newblock weisman a.
+\newblock {\em Handbook ofpsychiatric measures: Beck Scale for Suicide
+  Ideation. American Psychiatric Association}, 2000.
+
+\bibitem{beck1961inventory}
+Aaron~T Beck, Calvin~H Ward, Mock Mendelson, Jeremiah Mock, and John Erbaugh.
+\newblock An inventory for measuring depression.
+\newblock {\em Archives of general psychiatry}, 4(6):561--571, 1961.
+
+\bibitem{burnap2015machine}
+Pete Burnap, Walter Colombo, and Jonathan Scourfield.
+\newblock Machine classification and analysis of suicide-related communication
+  on twitter.
+\newblock In {\em Proceedings of the 26th ACM conference on hypertext \& social
+  media}, pages 75--84, 2015.
+
+\bibitem{castillo2020suicide}
+Gema Castillo-S{\'a}nchez, Gon{\c{c}}alo Marques, Enrique Dorronzoro, Octavio
+  Rivera-Romero, Manuel Franco-Mart{\'\i}n, and Isabel De~la Torre-D{\'\i}ez.
+\newblock Suicide risk assessment using machine learning and social networks: a
+  scoping review.
+\newblock {\em Journal of medical systems}, 44(12):205, 2020.
+
+\bibitem{chancellor2020methods}
+Stevie Chancellor and Munmun De~Choudhury.
+\newblock Methods in predictive techniques for mental health status on social
+  media: a critical review.
+\newblock {\em NPJ digital medicine}, 3(1):43, 2020.
+
+\bibitem{chen2018}
+Xuetong Chen, Martin~D Sykora, Thomas~W Jackson, and Suzanne Elayan.
+\newblock What about mood swings: Identifying depression on twitter with
+  temporal measures of emotions.
+\newblock In {\em Companion proceedings of the the web conference 2018}, pages
+  1653--1660, 2018.
+
+\bibitem{de2013predicting}
+Munmun De~Choudhury, Michael Gamon, Scott Counts, and Eric Horvitz.
+\newblock Predicting depression via social media.
+\newblock In {\em Proceedings of the international AAAI conference on web and
+  social media}, volume~7, pages 128--137, 2013.
+
+\bibitem{gaur2019knowledge}
+Manas Gaur, Amanuel Alambo, Joy~Prakash Sain, Ugur Kursuncu, Krishnaprasad
+  Thirunarayan, Ramakanth Kavuluru, Amit Sheth, Randy Welton, and Jyotishman
+  Pathak.
+\newblock Knowledge-aware assessment of severity of suicide risk for early
+  intervention.
+\newblock In {\em The world wide web conference}, pages 514--525, 2019.
+
+\bibitem{havigerova2019text}
+Jana~M Havigerov{\'a}, Ji{\v{r}}{\'\i} Haviger, Dalibor Ku{\v{c}}era, and Petra
+  Hoffmannov{\'a}.
+\newblock Text-based detection of the risk of depression.
+\newblock {\em Frontiers in psychology}, 10:513, 2019.
+
+\bibitem{hawton2013risk}
+Keith Hawton, Carolina~Casa{\~n}as i~Comabella, Camilla Haw, and Kate Saunders.
+\newblock Risk factors for suicide in individuals with depression: a systematic
+  review.
+\newblock {\em Journal of affective disorders}, 147(1-3):17--28, 2013.
+
+\bibitem{he2022deep}
+Lang He, Mingyue Niu, Prayag Tiwari, Pekka Marttinen, Rui Su, Jiewei Jiang,
+  Chenguang Guo, Hongyu Wang, Songtao Ding, Zhongmin Wang, et~al.
+\newblock Deep learning for depression recognition with audiovisual cues: A
+  review.
+\newblock {\em Information Fusion}, 80:56--86, 2022.
+
+\bibitem{joiner1997modified}
+Thomas~E Joiner~Jr, M~David Rudd, and M~Hasan Rajab.
+\newblock The modified scale for suicidal ideation: Factors of suicidality and
+  their relation to clinical and diagnostic variables.
+\newblock {\em Journal of abnormal psychology}, 106(2):260, 1997.
+
+\bibitem{kliem2017german}
+S{\"o}ren Kliem, Anna Lohmann, Thomas M{\"o}{\ss}le, and Elmar Br{\"a}hler.
+\newblock German beck scale for suicide ideation (bss): psychometric properties
+  from a representative population survey.
+\newblock {\em BMC psychiatry}, 17(1):1--8, 2017.
+
+\bibitem{kroenke2001phq}
+Kurt Kroenke, Robert~L Spitzer, and Janet~BW Williams.
+\newblock The phq-9: validity of a brief depression severity measure.
+\newblock {\em Journal of general internal medicine}, 16(9):606--613, 2001.
+
+\bibitem{li2022association}
+Kuiliang Li, Xiaoqing Zhan, Lei Ren, Nan Liu, Lei Zhang, Ling Li, Ting Chen,
+  Zhengzhi Feng, and Xi~Luo.
+\newblock The association of abuse and depression with suicidal ideation in
+  chinese adolescents: a network analysis.
+\newblock {\em Frontiers in psychiatry}, 13, 2022.
+
+\bibitem{lopez2022exploring}
+Yolanda L{\'o}pez-Del-Hoyo and Pedro Cerbuna.
+\newblock Exploring the risk of suicide in real time on spanish twitter:
+  Observational study.
+\newblock {\em JMIR Public Health and Surveillance}, 8(5), 2022.
+
+\bibitem{macavaney2021community}
+Sean MacAvaney, Anjali Mittu, Glen Coppersmith, Jeff Leintz, and Philip Resnik.
+\newblock Community-level research on suicidality prediction in a secure
+  environment: Overview of the clpsych 2021 shared task.
+\newblock In {\em Proceedings of the Seventh Workshop on Computational
+  Linguistics and Clinical Psychology: Improving Access}, pages 70--80, 2021.
+
+\bibitem{malhotra2022deep}
+Anshu Malhotra and Rajni Jindal.
+\newblock Deep learning techniques for suicide and depression detection from
+  online social media: A scoping review.
+\newblock {\em Applied Soft Computing}, page 109713, 2022.
+
+\bibitem{mann2020see}
+Paulo Mann, Aline Paes, and Elton~H Matsushima.
+\newblock See and read: detecting depression symptoms in higher education
+  students using multimodal social media data.
+\newblock In {\em Proceedings of the International AAAI Conference on Web and
+  social media}, volume~14, pages 440--451, 2020.
+
+\bibitem{martinengo2019suicide}
+Laura Martinengo, Louise Van~Galen, Elaine Lum, Martin Kowalski, Mythily
+  Subramaniam, and Josip Car.
+\newblock Suicide prevention and depression apps’ suicide risk assessment and
+  management: a systematic assessment of adherence to clinical guidelines.
+\newblock {\em BMC medicine}, 17(1):1--12, 2019.
+
+\bibitem{mcgirr2007examination}
+Alexander McGirr, Johanne Renaud, Monique Seguin, Martin Alda, Chawki
+  Benkelfat, Alain Lesage, and Gustavo Turecki.
+\newblock An examination of dsm-iv depressive symptoms and risk for suicide
+  completion in major depressive disorder: a psychological autopsy study.
+\newblock {\em Journal of affective disorders}, 97(1-3):203--209, 2007.
+
+\bibitem{park2013perception}
+Minsu Park, David McDonald, and Meeyoung Cha.
+\newblock Perception differences between the depressed and non-depressed users
+  in twitter.
+\newblock In {\em Proceedings of the international AAAI conference on web and
+  social media}, volume~7, pages 476--485, 2013.
+
+\bibitem{pennebaker2001linguistic}
+James~W Pennebaker, Martha~E Francis, and Roger~J Booth.
+\newblock Linguistic inquiry and word count: Liwc 2001.
+\newblock {\em Mahway: Lawrence Erlbaum Associates}, 71(2001):2001, 2001.
+
+\bibitem{posner2011columbia}
+Kelly Posner, Gregory~K Brown, Barbara Stanley, David~A Brent, Kseniya~V
+  Yershova, Maria~A Oquendo, Glenn~W Currier, Glenn~A Melvin, Laurence
+  Greenhill, Sa~Shen, et~al.
+\newblock The columbia--suicide severity rating scale: initial validity and
+  internal consistency findings from three multisite studies with adolescents
+  and adults.
+\newblock {\em American journal of psychiatry}, 168(12):1266--1277, 2011.
+
+\bibitem{radloff1977ces}
+Lenore~Sawyer Radloff.
+\newblock The ces-d scale: A self-report depression scale for research in the
+  general population.
+\newblock {\em Applied psychological measurement}, 1(3):385--401, 1977.
+
+\bibitem{rissola2020dataset}
+Esteban~A R{\'\i}ssola, Seyed~Ali Bahrainian, and Fabio Crestani.
+\newblock A dataset for research on depression in social media.
+\newblock In {\em Proceedings of the 28th ACM conference on user modeling,
+  adaptation and personalization}, pages 338--342, 2020.
+
+\bibitem{shen2017depression}
+Guangyao Shen, Jia Jia, Liqiang Nie, Fuli Feng, Cunjun Zhang, Tianrui Hu,
+  Tat-Seng Chua, Wenwu Zhu, et~al.
+\newblock Depression detection via harvesting social media: A multimodal
+  dictionary learning solution.
+\newblock In {\em IJCAI}, pages 3838--3844, 2017.
+
+\bibitem{shen2020detecting}
+Yanmei Shen, Wenyu Zhang, Bella Siu~Man Chan, Yaru Zhang, Fanchao Meng,
+  Elizabeth~A Kennon, Hanjing~Emily Wu, Xuerong Luo, and Xiangyang Zhang.
+\newblock Detecting risk of suicide attempts among chinese medical college
+  students using a machine learning algorithm.
+\newblock {\em Journal of affective disorders}, 273:18--23, 2020.
+
+\bibitem{shetty2020predicting}
+Nisha~P Shetty, Balachandra Muniyal, Arshia Anand, Sushant Kumar, and Sushant
+  Prabhu.
+\newblock Predicting depression using deep learning and ensemble algorithms on
+  raw twitter data.
+\newblock {\em International Journal of Electrical and Computer Engineering},
+  10(4):3751, 2020.
+
+\bibitem{shing2018expert}
+Han-Chin Shing, Suraj Nair, Ayah Zirikly, Meir Friedenberg, Hal Daum{\'e}~III,
+  and Philip Resnik.
+\newblock Expert, crowdsourced, and machine assessment of suicide risk via
+  online postings.
+\newblock In {\em Proceedings of the fifth workshop on computational
+  linguistics and clinical psychology: from keyboard to clinic}, pages 25--36,
+  2018.
+
+\bibitem{singh2022startling}
+Om~P Singh.
+\newblock Startling suicide statistics in india: Time for urgent action, 2022.
+
+\bibitem{tadesse2019detection}
+Michael~M Tadesse, Hongfei Lin, Bo~Xu, and Liang Yang.
+\newblock Detection of depression-related posts in reddit social media forum.
+\newblock {\em IEEE Access}, 7:44883--44893, 2019.
+
+\bibitem{tolentino2018dsm}
+Julio~C Tolentino and Sergio~L Schmidt.
+\newblock Dsm-5 criteria and depression severity: implications for clinical
+  practice.
+\newblock {\em Frontiers in psychiatry}, 9:450, 2018.
+
+\bibitem{vuorilehto2014method}
+M~Vuorilehto, HM~Valtonen, T~Melartin, P~Sokero, K~Suominen, and
+  ET~Isomets{\"a}.
+\newblock Method of assessment determines prevalence of suicidal ideation among
+  patients with depression.
+\newblock {\em European Psychiatry}, 29(6):338--344, 2014.
+
+\bibitem{vuorilehto2006suicidal}
+MS~Vuorilehto, Tarja~K Melartin, and ET~Isomets{\"a}.
+\newblock Suicidal behaviour among primary-care patients with depressive
+  disorders.
+\newblock {\em Psychological Medicine}, 36(2):203--210, 2006.
+
+\bibitem{wang2020depression}
+Xiaofeng Wang, Shuai Chen, Tao Li, Wanting Li, Yejie Zhou, Jie Zheng, Qingcai
+  Chen, Jun Yan, Buzhou Tang, et~al.
+\newblock Depression risk prediction for chinese microblogs via deep-learning
+  methods: content analysis.
+\newblock {\em JMIR medical informatics}, 8(7):e17958, 2020.
+
+\bibitem{whooley2014diagnostic}
+Owen Whooley.
+\newblock Diagnostic and statistical manual of mental disorders (dsm).
+\newblock {\em The Wiley Blackwell Encyclopedia of Health, Illness, Behavior,
+  and Society}, pages 381--384, 2014.
+
+\bibitem{eke2010hamilton}
+Janet~BW Williams.
+\newblock A structured interview guide for the hamilton depression rating
+  scale.
+\newblock {\em Archives of general psychiatry}, 45(8):742--747, 1988.
+
+\bibitem{xu2016contribution}
+Ying Xu, Juan Qi, Yi~Yang, and Xiaozhong Wen.
+\newblock The contribution of lifestyle factors to depressive symptoms: A
+  cross-sectional study in chinese college students.
+\newblock {\em Psychiatry research}, 245:243--249, 2016.
+
+\bibitem{ye2021multi}
+Jiayu Ye, Yanhong Yu, Qingxiang Wang, Wentao Li, Hu~Liang, Yunshao Zheng, and
+  Gang Fu.
+\newblock Multi-modal depression detection based on emotional audio and
+  evaluation text.
+\newblock {\em Journal of Affective Disorders}, 295:904--913, 2021.
+
+\bibitem{zhang2022natural}
+Tianlin Zhang, Annika~M Schoene, Shaoxiong Ji, and Sophia Ananiadou.
+\newblock Natural language processing applied to mental illness detection: a
+  narrative review.
+\newblock {\em NPJ digital medicine}, 5(1):46, 2022.
+
+\bibitem{zheng2020development}
+Le~Zheng, Oliver Wang, Shiying Hao, Chengyin Ye, Modi Liu, Minjie Xia, Alex~N
+  Sabo, Liliana Markovic, Frank Stearns, Laura Kanov, et~al.
+\newblock Development of an early-warning system for high-risk patients for
+  suicide attempt using deep learning and electronic health records.
+\newblock {\em Translational psychiatry}, 10(1):72, 2020.
+
+\bibitem{zogan2021depressionnet}
+Hamad Zogan, Imran Razzak, Shoaib Jameel, and Guandong Xu.
+\newblock Depressionnet: learning multi-modalities with user post summarization
+  for depression detection on social media.
+\newblock In {\em proceedings of the 44th international ACM SIGIR conference on
+  research and development in information retrieval}, pages 133--142, 2021.
+
+\end{thebibliography}
