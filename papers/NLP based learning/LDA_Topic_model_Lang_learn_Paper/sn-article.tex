@@ -252,12 +252,8 @@ LDA algorithm automatically discovers latent topics within the documents based o
   \end{enumerate}
 \end{enumerate}
 
-\section{Dataset}
-Text based Suicide and depression detection classification task uses NLP techniques and methodologies which are highly dependent on the quality of dataset, accurate annotation of labels and size of samples. Text based samples are mostly collected from Twitter, Reddit \cite{tadesse2019detection}, facebook, weibo etc websites donated by various institutions or researchers. Several researchers contributed publicly available dataset \cite{rissola2020dataset}. In 2021 the Computational Linguistics and Clinical Psychology CLPsych 2021 workshop organized a Task challenge for detecting suicidal risk \cite{macavaney2021community}. It facilitated participants providing sensitive authentic dataset on the problem of predicting suicide risk from social media Twitter. The dataset for the task includes information who attempted suicide or succeeded along with some control who have not. After collecting dataset from social sites, proper labeling is crucial for training machine learning classifier models. In\cite{lopez2022exploring} research study used Twitter post collection API for collecting Tweets and collected Tweets of size 2509 were obtained, of which 216 post were found relevant by 3 Expert psychologists evaluators. Furthermore, using LIWC, dictionary of the Linguistic Inquiry and Word Count \cite{pennebaker2001linguistic}, which is a linguistic feature analysis software that calculates the degree of positive and negative emotions across a wide spectrum of texts, Tweets were evaluated and results are statistically presented. In 2018 shing et. al \cite{shing2018expert}, and in 2019 Gaur et. al \cite{gaur2019knowledge} consulted with the professional practitioner psychiatrist to annnotate the dataset and segregated into several categories. \cite{gaur2019knowledge} contains gold standard dataset of 500 redditors prepared from 2181 redditors post and validated by four practicing psychiatrists following the guidelines outlined in Columbia.Suicide Severity Rating Scale (C-SSRS). 
-
 \section{Exploratory analysis of Textbook content}
-
-Here whole book is segregated into Lessons and we wanted to explore the important topics within the content. Similar topic words remain together. Therefore, assumptions are, it helps students to understands the words, sentences and context of the book. Ideal number of topics are determined using coherence score.
+In this research study for the dataset we have collected Bangladesh NCBI provided English Textbook for class 9-10. Here whole book is segregated into Lessons and we wanted to explore the important topics within the content. Similar topic words remain together. Therefore, assumptions are, it helps students to understands the words, sentences and context of the book. Ideal number of topics are determined using coherence score.
 
 \subsection{Coherence for LDA model}
 To measure coherence in the context of LDA, following steps are
@@ -314,39 +310,65 @@ multiple iterations. Using 6 topics we can see the output of
 corresponding topic and top 10 words in a topic.
 
 
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.17}}     
+  >{\raggedright\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.83}}@{}}
+\toprule
+Topics & Dominant Keywords and Weights \\
+\midrule
+\endhead
+\textbf{Topic 01} & \enquote*{energy} 0.060, \enquote*{source} 0.029, \enquote*{renewable} 0.018, \enquote*{water}0.016, \enquote*{use} 0.013, \enquote*{gas} 0.013, \enquote*{produce} 0.013, \enquote*{green} 0.013, \enquote*{warm}
+0.013, \enquote*{cause} 0.012 
+\\
+\textbf{Topic 02} & \enquote*{pastime} 0.024, \enquote*{computer} 0.024, \enquote*{social} 0.023, \enquote*{user} 0.022, \enquote*{network} 0.020, \enquote*{student} 0.019, \enquote*{class} 0.017, \enquote*{change} 0.016, \enquote*{book} 0.015, \enquote*{survey} 0.013  
+\\
+\textbf{Topic 03 }& \enquote*{mother} 0.083, \enquote*{buy} 0.021, \enquote*{love} 0.018, \enquote*{child} 0.014, \enquote*{worker} 0.014, \enquote*{begin} 0.013, \enquote*{cultural} 0.012, \enquote*{observe} 0.012, \enquote*{thing} 0.012, \enquote*{language} 0.011 
+\\ 
+\textbf{Topic 04} &  \enquote*{life} 0.016, \enquote*{Bangladesh} 0.016, \enquote*{family} 0.015, \enquote*{home} 0.014, \enquote*{root} 0.014, \enquote*{language} 0.014, \enquote*{country} 0.013, \enquote*{Pakistan} 0.010, \enquote*{war} 0.010, \enquote*{man} 0.009 
+\\ 
+\textbf{Topic 05} & \enquote*{country} 0.031, \enquote*{river} 0.022, \enquote*{India} 0.022, \enquote*{land} 0.021, \enquote*{boat} 0.015, \enquote*{small} 0.015, \enquote*{population} 0.015, \enquote*{lake} 0.013, \enquote*{group} 0.012, \enquote*{house} 0.011 
+\\ 
+\textbf{Topic 06} & \enquote*{job} 0.064, \enquote*{English} 0.023, \enquote*{learn} 0.021, \enquote*{teacher} 0.017, \enquote*{use} 0.016, \enquote*{dream} 0.016, \enquote*{think} 0.016, \enquote*{thing} 0.015, \enquote*{school} 0.014, \enquote*{education} 0.013\\
+\bottomrule
+\end{longtable}
 
-\textbf{Topic 01}: {[}\enquote*{energy} 0.060, \enquote*{source} 0.029, \enquote*{renewable} 0.018, \enquote*{water}
-0.016, \enquote*{use} 0.013, \enquote*{gas} 0.013, \enquote*{produce} 0.013, \enquote*{green} 0.013, \enquote*{warm}
-0.013, \enquote*{cause} 0.012,{]}
 
-\textbf{Topic 02}: {[}\enquote*{pastime} 0.024, \enquote*{computer} 0.024, \enquote*{social} 0.023, \enquote*{user}
-0.022, \enquote*{network} 0.020, \enquote*{student} 0.019, \enquote*{class} 0.017, \enquote*{change} 0.016,
-\enquote*{book} 0.015, \enquote*{survey} 0.013,{]}
 
-\textbf{Topic 03}: {[}\enquote*{mother} 0.083, \enquote*{buy} 0.021, \enquote*{love} 0.018, \enquote*{child} 0.014,
-\enquote*{worker} 0.014, \enquote*{begin} 0.013, \enquote*{cultural} 0.012, \enquote*{observe} 0.012,
-\enquote*{thing} 0.012, \enquote*{language} 0.011,{]}
 
-\textbf{Topic 04}: {[}\enquote*{life} 0.016, \enquote*{Bangladesh} 0.016, \enquote*{family} 0.015, \enquote*{home}
-0.014, \enquote*{root} 0.014, \enquote*{language} 0.014, \enquote*{country} 0.013, \enquote*{Pakistan}
-0.010, \enquote*{war} 0.010, \enquote*{man} 0.009,{]}
+%\textbf{Topic 01}: {[}\enquote*{energy} 0.060, \enquote*{source} 0.029, \enquote*{renewable} 0.018, \enquote*{water}
+%0.016, \enquote*{use} 0.013, \enquote*{gas} 0.013, \enquote*{produce} 0.013, \enquote*{green} 0.013, \enquote*{warm}
+%0.013, \enquote*{cause} 0.012,{]}
 
-\textbf{Topic 05}: {[}\enquote*{country} 0.031, \enquote*{river} 0.022, \enquote*{India} 0.022, \enquote*{land} 0.021,
-\enquote*{boat} 0.015, \enquote*{small} 0.015, \enquote*{population} 0.015, \enquote*{lake} 0.013, \enquote*{group}
-0.012, \enquote*{house} 0.011,{]}
+%\textbf{Topic 02}: {[}\enquote*{pastime} 0.024, \enquote*{computer} 0.024, \enquote*{social} 0.023, \enquote*{user}
+%0.022, \enquote*{network} 0.020, \enquote*{student} 0.019, \enquote*{class} 0.017, \enquote*{change} 0.016,
+%\enquote*{book} 0.015, \enquote*{survey} 0.013,{]}
 
-\textbf{Topic 06}: {[}\enquote*{job} 0.064, \enquote*{English} 0.023, \enquote*{learn} 0.021, \enquote*{teacher}
-0.017, \enquote*{use} 0.016, \enquote*{dream} 0.016, \enquote*{think} 0.016, \enquote*{thing} 0.015,
-\enquote*{school} 0.014, \enquote*{education} 0.013{]}
+%\textbf{Topic 03}: {[}\enquote*{mother} 0.083, \enquote*{buy} 0.021, \enquote*{love} 0.018, \enquote*{child} 0.014,
+%\enquote*{worker} 0.014, \enquote*{begin} 0.013, \enquote*{cultural} 0.012, \enquote*{observe} 0.012,
+%\enquote*{thing} 0.012, \enquote*{language} 0.011,{]}
+
+%\textbf{Topic 04}: {[}\enquote*{life} 0.016, \enquote*{Bangladesh} 0.016, \enquote*{family} 0.015, \enquote*{home}
+%0.014, \enquote*{root} 0.014, \enquote*{language} 0.014, \enquote*{country} 0.013, \enquote*{Pakistan}
+%0.010, \enquote*{war} 0.010, \enquote*{man} 0.009,{]}
+
+%\textbf{Topic 05}: {[}\enquote*{country} 0.031, \enquote*{river} 0.022, \enquote*{India} 0.022, \enquote*{land} 0.021,
+%\enquote*{boat} 0.015, \enquote*{small} 0.015, \enquote*{population} 0.015, \enquote*{lake} 0.013, \enquote*{group}
+%0.012, \enquote*{house} 0.011,{]}
+
+%\textbf{Topic 06}: {[}\enquote*{job} 0.064, \enquote*{English} 0.023, \enquote*{learn} 0.021, \enquote*{teacher}
+%0.017, \enquote*{use} 0.016, \enquote*{dream} 0.016, \enquote*{think} 0.016, \enquote*{thing} 0.015,
+%\enquote*{school} 0.014, \enquote*{education} 0.013{]}
 
 \subsection{Count vs Relative Importance measurement}
 
 Word frequency $n(w_{j},d_{i})$ in each document \(D\) is measured as below which identifies the most frequent words within each document and across the entire corpus.
 
-\(D = \sum_{d_{i} \in D}^{}\left\{ \begin{matrix}
+\begin{equation}
+D = \sum_{d_{i} \in D}^{}\left\{ \begin{array}{l}
 1,n\left( w_{i},d_{i} \right) > 0 \\
 0,n\left( w_{i},d_{i} \right) = 0 \\
-\end{matrix} \right.\ \)
+\end{array} \right.\
+\end{equation}
 
 we can visualize relative importance of any keywords in terms of frequency and plotted inclined with LDA provided weights.
 
@@ -412,25 +434,25 @@ distribution of words.
 \section{Englisher Mobile App}
 A mobile application (Englisher) is being developed with content from the NCTB’s English Textbook for class 9. The extracted keywords are organized into lessons and furthermore quiz is introduced as an exercise. Each sentence's and word's Bengali meaning is provided in accordance with the lesson. Students can take quizzes, and their results are recorded in the history so that history can be reviewed and performance can be improved by more practice in the future. 
 
-%\begin{figure}[h!]
-%\centering
-%\begin{subfigure}{\textwidth}
-%	\centering
-%    \includegraphics[width=\textwidth]{mobile_app_01.png}
-%    \caption{Lesson wise exercise}
-%    \label{fig:first}
-%\end{subfigure}
-%\hfill
-%\begin{subfigure}{\textwidth}
-%	\centering
-%    \includegraphics[width=\textwidth]{mobile_app_02.png}
-%    \caption{Quiz with Vocabulary}
-%    \label{fig:second}
-%\end{subfigure}
-%        
-%\caption{Englisher Mobile app for Learning LDA based topic model words}
-%\label{fig:figures}
-%\end{figure}
+\begin{figure}[h!]
+\centering
+\begin{subfigure}{\textwidth}
+	\centering
+    \includegraphics[width=\textwidth]{mobile_app_01.png}
+    \caption{Lesson wise exercise}
+    \label{fig:first}
+\end{subfigure}
+\hfill
+\begin{subfigure}{\textwidth}
+	\centering
+    \includegraphics[width=\textwidth]{mobile_app_02.png}
+    \caption{Quiz with Vocabulary}
+    \label{fig:second}
+\end{subfigure}
+        
+\caption{Englisher Mobile app for Learning LDA based topic model words}
+\label{fig:figures}
+\end{figure}
 
 \section{Qualitative survey}
 In the survey questions, it was indicated whether the students, teachers/instructors, and government organizations would find it acceptable and appreciated if textbook information were made available through a mobile app and presented in interactive format. To demonstrate the mobile app idea during the interrogation survey session prototype app Englisher is prepared. Participants were asked for suggestions on how to make the app better and specify shortcomings. Presumably It provides an insight of teacher’s emotion about inclusion of mobile technology in higher secondary English education system. 
