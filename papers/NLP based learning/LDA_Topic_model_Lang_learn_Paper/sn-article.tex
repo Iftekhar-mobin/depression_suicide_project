@@ -76,6 +76,9 @@
 \usepackage{caption}
 \usepackage{longtable,booktabs,array}
 \usepackage{csquotes}
+\usepackage{multirow} % Required for multirows
+\usepackage{longtable,booktabs,array}
+\usepackage{calc} % for calculating minipage widths
 \graphicspath{{Figs}{Figs/}}
 
 \begin{document}
@@ -409,25 +412,25 @@ distribution of words.
 \section{Englisher Mobile App}
 A mobile application (Englisher) is being developed with content from the NCTB’s English Textbook for class 9. The extracted keywords are organized into lessons and furthermore quiz is introduced as an exercise. Each sentence's and word's Bengali meaning is provided in accordance with the lesson. Students can take quizzes, and their results are recorded in the history so that history can be reviewed and performance can be improved by more practice in the future. 
 
-\begin{figure}[h!]
-\centering
-\begin{subfigure}{\textwidth}
-	\centering
-    \includegraphics[width=\textwidth]{mobile_app_01.png}
-    \caption{Lesson wise exercise}
-    \label{fig:first}
-\end{subfigure}
-\hfill
-\begin{subfigure}{\textwidth}
-	\centering
-    \includegraphics[width=\textwidth]{mobile_app_02.png}
-    \caption{Quiz with Vocabulary}
-    \label{fig:second}
-\end{subfigure}
-        
-\caption{Englisher Mobile app for Learning LDA based topic model words}
-\label{fig:figures}
-\end{figure}
+%\begin{figure}[h!]
+%\centering
+%\begin{subfigure}{\textwidth}
+%	\centering
+%    \includegraphics[width=\textwidth]{mobile_app_01.png}
+%    \caption{Lesson wise exercise}
+%    \label{fig:first}
+%\end{subfigure}
+%\hfill
+%\begin{subfigure}{\textwidth}
+%	\centering
+%    \includegraphics[width=\textwidth]{mobile_app_02.png}
+%    \caption{Quiz with Vocabulary}
+%    \label{fig:second}
+%\end{subfigure}
+%        
+%\caption{Englisher Mobile app for Learning LDA based topic model words}
+%\label{fig:figures}
+%\end{figure}
 
 \section{Qualitative survey}
 In the survey questions, it was indicated whether the students, teachers/instructors, and government organizations would find it acceptable and appreciated if textbook information were made available through a mobile app and presented in interactive format. To demonstrate the mobile app idea during the interrogation survey session prototype app Englisher is prepared. Participants were asked for suggestions on how to make the app better and specify shortcomings. Presumably It provides an insight of teacher’s emotion about inclusion of mobile technology in higher secondary English education system. 
@@ -436,12 +439,305 @@ In the survey questions, it was indicated whether the students, teachers/instruc
 The survey was conducted over a period of four weeks, with 50 High schools in Dhaka and Bogura district of Bangladesh. It encompasses only English subject areas Teachers who teaches in high schools from class six to class Ten and teaches regularly in the school. A questionnaire was distributed to teachers allowing us to gather questionnaire answer. 
 \subsubsection{Survey participants}
 During the survey standard participants were chosen emphasizing infrastructure quality, teaching experience, class size etc. At the beginning from 100 institution were selected. Then half of them were excluded since those institutions infrastructure's overall quality and condition were not above average. Among the chosen samples 76\% were good and 26\% considered average institutions. Privately held 45\%, 32\% partially government and 22\% are government institutes.  Over 1000 students study in almost 40\% of these institutions and  sizable number of pupils are present in each section and class. 38\% class have a size greater than 50. So, we can presume that the participating teachers have quite a bit of experience teaching sufficient number of students.  
-\subsection{Survey Results:}
+\subsection{Survey Results}
 We have done extensive analysis with the survey data collected. In our data collection highest priority is given for the secondary class student teachers who teach between 6-10th class about 46\%. High school, KG college and KG High school. Details about the statistics are depicted in the following figure. Adjacent chart explains the percentage of teachers who teach in which class. Hence, from these two figures we can get a vivid image of collected dataset resources about the participating teachers. 
 
+\begin{figure}[h!]
+\centering
+\begin{subfigure}{0.48\textwidth}
+    \includegraphics[width=\textwidth]{institution_size.png}
+    \caption{Participating institution category and size}
+    \label{cv}
+\end{subfigure}
+\hfill
+\begin{subfigure}{0.48\textwidth}
+    \includegraphics[width=\textwidth]{english_teaching_class.png}
+    \caption{Participating instructors' class/Label}
+    \label{umass}
+\end{subfigure}       
+%\caption{Coherence score to estimate optimal number of Topics}
+\label{cv_umass}
+\end{figure}
+
+The following graphs give an overview of the English teaching experiences of the teachers as well as the general consensus regarding the use of digital content and mobile apps in everyday teaching and learning. Almost 62\% of teachers have been teaching for more than 8 to 10 years, and some of them have been teaching for decades in higher secondary education. 32\% of teachers have three to eight years of experience, while just 6\% are fresh to the profession. Around 83.7\% of teachers the language of instruction during their graduation was English, and their major was also English. Very few teachers 13.3\% graduation major is something other than English yet teaching English in secondary schools probably have sufficient English language proficiency.  
+
+\begin{figure}[h!]
+\centering
+\begin{subfigure}{0.48\textwidth}
+    \includegraphics[width=\textwidth]{num_stu.png}
+    \caption{Participating institutions' number of students}
+    \label{cv}
+\end{subfigure}
+\hfill
+\begin{subfigure}{0.48\textwidth}
+    \includegraphics[width=\textwidth]{class_size.png}
+    \caption{Participating instructors' class size}
+    \label{umass}
+\end{subfigure}       
+%\caption{Coherence score to estimate optimal number of Topics}
+\label{cv_umass}
+\end{figure}
+
+\subsubsection{Analyzing survey Facts} 
+More than half of teachers, or 58\%, have no prior experience utilizing mobile apps or technology for teaching, but 90\% of them agree, and more than 45\% strongly agree, that it encourages pupils to engage actively in their learning. However, they (almost 60\%) also hold the opinion that a notebook cannot be completely replaced, despite the fact that mobile apps may solve many problems and provide technological support for teaching and learning. Promisingly optimistic approximately 40\%, although thinking that the notebook-based content memorizing learning method can be replaced, feel that mobile app-based learning can replace it permanently. 
+
+\begin{figure}[h!]
+\centering
+\begin{subfigure}{0.48\textwidth}
+    \includegraphics[width=\textwidth]{num_stu.png}
+    \caption{Participating institutions' number of students}
+    \label{cv}
+\end{subfigure}
+\hfill
+\begin{subfigure}{0.45\textwidth}
+    \includegraphics[width=\textwidth]{experience.png}
+    \caption{Participating instructors' Teaching experience}
+    \label{umass}
+\end{subfigure} 
+\begin{subfigure}{0.44\textwidth}
+    \includegraphics[width=\textwidth]{replace.png}
+    \caption{App could help students in replacement of guide book}
+    \label{cv}
+\end{subfigure}
+\hfill
+\begin{subfigure}{0.47\textwidth}
+    \includegraphics[width=\textwidth]{app_motivates.png}
+    \caption{App could motivate students}
+    \label{umass}
+\end{subfigure}        
+%\caption{Coherence score to estimate optimal number of Topics}
+\label{cv_umass}
+\end{figure}
+
+This study proposes the Englisher mobile app and presents it to the participating teachers to gather their insightful feedback. 92\% of teachers reported that they would use this type of mobile app for teaching if it were made available after using the trial version of the offered customized Englisher app. Teachers anticipate that 80\% of students will utilize this app during class. 86\% of respondents believed it may help students' English proficiency, and 98\% agreed that the government should support this kind of innovation in the education sector. 
+
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.7732}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.1066}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.1203}}@{}}
+\toprule
+\begin{minipage}[b]{\linewidth}\raggedright
+\textbf{Questions}
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+\textbf{yes}
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+\textbf{No}
+\end{minipage} \\
+\midrule
+\endhead
+Do you use digital content for teaching or digital medium for teaching
+and learning & 84\% & 16\% \\
+Have you ever used Internet or Mobile app to teach students or asked
+students to find learning materials from internet or Mobile App & 76\% &
+24\% \\
+Education during graduation was English and English was used for
+learning & 83.70\% & 16.30\% \\
+\multicolumn{3}{@{}>{\raggedright\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{1.0000} + 4\tabcolsep}@{}}{%
+\textit{Customized mobile app for Learning and Teaching English}} \\
+Do you think teacher will use the topic model mobile app for teaching &
+92\% & 8\% \\
+Do you think students will use the topic model app for learning? & 80\%
+& 20\% \\
+Do you think topic model based mobile app-based learning can improve
+English proficiency of students & 86\% & 14\% \\
+Do you think Govt should promote these types of innovation for education
+sector & 98\% & 2\% \\
+\bottomrule
+\end{longtable}
+
+
+\section{Linguistic Inquiry and Word Count (LIWC) for Qualitative sentiment}
+
+In this research LIWC is used to ascertain the general sentiment of the
+responses given by the survey participants. Linguistic Inquiry and Word
+Count (LIWC) {[}31{]}, {[}32{]} is a text analysis tool to measure
+psychological or emotional characteristics. It aims to quantify
+sentiment by examining the frequencies of different linguistic terms
+within given text based on predefined dictionary of words associated
+with various categories. Let's assume text as a sequence of words:
+\(\left\{ w_{1},w_{2},\ldots.,w_{n} \right\}\) and M different
+linguistic categories: \(\left\{ C_{1},C_{2},\ldots.,C_{m} \right\}\) .
+Proportion of words in each category
+\(P\lbrack i\rbrack = \frac{w\lbrack i\rbrack}{T}\) where T is the total
+number of Text. Now, a matrix \(X\lbrack i,j\rbrack\) can be formed,
+where \(w_{i}\) represents the frequency of the word in the linguistic
+category \(C_{j}\). LIWC vector containing the proportions of words in
+each linguistic category can be expressed as
+\(P_{total}\lbrack j\rbrack = \frac{\sum_{i = 1}^{T}{X\lbrack i,j\rbrack}}{T}\).
+
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 12\tabcolsep) * \real{0.1709}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 12\tabcolsep) * \real{0.1042}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 12\tabcolsep) * \real{0.1794}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 12\tabcolsep) * \real{0.1045}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 12\tabcolsep) * \real{0.1756}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 12\tabcolsep) * \real{0.1016}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 12\tabcolsep) * \real{0.1638}}@{}}
+\toprule
+\begin{minipage}[b]{\linewidth}\raggedright
+\textbf{Traditional LIWC Dimension}
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+\textbf{Answer Text}
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+\textbf{Standard Commercial Language}
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+\textbf{Answer Text}
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+\textbf{Standard for Formal Language}
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+\textbf{Answer Text}
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+\textbf{Standard for story language}
+\end{minipage} \\
+\midrule
+\endhead
+\textbf{Positive Tone} & 2.54 & 3.96 & 3.91 & 2.33 & 3.22 & 2.18 \\
+\textbf{Negative Tone} & 0 & 1.1 & 0 & 1.38 & 0 & 1.75 \\
+\textbf{Social Words} & 2.54 & 6.87 & 5.65 & 6.54 & 4.08 & 10.5 \\
+\textbf{Cognitive Processes} & 13.56 & 9.35 & 18.26 & 7.95 & 15.88 &
+8.7 \\
+\textbf{Allure} & 2.54 & 7.79 & 3.04 & 3.58 & 2.79 & 5.48 \\
+\textbf{Moralization} & 0 & 0.2 & 0 & 0.3 & 0 & 0.21 \\
+\bottomrule
+\end{longtable}
+
+From this LIWC table higher proportion of words related to positive
+emotions indicate a positive emotional tone in the text in the answer
+for the questions related to ``How this app can be improved'' and ``How
+English learning can be improved using Mobile App''. LIWC is applied for
+three different categories ``commercial writing'', ``Formal language'',
+and ``story language'' and in all the categories answer text showed
+highly positive sentiment from the survey user. Though respondents had a
+mix of optimism and skepticism regarding the use of mobile apps in
+teaching and learning. During the interrogation session, their tone was
+positive and enticed participants.
+
+\subsection{Visualize participants response with Word cloud}
+
+LIWC involves linguistic analysis using mathematical expression but
+using word cloud survey answers can be visualized vividly in
+interpretable interactive format. Word cloud consider a set of words
+\(\left\{ w_{1},w_{2},\ldots.,w_{n} \right\}\) extracted from Text
+document and associated frequencies
+\(\left\{ f_{1},f_{2},\ldots.,f_{n} \right\}\), \(s_{i}\) represent the
+proportional size of the word in the cloud can be expressed as
+\(s_{i} = \frac{f_{i}}{\sum_{j = 1}^{n}f_{j}}\) where normalized
+frequency \(f_{i}\).
+
+\begin{figure}[h!]
+\centering
+\begin{subfigure}{0.48\textwidth}
+    \includegraphics[width=\textwidth]{app_impv.png}
+    \caption{word cloud for the question regarding app improvement}
+    \label{cv}
+\end{subfigure}
+\hfill
+\begin{subfigure}{0.48\textwidth}
+    \includegraphics[width=\textwidth]{eng_app_impv.png}
+    \caption{word cloud for the question regarding English learning app improvement}
+    \label{umass}
+\end{subfigure}       
+%\caption{Coherence score to estimate optimal number of Topics}
+\label{cv_umass}
+\end{figure}
+
+The word cloud is generated from the answers provided question ``how the
+app can be improved'' and followed by more generalized question ``how
+English learning can be improved using an App''. The participants
+narrated varieties of viewpoints for the questions. From the word cloud
+it is inferred adding graphical content would enhance the
+apps\textquotesingle{} usefulness and make them more visually appealing
+to users. More practice resources for listening and exercise would be
+helpful. Another suggestion is to include synonym, and syllabus-related
+instances as well as audiovisual engagement with the app. Add additional
+vocabulary and involve more experience teachers who have greater
+experience in digital learning and teaching.
+
+\section{Results Discussion and outcomes}
+
+The results demonstrate that LDA-based topic modeling significantly
+enhances content comprehension by providing concise summaries of the
+learning material. Readers can grasp the main ideas and connections
+between topics, aiding in retention and knowledge acquisition. From the
+qualitative survey it is revealed LDA based topic modeling approach
+based extracted keywords within mobile apps seem effective as it
+provides more contextual meaning to the learners. Most of the
+participating teachers are enthusiastic about topic modeling based
+contexual resources learning related to technology incorporating into
+pedagogy. Participants appreciated the cutting edge NLP's learning
+resources available through mobile devices. Teachers admitted that
+available digital resources facilitated a deeper understanding of topics
+and catered to different learning styles, nurturing more engaging
+learning environment. This will positively impacted student motivation
+and overall engagement and hence boost overall learning. Some crucial
+suggestions were improving the graphics of the app so that it becomes
+interactive and guardian involvement can be introduced. Based on the
+survey results, it is revealed the potential for digital mobile-based
+learning in school is immense. Government should take initiatives to
+incorporate it into course curriculum syllabus and could impose
+ordinance to adopt mobile app based learning teaching in the school.
+
+Apps need to be improved by including collaborative form of learning.
+Additionally, the interactive interface receives positive feedback for
+its user-friendly design and utility in assisting
+readers\textquotesingle{} navigation through the textbook.
+Recommendation is to make it specific for NCTB Books only for particular
+class. This approach is also our goal considering NCTB Books. Including
+interactive e-books, dictionary, educational apps, and multimedia
+content.
+
+\section{Limitations}
+
+LDA could play a role in understanding the topics covered in an English
+textbook and potentially aiding in content customization and topic
+relevance for personalized learning. In a personalized learning context,
+the goal is to tailor the educational experience to the individual needs
+and preferences of each learner. This involves understanding the
+learner\textquotesingle s strengths, weaknesses, interests, and learning
+style. While LDA could be useful in some aspects of this process, it
+might not directly address all the requirements of personalized learning
+for an English textbook. In this research study we showed that LDA based
+topic modeling could be a solution to enhance the context understanding
+of the learners. However from the survey it is revealed that app was not
+sufficient. Learners oriented topic-document distribution to identify
+which topics are most relevant to a specific student can be provided.
+App can provide additional explanations, examples, or resources to cater
+to their individual learning style. Assessments and exercises focused on
+the topics that need reinforcement for each student. Monitor their
+progress and adjust the learning path accordingly. Analyze
+students\textquotesingle{} performance, engagement, and feedback to
+refine the topic modeling process and its integration into the learning
+environment. More sophisticated approaches, such as adaptive learning
+systems and AI-based tutoring, might be needed to truly personalize the
+learning experience in a comprehensive manner.
+
+\section{Special Remarks}
+
+For the data privacy and security issues many Teachers were reluctant to
+provide their social website address to the surveyor. Among all the
+participants only 24\% attendees provided their social sites address to
+use them publicly for research purposes.
+
+\section{Conclusion}
+By employing topic modeling in a personalized learning context,
+educators can create more engaging and effective learning experience.
+This approach allows enhancement understanding and retention of the
+Textbook context. The school survey with prototype app reaffirmed its
+potential in learning experiences. LDA based topic modeling leverages
+learning experience, improve interpretation and knowledge acquisition.
+The synthesis of existing research sheds light on the potential of topic
+modeling to improve Textbook context comprehension, and knowledge
+retention of learners. It was revealed teachers/instructors would find
+it acceptable and appreciated if textbook information were presented
+using NLP technology driven algorithms like LDA topic modeling in mobile
+app. The study concludes apps seem effective as they provide a personal
+and learner-centered learning opportunity ubiquitously. Reveal to user
+as a complementary essential material to learn English Textbook quickly
+and effectively. However, apps need to be improved by including
+collaborative form of learning.
 
 \subsection{Training Dataset}
-In this research we have used dataset from \cite{gaur2019knowledge}. For training classifier in this research 2019's Gaur et. al \cite{gaur2019knowledge} dataset is used. Compared to the existing four-label classification scheme (no risk, low risk, moderate risk, and high risk), this dataset introduced 5 lavel classification suicide indicator, ideation, behavior, attempt and another extra category incorporating supportive category. Supportive category represents whenever someone shows empathy and condolance for a suicidal post. 
+In this research we have used dataset from \cite{gaur2019knowledge}. For training classifier in this research 2019's Gaur et. al \cite{gaur2019knowledge} dataset is used. Compared to the existing four-label classification scheme (no risk, low risk, moderate risk, and high risk), this dataset introduced 5 lavel classification suicide indicator, ideation, behavior, attempt and another extra category incorporating supportive category. Supportive category represents whenever someone shows empathy and condolence for a suicidal post. 
 
 \subsection{Testing/Validation Dataset} 
 For testing dataset is collected from kaggle. It is an opesource dataset publicly available collected from reddit website by a pushshift API contained suicide and depression category.  This publicly available Reddit datasets in Kaggle Website comprised of 232,074 post annotated for binary classification as suicidal or non-suicidal in \cite{aldhyani2022detecting} for detecting suicidal ideation. The dataset is a collection of posts from the "SuicideWatch" and "depression" subreddits of the Reddit platform. All posts that were made to "SuicideWatch" from Dec 16, 2008(creation) till Jan 2, 2021, were collected while "depression" posts were collected from Jan 1, 2009, to Jan 2, 2021. In this research trained classifier is applied to detect class on this two category. Main objective isto determine the suicide categories (indicator, ideation, behavior, attempt, supportive ) within this dataset. Document length frequency and token distribution is depicted in Figure \ref{redditdist}. From the frequency distribution we can see some of the document sizes are very large. Hence, during the training process we chopped the sentences into multiple sentences keeping the label same. 
