@@ -165,38 +165,38 @@ In Bangladesh there is lacking in effective acquisition, synthesis skill of Engl
 Across all English learning applications via digital media, about 55\% exercise activities involved vocabulary learning \cite{klimova_evaluation_2018, hao_evaluative_2019, polakova_mobile_2019} and other exercises includes quizzes, flash cards, and games \cite{xu_scoping_2020, shortt_gamification_2023} for enhancing learners' comprehension and self-checks ability \cite{bernacki_mobile_2020, metruk_use_2021, isamiddinovna_mobile_2019, klimova_evaluation_2018}. Therefore, it can be assumed that if LDA extracted vocabulary is learned then it will improve contextual understanding, enhance synthesis knowledge of subtle meaning of correlated topics. There are numerous English learning apps are prevailing \cite{metruk_use_2021, rafiq_sustaining_2021, chen_evaluating_2016}. One caveat is of these apps are very few of them are based on Curriculum Board provided Textbook for learning English hence, could not able to attract a large number of pupils in Bangladesh who are mostly depended on NCBI textbook.  To grasp the English language knowledge from curriculum provided textbook a novel approach Latent Dirichlet Allocation (LDA) based unsupervised Topic modeling using textbook corpus is adopted and exploratory analysis is demonstrated in this study. Our anticipation is through this way student can able to interpret meaningful information facilitates students to understand the correlated topics and important keywords related to that topics leads to understand the subtle meaning of the textbook context.
 
 \subsection{Research Overview} 
-To detect underlying themes or topics keywords within a Textbook corpus an unsupervised probabilistic topic modeling technique LDA is used in this research \cite{jelodar_latent_2019, gupta_pan_lda_2021, pichardo_lagunas_svd_lda_2015, selvi_classification_2019, pichardo_lagunas_svd_lda_2015_1}. Topic modeling of LDA doesn\textquotesingle t directly account for student engagement such as learning tasks in mobile apps \cite{sandberg_mobile_2011}. Hence a prototype app is developed and qualitative survey is conducted to observe the instructor\textquotesingle s sentiment impact similar to research paper in \cite{\cite{oz_investigation_2015}}. Qualitative survey research is undertaken to evaluate the effectiveness of unsupervised topic modeling LDA Bangladesh\textquotesingle s National Curriculum Textbook Board (NCTB) provided English Textbook for Higher secondary school education. This study seeks to ascertain if instructors can teach and students can learn English better if a mobile app is introduced which includes NLP\textquotesingle s LDA driven topic modeling applied extracted keywords and analysis. A prototype mobile app is developed to incorporate the topic modeling extracted keywords into the app. This article presents the key findings and insights from the survey, shedding light on the prospective of learners especially instructors. In the survey questions, it was indicated whether the students, teachers/instructors would find it acceptable and appreciated if textbook information were made available through a mobile app and presented in interactive format. To demonstrate the mobile app idea during the interrogation survey session a prototype is also prepared. Participants were asked for suggestions on how to make the app better and about any shortcomings. After collecting feedback, word clouds were used (see \ref{wordcloud}) to analyze the frequency of the participants\textquotesingle{} recommended terms, and the LIWC approach was used to estimate overall sentiment (see \ref{liwc}). The survey\textquotesingle s findings show that teachers are eager to use NLP provided extracted keywords technology in teaching and learning, and there are tremendous opportunities.
+To detect underlying themes or topics keywords within a Textbook corpus an unsupervised probabilistic topic modeling technique LDA is used in this research \cite{jelodar_latent_2019} (see section \ref{lda_mdel} for details). Topic modeling of LDA doesn\textquotesingle t directly account for student engagement such as learning tasks in mobile apps \cite{sandberg_mobile_2011}. Hence a prototype app is developed and qualitative survey is conducted to observe the instructor\textquotesingle s sentiment impact similar to research paper in \cite{oz2015investigation}. Qualitative survey research is undertaken to evaluate the effectiveness of unsupervised topic modeling LDA Bangladesh\textquotesingle s National Curriculum Textbook Board (NCTB) provided English Textbook for Higher secondary school education. This study seeks to ascertain if instructors can teach and students can learn English better if a mobile app is introduced which includes NLP\textquotesingle s LDA driven topic modeling applied extracted keywords and analysis. A prototype mobile app is developed to incorporate the topic modeling extracted keywords into the app. This article presents the key findings and insights from the survey, shedding light on the prospective of learners especially instructors. In the survey questions, it was indicated whether the students, teachers/instructors would find it acceptable and appreciated if textbook information were made available through a mobile app and presented in interactive format. To demonstrate the mobile app idea during the interrogation survey session a prototype is also prepared. Participants were asked for suggestions on how to make the app better and about any shortcomings. After collecting feedback, word clouds were used (see \ref{wordcloud}) to analyze the frequency of the participants\textquotesingle{} recommended terms, and the LIWC approach was used to estimate overall sentiment (see \ref{liwc}). 
 
 \subsection{Topic Modeling}
  Different techniques have been developed to perform topic modeling in the unsupervised topic modeling domain of Natural Language Processing (NLP), having their own strengths and limitations \cite{vayansky2020review, abdelrazek2022topic, yi2009comparative}. Apart from LDA, Mallet LDA, Structural Topic Model (STM), Hierarchical Dirichlet Process (HDP), Non-Negative Matrix Factorization (NMF), Latent Semantic Analysis (LSA) etc are also prevailing and can be considered for comparative research study.
 
-\subsubsection{Topic models comparative analysis}
-While some variations of LDA, Mallet LDA is considered for large corpus processing and analysis \cite{vayansky2020review, abdelrazek2022topic, Comparison_Topic_Modeling_Algorithms}. It focuses on scalability, If large corpus needs to analyze, Mallet LDA might be more suitable. LDA in general can still be efficiently applied to moderately sized corpora. Analyzing topics within the context of metadata, STM could be a better fit. Hierarchical Dirichlet Process (HDP) can be useful when we cannot guess the number of topics in advance. In \cite{Comparison_Topic_Modeling_Algorithms} LSI, NMF and LDA are compared in terms of coherence and similarity measures for social media dataset and in their analysis NMF is observed most effective measures. However, as a baseline model LDA is often considered one of the most prominent choices. In this study Textbook corpus is divided into lessons which is a mixture of topics and using LDA expecting to determine which word in the lesson belong to Lesson\textquotesingle s topics. LDA produces interpretative results for exploratory topic analysis. The identified topics are represented as distributions over words, making it easy to assign meaningful labels to topics. Provided by most of the libraries and tools, making it easy to implement and can be integrated into existing workflows. Hence, LDA serves as a solid baseline for topic modeling tasks.  
-
-\section{Latent Dirichlet Allocation (LDA)}
-LDA model considers documents are mixes of topic, and each topic is a distribution over words. The objective is to derive the hidden topic assignments and the topic-word distributions that most effectively describe the observed documents. The goal of LDA is to uncover these latent topics from a collection of documents without needing any prior labeling or categorization of the content. An expression for the joint distribution of the LDA model is described below:  
+\subsection{Latent Dirichlet Allocation (LDA)}
+\label{lda_mdel}
+LDA model \cite{jelodar_latent_2019, gupta_pan_lda_2021, pichardo_lagunas_svd_lda_2015, selvi_classification_2019} considers documents are mixes of topic, and each topic is a distribution over words. The objective is to derive the hidden topic assignments and the topic-word distributions that most effectively describe the observed documents. The goal of LDA is to uncover these latent topics from a collection of documents without needing any prior labeling or categorization of the content. An expression for the joint distribution of the LDA model is described below:  
 \begin{equation}
 P(\theta_d,z,w\|\alpha,\beta)=P(\theta_d\|\alpha)\prod^N_{n=1}P(z_{d,n}\|\theta_d)P(w_{d,n}\|z_{d,n},\beta)
 \end{equation}
 Where $w_{d,n}$ the $n_{th}$ word in document $d$, $z_{d,n}$ the topic assigned to the $n_{th}$ word in document $d$, $\alpha,\beta$ are the Dirichlet LDA model parameters. controls per-document topic distribution, and per topic word distribution. $\theta_d$ represent the topic distribution. $P(\theta_d \| \alpha)$ Dirichlet 
 distribution representing the document-topic distribution, $P(z_{d,n}\|\theta_d)$ is the word topic assignment for the $n_{th}$ word in document $d$, $P(w_{d,n}\|z_{d,n},\beta)$ is the distribution representing the observed word given a topic. We have chosen LDA for baseline statistical topic modeling tool. However, how many topics are ideal it is needed to determine and also topic modeling quality needs to measure.
 
+\subsubsection{Topic models comparative analysis}
+While some variations of LDA, Mallet LDA is considered for large corpus processing and analysis \cite{vayansky2020review, abdelrazek2022topic, Comparison_Topic_Modeling_Algorithms}. It focuses on scalability, If large corpus needs to analyze, Mallet LDA might be more suitable. LDA in general can still be efficiently applied to moderately sized corpora. Analyzing topics within the context of metadata, STM could be a better fit. Hierarchical Dirichlet Process (HDP) can be useful when we cannot guess the number of topics in advance. In \cite{Comparison_Topic_Modeling_Algorithms} LSI, NMF and LDA are compared in terms of coherence and similarity measures for social media dataset and in their analysis NMF is observed most effective measures. However, as a baseline model LDA is often considered one of the most prominent choices. In this study Textbook corpus is divided into lessons which is a mixture of topics and using LDA expecting to determine which word in the lesson belong to Lesson\textquotesingle s topics. LDA produces interpretative results for exploratory topic analysis. The identified topics are represented as distributions over words, making it easy to assign meaningful labels to topics. Provided by most of the libraries and tools, making it easy to implement and can be integrated into existing workflows. Hence, LDA serves as a solid baseline for topic modeling tasks.  
 
 \subsection{Optimal Topics with Coherence}  
-Coherence score measure how coherent or interpret the words in that topic and estimates number of topic clusters. Coherence score assess the quality of the topics produced by LDA and ensures that the topics generated are statistically significant. Coherence \(C_{topic}\) can be expressed as follows  
+Coherence score measure how coherent or interpret the words in that topic and estimates number of topic clusters \cite{mimno2011optimizing}. Coherence score assess the quality of the topics produced by LDA and ensures that the topics generated are statistically significant. Coherence \(C_{topic}\) can be expressed as follows  
 \begin{equation}
-C_{topic}=\sum^N_{i=1} (\frac{1}{N(N-1)}\sum^i_{j=1} PMI(w_i,w_j)
+C_{topic}=\sum^N_{i=1} \frac{1}{N(N-1)}\sum^i_{j=1} PMI(w_i,w_j)
 \end{equation}
 Where, \(PMI\left( w_{i},w_{j} \right)\) represent pointwise mutual information statistical association between two words occurring together. PMI score indicates that the two words are more closely related within a topic. \(PMI\left( w_{i},w_{j} \right)\) can expressed as  
 \begin{equation}
 \(PMI\left( w_{i},w_{j} \right) = \log\frac{P\left( w_{i},w_{j} \right)}{P\left( w_{i} \right)P\left( w_{j} \right)}\)
 \end{equation}
 
-where \(P\left( w_{i},w_{j} \right)\) is joint probability of occurrence of words \(w_{i}\) and \(w_{j}\).  To calculate the coherence score genism library provides range of options such as \(u_{mass},c_{v},c_{uci},c_{npmi}\). \(u_{mass}\) and \(c_{v}\)These two methods are most popular. For given topic with words \(\{ w_{1},w_{2},w_{3},\ldots..,w_{n}\}\) a fixed context window size is provided (default size 10 words) then coherence score is calculated using an equation \(\sum_{j = 1}^{i}{PMI}\left( w_{i},w_{j} \right)\) which provides negative coherence score. \(c_{v}\) can be expressed as  
+where \(P\left( w_{i},w_{j} \right)\) is joint probability of occurrence of words \(w_{i}\) and \(w_{j}\).  To calculate the coherence score gensim library provides range of options such as \(u_{mass},c_{v},c_{uci},c_{npmi}\). \(u_{mass}\) and \(c_{v}\)These two methods are most popular. For given topic with words \(\{ w_{1},w_{2},w_{3},\ldots..,w_{n}\}\) a fixed context window size is provided (default size 10 words) then coherence score is calculated using an equation \(\sum_{j = 1}^{i}{PMI}\left( w_{i},w_{j} \right)\) which provides negative coherence score. \(c_{v}\) can be expressed as  
 \begin{equation}
 \(c_{v} = \frac{1}{N(N - 1)}\sum_{j = 1}^{i}{similarity\left( w_{i},w_{j} \right)}\)
 \end{equation}
-in which \(similarity\left( w_{i},w_{j} \right)\) represent the pairwise similarity between terms based on \(PMI\left( w_{i},w_{j} \right)\) scores. \(c_{v}\) provides a positive coherence score. Higher coherence values indicate that the topics are more coherent and representative of meaningful themes within the text data. Coherence score 0.5 are fairly good {[}43{]}.
+in which \(similarity\left( w_{i},w_{j} \right)\) represent the pairwise similarity between terms based on \(PMI\left( w_{i},w_{j} \right)\) scores. \(c_{v}\) provides a positive coherence score. Higher coherence values (higher than 0.5) indicate that the topics are moderately coherent and representative of meaningful themes within the text data.
   
 \section{Literature Review}
 
@@ -216,13 +216,17 @@ Sentiment analysis has been a key research area of NLP based research domain, wh
 
 \section{Methodology}
 The methodology involves pre-processing textual data, training the LDA model on the pre-processed text, and subsequently interpreting and visualizing the generated topics. Data is collected from NCBI's English Textbook for class 9 of higher secondary school. NLPs Data mining approach is applied to segregate into subsequent lessons \cite{kao_natural_2007, mccarthy_applied_2012}. Then textual data is pre-processed to remove noise, text standardizing, followed by the application of LDA to identify underlying topics, then coherence measurements are applied. Research overview is depicted as follows. 
-\begin{adjustbox}{center, nofloat=figure, vspace=\bigskipamount, caption={Research workflow diagram}, label{fig:methodology_diagram}}
+
+\begin{figure}[h!]
+\centering
 \includegraphics[width=0.9\textwidth]{Figs/methodology.png}
-\end{adjustbox}
+\caption{Research workflow diagram}
+\end{figure}
 
 LDA algorithm automatically discovers latent topics within the documents based on word co-occurrences. Each topic will be represented by a set of words. Interpret these words to understand the main concepts associated with each topic. Extensive exploratory analysis is conducted to visualize the topic modeling outputs. Analyze the topics generated by the model require manual review and adjustment to ensure the topics make sense.
 
-\section{Data Processing and Feature Extraction}
+\subsection{Data Processing and Models}
+\subsubsection{Feature Extraction}
 
 \begin{enumerate}
 \def\labelenumi{\alph{enumi}.}
@@ -375,13 +379,15 @@ D = \sum_{d_{i} \in D}^{}\left\{ \begin{array}{l}
 
 we can visualize relative importance of any keywords in terms of frequency and plotted inclined with LDA provided weights.
 
-\begin{figure}[h]
-\centerline{\includegraphics[width=\textwidth]{relative_imp.png}}
+\begin{figure}[h!]
+\centering
+\includegraphics[width=0.9\textwidth]{Figs/relative_imp.png}
 \caption{Word frequency and its relative importance}
 \label{fig:Relative_weight}
 \end{figure}
 
-\section{Dominant topic and contribution}
+
+\subsection{Dominant topic and contribution}
 
 In LDA models, each document is composed of multiple topics. But
 typically, some specific topics are dominant. The following experiment
@@ -408,9 +414,7 @@ Distance among topics refers to the measurement of similarity between
 topics in a high dimensional space matrix provided by the LDA model.
 PyLDAvis library is used to conserve dimensionality reduction using PCA
 and for calculating distance between topics metric like Euclidean
-distance or Cosine Similarity \(\). Topic-topic distribution matrix
-\(Q\left( t_{1},t_{2} \right)\) for topic \(t_{1}\) and topic \(t_{2}\),
-distance \(D\)between \(t_{1},t_{2}\) can be represented as
+distance or Cosine Similarity.
 
 \subsubsection{Salient Terms or dominant keywords}
 
@@ -435,6 +439,7 @@ that are closer together in the map are more similar in terms of the
 distribution of words.
 
 \section{Englisher Mobile App}
+\label{Englisher_mobile_app}
 A mobile application (Englisher) is being developed with content from the NCTB’s English Textbook for class 9. The extracted keywords are organized into lessons and furthermore quiz is introduced as an exercise. Each sentence's and word's Bengali meaning is provided in accordance with the lesson. Students can take quizzes, and their results are recorded in the history so that history can be reviewed and performance can be improved by more practice in the future. 
 
 \begin{figure}[h!]
@@ -458,7 +463,7 @@ A mobile application (Englisher) is being developed with content from the NCTB�
 \end{figure}
 
 \section{Qualitative survey}
-In the survey questions, it was indicated whether the students, teachers/instructors, and government organizations would find it acceptable and appreciated if textbook information were made available through a mobile app and presented in interactive format. To demonstrate the mobile app idea during the interrogation survey session prototype app Englisher is prepared. Participants were asked for suggestions on how to make the app better and specify shortcomings. Presumably It provides an insight of teacher’s emotion about inclusion of mobile technology in higher secondary English education system. 
+In the survey questions, it was indicated whether the students, teachers/instructors, and government organizations would find it acceptable and appreciated if textbook information were made available through a mobile app and presented in interactive format. To demonstrate the mobile app idea during the interrogation survey session prototype app Englisher is prepared (see demo in section \ref{Englisher_mobile_app}). Participants were asked for suggestions on how to make the app better and specify shortcomings. Presumably It provides an insight of teacher’s emotion about inclusion of mobile technology in higher secondary English education system. 
 
 \subsection{Survey Planning}
 The survey was conducted over a period of four weeks, with 50 High schools in Dhaka and Bogura district of Bangladesh. It encompasses only English subject areas Teachers who teaches in high schools from class six to class Ten and teaches regularly in the school. A questionnaire was distributed to teachers allowing us to gather questionnaire answer. 
@@ -759,186 +764,10 @@ using NLP technology driven algorithms like LDA topic modeling in mobile
 app. The study concludes apps seem effective as they provide a personal
 and learner-centered learning opportunity ubiquitously. Reveal to user
 as a complementary essential material to learn English Textbook quickly
-and effectively. However, apps need to be improved by including
+and effectively. The survey\textquotesingle s findings show that teachers are eager to use NLP provided extracted keywords technology in teaching and learning. There are tremendous opportunities, however, apps need to be improved by including
 collaborative form of learning.
 
-\subsection{Training Dataset}
-In this research we have used dataset from \cite{gaur2019knowledge}. For training classifier in this research 2019's Gaur et. al \cite{gaur2019knowledge} dataset is used. Compared to the existing four-label classification scheme (no risk, low risk, moderate risk, and high risk), this dataset introduced 5 lavel classification suicide indicator, ideation, behavior, attempt and another extra category incorporating supportive category. Supportive category represents whenever someone shows empathy and condolence for a suicidal post. 
-
-\subsection{Testing/Validation Dataset} 
-For testing dataset is collected from kaggle. It is an opesource dataset publicly available collected from reddit website by a pushshift API contained suicide and depression category.  This publicly available Reddit datasets in Kaggle Website comprised of 232,074 post annotated for binary classification as suicidal or non-suicidal in \cite{aldhyani2022detecting} for detecting suicidal ideation. The dataset is a collection of posts from the "SuicideWatch" and "depression" subreddits of the Reddit platform. All posts that were made to "SuicideWatch" from Dec 16, 2008(creation) till Jan 2, 2021, were collected while "depression" posts were collected from Jan 1, 2009, to Jan 2, 2021. In this research trained classifier is applied to detect class on this two category. Main objective isto determine the suicide categories (indicator, ideation, behavior, attempt, supportive ) within this dataset. Document length frequency and token distribution is depicted in Figure \ref{redditdist}. From the frequency distribution we can see some of the document sizes are very large. Hence, during the training process we chopped the sentences into multiple sentences keeping the label same. 
-
-\subsection{Data Processing and Models}
-\subsubsection{Data Pre-processing}\label{data_preprocessing}
-Social media dataset are mostly Text data which needs data pre-processing, cleaning, feature extraction and data mining related NLP tasks. NLP based text data contains noises such as: unnecessary quotes, special characters, punctuation etc. Moreover, morphological analysis is needed to retrieve root words followed by stemming, lemmatization. Then, sentences are divided into equal-length fragments, and null word padding is applied as needed. Words within a phrase are now referred to as tokens or features, and the dataset is shown as a corpus. Special features/tokens are further preprocessed and filtered using text data feature extraction tools and methods. Features are passed through a process in which features are converted to corresponding IDs and sentences which contains a series of IDs are represented a vector. The embedding is another term that is frequently used in relation to vector text analysis. Various Vectorization methods are present. Traditional vectorization method provide weights to terms/words mainly based on frequency of words within the sentence and documents, rather than its importance and contextual meaning. Also, how does a particular word or term create impact on the neighboring words is not taken into consideration, since these models does not have any prior knowledge of any words. Hence, various neural network based language models are proposed which are pretrained on massive amount of dataset. These models mainly carries weight which represents word to word relationships and most cases can provide contextual meaning of given sentence based on pretrained dataset knowledge. Deep learning models recently showed remarkable achievements in this case representing corresponding knowledge.
-
-\subsubsection{Classification}
-Machine learning and Deep Learning models are particularly used for Text classification and ML for feature selection or extraction in several studies \cite{castillo2020suicide, chancellor2020methods, zhang2022natural}. These extensive reviews reveal Deep learning methods receive more attention and perform better than traditional machine learning methods whereas in some cases when extracted or filtered features are fit into training process models are able to perform better. NLP techniques are applied for the annotated dataset collected from Twitter, Reddit, Facebook, instagram, Weibo \cite{wang2020depression} etc. After that various deep learning and machine learning models are trained for classification of suicide and depression. Then trained models are applied to determine the correct class of given text. \cite{malhotra2022deep} Provided a through investigation about passed research techniques, features, datasets, and performance metrics \cite{zhang2022natural, chancellor2020methods}. 
-
-\subsubsection{Data Learning Models}
-Among Several Deep Learning approaches most successful NLP classifier for segregating Depression and suicidal task are CNN, LSTM, GRU, XLNET, BERT, Variants of BERT RoBERTa and variants of CNN such as: CNN-BiLSTM etc \cite{aldhyani2022detecting, wang2020depression, shetty2020predicting} also showed promising results. 
-
-\subsubsection{Feature Selection} 
-The feature selection procedure has a substantial impact on the performance of machine learning and deep learning models because it lowers noise in the trained dataset, enabling the model to accurately understand data patterns. LIWC, LDA, LSA, n-gram analysis \cite{pennebaker2001linguistic, tadesse2019detection} etc are used as features analysis tools. 
-Most dominant approaches are n-gram word frequency based approach TF-IDF. Apart from the Deep learning model n-gram Traditional feature retrieve based analysis conducted in some research papers. In 2017 Shen et. al \cite{harvesting_social_media} collected several forms of features comprised of six chorots, namely, social network features, user profile features, visual features, emotional features, topic-level features, and domain-specific features and prepared a feature rich dictionary. This multimodal depressive dictionary learning model was used to detect the depressed users on Twitter using machine learning models. 
-
-Most dominant approaches are Word2Vec, XGBoost, SVM, Random Forest, other regression MLs. Typical word embedding approaches TF-IDF and Word2Vec, and CNN–BiLSTM are applied in  \cite{aldhyani2022detecting}. Using LIWC features, XGBoost ML together surpasses the accuracy of CNN–BiLSTM in  \cite{aldhyani2022detecting}. Others have used machine text Summarization based feature extraction strategy followed by classification for depression detection is applied in \cite{zogan2021depressionnet}. \cite{burnap2015machine}built a set of baseline classifiers using lexical, structural, emotive and psychological features extracted from Twitter posts. Then baseline classifiers are updated by building an ensemble classifier using the Rotation Forest algorithm and a Maximum Probability voting classification decision method. \cite{chancellor2020methods} This paper provided an excellent overview of 75 studies in between 2013 and 2018 outlining the methods of data annotation for mental health status, data collection and quality management, pre-processing and feature selection, and model selection and verification. 
-
-\subsection{Other Tools or Methods}
-Apart from the Machine Learning or statistical model approaches there are some sites, helpline numbers and apps \cite{martinengo2019suicide} that contains various facts, statistics, tips, tools, healthline numbers and ways to handle suicidal depression \cite{suicidaldepression_online}. 
-  
-nce, visualizing the result we can determine the suicidal tendency within depression post. Also, N-gram based analysis is conducted and frequency of Terms and connections of words or phrases are analyzed in this research scope. More often topic modeling clustering is used to determine latent topic and understand latent text network. From the network various facts can be revealed related to suicide and depression. This whole process is depicted in Figure \ref{fig:res_diagram}
-
-
-\section{Results Analysis}\label{sec2}
-First we started our experiment with document length distribution. The length of document and term frequency within the corpus is visualized in Figure \ref{redditdist_twitterdist}. From the distribution we can see that some of the document length are excessive long and contains more than 1000 tokens ( within Twitter and also Reddit both Dataset). Depression class document length are usually shorter in length. Depression document length are tend to be smaller than suicide document length. 
-
-Short sentence does not carry much terms and hence does not carry enough information to be classified confidently by classifier algorithms. We started reducing the numbers of samples based on document length. By reducing the samples based on numbers of tokens present in a document (see Figure \ref{redditdist_twitterdist}). Documents length versus category frequency information is showed in this chart. This charts explains if we filter out the shorter comments suicide post become dominant class and depression post become outnumbered. The difference showed an exponential pattern as length of document increases. Test dataset Reddit data distribution among depression and suicide class distribution ratio is equal. Filtering the class we have seen an interesting fact that depressed people does not want to comment very long. 
-
-
-
-\subsection{N-gram Analysis}
-\subsubsection{Uni-gram}
-Dataset is split into separate tokens after preprocessing and uni-gram generated. Based on frequency of words wordcloud is generated from these unigrams. Frequency based comparison between two categories is conducted for depression and suicide for Test dataset in Figure \ref{features_vis_pro_exp}. Main objective was to get top ranked words from Depression and Suicide corpus. After experiments we have seen There are similarities between the top ranked words those are occurring frequently. They tend to use slang and abusive terms compared to suicidal attempt thinking people. Rather suicidal depressed people want to share their thoughts with others using longer post. However, it does not reveals any clues in terms of hypothetical relationships between the two category. It is difficult find pattern in which we can determine the depression and suicidal thought. So far we found some pattern 
-%\begin{enumerate}
-%\item short statements likely to be more depression category
-%\item Depressive statements tend to have slang
-%\item Suicidal thinking people’s post having very high frequency of “kill” “die” these type of words or phrases.
-%\end{enumerate}
-%
-%\begin{figure}[H]
-%\centering
-%\begin{subfigure}{0.45\textwidth}
-%    \includegraphics[width=\textwidth]{dep_wordcloud.png}
-%    \caption{Wordcloud in Depression category}
-%    \label{fig:first}
-%\end{subfigure}
-%\hfill
-%\begin{subfigure}{0.45\textwidth}
-%    \includegraphics[width=\textwidth]{sui_wordcloud.png}
-%    \caption{Wordcloud in Suicide category}
-%    \label{fig:second}
-%\end{subfigure}
-%\hfill
-%\begin{subfigure}{0.8\textwidth}
-%    \includegraphics[height=7.5cm, width=\textwidth]{doc_len.png}
-%    \caption{Class frequency in different Document Length}
-%    \label{fig:second}
-%\end{subfigure}        
-%\caption{Dataset features visualization and properties exploration}
-%\label{features_vis_pro_exp}
-%\end{figure}
-
-To understand the term occurring frequently in two different classes scatterplot library is used for visual analysis. From the above two scenario we can see that there is a pattern that people used to say more slang and abusive words when they are depressed. It is also interesting that there are many words have high frequency such as depression or depressed but belongs to suicide class. One important fact is revealed here is that we can see although suicide, suicidal these words has high frequency in Suicide class but depression, depressed also occurred in parallel with high frequency. Here several experiments can be conducted for exploratory analysis with scattertext library for terms significance. However, this library is computationally heavy for larger dataset for visualization. Another drawbacks is this library have significant focus on the terms based analysis. We have used simple vectorization methods by which we can have greater control on dataset and experiments code. 
-
-\subsubsection{Bi-gram}
-First unigram is computed and analyzed then bigram is calculated for both categories. The bigram frequency showed there are some common terms like “mental health”, “feel like”, “make feel”, “high school” etc showed high occurrences in the dataset. Hence, we started to understand its pattern in the corpus. For analysis we have considered ['high school', 'mental health', 'best friend', 'feel like', 'really want', 'suicide thought', 'friend family'] these bi-grams and wanted to explore its surrounding context for each category. We called this special bigrams since it showed importance in the suicidal and depression both categories appeared highly frequent matter. We want to analyze how these words have impact with its neighboring words. 
-
-To explore the impact of special bi-grams on the samples, special bi-gram terms containing samples are filtered from dataset. After that using lebel encoder bigrams are encoded as integers and then chord diagram is generated  depicted in Figure \ref{Bigram_features_exp} to find meaningful relationship within the samples between the bigram features.  
-
-
-%\begin{figure}[H]
-%\centering
-%\begin{subfigure}{0.8\textwidth}
-%    \includegraphics[width=\textwidth]{dep_chord.png}
-%    \caption{Depression Chord diagram}
-%    \label{fig:first}
-%\end{subfigure}
-%\hfill
-%\begin{subfigure}{0.8\textwidth}
-%    \includegraphics[width=\textwidth]{suicide_chord.png}
-%    \caption{Depression Chord diagram}
-%    \label{fig:second}
-%\end{subfigure}        
-%\caption{Bi-gram features relation exploration}
-%\label{Bigram_features_exp}
-%\end{figure}
-
-
-From this two chord diagram interesting sentence can be inferred. Such as: from the depression class ? self centered person is depressed, having suicidal thought, want to go somewhere to live, spend happy moments and so on. For the suicidal class category suicidal attempt thinking people, have mental health issue, they want to share though with high school friends, best friends, friends and family members, having suicidal thoughts and so on.  
-
-Tri-grams or above did not reveals much meaning information, mostly does convey some meaningful information and therefore excluded for further experimental consideration. 
-
-\section{Classification Results}
-To segregate the Reddit suicide dataset into different categories of suicide first we have created a classifier using different classification techniques. Since our objective is not making highly accurate classifier. Following approach is applied in this study
-
-\begin{itemize}
-\item Pre-processed and useful features are used from Twitter's 500 post CSSR dataset for Training classifier
-\item Used count vectorizer and TFIDF transformer to generate vectors for the dataset
-\item Trained classifier to determine the categories of various suicidal intensities
-\end{itemize}
-
-We have used simple gridsearch technique of sklearn library and from a list of various classifiers applied on the dataset, we have chosen highest accurate classifiers to determine different label of suicidal risk. so that it can recognize the category. We have used classifiers "K Nearest Neighbors", "Linear and RBF SVM", "Gaussian Process", "Decision Tree", "Random Forest", "Vanilla Neural Net", "AdaBoost", "Naive Bayes". Using various set of parameters, from the result and experiments we found almost 60\% accuracy for SVM model to predict the suicide intensity categories. From various set of values of SVM we found degree=2, gamma=0.7, kernel=rbf showed the highest accuracy. 
-
-
-%\begin{table}[h]
-%\begin{center}
-%\begin{minipage}{174pt}
-%\caption{Caption text}\label{tab1}%
-%\begin{tabular}{@{}lllll@{}}
-%\toprule
-%Classifier & Precision & Recall & Accuracy & F1 \\
-%\midrule
-%Nearest Neighbors & 0.926 & 0.924 & 92.3896 & 0.924\\
-%RBF SVM & 0.942 & 0.924 & 92.3896 & 0.927\\
-%Decision Tree & 0.901 & 0.848 & 84.7793 & 0.856\\
-%Random Forest & 0.513 & 0.282 & 28.1583 & 0.167\\
-%Neural Net & 0.942 & 0.927 & 92.6941 & 0.929\\
-%AdaBoost & 0.905 & 0.898 & 89.8021 & 0.899\\
-%Gaussian Process & 0.940 & 0.921 & 92.0852 & 0.924\\
-%Naive Bayes & 0.923 & 0.918 & 91.7808 & 0.919\\
-%QDA & 0.931 & 0.909 & 90.8676 & 0.912\\
-%\botrule
-%\end{tabular}
-%\footnotetext{Shows classifiers accuracy of classification models}
-%\end{minipage}
-%\end{center}
-%\end{table}
-
-\subsubsection{Suicidal Intensities visualization}
-How much depression can trigger suicidal thoughts is an interesting question. In this study classifier is trained on the suicidal intensity. Then trained classifier is applied on the Depression/Suicide class dataset. From various machine learning models we have found SVM is a good performing model. SVM classifier is applied for the TFIDF vectorizer embedding (see results in figure~\ref{SVMTFIDF}) and also for Word2vec pretrained vectorizer model. The results are shown in figure~\ref{Suicidal_int_vis}. From the results we can see that suicidal ideation between depression and suicidal categories number of samples are very similar. Within depression more number of samples are showed suicidal indicator category compared to suicide which is an interesting result. Suicidal behavior and attempt is comparatively high within the suicidal category than depression. Hence, figure~\ref{SVMTFIDF} result seems to be pretty obvious, except for suicidal ideation category. Also for the suicidal indicator symptoms are higher within the depression category. 
-
-%\begin{figure}[H]
-%\centering
-%\begin{subfigure}{0.45\textwidth}
-%    \includegraphics[width=\textwidth]{grid_svm.png}
-%    \caption{SVM classifier applied for TFIDF vectorizer}
-%    \label{SVMTFIDF}
-%\end{subfigure}
-%\hfill
-%\begin{subfigure}{0.45\textwidth}
-%    \includegraphics[width=\textwidth]{glove_vec.png}
-%    \caption{SVM classifier applied for Glove Word2Vec Pretrained model vectorizer}
-%    \label{GloveWord2Vec}
-%\end{subfigure}        
-%\caption{Visualizing suicide intensities within Depression/Suicide class}
-%\label{Suicidal_int_vis} 
-%\end{figure}
-
-For the word2vec vector embedding scenario supportive and indicator categories results are almost similar in depression or suicide both classes. There is slight difference is shown for suicidal ideation and within suicide class, suicidal ideation is slight higher. Except the behavior and attempt category for the rest categories depression and suicide showed almost similar number of samples. 
-
-%\begin{figure}[H]
-%\centering
-%\begin{subfigure}{0.45\textwidth}
-%    \includegraphics[width=\textwidth]{sentiment_sunburst.png}
-%    \caption{First subfigure.}
-%    \label{fig:first}
-%\end{subfigure}
-%\hfill
-%\begin{subfigure}{0.45\textwidth}
-%    \includegraphics[width=\textwidth]{emotion_sunburst.png}
-%    \caption{Second subfigure.}
-%    \label{fig:second}
-%\end{subfigure}
-%        
-%\caption{Subreferences in \LaTeX.}
-%\label{fig:figures}
-%\end{figure}
-\section{Discussion} 
-From the result it is revealed that suicide categories shown within depression and suicide class vividly. Specially suicidal ideation, indicator showed similar patterns. The number of samples within depression and suicide is almost similar for this two categories. Hence, we can infer depressed person comments showed suicidal ideation and suicidal indicating symptoms. Suicidal behavior and attempt showed higher number of samples within the suicide category compared to depression category. All these results seems very logical results. Although from the results mathematical formulas are not derived in this research study since results are susceptible to chosen classifier, chosen dataset, pretrained models vectors or embedding provided to the classifier. 
  
-\section{Conclusion}
-Suicidal risk estimation task and classification samples to determine suicidal risk within social websites and blogs, techniques are discussed before. According to suicidal category previous work has been done before. However, to what extent depression level triggers suicidal risk is not yet discussed before. Also it is difficult to determine since depression and suicide categorical variables are independent factor. There is not any underlying correlation. Several research conducted to segregate which post is suicidal and which one is depression various classifiers are proposed. Extensive work has been done to improve the classification accuracy by adopting most powerful vectorization techniques that uses cutting edge NLP models BERT and its various variants. Research has also been conducted on how much severity label of suicide within a post is studied. 
 
 %\section{This is an example for first level head---section head}\label{sec3}
 %
@@ -989,7 +818,6 @@ Suicidal risk estimation task and classification samples to determine suicidal r
 
 
 \noindent
-The input format for the above table is as follows:
 
 
 
