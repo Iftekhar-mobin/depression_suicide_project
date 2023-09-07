@@ -1,0 +1,16 @@
+[(0,
+  '0.016*"doctor" + 0.012*"medication" + 0.009*"therapist" + 0.008*"anxiety" + '
+  '0.008*"new" + 0.008*"mental" + 0.007*"experience" + 0.007*"maybe" + '
+  '0.007*"change" + 0.007*"see"'),
+ (1,
+  '0.015*"like" + 0.012*"pain" + 0.011*"tired" + 0.010*"understand" + '
+  '0.008*"suicide" + 0.007*"happy" + 0.007*"person" + 0.007*"thank" + '
+  '0.006*"let" + 0.006*"mind"'),
+ (2,
+  '0.016*"like" + 0.015*"job" + 0.009*"school" + 0.009*"suicide" + '
+  '0.009*"person" + 0.008*"change" + 0.008*"parent" + 0.007*"problem" + '
+  '0.007*"fuck" + 0.007*"world"'),
+ (3,
+  '0.042*"behavior" + 0.040*"hyperactive" + 0.015*"mood" + 0.011*"mental" + '
+  '0.011*"thank" + 0.009*"happy" + 0.008*"sorry" + 0.008*"depressed" + '
+  '0.007*"maybe" + 0.007*"person"')]

@@ -1,0 +1,16 @@
+[(0,
+  '0.044*"hyperactive" + 0.018*"mood" + 0.013*"mental" + 0.010*"depressed" + '
+  '0.009*"pretty" + 0.008*"doctor" + 0.007*"control" + 0.007*"job" + '
+  '0.007*"school" + 0.007*"drug"'),
+ (1,
+  '0.016*"relationship" + 0.014*"support" + 0.014*"http" + 0.010*"doe" + '
+  '0.010*"hug" + 0.009*"sound" + 0.009*"tired" + 0.009*"glad" + 0.009*"ask" + '
+  '0.009*"worth"'),
+ (2,
+  '0.012*"point" + 0.011*"post" + 0.010*"leave" + 0.010*"attempt" + '
+  '0.009*"pain" + 0.009*"believe" + 0.009*"tired" + 0.008*"world" + '
+  '0.008*"give" + 0.008*"fail"'),
+ (3,
+  '0.022*"hospital" + 0.019*"shit" + 0.017*"therapist" + 0.014*"leave" + '
+  '0.014*"fuck" + 0.013*"stop" + 0.013*"say" + 0.011*"thank" + 0.011*"ask" + '
+  '0.010*"send"')]

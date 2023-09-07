@@ -1,0 +1,16 @@
+[(0,
+  '0.015*"cut" + 0.009*"tired" + 0.008*"great" + 0.008*"stop" + 0.007*"school" '
+  '+ 0.007*"hard" + 0.007*"problem" + 0.007*"deal" + 0.007*"shit" + '
+  '0.007*"therapist"'),
+ (1,
+  '0.051*"behavior" + 0.050*"hyperactive" + 0.017*"mood" + 0.010*"depressed" + '
+  '0.008*"reason" + 0.007*"hypersomnia" + 0.007*"girl" + 0.007*"mental" + '
+  '0.007*"hospital" + 0.007*"money"'),
+ (2,
+  '0.010*"mental" + 0.009*"drug" + 0.008*"problem" + 0.007*"thought" + '
+  '0.007*"plan" + 0.007*"suicidal" + 0.007*"behavior" + 0.006*"mood" + '
+  '0.006*"wait" + 0.006*"world"'),
+ (3,
+  '0.011*"thank" + 0.011*"job" + 0.010*"away" + 0.009*"hard" + 0.008*"tired" + '
+  '0.007*"little" + 0.007*"mean" + 0.007*"ill" + 0.006*"lose" + '
+  '0.006*"problem"')]

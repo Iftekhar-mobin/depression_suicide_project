@@ -1,0 +1,379 @@
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.4) (preloaded format=pdflatex 2023.6.3)  22 JUL 2023 14:50
+entering extended mode
+ restricted \write18 enabled.
+ %&-line parsing enabled.
+**./doc.tex
+(doc.tex
+LaTeX2e <2022-11-01> patch level 1
+L3 programming layer <2023-03-30>
+(C:\Program Files\MiKTeX\tex/latex/base\article.cls
+Document Class: article 2022/07/02 v1.4n Standard LaTeX document class
+(C:\Program Files\MiKTeX\tex/latex/base\size12.clo
+File: size12.clo 2022/07/02 v1.4n Standard LaTeX file (size option)
+)
+\c@part=\count185
+\c@section=\count186
+\c@subsection=\count187
+\c@subsubsection=\count188
+\c@paragraph=\count189
+\c@subparagraph=\count190
+\c@figure=\count191
+\c@table=\count192
+\abovecaptionskip=\skip48
+\belowcaptionskip=\skip49
+\bibindent=\dimen140
+)
+(C:\Program Files\MiKTeX\tex/latex/float\float.sty
+Package: float 2001/11/08 v1.3d Float enhancements (AL)
+\c@float@type=\count193
+\float@exts=\toks16
+\float@box=\box51
+\@float@everytoks=\toks17
+\@floatcapt=\box52
+)
+(C:\Program Files\MiKTeX\tex/latex/caption\subcaption.sty
+Package: subcaption 2023/02/19 v1.6 Sub-captions (AR)
+
+(C:\Program Files\MiKTeX\tex/latex/caption\caption.sty
+Package: caption 2023/03/12 v3.6j Customizing captions (AR)
+
+(C:\Program Files\MiKTeX\tex/latex/caption\caption3.sty
+Package: caption3 2023/03/12 v2.4 caption3 kernel (AR)
+
+(C:\Program Files\MiKTeX\tex/latex/graphics\keyval.sty
+Package: keyval 2022/05/29 v1.15 key=value parser (DPC)
+\KV@toks@=\toks18
+)
+\caption@tempdima=\dimen141
+\captionmargin=\dimen142
+\caption@leftmargin=\dimen143
+\caption@rightmargin=\dimen144
+\caption@width=\dimen145
+\caption@indent=\dimen146
+\caption@parindent=\dimen147
+\caption@hangindent=\dimen148
+Package caption Info: Standard document class detected.
+)
+\c@caption@flags=\count194
+\c@continuedfloat=\count195
+Package caption Info: float package is loaded.
+)
+Package caption Info: New subtype `subfigure' on input line 239.
+\c@subfigure=\count196
+Package caption Info: New subtype `subtable' on input line 239.
+\c@subtable=\count197
+)
+(C:\Program Files\MiKTeX\tex/latex/graphics\graphicx.sty
+Package: graphicx 2021/09/16 v1.2d Enhanced LaTeX Graphics (DPC,SPQR)
+
+(C:\Program Files\MiKTeX\tex/latex/graphics\graphics.sty
+Package: graphics 2022/03/10 v1.4e Standard LaTeX Graphics (DPC,SPQR)
+
+(C:\Program Files\MiKTeX\tex/latex/graphics\trig.sty
+Package: trig 2021/08/11 v1.11 sin cos tan (DPC)
+)
+(C:\Program Files\MiKTeX\tex/latex/graphics-cfg\graphics.cfg
+File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
+)
+Package graphics Info: Driver file: pdftex.def on input line 107.
+
+(C:\Program Files\MiKTeX\tex/latex/graphics-def\pdftex.def
+File: pdftex.def 2022/09/22 v1.2b Graphics/color driver for pdftex
+))
+\Gin@req@height=\dimen149
+\Gin@req@width=\dimen150
+)
+(C:\Program Files\MiKTeX\tex/latex/booktabs\booktabs.sty
+Package: booktabs 2020/01/12 v1.61803398 Publication quality tables
+\heavyrulewidth=\dimen151
+\lightrulewidth=\dimen152
+\cmidrulewidth=\dimen153
+\belowrulesep=\dimen154
+\belowbottomsep=\dimen155
+\aboverulesep=\dimen156
+\abovetopsep=\dimen157
+\cmidrulesep=\dimen158
+\cmidrulekern=\dimen159
+\defaultaddspace=\dimen160
+\@cmidla=\count198
+\@cmidlb=\count199
+\@aboverulesep=\dimen161
+\@belowrulesep=\dimen162
+\@thisruleclass=\count266
+\@lastruleclass=\count267
+\@thisrulewidth=\dimen163
+)
+(C:\Program Files\MiKTeX\tex/latex/l3backend\l3backend-pdftex.def
+File: l3backend-pdftex.def 2023-03-30 L3 backend support: PDF output (pdfTeX)
+\l__color_backend_stack_int=\count268
+\l__pdf_internal_box=\box53
+) (doc.aux
+
+LaTeX Warning: Label `sec2' multiply defined.
+
+
+LaTeX Warning: Label `sec2' multiply defined.
+
+
+LaTeX Warning: Label `fig:first' multiply defined.
+
+
+LaTeX Warning: Label `sub@fig:first' multiply defined.
+
+
+LaTeX Warning: Label `fig:second' multiply defined.
+
+
+LaTeX Warning: Label `sub@fig:second' multiply defined.
+
+
+LaTeX Warning: Label `fig:second' multiply defined.
+
+
+LaTeX Warning: Label `sub@fig:second' multiply defined.
+
+
+LaTeX Warning: Label `fig:figures' multiply defined.
+
+
+LaTeX Warning: Label `fig:first' multiply defined.
+
+
+LaTeX Warning: Label `sub@fig:first' multiply defined.
+
+
+LaTeX Warning: Label `fig:second' multiply defined.
+
+
+LaTeX Warning: Label `sub@fig:second' multiply defined.
+
+
+LaTeX Warning: Label `fig:figures' multiply defined.
+
+
+LaTeX Warning: Label `fig:first' multiply defined.
+
+
+LaTeX Warning: Label `sub@fig:first' multiply defined.
+
+
+LaTeX Warning: Label `fig:second' multiply defined.
+
+
+LaTeX Warning: Label `sub@fig:second' multiply defined.
+
+
+LaTeX Warning: Label `fig:figures' multiply defined.
+
+
+LaTeX Warning: Label `fig:first' multiply defined.
+
+
+LaTeX Warning: Label `sub@fig:first' multiply defined.
+
+
+LaTeX Warning: Label `fig:second' multiply defined.
+
+
+LaTeX Warning: Label `sub@fig:second' multiply defined.
+
+
+LaTeX Warning: Label `fig:figures' multiply defined.
+
+)
+\openout1 = `doc.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 14.
+LaTeX Font Info:    ... okay on input line 14.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 14.
+LaTeX Font Info:    ... okay on input line 14.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 14.
+LaTeX Font Info:    ... okay on input line 14.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 14.
+LaTeX Font Info:    ... okay on input line 14.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 14.
+LaTeX Font Info:    ... okay on input line 14.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 14.
+LaTeX Font Info:    ... okay on input line 14.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 14.
+LaTeX Font Info:    ... okay on input line 14.
+Package caption Info: Begin \AtBeginDocument code.
+Package caption Info: End \AtBeginDocument code.
+ (C:\Program Files\MiKTeX\tex/context/base/mkii\supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count269
+\scratchdimen=\dimen164
+\scratchbox=\box54
+\nofMPsegments=\count270
+\nofMParguments=\count271
+\everyMPshowfont=\toks19
+\MPscratchCnt=\count272
+\MPscratchDim=\dimen165
+\MPnumerator=\count273
+\makeMPintoPDFobject=\count274
+\everyMPtoPDFconversion=\toks20
+) (C:\Program Files\MiKTeX\tex/latex/epstopdf-pkg\epstopdf-base.sty
+Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
+Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
+85.
+
+(C:\Program Files\MiKTeX\tex/latex/00miktex\epstopdf-sys.cfg
+File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
+))
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <14.4> on input line 15.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <7> on input line 15.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <5> on input line 15.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <12> on input line 16.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <8> on input line 16.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <6> on input line 16.
+
+Overfull \hbox (0.88176pt too wide) in paragraph at lines 16--17
+[]\OT1/cmr/m/n/12 We have now added a ti-tle, au-thor and date to our first L[]
+T[]X document![[]] 
+ []
+
+
+LaTeX Warning: Citation `park2013perception' on page 1 undefined on input line 
+24.
+
+
+LaTeX Warning: Citation `de2013predicting' on page 1 undefined on input line 24
+.
+
+
+LaTeX Warning: Citation `xu2016contribution' on page 1 undefined on input line 
+24.
+
+[1
+
+{C:/Users/iftek/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}] [2]
+[3] [4] [5]
+Overfull \hbox (1.74547pt too wide) in paragraph at lines 57--58
+\OT1/cmr/m/n/12 based anal-y-sis con-ducted in some re-search pa-pers. Most dom
+-i-nant ap-proaches
+ []
+
+[6]
+<Figs/res_diagram.png, id=27, 1284.8pt x 1195.46625pt>
+File: Figs/res_diagram.png Graphic file (type png)
+<use Figs/res_diagram.png>
+Package pdftex.def Info: Figs/res_diagram.png  used on input line 76.
+(pdftex.def)             Requested size: 312.00119pt x 290.31064pt.
+ [7] [8 <./Figs/res_diagram.png>]
+<Figs/reddit_dist.png, id=37, 413.3844pt x 337.5009pt>
+File: Figs/reddit_dist.png Graphic file (type png)
+<use Figs/reddit_dist.png>
+Package pdftex.def Info: Figs/reddit_dist.png  used on input line 104.
+(pdftex.def)             Requested size: 175.49881pt x 143.28406pt.
+<Figs/twitterdist.png, id=38, 433.62pt x 337.5009pt>
+File: Figs/twitterdist.png Graphic file (type png)
+<use Figs/twitterdist.png>
+Package pdftex.def Info: Figs/twitterdist.png  used on input line 110.
+(pdftex.def)             Requested size: 175.49881pt x 136.59956pt.
+ [9 <./Figs/reddit_dist.png> <./Figs/twitterdist.png>]
+Overfull \hbox (4.326pt too wide) in paragraph at lines 125--126
+\OT1/cmr/m/n/12 think-ing peo-ple. Rather sui-ci-dal de-pressed peo-ple want to
+ share their thoughts
+ []
+
+<Figs/dep_wordcloud.png, id=44, 372.1905pt x 193.6836pt>
+File: Figs/dep_wordcloud.png Graphic file (type png)
+<use Figs/dep_wordcloud.png>
+Package pdftex.def Info: Figs/dep_wordcloud.png  used on input line 130.
+(pdftex.def)             Requested size: 175.49881pt x 91.32683pt.
+<Figs/sui_wordcloud.png, id=45, 372.1905pt x 193.6836pt>
+File: Figs/sui_wordcloud.png Graphic file (type png)
+<use Figs/sui_wordcloud.png>
+Package pdftex.def Info: Figs/sui_wordcloud.png  used on input line 136.
+(pdftex.def)             Requested size: 175.49881pt x 91.32683pt.
+<Figs/doc_len.png, id=46, 419.166pt x 351.9549pt>
+File: Figs/doc_len.png Graphic file (type png)
+<use Figs/doc_len.png>
+Package pdftex.def Info: Figs/doc_len.png  used on input line 142.
+(pdftex.def)             Requested size: 312.00722pt x 213.39253pt.
+[10]
+Overfull \hbox (120.60031pt too wide) in paragraph at lines 163--179
+[][]
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 163--179
+
+ []
+
+[11 <./Figs/dep_wordcloud.png> <./Figs/sui_wordcloud.png> <./Figs/doc_len.png>]
+[12]
+<Figs/dep_chord.png, id=59, 1053.9375pt x 1053.9375pt>
+File: Figs/dep_chord.png Graphic file (type png)
+<use Figs/dep_chord.png>
+Package pdftex.def Info: Figs/dep_chord.png  used on input line 189.
+(pdftex.def)             Requested size: 312.00119pt x 312.00243pt.
+<Figs/suicide_chord.png, id=60, 1053.9375pt x 1053.9375pt>
+File: Figs/suicide_chord.png Graphic file (type png)
+<use Figs/suicide_chord.png>
+Package pdftex.def Info: Figs/suicide_chord.png  used on input line 195.
+(pdftex.def)             Requested size: 312.00119pt x 312.00243pt.
+ [13]
+Overfull \vbox (140.20482pt too high) has occurred while \output is active []
+
+
+[14 <./Figs/dep_chord.png> <./Figs/suicide_chord.png>] [15]
+<Figs/grid_svm.png, id=74, 411.939pt x 328.8285pt>
+File: Figs/grid_svm.png Graphic file (type png)
+<use Figs/grid_svm.png>
+Package pdftex.def Info: Figs/grid_svm.png  used on input line 234.
+(pdftex.def)             Requested size: 175.49881pt x 140.08894pt.
+<Figs/glove_vec.png, id=75, 411.939pt x 328.8285pt>
+File: Figs/glove_vec.png Graphic file (type png)
+<use Figs/glove_vec.png>
+Package pdftex.def Info: Figs/glove_vec.png  used on input line 240.
+(pdftex.def)             Requested size: 175.49881pt x 140.08894pt.
+<Figs/sentiment_sunburst.png, id=76, 238.2501pt x 235.1184pt>
+File: Figs/sentiment_sunburst.png Graphic file (type png)
+<use Figs/sentiment_sunburst.png>
+Package pdftex.def Info: Figs/sentiment_sunburst.png  used on input line 253.
+(pdftex.def)             Requested size: 175.49881pt x 173.20277pt.
+<Figs/emotion_sunburst.png, id=77, 234.6366pt x 233.673pt>
+File: Figs/emotion_sunburst.png Graphic file (type png)
+<use Figs/emotion_sunburst.png>
+Package pdftex.def Info: Figs/emotion_sunburst.png  used on input line 259.
+(pdftex.def)             Requested size: 175.49881pt x 174.78366pt.
+ (doc.bbl [16 <./Figs/grid_svm.png> <./Figs/glove_vec.png> <./Figs/sentiment_su
+nburst.png> <./Figs/emotion_sunburst.png>] [17] [18] [19] [20] [21]) [22] (doc.
+aux)
+
+LaTeX Warning: There were undefined references.
+
+
+LaTeX Warning: There were multiply-defined labels.
+
+ ) 
+Here is how much of TeX's memory you used:
+ 3101 strings out of 476331
+ 56005 string characters out of 5797581
+ 1860660 words of memory out of 5000000
+ 23538 multiletter control sequences out of 15000+600000
+ 519155 words of font info for 54 fonts, out of 8000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 69i,13n,77p,2193b,475s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ <C:\Users\iftek\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm
+1200.pk> <C:\Users\iftek\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi60
+0\tcrm0700.pk> <C:\Users\iftek\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec
+/dpi600\tcrm1000.pk><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmb
+x12.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/P
+rogram Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Program Files/
+MiKTeX/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Program Files/MiKTeX/fonts/
+type1/public/amsfonts/cm/cmr8.pfb><C:/Program Files/MiKTeX/fonts/type1/public/a
+msfonts/cm/cmti12.pfb>
+Output written on doc.pdf (22 pages, 1427940 bytes).
+PDF statistics:
+ 143 PDF objects out of 1000 (max. 8388607)
+ 0 named destinations out of 1000 (max. 500000)
+ 61 words of extra memory for PDF output out of 10000 (max. 10000000)
+
