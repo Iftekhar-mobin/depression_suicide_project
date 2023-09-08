@@ -78,7 +78,7 @@
 
 \begin{document}
 
-\title[Article Title]{Exploratory analysis of depression  pattern within twitter post and investigation of suicidal intensity}
+\title[Article Title]{Exploratory analysis of suicidal intensity within depression, dissect social media post}
 
 %%=============================================================%%
 %% Prefix	-> \pfx{Dr}
@@ -372,6 +372,26 @@ LDA is a versatile tool to investigate various keywords in subtle topic within c
 \label{redditdist_twitterdist}
 \end{figure}
 
+
+\subsubsection{Combined topic modeling using BERTopic}
+
+
+\begin{figure}[h!]
+\centering
+\begin{subfigure}{0.45\textwidth}
+    \includegraphics[width=\textwidth]{bertopic/combined_bertopic_topics_heatmap_frequency.png}
+%    \caption{Ideation category word cloud}
+    \label{redditdist}
+\end{subfigure}
+\hfill
+\begin{subfigure}{0.45\textwidth}
+    \includegraphics[width=\textwidth]{bertopic/combined_bertopic_topics_map_frequency.png}
+%    \caption{Attempt category word cloud}
+    \label{twitterdist}
+\end{subfigure}   
+\caption{Inter distance topic similarities}
+\label{redditdist_twitterdist}
+\end{figure}
 
   
 \section{Methodology}\label{sec2}

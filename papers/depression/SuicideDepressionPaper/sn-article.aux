@@ -134,6 +134,7 @@
 \@writefile{toc}{\contentsline {subsubsection}{\numberline {3.5.3}LDA model coherence to determine optimal topic}{12}{subsubsection.3.5.3}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsubsection}{\numberline {3.5.4}Relative importance vs term frequency}{12}{subsubsection.3.5.4}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsubsection}{\numberline {3.5.5}LDA based feature exploration}{12}{subsubsection.3.5.5}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.5.6}Combined topic modeling using BERTopic}{12}{subsubsection.3.5.6}\protected@file@percent }
 \@writefile{toc}{\contentsline {section}{\numberline {4}Methodology}{12}{section.4}\protected@file@percent }
 \newlabel{sec2}{{4}{12}{Methodology}{section.4}{}}
 \newlabel{redditdist}{{4a}{13}{Indicator category word cloud\relax }{figure.caption.5}{}}
@@ -164,35 +165,41 @@
 \newlabel{sub@twitterdist}{{}{14}{LDA based feature exploration}{figure.caption.7}{}}
 \@writefile{lof}{\contentsline {figure}{\numberline {6}{\ignorespaces Inter distance topic similarities\relax }}{14}{figure.caption.7}\protected@file@percent }
 \newlabel{redditdist_twitterdist}{{6}{14}{Inter distance topic similarities\relax }{figure.caption.7}{}}
+\newlabel{redditdist}{{\caption@xref {redditdist}{ on input line 384}}{15}{Combined topic modeling using BERTopic}{figure.caption.8}{}}
+\newlabel{sub@redditdist}{{}{15}{Combined topic modeling using BERTopic}{figure.caption.8}{}}
+\newlabel{twitterdist}{{\caption@xref {twitterdist}{ on input line 390}}{15}{Combined topic modeling using BERTopic}{figure.caption.8}{}}
+\newlabel{sub@twitterdist}{{}{15}{Combined topic modeling using BERTopic}{figure.caption.8}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {7}{\ignorespaces Inter distance topic similarities\relax }}{15}{figure.caption.8}\protected@file@percent }
+\newlabel{redditdist_twitterdist}{{7}{15}{Inter distance topic similarities\relax }{figure.caption.8}{}}
 \@writefile{toc}{\contentsline {section}{\numberline {5}Results Analysis}{15}{section.5}\protected@file@percent }
 \newlabel{sec2}{{5}{15}{Results Analysis}{section.5}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.1}N-gram Analysis}{15}{subsection.5.1}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {5.1.1}Uni-gram}{15}{subsubsection.5.1.1}\protected@file@percent }
-\newlabel{fig:first}{{7a}{16}{Wordcloud in Depression category\relax }{figure.caption.9}{}}
-\newlabel{sub@fig:first}{{a}{16}{Wordcloud in Depression category\relax }{figure.caption.9}{}}
-\newlabel{fig:second}{{7b}{16}{Wordcloud in Suicide category\relax }{figure.caption.9}{}}
-\newlabel{sub@fig:second}{{b}{16}{Wordcloud in Suicide category\relax }{figure.caption.9}{}}
-\newlabel{fig:second}{{7c}{16}{Class frequency in different Document Length\relax }{figure.caption.9}{}}
-\newlabel{sub@fig:second}{{c}{16}{Class frequency in different Document Length\relax }{figure.caption.9}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {7}{\ignorespaces Dataset features visualization and properties exploration\relax }}{16}{figure.caption.9}\protected@file@percent }
-\newlabel{features_vis_pro_exp}{{7}{16}{Dataset features visualization and properties exploration\relax }{figure.caption.9}{}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {5.1.2}Bi-gram}{17}{subsubsection.5.1.2}\protected@file@percent }
-\newlabel{fig:first}{{8a}{18}{Depression Chord diagram\relax }{figure.caption.10}{}}
-\newlabel{sub@fig:first}{{a}{18}{Depression Chord diagram\relax }{figure.caption.10}{}}
-\newlabel{fig:second}{{8b}{18}{Depression Chord diagram\relax }{figure.caption.10}{}}
-\newlabel{sub@fig:second}{{b}{18}{Depression Chord diagram\relax }{figure.caption.10}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {8}{\ignorespaces Bi-gram features relation exploration\relax }}{18}{figure.caption.10}\protected@file@percent }
-\newlabel{Bigram_features_exp}{{8}{18}{Bi-gram features relation exploration\relax }{figure.caption.10}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {6}Classification Results}{19}{section.6}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {6.0.1}Suicidal Intensities visualization}{19}{subsubsection.6.0.1}\protected@file@percent }
-\newlabel{SVMTFIDF}{{9a}{20}{SVM classifier applied for TFIDF vectorizer\relax }{figure.caption.11}{}}
-\newlabel{sub@SVMTFIDF}{{a}{20}{SVM classifier applied for TFIDF vectorizer\relax }{figure.caption.11}{}}
-\newlabel{GloveWord2Vec}{{9b}{20}{SVM classifier applied for Glove Word2Vec Pretrained model vectorizer\relax }{figure.caption.11}{}}
-\newlabel{sub@GloveWord2Vec}{{b}{20}{SVM classifier applied for Glove Word2Vec Pretrained model vectorizer\relax }{figure.caption.11}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {9}{\ignorespaces Visualizing suicide intensities within Depression/Suicide class\relax }}{20}{figure.caption.11}\protected@file@percent }
-\newlabel{Suicidal_int_vis}{{9}{20}{Visualizing suicide intensities within Depression/Suicide class\relax }{figure.caption.11}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {7}Discussion}{20}{section.7}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {8}Conclusion}{20}{section.8}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.1}N-gram Analysis}{16}{subsection.5.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {5.1.1}Uni-gram}{16}{subsubsection.5.1.1}\protected@file@percent }
+\newlabel{fig:first}{{8a}{17}{Wordcloud in Depression category\relax }{figure.caption.10}{}}
+\newlabel{sub@fig:first}{{a}{17}{Wordcloud in Depression category\relax }{figure.caption.10}{}}
+\newlabel{fig:second}{{8b}{17}{Wordcloud in Suicide category\relax }{figure.caption.10}{}}
+\newlabel{sub@fig:second}{{b}{17}{Wordcloud in Suicide category\relax }{figure.caption.10}{}}
+\newlabel{fig:second}{{8c}{17}{Class frequency in different Document Length\relax }{figure.caption.10}{}}
+\newlabel{sub@fig:second}{{c}{17}{Class frequency in different Document Length\relax }{figure.caption.10}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {8}{\ignorespaces Dataset features visualization and properties exploration\relax }}{17}{figure.caption.10}\protected@file@percent }
+\newlabel{features_vis_pro_exp}{{8}{17}{Dataset features visualization and properties exploration\relax }{figure.caption.10}{}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {5.1.2}Bi-gram}{18}{subsubsection.5.1.2}\protected@file@percent }
+\newlabel{fig:first}{{9a}{19}{Depression Chord diagram\relax }{figure.caption.11}{}}
+\newlabel{sub@fig:first}{{a}{19}{Depression Chord diagram\relax }{figure.caption.11}{}}
+\newlabel{fig:second}{{9b}{19}{Depression Chord diagram\relax }{figure.caption.11}{}}
+\newlabel{sub@fig:second}{{b}{19}{Depression Chord diagram\relax }{figure.caption.11}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {9}{\ignorespaces Bi-gram features relation exploration\relax }}{19}{figure.caption.11}\protected@file@percent }
+\newlabel{Bigram_features_exp}{{9}{19}{Bi-gram features relation exploration\relax }{figure.caption.11}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {6}Classification Results}{20}{section.6}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {6.0.1}Suicidal Intensities visualization}{20}{subsubsection.6.0.1}\protected@file@percent }
+\newlabel{SVMTFIDF}{{10a}{21}{SVM classifier applied for TFIDF vectorizer\relax }{figure.caption.12}{}}
+\newlabel{sub@SVMTFIDF}{{a}{21}{SVM classifier applied for TFIDF vectorizer\relax }{figure.caption.12}{}}
+\newlabel{GloveWord2Vec}{{10b}{21}{SVM classifier applied for Glove Word2Vec Pretrained model vectorizer\relax }{figure.caption.12}{}}
+\newlabel{sub@GloveWord2Vec}{{b}{21}{SVM classifier applied for Glove Word2Vec Pretrained model vectorizer\relax }{figure.caption.12}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {10}{\ignorespaces Visualizing suicide intensities within Depression/Suicide class\relax }}{21}{figure.caption.12}\protected@file@percent }
+\newlabel{Suicidal_int_vis}{{10}{21}{Visualizing suicide intensities within Depression/Suicide class\relax }{figure.caption.12}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {7}Discussion}{21}{section.7}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {8}Conclusion}{21}{section.8}\protected@file@percent }
 \bibcite{aldhyani2022detecting}{{1}{}{{}}{{}}}
 \bibcite{beck2000weisman}{{2}{}{{}}{{}}}
 \bibcite{beck1961inventory}{{3}{}{{}}{{}}}
@@ -238,4 +245,4 @@
 \bibcite{zheng2020development}{{43}{}{{}}{{}}}
 \bibcite{zogan2021depressionnet}{{44}{}{{}}{{}}}
 \providecommand\NAT@force@numbers{}\NAT@force@numbers
-\gdef \@abspage@last{25}
+\gdef \@abspage@last{26}
