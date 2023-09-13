@@ -74,6 +74,8 @@
 \usepackage{graphicx, adjustbox}
 \usepackage{caption}
 \usepackage{enumitem}
+\usepackage{float}
+\usepackage{longtable,booktabs,array}
 \graphicspath{{Figs}{Figs/}}
 
 \begin{document}
@@ -110,7 +112,7 @@
 %% sample for unstructured abstract %%
 %%==================================%%
 
-\abstract{Social media's Text databases have emerged as the best option for assessing studies on depression and suicide for Natural Language Processing (NLP) research experts. This study uses Reddit and Twitter datasets for exploratory data analysis to examine the degree of depressed person's post contains suicidal thoughts. The main objective is to determine if a depressed individual has a tendency toward suicide, determine the degree of the depression or the opposite. Prior belief that some depressed persons actually have suicide thoughts. This study presents an unsupervised feature analysis using the LDA topic model of the Reddit C-SSRS dataset. Latent suicidal topics, cross-topic co-occurrence patterns, and dominating, high-impact keywords are revealed. In addition, supervised machine learning classifiers developed on the Reddit dataset are used to determine the severity of suicide tendencies. State of the art NLP's data processing is applied, then extracted text features converted to embedding vector with vectorizer followed by machine learning classifiers are trained to segregate suicide categories. The Twitter dataset with the depression vs. suicide category is used to test trained models.  To get the best results, cutting edge tex embedding vectorization techniques and machine learning estimators are applied. Statistical measurements depicts the degree of suicide intensity within depressed label post.  From the analysis it is revealed that suicidal tendency within depression people post is extremely high. Depressed person's post in the twitter showed 60\% similarities in various categories of suicidal intensity.}
+\abstract{Social media's Text databases have emerged as the best option for assessing studies on depression and suicide for Natural Language Processing (NLP) research experts. This study uses Reddit and Twitter datasets for exploratory data analysis to examine the degree of depressed person's post contains suicidal thoughts. The main objective is to determine if a depressed individual has a tendency toward suicide, determine the degree of the depression or the opposite. Prior belief that some depressed persons actually have suicide thoughts. This study presents an unsupervised feature analysis using the LDA topic model of the Reddit C-SSRS dataset. Latent suicidal topics, cross-topic co-occurrence patterns, and dominating, high-impact keywords are revealed. In addition, supervised machine learning classifiers developed on the Reddit dataset are used to determine the severity of suicide tendencies. State of the art NLP's data processing is applied, then extracted text features converted to embedding vector with vectorizer followed by machine learning classifiers are trained to segregate suicide categories. The Twitter dataset with the depression vs. suicide category is used to test trained models. To get the best results, cutting edge tex embedding vectorization techniques and machine learning estimators are applied. Statistical measurements depicts the degree of suicide intensity within depressed label post. From the analysis it is revealed that suicidal tendency within depression people post is extremely high. Depressed person's post in the twitter showed 60\% similarities in various categories of suicidal intensity.}
 
 
 
@@ -149,8 +151,7 @@ Visual impact on individuals to detect depression also has been studied in some 
 It is observed that Text based expression depicts mental illness more clearly compared to other features and is dominant among researchers to detect mental issues effectively. In this study we will be focusing on the text based features only for mental illness and suicidal pattern detection. 
 
 \subsection{Instrument for measuring Severity}
-From the very beginning questionnaire based suicidal/depression intensity measurements tool were available. These scale are applied for setting the questionnaire during the interrogation. This process provides weights to answers replied by individuals. Most renowned scales are PHQ-9, DSM-5, DASS-21 \cite{havigerova2019text}, Beck's Depression Inventory BSS \cite{beck2000weisman}, Columbia Suicide Severity Rating Scale (C-SSRS) \cite{posner2011columbia, joiner1997modified} etc.  Most of these scales are based on predefined specific number of multiple choice questions having specific weights. \cite{havigerova2019text, beck1961inventory, kroenke2001phq, tolentino2018dsm, kliem2017german, eke2010hamilton}. According to the answer feedback from the patients severity and symptoms are decided based on cumulative weight. Furthermore, statistical models are applied to investigate patterns \cite{shen2020detecting, shen2017depression}.   
-
+From the very beginning questionnaire based suicidal/depression intensity measurements tool were available. These scale are applied for setting the questionnaire during the interrogation. This process provides weights to answers replied by individuals. Most renowned scales are PHQ-9, DSM-5, DASS-21 \cite{havigerova2019text}, Beck's Depression Inventory BSS \cite{beck2000weisman}, Columbia Suicide Severity Rating Scale (C-SSRS) \cite{posner2011columbia, joiner1997modified} etc. Most of these scales are based on predefined specific number of multiple choice questions having specific weights. \cite{havigerova2019text, beck1961inventory, kroenke2001phq, tolentino2018dsm, kliem2017german, eke2010hamilton}. According to the answer feedback from the patients severity and symptoms are decided based on cumulative weight. Furthermore, statistical models are applied to investigate patterns \cite{shen2020detecting, shen2017depression}.   
 
 \subsection{Comparative Analysis of scales}
 \begin{itemize}
@@ -204,6 +205,14 @@ Dataset is the most crucial for Natural language Processing (NLP) based research
 \subsection{Gold standard dataset}
 In 2018 shing et. al \cite{shing2018expert}, and in 2019 Gaur et. al \cite{gaur2019knowledge} consulted with the professional practitioner psychiatrist to annnotate the dataset and segregated into several categories. \cite{gaur2019knowledge} contains gold standard dataset of 500 redditors prepared from 2181 redditors post and validated by four practicing psychiatrists following the guidelines outlined in Columbian Suicide Severity Rating Scale (C-SSRS). Document lengths in various categories are depicted in figure~\ref{reddit_cssrs_doc_len_freq}.
 
+\begin{figure}[H]
+\centering
+\includegraphics[width=\textwidth]{document_size_length_in_each_class.png}
+\caption{Document size length in each class of suicidal category and samples frequency}
+\label{reddit_cssrs_doc_len_freq}
+\end{figure}
+
+Text Data augmentation is applied here to increase the dataset size balancing samples of each class and synthetic dataset is prepared. Moreover, some standalone features are also provided belongs to specific category of suicide. Categorical features are mixed together shuffled and then chopped into fixed sized tokens and considered as sample sentences for specific category. This process continues until we found desired number of samples. Shuffling happens randomly and all the samples features only sentence and specific feature sentence are combined to prepare train classifier dataset. 
 
 \subsection{Training Dataset}
 In this research we have used dataset from \cite{gaur2019knowledge}. For training classifier in this research 2019's Gaur et. al \cite{gaur2019knowledge} Reddit C-SSRS dataset is used. Compared to the existing four-label classification scheme (no risk, low risk, moderate risk, and high risk), this dataset introduced 5 lavel classification suicide indicator, ideation, behavior, attempt and another extra category incorporating supportive category. Supportive category represents whenever someone shows empathy and condolance for a suicidal post. It is not taken into account in the analysis section since supporting group does not belong to examined specimen individual. Word cloud is showed in figure \ref{redditdist_twitterdist_wordcloud} to depict each category and influence of dominant keywords based on frequency.  
@@ -212,29 +221,49 @@ In this research we have used dataset from \cite{gaur2019knowledge}. For trainin
 \centering
 \begin{subfigure}{0.45\textwidth}
     \includegraphics[width=\textwidth]{indicator_word_cloud.png}
-    \caption{Indicator category word cloud}
+    \caption{Indicator category word high impact words are anxiety, disease, disorder, nervous etc}
     \label{redditdist}
 \end{subfigure}
 \hfill
 \begin{subfigure}{0.45\textwidth}
     \includegraphics[width=\textwidth]{Ideation_word_cloud.png}
-    \caption{Ideation category word cloud}
+    \caption{Ideation category word cloud high impact words are dementia, affective disorder, stress, bipolar personality}
     \label{twitterdist}
 \end{subfigure}      
 \centering
 \begin{subfigure}{0.45\textwidth}
     \includegraphics[width=\textwidth]{Behavior_word_cloud.png}
-    \caption{Behavior category word cloud}
+    \caption{Behavior category word cloud high impact words are self-harm, suicidal, intentional etc.}
     \label{redditdist}
 \end{subfigure}
 \hfill
 \begin{subfigure}{0.45\textwidth}
     \includegraphics[width=\textwidth]{Attempt_word_cloud.png}
-    \caption{Attempt category word cloud}
+    \caption{Attempt category word cloud high impact keywords suicide, attempt, inflicted injury etc.}
     \label{twitterdist}
 \end{subfigure}   
-%\caption{Train Reddit C-SSRS dataset word cloud distribution}
+\caption{Train Reddit C-SSRS dataset word cloud distribution represents that there are overlapping features between Indicator with Ideation and Behavior with Attempt categories}
 \label{redditdist_twitterdist_wordcloud}
+\end{figure}
+
+\subsection{Testing/Validation Dataset} 
+For testing dataset is collected from kaggle. It is an opesource dataset publicly available collected from reddit website by a pushshift API contained suicide and depression category.  This publicly available Reddit datasets in Kaggle Website comprised of 232,074 post annotated for binary classification as suicidal or non-suicidal in \cite{aldhyani2022detecting} for detecting suicidal ideation. The dataset is a collection of posts from the "SuicideWatch" and "depression" subreddits of the Reddit platform. All posts that were made to "SuicideWatch" from Dec 16, 2008(creation) till Jan 2, 2021, were collected while "depression" posts were collected from Jan 1, 2009, to Jan 2, 2021. In this research trained classifier is applied to detect class on this two category. Main objective is to determine the suicide categories (indicator, ideation, behavior, attempt, supportive ) within this dataset. Document length frequency and token distribution is depicted in Figure \ref{redditdist_twitterdist_together}. From the frequency distribution we can see some of the document sizes are very large. Hence, during the training process we chopped the sentences into multiple sentences keeping the label same. 
+
+\begin{figure}[H]
+\centering
+\begin{subfigure}{0.45\textwidth}
+    \includegraphics[width=\textwidth]{reddit_dist.png}
+    \caption{Reddit dataset distribution}
+    \label{redditdist}
+\end{subfigure}
+\hfill
+\begin{subfigure}{0.45\textwidth}
+    \includegraphics[width=\textwidth]{twitterdist.png}
+    \caption{Twitter dataset distribution}
+    \label{twitterdist}
+\end{subfigure}       
+\caption{Train and Test dataset Twitter and Reddit dataset distribution}
+\label{redditdist_twitterdist_together}
 \end{figure}
 
 \subsection{N-gram Analysis}
@@ -277,7 +306,7 @@ First unigram is computed and analyzed then bigram is calculated for both catego
 To explore the impact of special bi-grams on the samples, special bi-gram terms containing samples are filtered from dataset. After that using lebel encoder bigrams are encoded as integers and then chord diagram is generated  depicted in Figure \ref{Bigram_features_exp} to find meaningful relationship within the samples between the bigram features.  
 
 
-\begin{figure}[h!]
+\begin{figure}[H]
 \centering
 \begin{subfigure}{0.8\textwidth}
     \includegraphics[width=\textwidth]{dep_chord.png}
@@ -295,7 +324,26 @@ To explore the impact of special bi-grams on the samples, special bi-gram terms 
 \end{figure}
 
 
-From this two chord diagram interesting sentence can be inferred. Such as: from the depression class ? self centered person is depressed, having suicidal thought, want to go somewhere to live, spend happy moments and so on. For the suicidal class category suicidal attempt thinking people, have mental health issue, they want to share though with high school friends, best friends, friends and family members, having suicidal thoughts and so on.  
+From this two chord diagram interesting sentence can be inferred. 
+
+\begin{table}[h]
+\begin{center}
+\begin{flushleft}
+\caption{Inference from chord diagrams}\label{tab1}%
+\begin{tabular}{|l|p{6cm}|}
+\toprule
+\textbf{Depression} & \textbf{Suicide} \\
+\midrule
+self centered person is depressed & have mental health issue \\
+having suicidal thought & share though with friends (high school friends, Best friends, family members) \\
+want to go somewhere to live & having suicidal thoughts \\
+spend happy moments & Friend family make feel better \\
+\bottomrule
+\end{tabular}
+%\footnotetext{Inference from chord diagrams}
+\end{flushleft}
+\end{center}
+\end{table}
 
 Tri-grams or above did not reveals much meaning information, mostly does convey some meaningful information and therefore excluded for further experimental consideration. 
 
@@ -317,34 +365,9 @@ Hence, visualizing the result we can determine the suicidal tendency within depr
 Social media dataset are mostly Text data which needs data pre-processing, cleaning, feature extraction and data mining related NLP tasks. NLP based text data contains noises such as: unnecessary quotes, special characters, punctuation etc. Moreover, morphological analysis is needed to retrieve root words followed by stemming, lemmatization. Then, sentences are divided into equal-length fragments, and null word padding is applied as needed. Words within a phrase are now referred to as tokens or features, and the dataset is shown as a corpus. Special features/tokens are further preprocessed and filtered using text data feature extraction tools and methods. Features are passed through a process in which features are converted to corresponding IDs and sentences which contains a series of IDs are represented a vector. The embedding is another term that is frequently used in relation to vector text analysis. Various Vectorization methods are present. Traditional vectorization method provide weights to terms/words mainly based on frequency of words within the sentence and documents, rather than its importance and contextual meaning. Also, how does a particular word or term create impact on the neighboring words is not taken into consideration, since these models does not have any prior knowledge of any words. Hence, various neural network based language models are proposed which are pretrained on massive amount of dataset. These models mainly carries weight which represents word to word relationships and most cases can provide contextual meaning of given sentence based on pretrained dataset knowledge. Deep learning models recently showed remarkable achievements in this case representing corresponding knowledge.
 
 \section{Feature exploration}
-\begin{figure}[h!]
-\centering
-\includegraphics[width=\textwidth]{document_size_length_in_each_class.png}
-\caption{Document size length in each class of suicidal category and samples frequency}
-\label{reddit_cssrs_doc_len_freq}
-\end{figure}
 
-Here, SMOTE technique is applied to balancing this dataset. Since some specific features are already provide for each category. Categorical features are mixed together shuffled and then chopped into fixed sized tokens and considered as sample sentences for specific category. This process continues until we found desired number of samples. Shuffling happens randomly and all the samples features only sentence and specific feature sentence are piled together to train classifier. 
 
-\subsection{Testing/Validation Dataset} 
-For testing dataset is collected from kaggle. It is an opesource dataset publicly available collected from reddit website by a pushshift API contained suicide and depression category.  This publicly available Reddit datasets in Kaggle Website comprised of 232,074 post annotated for binary classification as suicidal or non-suicidal in \cite{aldhyani2022detecting} for detecting suicidal ideation. The dataset is a collection of posts from the "SuicideWatch" and "depression" subreddits of the Reddit platform. All posts that were made to "SuicideWatch" from Dec 16, 2008(creation) till Jan 2, 2021, were collected while "depression" posts were collected from Jan 1, 2009, to Jan 2, 2021. In this research trained classifier is applied to detect class on this two category. Main objective is to determine the suicide categories (indicator, ideation, behavior, attempt, supportive ) within this dataset. Document length frequency and token distribution is depicted in Figure \ref{redditdist}. From the frequency distribution we can see some of the document sizes are very large. Hence, during the training process we chopped the sentences into multiple sentences keeping the label same. 
 
-\begin{figure}[h!]
-\centering
-\begin{subfigure}{0.45\textwidth}
-    \includegraphics[width=\textwidth]{reddit_dist.png}
-    \caption{Reddit dataset distribution}
-    \label{redditdist}
-\end{subfigure}
-\hfill
-\begin{subfigure}{0.45\textwidth}
-    \includegraphics[width=\textwidth]{twitterdist.png}
-    \caption{Twitter dataset distribution}
-    \label{twitterdist}
-\end{subfigure}       
-\caption{Train and Test dataset Twitter and Reddit dataset distribution}
-\label{redditdist_twitterdist}
-\end{figure}
 
 
 \section{Exploratory analysis using Topic Modeling}
@@ -414,66 +437,121 @@ in which \(similarity\left( w_{i},w_{j} \right)\) represent the pairwise similar
 
 \subsubsection{Relative importance vs term frequency}
 Relative importance is measured using LDA model. Then depicted in figure \ref{}. 
-\begin{figure}[h!]
-\centering
-\begin{subfigure}{0.45\textwidth}
+%\begin{figure}[h!]
+%\centering
+%\begin{subfigure}{0.45\textwidth}
+%    \includegraphics[width=\textwidth]{indicator_weight_relative_imp.png}
+%    \caption{Indicator category word cloud}
+%    \label{redditdist}
+%\end{subfigure}
+%\hfill
+%\begin{subfigure}{0.45\textwidth}
+%    \includegraphics[width=\textwidth]{ideation_weight_relative_imp.png}
+%    \caption{Ideation category word cloud}
+%    \label{twitterdist}
+%\end{subfigure}      
+%\centering
+%\begin{subfigure}{0.45\textwidth}
+%    \includegraphics[width=\textwidth]{behavior_weight_relative_imp.png}
+%    \caption{Behavior category word cloud}
+%    \label{redditdist}
+%\end{subfigure}
+%\hfill
+%\begin{subfigure}{0.45\textwidth}
+%    \includegraphics[width=\textwidth]{attempt_weight_relative_imp.png}
+%    \caption{Attempt category word cloud}
+%    \label{twitterdist}
+%\end{subfigure}   
+%%\caption{Train Reddit C-SSRS dataset word cloud distribution}
+%\label{redditdist_twitterdist}
+%\end{figure}
+
+
+\begin{figure}[H]
     \includegraphics[width=\textwidth]{indicator_weight_relative_imp.png}
-    \caption{Indicator category word cloud}
+    \caption{Indicator category frequency vs LDA based relative Importance}
     \label{redditdist}
-\end{subfigure}
-\hfill
-\begin{subfigure}{0.45\textwidth}
-    \includegraphics[width=\textwidth]{ideation_weight_relative_imp.png}
-    \caption{Ideation category word cloud}
-    \label{twitterdist}
-\end{subfigure}      
-\centering
-\begin{subfigure}{0.45\textwidth}
-    \includegraphics[width=\textwidth]{behavior_weight_relative_imp.png}
-    \caption{Behavior category word cloud}
-    \label{redditdist}
-\end{subfigure}
-\hfill
-\begin{subfigure}{0.45\textwidth}
-    \includegraphics[width=\textwidth]{attempt_weight_relative_imp.png}
-    \caption{Attempt category word cloud}
-    \label{twitterdist}
-\end{subfigure}   
-%\caption{Train Reddit C-SSRS dataset word cloud distribution}
-\label{redditdist_twitterdist}
 \end{figure}
+
+
+\begin{figure}[H]
+    \includegraphics[width=\textwidth]{ideation_weight_relative_imp.png}
+    \caption{Ideation category frequency vs LDA based relative Importance}
+    \label{twitterdist}
+\end{figure}  
+
+
+\begin{figure}[H]
+    \includegraphics[width=\textwidth]{behavior_weight_relative_imp.png}
+    \caption{Behavior category frequency vs LDA based relative Importance}
+    \label{redditdist}
+\end{figure}
+
+
+\hfill
+\begin{figure}[H]
+    \includegraphics[width=\textwidth]{attempt_weight_relative_imp.png}
+    \caption{Attempt category frequency vs LDA based relative Importance}
+    \label{twitterdist}
+\end{figure}   
 
 
 \subsubsection{LDA based feature exploration}
 LDA is a versatile tool to investigate various keywords in subtle topic within context. LDA driven results are included in this study to observe the latent topic and terms. 
 
+%\begin{figure}[h!]
+%\centering
+%\begin{subfigure}{0.45\textwidth}
+%    \includegraphics[width=\textwidth]{indicator_pyldvis.png}
+%%    \caption{Indicator category word cloud}
+%    \label{redditdist}
+%\end{subfigure}
+%\hfill
+%\begin{subfigure}{0.45\textwidth}
+%    \includegraphics[width=\textwidth]{Behavior_pyldvis.png}
+%%    \caption{Behavior category word cloud}
+%    \label{twitterdist}
+%\end{subfigure}      
+%\centering
+%\begin{subfigure}{0.45\textwidth}
+%    \includegraphics[width=\textwidth]{Ideation_pyldvis.png}
+%%    \caption{Ideation category word cloud}
+%    \label{redditdist}
+%\end{subfigure}
+%\hfill
+%\begin{subfigure}{0.45\textwidth}
+%    \includegraphics[width=\textwidth]{Attempt_pyldvis.png}
+%%    \caption{Attempt category word cloud}
+%    \label{twitterdist}
+%\end{subfigure}   
+%\caption{Inter distance topic similarities}
+%\label{redditdist_twitterdist}
+%\end{figure}
+
+
 \begin{figure}[h!]
 \centering
-\begin{subfigure}{0.45\textwidth}
     \includegraphics[width=\textwidth]{indicator_pyldvis.png}
-%    \caption{Indicator category word cloud}
+    \caption{Indicator categories LDA's salient terms and topic visualization}
     \label{redditdist}
-\end{subfigure}
-\hfill
-\begin{subfigure}{0.45\textwidth}
-    \includegraphics[width=\textwidth]{Behavior_pyldvis.png}
-%    \caption{Behavior category word cloud}
-    \label{twitterdist}
-\end{subfigure}      
-\centering
-\begin{subfigure}{0.45\textwidth}
+\end{figure}
+
+\begin{figure}[h!]
     \includegraphics[width=\textwidth]{Ideation_pyldvis.png}
-%    \caption{Ideation category word cloud}
+    \caption{Ideation categories LDA's salient terms and topic visualization}
     \label{redditdist}
-\end{subfigure}
-\hfill
-\begin{subfigure}{0.45\textwidth}
-    \includegraphics[width=\textwidth]{Attempt_pyldvis.png}
-%    \caption{Attempt category word cloud}
+\end{figure}
+
+\begin{figure}[h!]
+    \includegraphics[width=\textwidth]{Behavior_pyldvis.png}
+    \caption{Behavior categories LDA's salient terms and topic visualization}
     \label{twitterdist}
-\end{subfigure}   
-\caption{Inter distance topic similarities}
-\label{redditdist_twitterdist}
+\end{figure}
+
+\begin{figure}[h!]
+    \includegraphics[width=\textwidth]{Attempt_pyldvis.png}
+    \caption{Attempt categories LDA's salient terms and topic visualization}
+    \label{twitterdist}
 \end{figure}
 
 
