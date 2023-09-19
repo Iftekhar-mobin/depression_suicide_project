@@ -195,20 +195,12 @@ SSI, BDI, HEM-D, C-SSRS these standards scale have been successfully validated a
 
 \section{Dataset}
 For psychological research apart from clinical domain, Text based samples are mostly collected from Twitter, Reddit \cite{tadesse2019detection}, facebook, weibo etc websites donated by various institutions or researchers. Several researchers contributed publicly available dataset \cite{rissola2020dataset}. In 2021 the Computational Linguistics and Clinical Psychology CLPsych 2021 workshop organized a Task challenge for detecting suicidal risk \cite{macavaney2021community}. It facilitated participants providing sensitive authentic dataset on the problem of predicting suicide risk from social media Twitter. The dataset for the task includes information who attempted suicide or succeeded along with some control who have not. After collecting dataset from social sites, proper labeling is crucial for training machine learning classifier models. In\cite{lopez2022exploring} research study used Twitter post collection API for collecting Tweets and collected Tweets of size 2509 were obtained, of which 216 post were found relevant by 3 Expert psychologists evaluators. Furthermore, using LIWC, dictionary of the Linguistic Inquiry and Word Count \cite{pennebaker2001linguistic}, which is a linguistic feature analysis software that calculates the degree of positive and negative emotions across a wide spectrum of texts, Tweets were evaluated and results are statistically presented. 
+
 \subsection{Gold standard dataset}
 This research study incorporates the gold standard dataset validated and prepared by professionals published in \cite{gaur2019knowledge}. 
 In 2018 shing et. al \cite{shing2018expert}, and in 2019 Gaur et. al \cite{gaur2019knowledge} consulted with the professional practitioner psychiatrist to annnotate the dataset and segregated into several categories. \cite{gaur2019knowledge} contains gold standard dataset of 500 redditors prepared from 2181 redditors post and validated by four practicing psychiatrists following the guidelines outlined in Columbian Suicide Severity Rating Scale (C-SSRS). Document samples based on lengths in various categories are depicted in figure~\ref{reddit_cssrs_doc_len_freq}.
 
-\begin{figure}[H]
-\centering
-\includegraphics[width=\textwidth]{document_size_length_in_each_class.png}
-\caption{Document size length in each class of suicidal category and samples frequency}
-\label{reddit_cssrs_doc_len_freq}
-\end{figure}
-
-Text Data augmentation is applied here to increase the dataset size balancing samples of each class and synthetic dataset is prepared. Moreover, some standalone features are also provided belongs to specific category of suicide. Categorical features are mixed together shuffled and then chopped into fixed sized tokens and considered as sample sentences for specific category. This process continues until we found desired number of samples. Shuffling happens randomly and all the samples features only sentence and specific feature sentence are combined to prepare train classifier dataset. 
-
-\subsection{Training Dataset}
+\subsubsection{Training Dataset}
 In this research we have used dataset from \cite{gaur2019knowledge}. For training classifier in this research 2019's Gaur et. al \cite{gaur2019knowledge} Reddit C-SSRS dataset is used. Compared to the existing four-label classification scheme (no risk, low risk, moderate risk, and high risk), this dataset introduced 5 lavel classification of suicide 
 
 \begin{enumerate}[label=(\roman*)]
@@ -220,23 +212,37 @@ In this research we have used dataset from \cite{gaur2019knowledge}. For trainin
 \end{enumerate}
 Supportive category is not taken into account in the analysis section since supporting group does not belong to examined specimen individual. 
 
-\subsection{Testing/Validation Dataset} 
+
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=\textwidth]{document_size_length_in_each_class.png}
+\caption{Document size length in each class of suicidal category and samples frequency}
+\label{reddit_cssrs_doc_len_freq}
+\end{figure}
+
+Text Data augmentation \cite{bayer2022survey} is applied here to increase the dataset size balancing samples of each class and synthetic dataset is prepared. Moreover, some standalone features are also provided belongs to specific category of suicide. Categorical features are mixed together shuffled and then chopped into fixed sized tokens and considered as sample sentences for specific category. This process continues until we found desired number of samples. Shuffling happens randomly and all the samples features only sentence and specific feature sentence are combined to prepare train classifier dataset. 
+
+
+
+\subsubsection{Testing/Validation Dataset} 
 For testing dataset is collected from kaggle. It is an opesource dataset publicly available collected from reddit website by a pushshift API contained suicide and depression category.  This publicly available Reddit datasets in Kaggle Website comprised of 232,074 post annotated for binary classification as suicidal or non-suicidal in \cite{aldhyani2022detecting} for detecting suicidal ideation. The dataset is a collection of posts from the "SuicideWatch" and "depression" subreddits of the Reddit platform. All posts that were made to "SuicideWatch" from Dec 16, 2008(creation) till Jan 2, 2021, were collected while "depression" posts were collected from Jan 1, 2009, to Jan 2, 2021. In this research trained classifier is applied to detect class on this two category. Main objective is to determine the suicide categories (indicator, ideation, behavior, attempt, supportive ) within this dataset. 
 
 \section{Methodology}\label{sec2}
 In several research papers reddit dataset has become a good estimator to determine depression and suicide. Reddit dataset is used as a test dataset for classifiers for this research because of its availability and open access. Here classifier is trained with the suicidal intensity determinant Twitter's dataset which is used to determine the depression intensity within a suicidal post. It  provides the suicidal risk classification dataset and has specific features belongs to specific category of suicidal risk. As test dataset for classification result Reddit's suicide vs depression dataset are chosen. Trained classifier, detects the suicidal risk within reddit post which contains depression vs suicide category. 
 
-%\begin{figure}[h!]
-%\centering
-%\includegraphics[width=0.8\textwidth]{research diagram.jpeg}
-%\includegraphics[width=0.8\textwidth]{res_diagram.jpeg}
-%\caption{Research Methodology overview}
-%\label{fig:res_diagram}
-%\end{figure}
+\begin{figure}[h!]
+\centering
+\includegraphics[width=0.8\textwidth]{res_diagram.jpeg}
+\caption{Research Methodology overview}
+\label{fig:res_diagram}
+\end{figure}
 
 In this research dataset is pro-processed using the most common techniques of NLP mentioned in the section \ref{data_preprocessing}. We cleaned the dataset by removing unwanted characters, symbols and stop words. Then further pre-processing is conducted which are followed for standard data cleaning process for NLP task. Pre-processed dataset is converted to vector. Various vectorizer are used to convert the corpus into corresponding vector. Text is converted to meaningful feature vector then classifier is trained to determine depression degree within a suicidal post. Various vectorization methods are applied to get best possible outcomes. Then machine learning classifier is applied to estimate the class category. From the observed result statistical analysis explained the degree of depression within a suicidal post. In our analysis we used different classifiers to determine how suicide intensity is showed in depression vs suicide category dataset. Thereby we can infer degree of suicidal tendency within depression person's post. 
 
 Hence, visualizing the result we can determine the suicidal tendency within depression post. Also, N-gram based analysis is conducted and frequency of Terms and connections of words or phrases are analyzed in this research scope. More often topic modeling clustering is used to determine latent topic and understand latent text network. From the network various facts can be revealed related to suicide and depression. This whole process is depicted in Figure \ref{fig:res_diagram}
+
+
 
 \subsection{Data Processing and Models}
 \subsubsection{Data Pre-processing}\label{data_preprocessing}
@@ -252,7 +258,7 @@ Where $w_{d,n}$ the $n_{th}$ word in document $d$, $z_{d,n}$ the topic assigned 
 distribution representing the document-topic distribution, $P(z_{d,n}\|\theta_d)$ is the word topic assignment for the $n_{th}$ word in document $d$, $P(w_{d,n}\|z_{d,n},\beta)$ is the distribution representing the observed word given a topic. We have chosen LDA for baseline statistical topic modeling tool. However, how many topics are ideal it is needed to determine and also topic modeling quality needs to measure.
 
 \subsubsection{Topic models comparative analysis}
-While some variations of LDA, Mallet LDA is considered for large corpus processing and analysis \cite{vayansky2020review, abdelrazek2022topic, Comparison_Topic_Modeling_Algorithms}. It focuses on scalability, If large corpus needs to analyze, Mallet LDA might be more suitable. LDA in general can still be efficiently applied to moderately sized corpora. Analyzing topics within the context of metadata, STM could be a better fit. Hierarchical Dirichlet Process (HDP) can be useful when we cannot guess the number of topics in advance. In \cite{Comparison_Topic_Modeling_Algorithms} LSI, NMF and LDA are compared in terms of coherence and similarity measures for social media dataset and in their analysis NMF is observed most effective measures. However, as a baseline model LDA is often considered one of the most prominent choices. In this study Textbook corpus is divided into lessons which is a mixture of topics and using LDA expecting to determine which word in the lesson belong to Lesson\textquotesingle s topics. LDA produces interpretative results for exploratory topic analysis. The identified topics are represented as distributions over words, making it easy to assign meaningful labels to topics. Provided by most of the libraries and tools, making it easy to implement and can be integrated into existing workflows. Hence, LDA serves as a solid baseline for topic modeling tasks.  
+While some variations of LDA, Mallet LDA is considered for large corpus processing and analysis \cite{vayansky2020review, abdelrazek2022topic, Comparison_Topic_Modeling_Algorithms}. It focuses on scalability, If large corpus needs to analyze, Mallet LDA might be more suitable. LDA in general can still be efficiently applied to moderately sized corpora. Analyzing topics within the context of metadata, STM could be a better fit. Hierarchical Dirichlet Process (HDP) can be useful when we cannot guess the number of topics in advance. In \cite{Comparison_Topic_Modeling_Algorithms} LSI, NMF and LDA are compared in terms of coherence and similarity measures for social media dataset and in their analysis NMF is observed most effective measures. However, as a baseline model LDA is often considered one of the most prominent choices. In this study Reddit corpus is divided into lessons which is a mixture of topics and using LDA expecting to determine which word in the suicide category belong to other category. LDA produces interpretative results for exploratory topic analysis. The identified topics are represented as distributions over words, making it easy to assign meaningful labels to topics. Provided by most of the libraries and tools, making it easy to implement and can be integrated into existing workflows. Hence, LDA serves as a solid baseline for topic modeling tasks.  
 
 \subsubsection{Optimal Topics with Coherence}  
 Coherence score measure how coherent or interpret the words in that topic and estimates number of topic clusters \cite{mimno2011optimizing}. Coherence score assess the quality of the topics produced by LDA and ensures that the topics generated are statistically significant. Coherence \(C_{topic}\) can be expressed as follows  
@@ -303,7 +309,11 @@ Word cloud is showed in figure \ref{redditdist_twitterdist_wordcloud} to depict 
 \label{redditdist_twitterdist_wordcloud}
 \end{figure}
 
-Document length frequency and token distribution is depicted in Figure \ref{redditdist_twitterdist_together}. From the frequency distribution we can see some of the document sizes are very large. Hence, during the training process we chopped the sentences into multiple sentences keeping the label same. 
+
+
+\subsection{N-gram Analysis}
+\subsubsection{Uni-gram}
+Dataset is split into separate tokens after preprocessing and uni-gram tokens are generated. Document length frequency and token distribution is depicted in Figure \ref{redditdist_twitterdist_together}. From the frequency distribution we can see some of the document sizes are very large. Hence, during the training process we chopped the sentences of tokens into multiple sentences of tokens keeping the label same. 
 
 \begin{figure}[H]
 \centering
@@ -322,9 +332,8 @@ Document length frequency and token distribution is depicted in Figure \ref{redd
 \label{redditdist_twitterdist_together}
 \end{figure}
 
-\subsection{N-gram Analysis}
-\subsubsection{Uni-gram}
-Dataset is split into separate tokens after preprocessing and uni-gram generated. Based on frequency of words wordcloud is generated from these unigrams. Frequency based comparison between two categories is conducted for depression and suicide for Test dataset in Figure \ref{features_vis_pro_exp}. Main objective was to get top ranked words from Depression and Suicide corpus. After experiments we have seen There are similarities between the top ranked words those are occurring frequently. They tend to use slang and abusive terms compared to suicidal attempt thinking people. Rather suicidal depressed people want to share their thoughts with others using longer post. However, it does not reveals any clues in terms of hypothetical relationships between the two category. It is difficult find pattern in which we can determine the depression and suicidal thought. So far we found some pattern 
+
+Based on frequency of words wordcloud is generated from these unigrams. Frequency based comparison between two categories is conducted for depression and suicide for Test dataset in Figure \ref{features_vis_pro_exp}. Main objective was to get top ranked words from Depression and Suicide corpus. After experiments we have seen There are similarities between the top ranked words those are occurring frequently. They tend to use slang and abusive terms compared to suicidal attempt thinking people. Rather suicidal depressed people want to share their thoughts with others using longer post. However, it does not reveals any clues in terms of hypothetical relationships between the two category. It is difficult find pattern in which we can determine the depression and suicidal thought. So far we found some pattern 
 \begin{enumerate}
 \item short statements likely to be more depression category
 \item Depressive statements tend to have slang
