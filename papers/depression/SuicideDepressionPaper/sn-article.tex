@@ -218,32 +218,38 @@ Standalone categorical features of suicide categories are provided in \cite{gaur
 For testing dataset is collected from kaggle. It is an opesource dataset publicly available collected from reddit website by a pushshift API contained suicide and depression category.  This publicly available Reddit datasets in Kaggle Website comprised of 232,074 post annotated for binary classification as suicidal or non-suicidal in \cite{aldhyani2022detecting} for detecting suicidal ideation. The dataset is a collection of posts from the \enquote{SuicideWatch} and \enquote{depression} subreddits of the Reddit platform. All posts that were made to \enquote{SuicideWatch} from Dec 16, 2008(creation) till Jan 2, 2021, were collected while \enquote{depression} posts were collected from Jan 1, 2009, to Jan 2, 2021. In this research trained classifier is applied to detect class on this two category. Main objective is to determine the suicide categories (indicator, ideation, behavior, attempt, supportive ) within this dataset. 
 
 \section{Methodology}\label{sec2}
-In this research supervised and unsupervised both type of data modeling is conducted. Unsupervised modeling explores the key features, depict coherent terms related to specific suicide category. Supervised model is applied to train machine learning classifier to determine suicidal severity categories. Trained classifier, detects the suicidal risk within given post which contains depression post. Thereby analyzing result statistically suicidal tendency significance in depression post can be observed. Exploratory analysis started with dataset pre-processing. Most common techniques of NLP for data pre-processing is applied mentioned in the section \ref{data_preprocessing}. 
+In this research supervised and unsupervised both type of data modeling is conducted. Unsupervised LDA modeling explores the key features, depict coherent terms related to specific suicide category. Supervised model is applied to train machine learning classifier to determine suicidal severity categories. Trained classifier, detects the suicidal risk within given post which contains depression post. Thereby analyzing result statistically suicidal tendency significance in depression post can be observed. This whole process is depicted in Figure \ref{fig:res_diagram}. Exploratory analysis started with dataset pre-processing. Most common techniques of NLP for data pre-processing is applied mentioned in the section \ref{data_preprocessing}. 
 
-\subsubsection{Data Pre-processing}\label{data_preprocessing}
+\subsection{Data Pre-processing}\label{data_preprocessing}
+Social media dataset are Text data which needs data pre-processing, cleaning, feature extraction and data mining related NLP tasks.
 \begin{enumerate}[label=(\roman*)]
-\item Social media dataset are Text data which needs data pre-processing, cleaning, feature extraction and data mining related NLP tasks.
-\begin{enumerate}
 \item Dataset noises such as: unnecessary quotes, special characters, punctuation etc and stop words are removed. Then further pre-processing is conducted which are followed for standard data cleaning process for NLP task. 
 \item Morphological analysis is conducted to retrieve root words, process involves stemming, lemmatization etc.
 \item Sentences are divided into equal-length fragments, and null word padding is applied to keep sample documents length same. Thereby corpus is prepared for further analysis.
-\item Pre-processed dataset corpus is converted to vector using cutting edge vectorizers. Resulting vector most often called embedding vector. 
-\end{enumerate}
-\item Text is converted to meaningful feature vector then classifier is trained to determine depression degree within a suicidal post. Various vectorization methods are applied to get best possible outcomes. Features are passed through a process in which features are converted to corresponding IDs and sentences which contains a series of IDs are represented a vector. The embedding is another term that is frequently used in relation to vector text analysis. Various Vectorization methods are present. Traditional vectorization method provide weights to terms/words mainly based on frequency of words within the sentence and documents, rather than its importance and contextual meaning. Also, how does a particular word or term create impact on the neighboring words is not taken into consideration, since these models does not have any prior knowledge of any words. Hence, various neural network based language models are proposed which are pretrained on massive amount of dataset. These models mainly carries weight which represents word to word relationships and most cases can provide contextual meaning of given sentence based on pretrained dataset knowledge. Deep learning models recently showed remarkable achievements in this case representing corresponding knowledge.
-\item Then machine learning classifier is applied to estimate the class category. From the observed result statistical analysis explained the degree of depression within a suicidal post. In our analysis we used different classifiers to determine how suicide intensity is showed in depression vs suicide category dataset. Thereby we can infer degree of suicidal tendency within depression person's post. 
+\item Features are passed through a process in which features are converted to corresponding IDs and sentences which contain a series of IDs represented as vector. The embedding is another term that is frequently used in relation to vector text analysis. 
 \end{enumerate}
 
+\subsection{Unsupervised modeling}
+Unsupervised modeling of text data refers to the techniques to analyze and extract meaningful patterns or structures from text without using labeled data. Hence, without target labels from the pre-processed dataset tokenized sample data is obtained. 
+\subsubsection{N-gram} 
+N-grams are generated (unigrams, bigrams, trigrams, etc.). To observe the most common n-grams. Word Clouds are prepared where the size of each n-gram is proportional to its frequency, gives a visually appealing representation of the most frequent n-grams, helps identify patterns of co-occurring n-grams.
 
-
+\subsubsection{Latent Dirichlet Allocation (LDA)}
+\label{lda_mdel}
+LDA topic modeling is used in this research scope to uncover latent topics from the collection of documents corpus. LDA model \cite{jelodar_latent_2019, gupta_pan_lda_2021, pichardo_lagunas_svd_lda_2015, selvi_classification_2019} considers documents are mixed of topic, and each topic is a distribution over words. The objective of using LDA is to explore the hidden topic and the topic-word distributions that most effectively describe the sample documents. An expression for the joint distribution of the LDA model is described below:  
+\begin{equation}
+P(\theta_d,z,w\|\alpha,\beta)=P(\theta_d\|\alpha)\prod^N_{n=1}P(z_{d,n}\|\theta_d)P(w_{d,n}\|z_{d,n},\beta)
+\end{equation}
+Where $w_{d,n}$ the $n_{th}$ word in document $d$, $z_{d,n}$ the topic assigned to the $n_{th}$ word in document $d$, $\alpha,\beta$ are the Dirichlet LDA model parameters. controls per-document topic distribution, and per topic word distribution. $\theta_d$ represent the topic distribution. $P(\theta_d \| \alpha)$ Dirichlet 
+distribution representing the document-topic distribution, $P(z_{d,n}\|\theta_d)$ is the word topic assignment for the $n_{th}$ word in document $d$, $P(w_{d,n}\|z_{d,n},\beta)$ is the distribution representing the observed word given a topic. We have chosen LDA for baseline statistical topic modeling tool. However, how many topics are ideal it is needed to determine and also topic modeling quality needs to measure.
+\subsection{Supervised Modeling}
+Pre-processed dataset converted to vector using cutting edge vectorizers. Feature vector is feed into machine learning classifier which is trained to determine suicide intensity label in depression post. Various vectorization methods are present \cite{aldhyani2022detecting, wang2020depression, shetty2020predicting}. 
 \begin{figure}[h!]
 \centering
 \includegraphics[width=0.8\textwidth]{res_diagram.jpeg}
 \caption{Research Methodology overview}
 \label{fig:res_diagram}
 \end{figure}
-
-
-Hence, visualizing the result we can determine the suicidal tendency within depression post. Also, N-gram based analysis is conducted and frequency of Terms and connections of words or phrases are analyzed in this research scope. More often topic modeling clustering is used to determine latent topic and understand latent text network. From the network various facts can be revealed related to suicide and depression. This whole process is depicted in Figure \ref{fig:res_diagram}
 
 \section{Feature exploration}
 Word cloud is showed in figure \ref{redditdist_twitterdist_wordcloud} to depict each category and influence of dominant keywords based on frequency.  
@@ -386,19 +392,11 @@ Tri-grams or above did not reveals much meaning information, mostly does convey 
 \section{Exploratory analysis using Topic Modeling}
  Different techniques have been developed to perform topic modeling in the unsupervised topic modeling domain of Natural Language Processing (NLP), having their own strengths and limitations \cite{vayansky2020review, abdelrazek2022topic, yi2009comparative}. Apart from LDA, Mallet LDA, Structural Topic Model (STM), Hierarchical Dirichlet Process (HDP), Non-Negative Matrix Factorization (NMF), Latent Semantic Analysis (LSA) etc are also prevailing and can be considered for comparative research study.
 
-\subsection{Latent Dirichlet Allocation (LDA)}
-\label{lda_mdel}
-LDA model \cite{jelodar_latent_2019, gupta_pan_lda_2021, pichardo_lagunas_svd_lda_2015, selvi_classification_2019} considers documents are mixes of topic, and each topic is a distribution over words. The objective is to derive the hidden topic assignments and the topic-word distributions that most effectively describe the observed documents. The goal of LDA is to uncover these latent topics from a collection of documents without needing any prior labeling or categorization of the content. An expression for the joint distribution of the LDA model is described below:  
-\begin{equation}
-P(\theta_d,z,w\|\alpha,\beta)=P(\theta_d\|\alpha)\prod^N_{n=1}P(z_{d,n}\|\theta_d)P(w_{d,n}\|z_{d,n},\beta)
-\end{equation}
-Where $w_{d,n}$ the $n_{th}$ word in document $d$, $z_{d,n}$ the topic assigned to the $n_{th}$ word in document $d$, $\alpha,\beta$ are the Dirichlet LDA model parameters. controls per-document topic distribution, and per topic word distribution. $\theta_d$ represent the topic distribution. $P(\theta_d \| \alpha)$ Dirichlet 
-distribution representing the document-topic distribution, $P(z_{d,n}\|\theta_d)$ is the word topic assignment for the $n_{th}$ word in document $d$, $P(w_{d,n}\|z_{d,n},\beta)$ is the distribution representing the observed word given a topic. We have chosen LDA for baseline statistical topic modeling tool. However, how many topics are ideal it is needed to determine and also topic modeling quality needs to measure.
 
 \subsubsection{Topic models comparative analysis}
 While some variations of LDA, Mallet LDA is considered for large corpus processing and analysis \cite{vayansky2020review, abdelrazek2022topic, Comparison_Topic_Modeling_Algorithms}. It focuses on scalability, If large corpus needs to analyze, Mallet LDA might be more suitable. LDA in general can still be efficiently applied to moderately sized corpora. Analyzing topics within the context of metadata, STM could be a better fit. Hierarchical Dirichlet Process (HDP) can be useful when we cannot guess the number of topics in advance. In \cite{Comparison_Topic_Modeling_Algorithms} LSI, NMF and LDA are compared in terms of coherence and similarity measures for social media dataset and in their analysis NMF is observed most effective measures. However, as a baseline model LDA is often considered one of the most prominent choices. In this study Reddit corpus is divided into lessons which is a mixture of topics and using LDA expecting to determine which word in the suicide category belong to other category. LDA produces interpretative results for exploratory topic analysis. The identified topics are represented as distributions over words, making it easy to assign meaningful labels to topics. Provided by most of the libraries and tools, making it easy to implement and can be integrated into existing workflows. Hence, LDA serves as a solid baseline for topic modeling tasks.  
 
-\subsubsection{Optimal Topics with Coherence}  
+\subsubsection{LDA model coherence to determine optimal topic}
 Coherence score measure how coherent or interpret the words in that topic and estimates number of topic clusters \cite{mimno2011optimizing}. Coherence score assess the quality of the topics produced by LDA and ensures that the topics generated are statistically significant. Coherence \(C_{topic}\) can be expressed as follows  
 \begin{equation}
 C_{topic}=\sum^N_{i=1} \frac{1}{N(N-1)}\sum^i_{j=1} PMI(w_i,w_j)
@@ -414,7 +412,7 @@ where \(P\left( w_{i},w_{j} \right)\) is joint probability of occurrence of word
 \end{equation}
 in which \(similarity\left( w_{i},w_{j} \right)\) represent the pairwise similarity between terms based on \(PMI\left( w_{i},w_{j} \right)\) scores. \(c_{v}\) provides a positive coherence score. Higher coherence values (higher than 0.5) indicate that the topics are moderately coherent and representative of meaningful themes within the text data.
 
-\subsubsection{LDA model coherence to determine optimal topic}
+
 \begin{figure}[h!]
 \centering
 \begin{subfigure}{0.45\textwidth}
@@ -480,36 +478,6 @@ Relative importance is measured using LDA model. Then depicted in figure \ref{}.
 \subsubsection{LDA based feature exploration}
 LDA is a versatile tool to investigate various keywords in subtle topic within context. LDA driven results are included in this study to observe the latent topic and terms. 
 
-%\begin{figure}[h!]
-%\centering
-%\begin{subfigure}{0.45\textwidth}
-%    \includegraphics[width=\textwidth]{indicator_pyldvis.png}
-%%    \caption{Indicator category word cloud}
-%    \label{redditdist}
-%\end{subfigure}
-%\hfill
-%\begin{subfigure}{0.45\textwidth}
-%    \includegraphics[width=\textwidth]{Behavior_pyldvis.png}
-%%    \caption{Behavior category word cloud}
-%    \label{twitterdist}
-%\end{subfigure}      
-%\centering
-%\begin{subfigure}{0.45\textwidth}
-%    \includegraphics[width=\textwidth]{Ideation_pyldvis.png}
-%%    \caption{Ideation category word cloud}
-%    \label{redditdist}
-%\end{subfigure}
-%\hfill
-%\begin{subfigure}{0.45\textwidth}
-%    \includegraphics[width=\textwidth]{Attempt_pyldvis.png}
-%%    \caption{Attempt category word cloud}
-%    \label{twitterdist}
-%\end{subfigure}   
-%\caption{Inter distance topic similarities}
-%\label{redditdist_twitterdist}
-%\end{figure}
-
-
 \begin{figure}[h!]
 \centering
     \includegraphics[width=\textwidth]{indicator_pyldvis.png}
@@ -562,8 +530,7 @@ LDA is a versatile tool to investigate various keywords in subtle topic within c
 \subsection{Classification}
 Machine learning and Deep Learning models are particularly used for Text classification and ML for feature selection or extraction in several studies \cite{castillo2020suicide, chancellor2020methods, zhang2022natural}. These extensive reviews reveal Deep learning methods receive more attention and perform better than traditional machine learning methods whereas in some cases when extracted or filtered features are fit into training process models are able to perform better. NLP techniques are applied for the annotated dataset collected from Twitter, Reddit, Facebook, instagram, Weibo \cite{wang2020depression} etc. After that various deep learning and machine learning models are trained for classification of suicide and depression. Then trained models are applied to determine the correct class of given text. \cite{malhotra2022deep} Provided a through investigation about passed research techniques, features, datasets, and performance metrics \cite{zhang2022natural, chancellor2020methods}. 
 
-\subsubsection{Data Learning Models}
-Among Several Deep Learning approaches most successful NLP classifier for segregating Depression and suicidal task are CNN, LSTM, GRU, XLNET, BERT, Variants of BERT RoBERTa and variants of CNN such as: CNN-BiLSTM etc \cite{aldhyani2022detecting, wang2020depression, shetty2020predicting} also showed promising results. 
+
 
 \subsubsection{Feature Selection} 
 The feature selection procedure has a substantial impact on the performance of machine learning and deep learning models because it lowers noise in the trained dataset, enabling the model to accurately understand data patterns. LIWC, LDA, LSA, n-gram analysis \cite{pennebaker2001linguistic, tadesse2019detection} etc are used as features analysis tools. 
