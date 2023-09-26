@@ -241,7 +241,26 @@ LDA topic modeling is used in this research scope to uncover latent topics from 
 P(\theta_d,z,w\|\alpha,\beta)=P(\theta_d\|\alpha)\prod^N_{n=1}P(z_{d,n}\|\theta_d)P(w_{d,n}\|z_{d,n},\beta)
 \end{equation}
 Where $w_{d,n}$ the $n_{th}$ word in document $d$, $z_{d,n}$ the topic assigned to the $n_{th}$ word in document $d$, $\alpha,\beta$ are the Dirichlet LDA model parameters. controls per-document topic distribution, and per topic word distribution. $\theta_d$ represent the topic distribution. $P(\theta_d \| \alpha)$ Dirichlet 
-distribution representing the document-topic distribution, $P(z_{d,n}\|\theta_d)$ is the word topic assignment for the $n_{th}$ word in document $d$, $P(w_{d,n}\|z_{d,n},\beta)$ is the distribution representing the observed word given a topic. We have chosen LDA for baseline statistical topic modeling tool. However, how many topics are ideal it is needed to determine and also topic modeling quality needs to measure.
+distribution representing the document-topic distribution, $P(z_{d,n}\|\theta_d)$ is the word topic assignment for the $n_{th}$ word in document $d$, $P(w_{d,n}\|z_{d,n},\beta)$ is the distribution representing the observed word given a topic. 
+
+
+Different techniques have been developed to perform topic modeling in the unsupervised topic modeling domain of Natural Language Processing (NLP), having their own strengths and limitations \cite{vayansky2020review, abdelrazek2022topic, yi2009comparative}. Apart from LDA, Mallet LDA, Structural Topic Model (STM), Hierarchical Dirichlet Process (HDP), Non-Negative Matrix Factorization (NMF), Latent Semantic Analysis (LSA) etc are also prevailing and can be considered for comparative research study.
+
+\subsubsection{Topic models comparative analysis}
+While some variations of LDA, Mallet LDA is considered for large corpus processing and analysis \cite{vayansky2020review, abdelrazek2022topic, Comparison_Topic_Modeling_Algorithms}. It focuses on scalability, If large corpus needs to analyze, Mallet LDA might be more suitable. LDA in general can still be efficiently applied to moderately sized corpora. Analyzing topics within the context of metadata, STM could be a better fit. Hierarchical Dirichlet Process (HDP) can be useful when we cannot guess the number of topics in advance. In \cite{Comparison_Topic_Modeling_Algorithms} LSI, NMF and LDA are compared in terms of coherence and similarity measures for social media dataset and in their analysis NMF is observed most effective measures. However, as a baseline model LDA is often considered one of the most prominent choices. In this study Reddit corpus is divided into lessons which is a mixture of topics and using LDA expecting to determine which word in the suicide category belong to other category. LDA produces interpretative results for exploratory topic analysis. The identified topics are represented as distributions over words, making it easy to assign meaningful labels to topics. Provided by most of the libraries and tools, making it easy to implement and can be integrated into existing workflows. Hence, LDA serves as a solid baseline for topic modeling tasks. We have chosen LDA for baseline statistical topic modeling tool. However, how many topics are ideal it is needed to determine (see section \ref{coherence_equations}) that represents topic modeling quality.
+
+\subsubsection{LDA model coherence}
+\label{coherence_equations}
+Coherence score estimates optimal number of topics. In this research scope coherence is measured to determine how coherent topic terms are \cite{mimno2011optimizing}. Using this score quality of the topics produced by LDA is assessed and ensures that the topics generated are statistically significant. Coherence \(C_{topic}\) can be expressed as follows  
+\begin{equation}
+C_{topic}=\sum^N_{i=1} \frac{1}{N(N-1)}\sum^i_{j=1} PMI(w_i,w_j)
+\end{equation}
+Where, \(PMI\left( w_{i},w_{j} \right)\) represent pointwise mutual information statistical association between two words occurring together. PMI score indicates that the two words are more closely related within a topic. \(PMI\left( w_{i},w_{j} \right)\) represents  
+\begin{equation}
+\(PMI\left( w_{i},w_{j} \right) = \log\frac{P\left( w_{i},w_{j} \right)}{P\left( w_{i} \right)P\left( w_{j} \right)}\)
+\end{equation}
+where \(P\left( w_{i},w_{j} \right)\) is joint probability of occurrence of words \(w_{i}\) and \(w_{j}\).  
+
 \subsection{Supervised Modeling}
 Pre-processed dataset converted to vector using cutting edge vectorizers. Feature vector is feed into machine learning classifier which is trained to determine suicide intensity label in depression post. Various vectorization methods are present \cite{aldhyani2022detecting, wang2020depression, shetty2020predicting}. 
 \begin{figure}[h!]
@@ -251,9 +270,27 @@ Pre-processed dataset converted to vector using cutting edge vectorizers. Featur
 \label{fig:res_diagram}
 \end{figure}
 
-\section{Feature exploration}
-Word cloud is showed in figure \ref{redditdist_twitterdist_wordcloud} to depict each category and influence of dominant keywords based on frequency.  
+\section{Exploratory analysis of features}
+After pre-processing document samples contains only noise free features. Document length frequency and features distribution is depicted in Figure \ref{redditdist_twitterdist_together}. From the frequency distribution we can see some of the document sizes are very large. Hence, larger sentences are chopped and one sentence become multiple sentences of features keeping the label same. 
+\begin{figure}[H]
+\centering
+\begin{subfigure}{0.45\textwidth}
+    \includegraphics[width=\textwidth]{reddit_dist.png}
+    \caption{Training dataset distribution}
+    \label{redditdist}
+\end{subfigure}
+\hfill
+\begin{subfigure}{0.45\textwidth}
+    \includegraphics[width=\textwidth]{twitterdist.png}
+    \caption{Testing dataset distribution}
+    \label{twitterdist}
+\end{subfigure}       
+\caption{Train and Test dataset distribution}
+\label{redditdist_twitterdist_together}
+\end{figure}
 
+\subsection{Training dataset exploration}
+Uni-gram Word cloud is showed in figure \ref{redditdist_twitterdist_wordcloud} to depict each category and influence of dominant keywords based on frequency.  
 \begin{figure}[h!]
 \centering
 \begin{subfigure}{0.45\textwidth}
@@ -282,136 +319,14 @@ Word cloud is showed in figure \ref{redditdist_twitterdist_wordcloud} to depict 
 \caption{Train Reddit C-SSRS dataset word cloud distribution represents that there are overlapping features between Indicator with Ideation and Behavior with Attempt categories}
 \label{redditdist_twitterdist_wordcloud}
 \end{figure}
+Visualizing the word cloud it is revealed there are correlation between Ideation and Indicator, Behavior and Attempt categories.  
 
-
-
-\subsection{N-gram Analysis}
-\subsubsection{Uni-gram}
-Dataset is split into separate tokens after preprocessing and uni-gram tokens are generated. Document length frequency and token distribution is depicted in Figure \ref{redditdist_twitterdist_together}. From the frequency distribution we can see some of the document sizes are very large. Hence, during the training process we chopped the sentences of tokens into multiple sentences of tokens keeping the label same. 
-
-\begin{figure}[H]
-\centering
-\begin{subfigure}{0.45\textwidth}
-    \includegraphics[width=\textwidth]{reddit_dist.png}
-    \caption{Reddit dataset distribution}
-    \label{redditdist}
-\end{subfigure}
-\hfill
-\begin{subfigure}{0.45\textwidth}
-    \includegraphics[width=\textwidth]{twitterdist.png}
-    \caption{Twitter dataset distribution}
-    \label{twitterdist}
-\end{subfigure}       
-\caption{Train and Test dataset Twitter and Reddit dataset distribution}
-\label{redditdist_twitterdist_together}
-\end{figure}
-
-
-Based on frequency of words wordcloud is generated from these unigrams. Frequency based comparison between two categories is conducted for depression and suicide for Test dataset in Figure \ref{features_vis_pro_exp}. Main objective was to get top ranked words from Depression and Suicide corpus. After experiments we have seen There are similarities between the top ranked words those are occurring frequently. They tend to use slang and abusive terms compared to suicidal attempt thinking people. Rather suicidal depressed people want to share their thoughts with others using longer post. However, it does not reveals any clues in terms of hypothetical relationships between the two category. It is difficult find pattern in which we can determine the depression and suicidal thought. So far we found some pattern 
-\begin{enumerate}
-\item short statements likely to be more depression category
-\item Depressive statements tend to have slang
-\item Suicidal thinking people’s post having very high frequency of “kill” “die” these type of words or phrases.
-\end{enumerate}
-
-\begin{figure}[H]
-\centering
-\begin{subfigure}{0.45\textwidth}
-    \includegraphics[width=\textwidth]{dep_wordcloud.png}
-    \caption{Wordcloud in Depression category}
-    \label{fig:first}
-\end{subfigure}
-\hfill
-\begin{subfigure}{0.45\textwidth}
-    \includegraphics[width=\textwidth]{sui_wordcloud.png}
-    \caption{Wordcloud in Suicide category}
-    \label{fig:second}
-\end{subfigure}
-%\caption{Dataset features visualization and properties exploration}
-\label{features_vis_pro_exp}
-\end{figure}
-
-
-\begin{figure}[H]
-    \includegraphics[width=\textwidth]{doc_len.png}
-    \caption{Class frequency in different Document Length}
-    \label{fig:second}
-\end{figure}
-
-To understand the term occurring frequently in two different classes scatterplot library is used for visual analysis. From the above two scenario we can see that there is a pattern that people used to say more slang and abusive words when they are depressed. It is also interesting that there are many words have high frequency such as depression or depressed but belongs to suicide class. One important fact is revealed here is that we can see although suicide, suicidal these words has high frequency in Suicide class but depression, depressed also occurred in parallel with high frequency. Here several experiments can be conducted for exploratory analysis with scattertext library for terms significance. However, this library is computationally heavy for larger dataset for visualization. Another drawbacks is this library have significant focus on the terms based analysis. We have used simple vectorization methods by which we can have greater control on dataset and experiments code. 
-
-\subsubsection{Bi-gram}
-First unigram is computed and analyzed then bigram is calculated for both categories. The bigram frequency showed there are some common terms like “mental health”, “feel like”, “make feel”, “high school” etc showed high occurrences in the dataset. Hence, we started to understand its pattern in the corpus. For analysis we have considered ['high school', 'mental health', 'best friend', 'feel like', 'really want', 'suicide thought', 'friend family'] these bi-grams and wanted to explore its surrounding context for each category. We called this special bigrams since it showed importance in the suicidal and depression both categories appeared highly frequent matter. We want to analyze how these words have impact with its neighboring words. 
-
-To explore the impact of special bi-grams on the samples, special bi-gram terms containing samples are filtered from dataset. After that using lebel encoder bigrams are encoded as integers and then chord diagram is generated  depicted in Figure \ref{Bigram_features_exp} to find meaningful relationship within the samples between the bigram features.  
-
-
-\begin{figure}[H]
-\centering
-\begin{subfigure}{0.8\textwidth}
-    \includegraphics[width=\textwidth]{dep_chord.png}
-    \caption{Depression Chord diagram}
-    \label{fig:first}
-\end{subfigure}
-\hfill
-\begin{subfigure}{0.8\textwidth}
-    \includegraphics[width=\textwidth]{suicide_chord.png}
-    \caption{Depression Chord diagram}
-    \label{fig:second}
-\end{subfigure}        
-\caption{Bi-gram features relation exploration}
-\label{Bigram_features_exp}
-\end{figure}
-
-
-From this two chord diagram interesting sentence can be inferred. 
-
-\begin{table}[h]
-\begin{center}
-\begin{flushleft}
-\caption{Inference from chord diagrams}\label{tab1}%
-\begin{tabular}{|l|p{6cm}|}
-\toprule
-\textbf{Depression} & \textbf{Suicide} \\
-\midrule
-self centered person is depressed & have mental health issue \\
-having suicidal thought & share though with friends (high school friends, Best friends, family members) \\
-want to go somewhere to live & having suicidal thoughts \\
-spend happy moments & Friend family make feel better \\
-\bottomrule
-\end{tabular}
-%\footnotetext{Inference from chord diagrams}
-\end{flushleft}
-\end{center}
-\end{table}
-
-Tri-grams or above did not reveals much meaning information, mostly does convey some meaningful information and therefore excluded for further experimental consideration. 
-
-
-
-\section{Exploratory analysis using Topic Modeling}
- Different techniques have been developed to perform topic modeling in the unsupervised topic modeling domain of Natural Language Processing (NLP), having their own strengths and limitations \cite{vayansky2020review, abdelrazek2022topic, yi2009comparative}. Apart from LDA, Mallet LDA, Structural Topic Model (STM), Hierarchical Dirichlet Process (HDP), Non-Negative Matrix Factorization (NMF), Latent Semantic Analysis (LSA) etc are also prevailing and can be considered for comparative research study.
-
-
-\subsubsection{Topic models comparative analysis}
-While some variations of LDA, Mallet LDA is considered for large corpus processing and analysis \cite{vayansky2020review, abdelrazek2022topic, Comparison_Topic_Modeling_Algorithms}. It focuses on scalability, If large corpus needs to analyze, Mallet LDA might be more suitable. LDA in general can still be efficiently applied to moderately sized corpora. Analyzing topics within the context of metadata, STM could be a better fit. Hierarchical Dirichlet Process (HDP) can be useful when we cannot guess the number of topics in advance. In \cite{Comparison_Topic_Modeling_Algorithms} LSI, NMF and LDA are compared in terms of coherence and similarity measures for social media dataset and in their analysis NMF is observed most effective measures. However, as a baseline model LDA is often considered one of the most prominent choices. In this study Reddit corpus is divided into lessons which is a mixture of topics and using LDA expecting to determine which word in the suicide category belong to other category. LDA produces interpretative results for exploratory topic analysis. The identified topics are represented as distributions over words, making it easy to assign meaningful labels to topics. Provided by most of the libraries and tools, making it easy to implement and can be integrated into existing workflows. Hence, LDA serves as a solid baseline for topic modeling tasks.  
-
-\subsubsection{LDA model coherence to determine optimal topic}
-Coherence score measure how coherent or interpret the words in that topic and estimates number of topic clusters \cite{mimno2011optimizing}. Coherence score assess the quality of the topics produced by LDA and ensures that the topics generated are statistically significant. Coherence \(C_{topic}\) can be expressed as follows  
-\begin{equation}
-C_{topic}=\sum^N_{i=1} \frac{1}{N(N-1)}\sum^i_{j=1} PMI(w_i,w_j)
-\end{equation}
-Where, \(PMI\left( w_{i},w_{j} \right)\) represent pointwise mutual information statistical association between two words occurring together. PMI score indicates that the two words are more closely related within a topic. \(PMI\left( w_{i},w_{j} \right)\) can expressed as  
-\begin{equation}
-\(PMI\left( w_{i},w_{j} \right) = \log\frac{P\left( w_{i},w_{j} \right)}{P\left( w_{i} \right)P\left( w_{j} \right)}\)
-\end{equation}
-
-where \(P\left( w_{i},w_{j} \right)\) is joint probability of occurrence of words \(w_{i}\) and \(w_{j}\).  To calculate the coherence score gensim library provides range of options such as \(u_{mass},c_{v},c_{uci},c_{npmi}\). \(u_{mass}\) and \(c_{v}\)These two methods are most popular. For given topic with words \(\{ w_{1},w_{2},w_{3},\ldots..,w_{n}\}\) a fixed context window size is provided (default size 10 words) then coherence score is calculated using an equation \(\sum_{j = 1}^{i}{PMI}\left( w_{i},w_{j} \right)\) which provides negative coherence score. \(c_{v}\) can be expressed as  
+\subsubsection{Coherence estimation for LDA model}
+To calculate the coherence score gensim library provides range of options such as \(u_{mass},c_{v},c_{uci},c_{npmi}\). \(u_{mass}\) and \(c_{v}\)These two methods are most popular. For given topic with words \(\{ w_{1},w_{2},w_{3},\ldots..,w_{n}\}\) a fixed context window size is provided (default size 10 words) then coherence score is calculated using an equation \(\sum_{j = 1}^{i}{PMI}\left( w_{i},w_{j} \right)\) which provides negative coherence score. \(c_{v}\) can be expressed as  
 \begin{equation}
 \(c_{v} = \frac{1}{N(N - 1)}\sum_{j = 1}^{i}{similarity\left( w_{i},w_{j} \right)}\)
 \end{equation}
 in which \(similarity\left( w_{i},w_{j} \right)\) represent the pairwise similarity between terms based on \(PMI\left( w_{i},w_{j} \right)\) scores. \(c_{v}\) provides a positive coherence score. Higher coherence values (higher than 0.5) indicate that the topics are moderately coherent and representative of meaningful themes within the text data.
-
 
 \begin{figure}[h!]
 \centering
@@ -445,28 +360,21 @@ in which \(similarity\left( w_{i},w_{j} \right)\) represent the pairwise similar
 
 \subsubsection{Relative importance vs term frequency}
 Relative importance is measured using LDA model. Then depicted in figure \ref{}. 
-
 \begin{figure}[H]
     \includegraphics[width=\textwidth]{indicator_weight_relative_imp.png}
     \caption{Indicator category frequency vs LDA based relative Importance}
     \label{redditdist}
 \end{figure}
-
-
 \begin{figure}[H]
     \includegraphics[width=\textwidth]{ideation_weight_relative_imp.png}
     \caption{Ideation category frequency vs LDA based relative Importance}
     \label{twitterdist}
 \end{figure}  
-
-
 \begin{figure}[H]
     \includegraphics[width=\textwidth]{behavior_weight_relative_imp.png}
     \caption{Behavior category frequency vs LDA based relative Importance}
     \label{redditdist}
 \end{figure}
-
-
 \hfill
 \begin{figure}[H]
     \includegraphics[width=\textwidth]{attempt_weight_relative_imp.png}
@@ -476,35 +384,35 @@ Relative importance is measured using LDA model. Then depicted in figure \ref{}.
 
 
 \subsubsection{LDA based feature exploration}
-LDA is a versatile tool to investigate various keywords in subtle topic within context. LDA driven results are included in this study to observe the latent topic and terms. 
+LDA is a versatile tool to investigate various keywords in subtle topic within context. LDA driven results of various categories are visualized in this study to observe the latent topic and terms using pyldvis library in figure~\ref{indicator_pyldvis}, \ref{Ideation_pyldvis}, \ref{Behavior_pyldvis} and \ref{Attempt_pyldvis}. 
 
 \begin{figure}[h!]
 \centering
     \includegraphics[width=\textwidth]{indicator_pyldvis.png}
     \caption{Indicator categories LDA's salient terms and topic visualization}
-    \label{redditdist}
+    \label{indicator_pyldvis}
 \end{figure}
 
 \begin{figure}[h!]
     \includegraphics[width=\textwidth]{Ideation_pyldvis.png}
     \caption{Ideation categories LDA's salient terms and topic visualization}
-    \label{redditdist}
+    \label{Ideation_pyldvis}
 \end{figure}
 
 \begin{figure}[h!]
     \includegraphics[width=\textwidth]{Behavior_pyldvis.png}
     \caption{Behavior categories LDA's salient terms and topic visualization}
-    \label{twitterdist}
+    \label{Behavior_pyldvis}
 \end{figure}
 
 \begin{figure}[h!]
     \includegraphics[width=\textwidth]{Attempt_pyldvis.png}
     \caption{Attempt categories LDA's salient terms and topic visualization}
-    \label{twitterdist}
+    \label{Attempt_pyldvis}
 \end{figure}
 
 
-\subsection{Combined topic modeling using BERTopic}
+\subsubsection{Combined topic modeling using BERTopic}
 
 
 \begin{figure}[h!]
@@ -525,7 +433,85 @@ LDA is a versatile tool to investigate various keywords in subtle topic within c
 \end{figure}
 
 
+\subsection{Test dataset exploration}
+Frequency based comparison between two categories is conducted for depression and suicide for Test dataset in Figure \ref{features_vis_pro_exp} using Uni-gram based wordcloud. From this figure we can see that top ranked words those are occurring frequently tend to have slang and abusive terms compared to suicidal category. 
+\begin{figure}[H]
+\centering
+\begin{subfigure}{0.45\textwidth}
+    \includegraphics[width=\textwidth]{dep_wordcloud.png}
+    \caption{Wordcloud in Depression category}
+%    \label{fig:first}
+\end{subfigure}
+\hfill
+\begin{subfigure}{0.45\textwidth}
+    \includegraphics[width=\textwidth]{sui_wordcloud.png}
+    \caption{Wordcloud in Suicide category}
+%    \label{fig:second}
+\end{subfigure}
+%\caption{Dataset features visualization and properties exploration}
+\label{features_vis_pro_exp}
+\end{figure}
+In Test dataset samples a large number of documents are having low features. In figure~\ref{fig_Test_Dataset_token_frequency} the frequency of tokens in each class is depicted. 
+%
+\begin{figure}[H]
+\includegraphics[height=6cm, width=0.7\textwidth]{doc_len.png}
+\caption{Test Dataset token frequency in different Document Length}
+\label{fig_Test_Dataset_token_frequency}
+\end{figure}
+%
+From figure~\ref{fig_Test_Dataset_token_frequency} and figure~\ref{features_vis_pro_exp} the following comments can be inferred
+\begin{enumerate}
+\item short statements likely to be more depression category
+\item Depressive statements tend to have slang and abusive words
+\item Suicidal thinking people’s post having very high frequency of “kill” “die” these type of words or phrases.
+\item Rather suicidal depressed people want to share their thoughts with others using longer post.
+\end{enumerate}
+However, it does not reveals any direct clues in terms of hypothetical relationships between the two category. It is difficult find pattern in which we can determine the depression and suicidal thought.  
 
+\subsubsection{Bi-gram features relation exploration}
+Bi-gram is analyzed for depression and suicide both categories. The bigram frequency showed there are some common terms like “mental health”, “feel like”, “make feel”, “high school” etc which showed high occurrences in the dataset. Hence, frequently occurred Bi-grams and its pattern in the corpus is explored. We want to analyze how these words have impact with its neighboring words. We called this special bigrams since it showed importance in the suicidal and depression both categories appeared highly frequent matter.
+
+For analysis some Bi-grams are chosen ['high school', 'mental health', 'best friend', 'feel like', 'really want', 'suicide thought', 'friend family'] etc. Surrounding context for each category for the given Bi-gram is observed in Figure \ref{Bigram_features_exp}.  
+
+To explore the impact of special bi-grams on the samples, special bi-gram terms containing samples are filtered from dataset. After that using lebel encoder bigrams are encoded as integers and then chord diagram is generated  depicted in Figure \ref{Bigram_features_exp} to find meaningful relationship within the samples between the bigram features.  
+
+
+\begin{figure}[H]
+\centering
+    \includegraphics[width=0.75\textwidth]{dep_chord.png}
+    \caption{Depression Chord diagram}
+    \label{dep_chord}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+    \includegraphics[width=0.75\textwidth]{suicide_chord.png}
+    \caption{Depression Chord diagram}
+    \label{suicide_chord}
+\end{figure}        
+
+From figure~\ref{dep_chord} and \ref{suicide_chord} two chord diagram interesting sentence can be inferred. 
+
+\begin{table}[h]
+\begin{center}
+\begin{flushleft}
+\caption{Inference from chord diagrams}\label{tab1}%
+\begin{tabular}{|l|p{6cm}|}
+\toprule
+\textbf{Depression} & \textbf{Suicide} \\
+\midrule
+self centered person is depressed & have mental health issue \\
+having suicidal thought & share though with friends (high school friends, Best friends, family members) \\
+want to go somewhere to live & having suicidal thoughts \\
+spend happy moments & Friend family make feel better \\
+\bottomrule
+\end{tabular}
+%\footnotetext{Inference from chord diagrams}
+\end{flushleft}
+\end{center}
+\end{table}
+
+Tri-grams or above did not reveals much meaning information, and therefore excluded for further experimental consideration. 
 
 \subsection{Classification}
 Machine learning and Deep Learning models are particularly used for Text classification and ML for feature selection or extraction in several studies \cite{castillo2020suicide, chancellor2020methods, zhang2022natural}. These extensive reviews reveal Deep learning methods receive more attention and perform better than traditional machine learning methods whereas in some cases when extracted or filtered features are fit into training process models are able to perform better. NLP techniques are applied for the annotated dataset collected from Twitter, Reddit, Facebook, instagram, Weibo \cite{wang2020depression} etc. After that various deep learning and machine learning models are trained for classification of suicide and depression. Then trained models are applied to determine the correct class of given text. \cite{malhotra2022deep} Provided a through investigation about passed research techniques, features, datasets, and performance metrics \cite{zhang2022natural, chancellor2020methods}. 
@@ -545,7 +531,7 @@ First we started our experiment with document length distribution. The length of
 Short sentence does not carry much terms and hence does not carry enough information to be classified confidently by classifier algorithms. We started reducing the numbers of samples based on document length. By reducing the samples based on numbers of tokens present in a document (see Figure \ref{redditdist_twitterdist}). Documents length versus category frequency information is showed in this chart. This charts explains if we filter out the shorter comments suicide post become dominant class and depression post become outnumbered. The difference showed an exponential pattern as length of document increases. Test dataset Reddit data distribution among depression and suicide class distribution ratio is equal. Filtering the class we have seen an interesting fact that depressed people does not want to comment very long. 
 
 
-
+It is also interesting that there are many words have high frequency such as depression or depressed but belongs to suicide class. One important fact is revealed here is that we can see although suicide, suicidal these words has high frequency in Suicide class but depression, depressed also occurred in parallel with high frequency. Here several experiments can be conducted for exploratory analysis with scattertext library for terms significance. However, this library is computationally heavy for larger dataset for visualization. Another drawbacks is this library have significant focus on the terms based analysis. We have used simple vectorization methods by which we can have greater control on dataset and experiments code.
 
 
 \section{Classification Results}
