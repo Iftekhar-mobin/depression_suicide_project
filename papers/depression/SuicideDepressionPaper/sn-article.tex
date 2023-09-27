@@ -358,33 +358,32 @@ in which \(similarity\left( w_{i},w_{j} \right)\) represent the pairwise similar
 \end{figure}
 
 
-\subsubsection{Relative importance vs term frequency}
-Relative importance is measured using LDA model. Then depicted in figure \ref{}. 
+\subsubsection{Keywords importance visualization using LDA}
+LDA driven results of various categories are visualized in this study to observe the latent topic using relative importance measurements depicted in figure \ref{indicator_weight_relative_imp}, \ref{ideation_weight_relative_imp}, \ref{behavior_weight_relative_imp}, and \ref{attempt_weight_relative_imp} and pyldvis library in figure~\ref{indicator_pyldvis}, \ref{Ideation_pyldvis}, \ref{Behavior_pyldvis} and \ref{Attempt_pyldvis}.
 \begin{figure}[H]
     \includegraphics[width=\textwidth]{indicator_weight_relative_imp.png}
     \caption{Indicator category frequency vs LDA based relative Importance}
-    \label{redditdist}
+    \label{indicator_weight_relative_imp}
 \end{figure}
 \begin{figure}[H]
     \includegraphics[width=\textwidth]{ideation_weight_relative_imp.png}
     \caption{Ideation category frequency vs LDA based relative Importance}
-    \label{twitterdist}
+    \label{ideation_weight_relative_imp}
 \end{figure}  
 \begin{figure}[H]
     \includegraphics[width=\textwidth]{behavior_weight_relative_imp.png}
     \caption{Behavior category frequency vs LDA based relative Importance}
-    \label{redditdist}
+    \label{behavior_weight_relative_imp}
 \end{figure}
 \hfill
 \begin{figure}[H]
     \includegraphics[width=\textwidth]{attempt_weight_relative_imp.png}
     \caption{Attempt category frequency vs LDA based relative Importance}
-    \label{twitterdist}
+    \label{attempt_weight_relative_imp}
 \end{figure}   
 
 
-\subsubsection{LDA based feature exploration}
-LDA is a versatile tool to investigate various keywords in subtle topic within context. LDA driven results of various categories are visualized in this study to observe the latent topic and terms using pyldvis library in figure~\ref{indicator_pyldvis}, \ref{Ideation_pyldvis}, \ref{Behavior_pyldvis} and \ref{Attempt_pyldvis}. 
+ 
 
 \begin{figure}[h!]
 \centering
@@ -413,7 +412,7 @@ LDA is a versatile tool to investigate various keywords in subtle topic within c
 
 
 \subsubsection{Combined topic modeling using BERTopic}
-
+In this research scope BERTopic topic modeling applied which leverages deep learning pretrained transformers and c-TF-IDF to create dense clusters allowing for easily interpret topics. Here BERTopic applied for the combined samples. Hence we can observe topics' distinctive feature characteristics.
 
 \begin{figure}[h!]
 \centering
