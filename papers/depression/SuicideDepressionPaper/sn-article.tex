@@ -190,7 +190,7 @@ SSI, BDI, HEM-D, C-SSRS these standards scale have been successfully validated a
 
 \subsection{Feature Selection and exploration}
 Feature exploration has substantial impact on exploratory analysis, enabling the researchers to accurately understand data patterns. 
-In 2020 chancellor. et. al \cite{chancellor2020methods} published an excellent overview of 75 studies in between 2013 and 2018 outlining the methods of data annotation for mental health status, data collection strategies in those papers, along with pre-processing, feature selection, exploration, model development for classification, accuracy verification for models are described vividly. LIWC, LDA, LSA, n-gram analysis \cite{pennebaker2001linguistic, tadesse2019detection} etc are used as features analysis tools in previous research. In 2017 Shen et. al \cite{harvesting_social_media} collected several forms of features comprised of six chorots, namely, social network features, user profile features, visual features, emotional features, topic-level features, and domain-specific features and prepared a feature rich dictionary. This multimodal depressive dictionary learning model was used to detect the depressed users on Twitter using machine learning models. Most common approaches are n-gram word frequency based approach TF-IDF. Apart from the Deep learning model n-gram Traditional feature retrieve based analysis conducted in some research papers. Most dominant approaches are Word2Vec, XGBoost, SVM, Random Forest, other regression MLs. Typical word embedding approaches TF-IDF and Word2Vec, and CNN–BiLSTM are applied in  \cite{aldhyani2022detecting}. Using LIWC features, XGBoost ML together surpasses the accuracy of CNN–BiLSTM in  \cite{aldhyani2022detecting}. Others have used machine text Summarization based feature extraction strategy followed by classification for depression detection is applied in \cite{zogan2021depressionnet}. In 2015 burnap \cite{burnap2015machine} built a set of baseline classifiers using lexical, structural, emotive and psychological features extracted from Twitter posts. Then baseline classifiers are updated by building an ensemble classifier using the Random Forest algorithm and a Maximum Probability voting classifier is applied as classification method. Since, source of dataset varies and various methodology followed in several researches LDA, n-gram based TF-IDF and Word2Vec reveals most frequent statistical methods for feature exploration and classification. 
+In 2020 chancellor. et. al \cite{chancellor2020methods} published an excellent overview of 75 studies in between 2013 and 2018 outlining the methods of data annotation for mental health status, data collection strategies in those papers, along with pre-processing, feature selection, exploration, model development for classification, accuracy verification for models are described vividly. LIWC, LDA, LSA, n-gram analysis \cite{pennebaker2001linguistic, tadesse2019detection} etc are used as features analysis tools in previous research. In 2017 Shen et. al \cite{shen2017depression} collected several forms of features comprised of six chorots, namely, social network features, user profile features, visual features, emotional features, topic-level features, and domain-specific features and prepared a feature rich dictionary. This multimodal depressive dictionary learning model was used to detect the depressed users on Twitter using machine learning models. Most common approaches are n-gram word frequency based approach TF-IDF. Apart from the Deep learning model n-gram Traditional feature retrieve based analysis conducted in some research papers. Most dominant approaches are Word2Vec, XGBoost, SVM, Random Forest, other regression MLs. Typical word embedding approaches TF-IDF and Word2Vec, and CNN–BiLSTM are applied in  \cite{aldhyani2022detecting}. Using LIWC features, XGBoost ML together surpasses the accuracy of CNN–BiLSTM in  \cite{aldhyani2022detecting}. Others have used machine text Summarization based feature extraction strategy followed by classification for depression detection is applied in \cite{zogan2021depressionnet}. In 2015 burnap \cite{burnap2015machine} built a set of baseline classifiers using lexical, structural, emotive and psychological features extracted from Twitter posts. Then baseline classifiers are updated by building an ensemble classifier using the Random Forest algorithm and a Maximum Probability voting classifier is applied as classification method. Since, source of dataset varies and various methodology followed in several researches LDA, n-gram based TF-IDF and Word2Vec reveals most frequent statistical methods for feature exploration and classification. 
 
 \section{Dataset}
 For psychological research apart from clinical domain, Text based samples are mostly collected from Twitter, Reddit \cite{tadesse2019detection}, facebook, weibo etc websites donated by various institutions or researchers \cite{rissola2020dataset}. In 2021 the Computational Linguistics and Clinical Psychology CLPsych 2021 workshop organized a Task challenge for detecting suicidal risk \cite{macavaney2021community}. It facilitated participants providing sensitive authentic dataset on the problem of predicting suicide risk from social media Twitter. The dataset for the task includes information who attempted suicide or succeeded along with some control who have not. After collecting dataset from social sites, proper annotation is crucial for training machine learning classifier models. In\cite{lopez2022exploring} research study used Twitter post collection API for collecting Tweets and collected Tweets of size 2509 were obtained, of which 216 post were found relevant by 3 Expert psychologists evaluators. Furthermore, using LIWC, dictionary of the Linguistic Inquiry and Word Count \cite{pennebaker2001linguistic}, which is a linguistic feature analysis software that calculates the degree of positive and negative emotions across a wide spectrum of texts, Tweets were evaluated and results are statistically presented. 
@@ -236,7 +236,7 @@ Social media dataset are Text data which needs data pre-processing, cleaning, fe
 \subsection{Unsupervised modeling}
 Unsupervised modeling of text data refers to the techniques to analyze and extract meaningful patterns or structures from text without using labeled data. Hence, without target labels from the pre-processed dataset tokenized sample data is obtained. 
 \subsubsection{N-gram} 
-N-grams are generated (unigrams, bigrams, trigrams, etc.). To observe the most common n-grams. Word Clouds are prepared where the size of each n-gram is proportional to its frequency, gives a visually appealing representation of the most frequent n-grams, helps identify patterns of co-occurring n-grams.
+N-grams are generated (unigrams, Bi-grams, trigrams, etc.). To observe the most common n-grams. Word Clouds are prepared where the size of each n-gram is proportional to its frequency, gives a visually appealing representation of the most frequent n-grams, helps identify patterns of co-occurring n-grams.
 
 \subsubsection{Latent Dirichlet Allocation (LDA)}
 \label{lda_mdel}
@@ -270,7 +270,13 @@ Various off-the-selves Machine learning and Deep Learning models are used for su
 \subsubsection{Classification}
 For classification mostly NLP techniques are applied for the annotated dataset collected from various online social media platforms sus as: Twitter, Reddit, Facebook, instagram, Weibo \cite{wang2020depression} etc. After that various deep learning and machine learning models are trained for classification of suicide and depression \cite{malhotra2022deep}. Then trained models are applied to determine the correct class of given samples. Investigation about passed research techniques, features, datasets, and performance metrics is discussed in \cite{zhang2022natural, chancellor2020methods}. 
 
-In this research pre-processed dataset converted to vector using cutting edge vectorizers. Feature vector is feed into machine learning classifier which is trained to determine suicide intensity label in depression post. Various vectorization methods are present \cite{aldhyani2022detecting, wang2020depression, shetty2020predicting}. TF-IDF and Word2Vec vectorizers are applied here. 
+In this research pre-processed dataset converted to vector using cutting edge vectorizers. Feature vector is feed into machine learning classifier which is trained to determine suicide intensity label in depression post. Various vectorization methods are present \cite{aldhyani2022detecting, wang2020depression, shetty2020predicting}. TF-IDF and Word2Vec vectorizers are applied here. Following approach is applied in this study for supervised classification
+\begin{enumerate} [label=(\roman*)]
+\item Pre-processed and useful features are used from Reddit's 500 post CSSR dataset for classifier Training
+\item Used count vectorizer and TFIDF transformer to generate vectors for the dataset
+\item Trained classifier to determine the categories of various suicidal intensities
+\end{enumerate}
+Research methodology is portrayed in figure~\ref{fig:res_diagram} 
 \begin{figure}[h!]
 \centering
 \includegraphics[width=0.8\textwidth]{res_diagram.jpeg}
@@ -441,22 +447,22 @@ In this research scope BERTopic topic modeling applied which leverages deep lear
 
 
 \subsection{Test dataset exploration}
-Frequency based comparison between two categories is conducted for depression and suicide for Test dataset in Figure \ref{features_vis_pro_exp} using Uni-gram based wordcloud. From this figure we can see that top ranked words those are occurring frequently tend to have slang and abusive terms compared to suicidal category. 
+Frequency based comparison between two categories is conducted for depression and suicide for Test dataset in Figure \ref{dep_wordcloud_test} and \ref{sui_wordcloud_test} using Uni-gram based wordcloud. From this figure we can see that top ranked words those are occurring frequently tend to have slang and abusive terms compared to suicidal category. 
 \begin{figure}[H]
 \centering
 \begin{subfigure}{0.45\textwidth}
     \includegraphics[width=\textwidth]{dep_wordcloud.png}
     \caption{Wordcloud in Depression category}
-%    \label{fig:first}
+    \label{dep_wordcloud_test}
 \end{subfigure}
 \hfill
 \begin{subfigure}{0.45\textwidth}
     \includegraphics[width=\textwidth]{sui_wordcloud.png}
     \caption{Wordcloud in Suicide category}
-%    \label{fig:second}
+    \label{sui_wordcloud_test}
 \end{subfigure}
 %\caption{Dataset features visualization and properties exploration}
-\label{features_vis_pro_exp}
+%\label{features_vis_pro_exp}
 \end{figure}
 
 \subsubsection{Uni-gram Token distribution visualization}
@@ -468,7 +474,7 @@ In Test dataset samples a large number of documents are having low features. In 
 \label{fig_Test_Dataset_token_frequency}
 \end{figure}
 %
-The length of document and term frequency within the corpus is visualized in Figure \ref{redditdist_twitterdist}. From the distribution we can see that some of the document length are excessive long and contains more than 1000 tokens (within Train and Test both Dataset). Depression class document length are usually shorter in length. Depression document length are tend to be smaller than suicide document length. The difference showed an exponential pattern as length of document increases. Test dataset Reddit data distribution among depression and suicide class distribution ratio was equal. Filtering the class from figure \ref{fig_Test_Dataset_token_frequency} an interesting fact is revealed that depressed people does not want to comment very long. From figure~\ref{fig_Test_Dataset_token_frequency} and figure~\ref{features_vis_pro_exp} the following comments can be inferred
+The length of document and term frequency within the corpus is visualized in Figure \ref{redditdist_twitterdist}. From the distribution we can see that some of the document length are excessive long and contains more than 1000 tokens (within Train and Test both Dataset). Depression class document length are usually shorter in length. Depression document length are tend to be smaller than suicide document length. The difference showed an exponential pattern as length of document increases. Test dataset Reddit data distribution among depression and suicide class distribution ratio was equal. Filtering the class from figure \ref{fig_Test_Dataset_token_frequency} an interesting fact is revealed that depressed people does not want to comment very long. From figure~\ref{fig_Test_Dataset_token_frequency},  figure~\ref{dep_wordcloud_test} and \ref{sui_wordcloud_test} the following comments can be inferred
 \begin{enumerate}
 \item short statements likely to be more depression category
 \item Depressive statements tend to have slang and abusive words
@@ -479,11 +485,7 @@ The length of document and term frequency within the corpus is visualized in Fig
 It is also interesting that there are many words have high frequency such as depression or depressed but belongs to suicide class. One important fact is revealed here is that we can see although suicide, suicidal these words has high frequency in Suicide class but depression, depressed also occurred in parallel with high frequency. However, it does not reveals any direct clues in terms of hypothetical relationships between the two category. It is difficult find pattern in which we can determine the depression and suicidal thought.  
 
 \subsubsection{Bi-gram features relation exploration}
-Bi-gram is analyzed for depression and suicide both categories. The bigram frequency showed there are some common terms like “mental health”, “feel like”, “make feel”, “high school” etc which showed high occurrences in the dataset. Hence, frequently occurred Bi-grams and its pattern in the corpus is explored. We want to analyze how these words have impact with its neighboring words. We called this special bigrams since it showed importance in the suicidal and depression both categories appeared highly frequent matter.
-
-For analysis some Bi-grams are chosen ['high school', 'mental health', 'best friend', 'feel like', 'really want', 'suicide thought', 'friend family'] etc. Surrounding context for each category for the given Bi-gram is observed in Figure \ref{Bigram_features_exp}.  
-
-To explore the impact of special bi-grams on the samples, special bi-gram terms containing samples are filtered from dataset. After that using lebel encoder bigrams are encoded as integers and then chord diagram is generated  depicted in Figure \ref{Bigram_features_exp} to find meaningful relationship within the samples between the bigram features.  
+Bi-gram is analyzed for depression and suicide both categories. There are some Bi-grams which showed very high frequency. We called this special Bi-grams since. Special Bi-grams in the suicidal and depression both categories appeared highly frequent matter. Special Bi-grams are \enquote{mental health}, \enquote{feel like}, \enquote{make feel}, \enquote{high school}, \enquote{best friend}, \enquote{really want}, \enquote{suicide thought}, \enquote{friend family} showed high occurrences in the test dataset. Frequently occurred Bi-grams and its pattern in the corpus is explored. We want to analyze how these words have impact with its neighboring words depicted in Figure \ref{dep_chord} and \ref{suicide_chord}. To explore the impact of special bi-grams on the samples, special bi-gram terms containing samples are filtered from dataset. After that using lebel encoder Bi-grams are encoded as integers and then chord diagram is generated. We can observe meaningful relationship within the samples between the Bi-gram features.  
 
 
 \begin{figure}[H]
@@ -500,8 +502,7 @@ To explore the impact of special bi-grams on the samples, special bi-gram terms 
     \label{suicide_chord}
 \end{figure}        
 
-From figure~\ref{dep_chord} and \ref{suicide_chord} two chord diagram interesting sentence can be inferred. 
-
+From figure~\ref{dep_chord} and \ref{suicide_chord} two chord diagram interesting observation can be inferred. 
 \begin{table}[h]
 \begin{center}
 \begin{flushleft}
@@ -524,41 +525,56 @@ spend happy moments & Friend family make feel better \\
 Tri-grams or above did not reveals much meaning information, and therefore excluded for further experimental consideration. 
 
 
-\section{Results}
-To segregate the Reddit suicide dataset into different categories of suicide first we have created a SVM classifier using gridsearch technique for hyperparameter optimization different classification techniques. Since our objective is not making highly accurate classifier. Following approach is applied in this study
-
-\begin{itemize}
-\item Pre-processed and useful features are used from Twitter's 500 post CSSR dataset for Training classifier
-\item Used count vectorizer and TFIDF transformer to generate vectors for the dataset
-\item Trained classifier to determine the categories of various suicidal intensities
-\end{itemize}
-
-We have used simple gridsearch technique of sklearn library and from a list of various classifiers applied on the dataset, we have chosen highest accurate classifiers to determine different label of suicidal risk. so that it can recognize the category. We have used classifiers "K Nearest Neighbors", "Linear and RBF SVM", "Gaussian Process", "Decision Tree", "Random Forest", "Vanilla Neural Net", "AdaBoost", "Naive Bayes". Using various set of parameters, from the result and experiments we found almost 60\% accuracy for SVM model to predict the suicide intensity categories. From various set of values of SVM we found degree=2, gamma=0.7, kernel=rbf showed the highest accuracy. 
-
-
-\begin{table}[h!]
+\section{Classification Results}
+Various machine learning classification algorithms are used mentioned in the Table \ref{Table_classification_alg}. The hyper-parameters are mostly sklearns' default settings. Two step of Gridsearch technique of sklearn library is used. From the selected classifiers to determine the best classifiers default parameters are applied and SVM showed high accuracy. Then, to achieve highest accuracy hyper-parameters are feed into grid search. Using various set of parameters, from the result and experiments we found almost 60\% accuracy for SVM model to predict the suicide intensity categories. From various set of values applying gridsearch for SVM SVC we found degree=2, gamma=0.7, kernel=rbf showed the highest accuracy. 
+%
+\begin{table}[h]
 \begin{center}
-\begin{minipage}{174pt}
-\caption{Classifiers accuracy of models}\label{tab1}%
-\begin{tabular}{@{}lllll@{}}
+\begin{flushleft}
+\caption{Applied Machine Learning Classifiers and Parameters}\label{tab1}%
+\begin{tabular}{|l|p{8cm}|}
 \toprule
-Classifier & Precision & Recall & Accuracy & F1 \\
+\textbf{Classifiers} & \textbf{Hyper-Parameters [Some Specified and rest are default sklearn params]} \\
 \midrule
-Nearest Neighbors & 0.926 & 0.924 & 92.3896 & 0.924\\
-RBF SVM & 0.942 & 0.924 & 92.3896 & 0.927\\
-Decision Tree & 0.901 & 0.848 & 84.7793 & 0.856\\
-Random Forest & 0.513 & 0.282 & 28.1583 & 0.167\\
-Neural Net & 0.942 & 0.927 & 92.6941 & 0.929\\
-AdaBoost & 0.905 & 0.898 & 89.8021 & 0.899\\
-Gaussian Process & 0.940 & 0.921 & 92.0852 & 0.924\\
-Naive Bayes & 0.923 & 0.918 & 91.7808 & 0.919\\
-QDA & 0.931 & 0.909 & 90.8676 & 0.912\\
-\botrule
+K Nearest Neighbors & neighbors=5,  weights=uniform \\
+SVM (SVC, Linear, SGD)& C=$0.1\sim 1.0$, kernel=rbf/Linear/poly, degree=$1\sim 3$\\
+Gaussian Process Regressor & $\alpha$=$1^{-10}$ \\
+Decision Tree & criterion=gini, splitter=best, min split=2  \\
+Random Forest Ensemble & estimators=100, criterion=gini, min split=2, min leaf=1, max features=sqrt\\
+Multi-layer perceptron & solver=Adam, $\alpha$=1, hidden layer=15 \\
+AdaBoost Ensemble & estimators=50, learning rate=1.0, boosting algorithm=SAMME.R\\
+Naive Bayes (GaussianNB) & smoothing=$1^{-9}$\\
+\bottomrule
 \end{tabular}
-\footnotetext{}
-\end{minipage}
+%\footnotetext{Inference from chord diagrams}
+\end{flushleft}
 \end{center}
+\label{Table_classification_alg}
 \end{table}
+
+%\begin{table}[h!]
+%\begin{center}
+%\begin{minipage}{174pt}
+%\caption{Classifiers accuracy of models}\label{tab1}%
+%\begin{tabular}{@{}lllll@{}}
+%\toprule
+%Classifier & Precision & Recall & Accuracy & F1 \\
+%\midrule
+%Nearest Neighbors & 0.926 & 0.924 & 92.3896 & 0.924\\
+%RBF SVM & 0.942 & 0.924 & 92.3896 & 0.927\\
+%Decision Tree & 0.901 & 0.848 & 84.7793 & 0.856\\
+%Random Forest & 0.513 & 0.282 & 28.1583 & 0.167\\
+%Neural Net & 0.942 & 0.927 & 92.6941 & 0.929\\
+%AdaBoost & 0.905 & 0.898 & 89.8021 & 0.899\\
+%Gaussian Process & 0.940 & 0.921 & 92.0852 & 0.924\\
+%Naive Bayes & 0.923 & 0.918 & 91.7808 & 0.919\\
+%QDA & 0.931 & 0.909 & 90.8676 & 0.912\\
+%\botrule
+%\end{tabular}
+%\footnotetext{}
+%\end{minipage}
+%\end{center}
+%\end{table}
 
 
 \subsubsection{Suicidal Intensities visualization}
@@ -583,23 +599,23 @@ How much depression can trigger suicidal thoughts is an interesting question. In
 
 For the word2vec vector embedding scenario supportive and indicator categories results are almost similar in depression or suicide both classes. There is slight difference is shown for suicidal ideation and within suicide class, suicidal ideation is slight higher. Except the behavior and attempt category for the rest categories depression and suicide showed almost similar number of samples. 
 
-%\begin{figure}[H]
-%\centering
-%\begin{subfigure}{0.45\textwidth}
-%    \includegraphics[width=\textwidth]{sentiment_sunburst.png}
-%    \caption{First subfigure.}
-%    \label{fig:first}
-%\end{subfigure}
-%\hfill
-%\begin{subfigure}{0.45\textwidth}
-%    \includegraphics[width=\textwidth]{emotion_sunburst.png}
-%    \caption{Second subfigure.}
-%    \label{fig:second}
-%\end{subfigure}
-%        
-%\caption{Subreferences in \LaTeX.}
+\begin{figure}[H]
+\centering
+\begin{subfigure}{0.45\textwidth}
+    \includegraphics[width=\textwidth]{sentiment_sunburst.png}
+    \caption{First subfigure.}
+    \label{fig:first_sentiment_sunburst}
+\end{subfigure}
+\hfill
+\begin{subfigure}{0.45\textwidth}
+    \includegraphics[width=\textwidth]{emotion_sunburst.png}
+    \caption{Second subfigure.}
+    \label{fig:second_emotion_sunburst}
+\end{subfigure}
+        
+\caption{Subreferences in \LaTeX.}
 %\label{fig:figures}
-%\end{figure}
+\end{figure}
 \section{Discussion} 
 From the result it is revealed that suicide categories shown within depression and suicide class vividly. Specially suicidal ideation, indicator showed similar patterns. The number of samples within depression and suicide is almost similar for this two categories. Hence, we can infer depressed person comments showed suicidal ideation and suicidal indicating symptoms. Suicidal behavior and attempt showed higher number of samples within the suicide category compared to depression category. All these results seems very logical results. Although from the results mathematical formulas are not derived in this research study since results are susceptible to chosen classifier, chosen dataset, pretrained models vectors or embedding provided to the classifier. 
  
