@@ -70,6 +70,8 @@
 %%\unnumbered% uncomment this for unnumbered level heads
 
 %% My used library
+\usepackage[numbers]{natbib}
+\usepackage{notoccite}
 \usepackage{subcaption}
 \usepackage{amsmath,amssymb}
 \usepackage{graphicx, adjustbox}
@@ -83,8 +85,7 @@
 
 \begin{document}
 
-\title[Article Title]{Unsupervised Topic Modeling with LDA for Textbook Content Comprehension,
-a qualitative survey}
+\title[Article Title]{An unsupervised approach for English Textbook Content Comprehension for the perspective of Bangladesh}
 
 %%=============================================================%%
 %% Prefix	-> \pfx{Dr}
@@ -116,7 +117,7 @@ a qualitative survey}
 %% sample for unstructured abstract %%
 %%==================================%%
 
-\abstract{In this research LDA driven exploratory analysis is shown to depict
+\abstract{In this research exploratory analysis is shown to depict
 various keywords related to subtle topic in context. It identifies
 latent topics within textbook lessons, uncovers coherent themes from
 textual data, aims to improve the curriculum provided English textbook
@@ -167,36 +168,6 @@ Across all English learning applications via digital media, about 55\% exercise 
 \subsection{Research Overview} 
 To detect underlying themes or topics keywords within a Textbook corpus an unsupervised probabilistic topic modeling technique LDA is used in this research \cite{jelodar_latent_2019} (see section \ref{lda_mdel} for details). Topic modeling of LDA doesn\textquotesingle t directly account for student engagement such as learning tasks in mobile apps \cite{sandberg_mobile_2011}. Hence a prototype app is developed and qualitative survey is conducted to observe the instructor\textquotesingle s sentiment impact similar to research paper in \cite{oz2015investigation}. Qualitative survey research is undertaken to evaluate the effectiveness of unsupervised topic modeling LDA Bangladesh\textquotesingle s National Curriculum Textbook Board (NCTB) provided English Textbook for Higher secondary school education. This study seeks to ascertain if instructors can teach and students can learn English better if a mobile app is introduced which includes NLP\textquotesingle s LDA driven topic modeling applied extracted keywords and analysis. A prototype mobile app is developed to incorporate the topic modeling extracted keywords into the app. This article presents the key findings and insights from the survey, shedding light on the prospective of learners especially instructors. In the survey questions, it was indicated whether the students, teachers/instructors would find it acceptable and appreciated if textbook information were made available through a mobile app and presented in interactive format. To demonstrate the mobile app idea during the interrogation survey session a prototype is also prepared. Participants were asked for suggestions on how to make the app better and about any shortcomings. After collecting feedback, word clouds were used (see \ref{wordcloud}) to analyze the frequency of the participants\textquotesingle{} recommended terms, and the LIWC approach was used to estimate overall sentiment (see \ref{liwc}). 
 
-\subsection{Topic Modeling}
- Different techniques have been developed to perform topic modeling in the unsupervised topic modeling domain of Natural Language Processing (NLP), having their own strengths and limitations \cite{vayansky2020review, abdelrazek2022topic, yi2009comparative}. Apart from LDA, Mallet LDA, Structural Topic Model (STM), Hierarchical Dirichlet Process (HDP), Non-Negative Matrix Factorization (NMF), Latent Semantic Analysis (LSA) etc are also prevailing and can be considered for comparative research study.
-
-\subsection{Latent Dirichlet Allocation (LDA)}
-\label{lda_mdel}
-LDA model \cite{jelodar_latent_2019, gupta_pan_lda_2021, pichardo_lagunas_svd_lda_2015, selvi_classification_2019} considers documents are mixes of topic, and each topic is a distribution over words. The objective is to derive the hidden topic assignments and the topic-word distributions that most effectively describe the observed documents. The goal of LDA is to uncover these latent topics from a collection of documents without needing any prior labeling or categorization of the content. An expression for the joint distribution of the LDA model is described below:  
-\begin{equation}
-P(\theta_d,z,w\|\alpha,\beta)=P(\theta_d\|\alpha)\prod^N_{n=1}P(z_{d,n}\|\theta_d)P(w_{d,n}\|z_{d,n},\beta)
-\end{equation}
-Where $w_{d,n}$ the $n_{th}$ word in document $d$, $z_{d,n}$ the topic assigned to the $n_{th}$ word in document $d$, $\alpha,\beta$ are the Dirichlet LDA model parameters. controls per-document topic distribution, and per topic word distribution. $\theta_d$ represent the topic distribution. $P(\theta_d \| \alpha)$ Dirichlet 
-distribution representing the document-topic distribution, $P(z_{d,n}\|\theta_d)$ is the word topic assignment for the $n_{th}$ word in document $d$, $P(w_{d,n}\|z_{d,n},\beta)$ is the distribution representing the observed word given a topic. We have chosen LDA for baseline statistical topic modeling tool. However, how many topics are ideal it is needed to determine and also topic modeling quality needs to measure.
-
-\subsubsection{Topic models comparative analysis}
-While some variations of LDA, Mallet LDA is considered for large corpus processing and analysis \cite{vayansky2020review, abdelrazek2022topic, Comparison_Topic_Modeling_Algorithms}. It focuses on scalability, If large corpus needs to analyze, Mallet LDA might be more suitable. LDA in general can still be efficiently applied to moderately sized corpora. Analyzing topics within the context of metadata, STM could be a better fit. Hierarchical Dirichlet Process (HDP) can be useful when we cannot guess the number of topics in advance. In \cite{Comparison_Topic_Modeling_Algorithms} LSI, NMF and LDA are compared in terms of coherence and similarity measures for social media dataset and in their analysis NMF is observed most effective measures. However, as a baseline model LDA is often considered one of the most prominent choices. In this study Textbook corpus is divided into lessons which is a mixture of topics and using LDA expecting to determine which word in the lesson belong to Lesson\textquotesingle s topics. LDA produces interpretative results for exploratory topic analysis. The identified topics are represented as distributions over words, making it easy to assign meaningful labels to topics. Provided by most of the libraries and tools, making it easy to implement and can be integrated into existing workflows. Hence, LDA serves as a solid baseline for topic modeling tasks.  
-
-\subsection{Optimal Topics with Coherence}  
-Coherence score measure how coherent or interpret the words in that topic and estimates number of topic clusters \cite{mimno2011optimizing}. Coherence score assess the quality of the topics produced by LDA and ensures that the topics generated are statistically significant. Coherence \(C_{topic}\) can be expressed as follows  
-\begin{equation}
-C_{topic}=\sum^N_{i=1} \frac{1}{N(N-1)}\sum^i_{j=1} PMI(w_i,w_j)
-\end{equation}
-Where, \(PMI\left( w_{i},w_{j} \right)\) represent pointwise mutual information statistical association between two words occurring together. PMI score indicates that the two words are more closely related within a topic. \(PMI\left( w_{i},w_{j} \right)\) can expressed as  
-\begin{equation}
-\(PMI\left( w_{i},w_{j} \right) = \log\frac{P\left( w_{i},w_{j} \right)}{P\left( w_{i} \right)P\left( w_{j} \right)}\)
-\end{equation}
-
-where \(P\left( w_{i},w_{j} \right)\) is joint probability of occurrence of words \(w_{i}\) and \(w_{j}\).  To calculate the coherence score gensim library provides range of options such as \(u_{mass},c_{v},c_{uci},c_{npmi}\). \(u_{mass}\) and \(c_{v}\)These two methods are most popular. For given topic with words \(\{ w_{1},w_{2},w_{3},\ldots..,w_{n}\}\) a fixed context window size is provided (default size 10 words) then coherence score is calculated using an equation \(\sum_{j = 1}^{i}{PMI}\left( w_{i},w_{j} \right)\) which provides negative coherence score. \(c_{v}\) can be expressed as  
-\begin{equation}
-\(c_{v} = \frac{1}{N(N - 1)}\sum_{j = 1}^{i}{similarity\left( w_{i},w_{j} \right)}\)
-\end{equation}
-in which \(similarity\left( w_{i},w_{j} \right)\) represent the pairwise similarity between terms based on \(PMI\left( w_{i},w_{j} \right)\) scores. \(c_{v}\) provides a positive coherence score. Higher coherence values (higher than 0.5) indicate that the topics are moderately coherent and representative of meaningful themes within the text data.
   
 \section{Literature Review}
 
@@ -226,13 +197,7 @@ The methodology involves pre-processing textual data, training the LDA model on 
 LDA algorithm automatically discovers latent topics within the documents based on word co-occurrences. Each topic will be represented by a set of words. Interpret these words to understand the main concepts associated with each topic. Extensive exploratory analysis is conducted to visualize the topic modeling outputs. Analyze the topics generated by the model require manual review and adjustment to ensure the topics make sense.
 
 \subsection{Data Processing and Models}
-\subsubsection{Feature Extraction}
-
-\begin{enumerate}
-\def\labelenumi{\alph{enumi}.}
-\item
-  First NLP's data processing or data mining techniques are applied for meaningful token or feature extraction. Text is converted to Lowercased and Normalized to ensure consistent pre-processing \cite{kao_natural_2007}.
-
+Text is converted to Lowercased and Normalized to ensure consistent pre-processing \cite{kao_natural_2007}.
   \begin{enumerate}
   \def\labelenumii{\roman{enumii}.}
   \item
@@ -257,12 +222,76 @@ LDA algorithm automatically discovers latent topics within the documents based o
     thereby token is collected for only which are not punctuation,
     conjunction, symbol etc.
   \end{enumerate}
-\end{enumerate}
 
-\section{Exploratory analysis of Textbook content}
+\subsection{Topic Modeling and Feature Extraction}
+Different techniques have been developed to perform topic modeling in the unsupervised topic modeling domain of Natural Language Processing (NLP), having their own strengths and limitations \cite{vayansky2020review, abdelrazek2022topic, yi2009comparative}. Apart from LDA, Mallet LDA, Structural Topic Model (STM), Hierarchical Dirichlet Process (HDP), Non-Negative Matrix Factorization (NMF), Latent Semantic Analysis (LSA) etc are also prevailing and can be considered for comparative research study. Prevailing LDA based data mining techniques are applied for feature extraction. 
+
+\subsection{Latent Dirichlet Allocation (LDA)}
+\label{lda_mdel}
+LDA model \cite{jelodar_latent_2019, gupta_pan_lda_2021, pichardo_lagunas_svd_lda_2015, selvi_classification_2019} considers documents are mixes of topic, and each topic is a distribution over words. The objective is to derive the hidden topic assignments and the topic-word distributions that most effectively describe the observed documents. The goal of LDA is to uncover these latent topics from a collection of documents without needing any prior labeling or categorization of the content. An expression for the joint distribution of the LDA model is described below:  
+\begin{equation}
+P(\theta_d,z,w\|\alpha,\beta)=P(\theta_d\|\alpha)\prod^N_{n=1}P(z_{d,n}\|\theta_d)P(w_{d,n}\|z_{d,n},\beta)
+\end{equation}
+Where $w_{d,n}$ the $n_{th}$ word in document $d$, $z_{d,n}$ the topic assigned to the $n_{th}$ word in document $d$, $\alpha,\beta$ are the Dirichlet LDA model parameters. controls per-document topic distribution, and per topic word distribution. $\theta_d$ represent the topic distribution. $P(\theta_d \| \alpha)$ Dirichlet 
+distribution representing the document-topic distribution, $P(z_{d,n}\|\theta_d)$ is the word topic assignment for the $n_{th}$ word in document $d$, $P(w_{d,n}\|z_{d,n},\beta)$ is the distribution representing the observed word given a topic. We have chosen LDA for baseline statistical topic modeling tool. However, how many topics are ideal it is needed to determine and also topic modeling quality needs to measure.
+
+\subsubsection{Comparative analysis of Topic modeling}
+While some variations of LDA, Mallet LDA is considered for large corpus processing and analysis \cite{vayansky2020review, abdelrazek2022topic, Comparison_Topic_Modeling_Algorithms}. It focuses on scalability, If large corpus needs to analyze, Mallet LDA might be more suitable. LDA in general can still be efficiently applied to moderately sized corpora. Analyzing topics within the context of metadata, STM could be a better fit. Hierarchical Dirichlet Process (HDP) can be useful when we cannot guess the number of topics in advance. In \cite{Comparison_Topic_Modeling_Algorithms} LSI, NMF and LDA are compared in terms of coherence and similarity measures for social media dataset and in their analysis NMF is observed most effective measures. However, as a baseline model LDA is often considered one of the most prominent choices. In this study Textbook corpus is divided into lessons which is a mixture of topics and using LDA expecting to determine which word in the lesson belong to Lesson\textquotesingle s topics. LDA produces interpretative results for exploratory topic analysis. The identified topics are represented as distributions over words, making it easy to assign meaningful labels to topics. Provided by most of the libraries and tools, making it easy to implement and can be integrated into existing workflows. Hence, LDA serves as a solid baseline for topic modeling tasks.  
+
+\subsection{Optimal Topics with Coherence}  
+Coherence score measure how coherent or interpret the words in that topic and estimates number of topic clusters \cite{mimno2011optimizing}. Coherence score assess the quality of the topics produced by LDA and ensures that the topics generated are statistically significant. Coherence \(C_{topic}\) can be expressed as follows  
+\begin{equation}
+C_{topic}=\sum^N_{i=1} \frac{1}{N(N-1)}\sum^i_{j=1} PMI(w_i,w_j)
+\end{equation}
+Where, \(PMI\left( w_{i},w_{j} \right)\) represent pointwise mutual information statistical association between two words occurring together. PMI score indicates that the two words are more closely related within a topic. \(PMI\left( w_{i},w_{j} \right)\) can expressed as  
+\begin{equation}
+\(PMI\left( w_{i},w_{j} \right) = \log\frac{P\left( w_{i},w_{j} \right)}{P\left( w_{i} \right)P\left( w_{j} \right)}\)
+\end{equation}
+
+where \(P\left( w_{i},w_{j} \right)\) is joint probability of occurrence of words \(w_{i}\) and \(w_{j}\).  To calculate the coherence score gensim library provides range of options such as \(u_{mass},c_{v},c_{uci},c_{npmi}\). \(u_{mass}\) and \(c_{v}\)These two methods are most popular. For given topic with words \(\{ w_{1},w_{2},w_{3},\ldots..,w_{n}\}\) a fixed context window size is provided (default size 10 words) then coherence score is calculated using an equation \(\sum_{j = 1}^{i}{PMI}\left( w_{i},w_{j} \right)\) which provides negative coherence score. \(c_{v}\) can be expressed as  
+\begin{equation}
+\(c_{v} = \frac{1}{N(N - 1)}\sum_{j = 1}^{i}{similarity\left( w_{i},w_{j} \right)}\)
+\end{equation}
+in which \(similarity\left( w_{i},w_{j} \right)\) represent the pairwise similarity between terms based on \(PMI\left( w_{i},w_{j} \right)\) scores. \(c_{v}\) provides a positive coherence score. Higher coherence values (higher than 0.5) indicate that the topics are moderately coherent and representative of meaningful themes within the text data.
+
+
+\subsection{Visualize participants response}
+\subsubsection{Linguistic Inquiry and Word Count (LIWC)}
+\label{liwc}
+
+In this research LIWC is used to ascertain the general sentiment of the
+responses given by the survey participants. Linguistic Inquiry and Word
+Count (LIWC), is a text analysis tool to measure
+psychological or emotional characteristics \cite{tausczik2010psychological, liwc22_welcome_nodate}. It aims to quantify
+sentiment by examining the frequencies of different linguistic terms
+within given text based on predefined dictionary of words associated
+with various categories. Let's assume text as a sequence of words:
+\(\left\{ w_{1},w_{2},\ldots.,w_{n} \right\}\) and M different
+linguistic categories: \(\left\{ C_{1},C_{2},\ldots.,C_{m} \right\}\) .
+Proportion of words in each category
+\(P\lbrack i\rbrack = \frac{w\lbrack i\rbrack}{T}\) where T is the total
+number of Text. Now, a matrix \(X\lbrack i,j\rbrack\) can be formed,
+where \(w_{i}\) represents the frequency of the word in the linguistic
+category \(C_{j}\). LIWC vector containing the proportions of words in
+each linguistic category can be expressed as
+\(P_{total}\lbrack j\rbrack = \frac{\sum_{i = 1}^{T}{X\lbrack i,j\rbrack}}{T}\).
+
+\subsubsection{Word cloud}
+\label{wordcloud}
+LIWC involves linguistic analysis using mathematical expression but
+using word cloud survey answers can be visualized vividly in
+interpretable interactive format. Word cloud consider a set of words
+\(\left\{ w_{1},w_{2},\ldots.,w_{n} \right\}\) extracted from Text
+document and associated frequencies
+\(\left\{ f_{1},f_{2},\ldots.,f_{n} \right\}\), \(s_{i}\) represent the
+proportional size of the word in the cloud can be expressed as
+\(s_{i} = \frac{f_{i}}{\sum_{j = 1}^{n}f_{j}}\) where normalized
+frequency \(f_{i}\).
+
+\section{Experiment and analysis}
 In this research study for the dataset we have collected Bangladesh NCBI provided English Textbook for class 9-10. Here whole book is segregated into Lessons and we wanted to explore the important topics within the content. Similar topic words remain together. Therefore, assumptions are, it helps students to understands the words, sentences and context of the book. Ideal number of topics are determined using coherence score \cite{mimno2011optimizing}.
 
-\subsection{Coherence for LDA model}
+\subsection{Coherence for LDA model measurements}
 To measure coherence in the context of LDA, following steps are
 followed:
 
@@ -438,7 +467,10 @@ subspace by computing eigenvalues reduced the circle overlapping. Topics
 that are closer together in the map are more similar in terms of the
 distribution of words.
 
-\section{Englisher Mobile App}
+\subsection{Qualitative survey}
+In the survey questions, it was indicated whether the students, teachers/instructors, and government organizations would find it acceptable and appreciated if textbook information were made available through a mobile app and presented in interactive format. To demonstrate the mobile app idea during the interrogation survey session prototype app Englisher is prepared (see demo in section \ref{Englisher_mobile_app}). Participants were asked for suggestions on how to make the app better and specify shortcomings. Presumably It provides an insight of teacher’s emotion about inclusion of mobile technology in higher secondary English education system. 
+
+\subsubsection{Englisher Mobile App}
 \label{Englisher_mobile_app}
 A mobile application (Englisher) is being developed with content from the NCTB’s English Textbook for class 9. The extracted keywords are organized into lessons and furthermore quiz is introduced as an exercise. Each sentence's and word's Bengali meaning is provided in accordance with the lesson. Students can take quizzes, and their results are recorded in the history so that history can be reviewed and performance can be improved by more practice in the future. 
 
@@ -462,14 +494,11 @@ A mobile application (Englisher) is being developed with content from the NCTB�
 \label{fig:figures}
 \end{figure}
 
-\section{Qualitative survey}
-In the survey questions, it was indicated whether the students, teachers/instructors, and government organizations would find it acceptable and appreciated if textbook information were made available through a mobile app and presented in interactive format. To demonstrate the mobile app idea during the interrogation survey session prototype app Englisher is prepared (see demo in section \ref{Englisher_mobile_app}). Participants were asked for suggestions on how to make the app better and specify shortcomings. Presumably It provides an insight of teacher’s emotion about inclusion of mobile technology in higher secondary English education system. 
-
-\subsection{Survey Planning}
+\subsubsection{Survey Planning}
 The survey was conducted over a period of four weeks, with 50 High schools in Dhaka and Bogura district of Bangladesh. It encompasses only English subject areas Teachers who teaches in high schools from class six to class Ten and teaches regularly in the school. A questionnaire was distributed to teachers allowing us to gather questionnaire answer. 
-\subsubsection{Survey participants}
+\subsubsection{Participants}
 During the survey standard participants were chosen emphasizing infrastructure quality, teaching experience, class size etc. At the beginning from 100 institution were selected. Then half of them were excluded since those institutions infrastructure's overall quality and condition were not above average. Among the chosen samples 76\% were good and 26\% considered average institutions. Privately held 45\%, 32\% partially government and 22\% are government institutes.  Over 1000 students study in almost 40\% of these institutions and  sizable number of pupils are present in each section and class. 38\% class have a size greater than 50. So, we can presume that the participating teachers have quite a bit of experience teaching sufficient number of students.  
-\subsection{Survey Results}
+\subsubsection{Survey Results}
 We have done extensive analysis with the survey data collected. In our data collection highest priority is given for the secondary class student teachers who teach between 6-10th class about 46\%. High school, KG college and KG High school. Details about the statistics are depicted in the following figure. Adjacent chart explains the percentage of teachers who teach in which class. Hence, from these two figures we can get a vivid image of collected dataset resources about the participating teachers. 
 
 \begin{figure}[h!]
@@ -575,26 +604,7 @@ sector & 98\% & 2\% \\
 \bottomrule
 \end{longtable}
 
-
-\section{Linguistic Inquiry and Word Count (LIWC) for Qualitative sentiment}
-\label{liwc}
-
-In this research LIWC is used to ascertain the general sentiment of the
-responses given by the survey participants. Linguistic Inquiry and Word
-Count (LIWC), is a text analysis tool to measure
-psychological or emotional characteristics \cite{tausczik2010psychological, liwc22_welcome_nodate}. It aims to quantify
-sentiment by examining the frequencies of different linguistic terms
-within given text based on predefined dictionary of words associated
-with various categories. Let's assume text as a sequence of words:
-\(\left\{ w_{1},w_{2},\ldots.,w_{n} \right\}\) and M different
-linguistic categories: \(\left\{ C_{1},C_{2},\ldots.,C_{m} \right\}\) .
-Proportion of words in each category
-\(P\lbrack i\rbrack = \frac{w\lbrack i\rbrack}{T}\) where T is the total
-number of Text. Now, a matrix \(X\lbrack i,j\rbrack\) can be formed,
-where \(w_{i}\) represents the frequency of the word in the linguistic
-category \(C_{j}\). LIWC vector containing the proportions of words in
-each linguistic category can be expressed as
-\(P_{total}\lbrack j\rbrack = \frac{\sum_{i = 1}^{T}{X\lbrack i,j\rbrack}}{T}\).
+\subsubsection{Qualitative Survey Sentiment}
 
 \begin{longtable}[]{@{}
   >{\raggedright\arraybackslash}p{(\columnwidth - 12\tabcolsep) * \real{0.1709}}
@@ -643,17 +653,6 @@ mix of optimism and skepticism regarding the use of mobile apps in
 teaching and learning. During the interrogation session, their tone was
 positive and enticed participants.
 
-\subsection{Visualize participants response with Word cloud}
-\label{wordcloud}
-LIWC involves linguistic analysis using mathematical expression but
-using word cloud survey answers can be visualized vividly in
-interpretable interactive format. Word cloud consider a set of words
-\(\left\{ w_{1},w_{2},\ldots.,w_{n} \right\}\) extracted from Text
-document and associated frequencies
-\(\left\{ f_{1},f_{2},\ldots.,f_{n} \right\}\), \(s_{i}\) represent the
-proportional size of the word in the cloud can be expressed as
-\(s_{i} = \frac{f_{i}}{\sum_{j = 1}^{n}f_{j}}\) where normalized
-frequency \(f_{i}\).
 
 \begin{figure}[h!]
 \centering
@@ -1209,7 +1208,7 @@ collaborative form of learning.
 %%% by copying the reference list from your .bbl file, paste it into the main manuscript .tex %%
 %%% file, and delete the associated \verb+\bibliography+ commands.                            %%
 %%%===========================================================================================%%
-
+%\bibliographystyle{unsrt}
 %\bibliography{sn-bibliography}% common bib file
 %% if required, the content of .bbl file can be included here once bbl is generated
 %%\input sn-article.bbl
