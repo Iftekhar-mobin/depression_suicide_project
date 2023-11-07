@@ -171,7 +171,7 @@ To detect underlying themes or topics keywords within a Textbook corpus an unsup
   
 \section{Literature Review}
 
-LDA based topic modeling has been used for semantic search, ontology exploration, classification, dominant keywords searching in many research studies. For curriculum based textbook study it could be an option is not revealed from rigorous search in online repositories, which we addressed in this research study. This research model is infusing Textbook features into LDA based topic modeling to discover a set of topic-words from the provided document for Textbook comprehension and understanding context. Similar approaches and implications are described below:
+Topic modeling has been used for semantic search, ontology exploration, classification, dominant keywords searching in many research studies. For curriculum based textbook study it could be an option is not revealed from rigorous search in online repositories, which we addressed in this research study. This research model is infusing Textbook features into LDA based topic modeling to discover a set of topic-words from the provided document for Textbook comprehension and understanding context. Similar approaches and implications are described below:
 
 \subsection{LDA for Textbook Content}
 
@@ -260,10 +260,8 @@ in which \(similarity\left( w_{i},w_{j} \right)\) represent the pairwise similar
 \label{liwc}
 
 In this research LIWC is used to ascertain the general sentiment of the
-responses given by the survey participants. Linguistic Inquiry and Word
-Count (LIWC), is a text analysis tool to measure
-psychological or emotional characteristics \cite{tausczik2010psychological, liwc22_welcome_nodate}. It aims to quantify
-sentiment by examining the frequencies of different linguistic terms
+responses given by the survey participants (see section \ref{q_sentiment}). Linguistic Inquiry and Word
+Count (LIWC), is a text analysis tool to measure psychological or emotional characteristics \cite{tausczik2010psychological, liwc22_welcome_nodate}. It aims to quantify sentiment by examining the frequencies of different linguistic terms
 within given text based on predefined dictionary of words associated
 with various categories. Let's assume text as a sequence of words:
 \(\left\{ w_{1},w_{2},\ldots.,w_{n} \right\}\) and M different
@@ -286,7 +284,7 @@ document and associated frequencies
 \(\left\{ f_{1},f_{2},\ldots.,f_{n} \right\}\), \(s_{i}\) represent the
 proportional size of the word in the cloud can be expressed as
 \(s_{i} = \frac{f_{i}}{\sum_{j = 1}^{n}f_{j}}\) where normalized
-frequency \(f_{i}\).
+frequency \(f_{i}\). In section \ref{q_sentiment} figure \ref{word_cloud_1} and \ref{word_cloud_2} we can see the participants responses most frequent terms. 
 
 \section{Experiment and analysis}
 In this research study for the dataset we have collected Bangladesh NCBI provided English Textbook for class 9-10. Here whole book is segregated into Lessons and we wanted to explore the important topics within the content. Similar topic words remain together. Therefore, assumptions are, it helps students to understands the words, sentences and context of the book. Ideal number of topics are determined using coherence score \cite{mimno2011optimizing}.
@@ -327,13 +325,11 @@ followed:
 \begin{subfigure}{0.45\textwidth}
     \includegraphics[width=\textwidth]{cv.png}
     \caption{Coherence for $c_v$ approach}
-    \label{cv}
 \end{subfigure}
 \hfill
 \begin{subfigure}{0.45\textwidth}
     \includegraphics[width=\textwidth]{umass.png}
     \caption{Coherence for $u_{mass}$ approach}
-    \label{umass}
 \end{subfigure}       
 \caption{Coherence score to estimate optimal number of Topics}
 \label{cv_umass}
@@ -394,28 +390,6 @@ Topics & Dominant Keywords and Weights \\
 %\textbf{Topic 06}: {[}\enquote*{job} 0.064, \enquote*{English} 0.023, \enquote*{learn} 0.021, \enquote*{teacher}
 %0.017, \enquote*{use} 0.016, \enquote*{dream} 0.016, \enquote*{think} 0.016, \enquote*{thing} 0.015,
 %\enquote*{school} 0.014, \enquote*{education} 0.013{]}
-
-\subsection{Count vs Relative Importance measurement}
-
-Word frequency $n(w_{j},d_{i})$ in each document \(D\) is measured as below which identifies the most frequent words within each document and across the entire corpus.
-
-\begin{equation}
-D = \sum_{d_{i} \in D}^{}\left\{ \begin{array}{l}
-1,n\left( w_{i},d_{i} \right) > 0 \\
-0,n\left( w_{i},d_{i} \right) = 0 \\
-\end{array} \right.\
-\end{equation}
-
-we can visualize relative importance of any keywords in terms of frequency and plotted inclined with LDA provided weights.
-
-\begin{figure}[h!]
-\centering
-\includegraphics[width=0.9\textwidth]{Figs/relative_imp.png}
-\caption{Word frequency and its relative importance}
-\label{fig:Relative_weight}
-\end{figure}
-
-
 \subsection{Dominant topic and contribution}
 
 In LDA models, each document is composed of multiple topics. But
@@ -426,6 +400,28 @@ belongs predominantly to which topic. How frequently the words have
 appeared in the documents and the weights of each keyword in the same
 chart, words that occur in multiple topics and the ones whose relative
 frequency is more than the weight.
+
+\subsubsection{Count vs Relative Importance measurement}
+
+Word frequency $n(w_{j},d_{i})$ in each document \(D\) is measured in equation \ref{eq:rela_weight} as below which identifies the most frequent words within each document and across the entire corpus.
+
+\begin{equation}
+\label{eq:rela_weight}
+D = \sum_{d_{i} \in D}^{}\left\{ \begin{array}{l}
+1,n\left( w_{i},d_{i} \right) > 0 \\
+0,n\left( w_{i},d_{i} \right) = 0 \\
+\end{array} \right.\
+\end{equation}
+
+we can visualize relative importance of any keywords in terms of frequency and plotted inclined with LDA provided weights (figure \ref{fig:Relative_weight}).
+
+\begin{figure}[h!]
+\centering
+\includegraphics[width=18cm, height=10cm,angle=90]{Figs/relative_imp.png}
+\caption{Word frequency and its relative importance}
+\label{fig:Relative_weight}
+\end{figure}
+
 
 \subsection{Topic-Term Matrix Visualization and Inter-Topic Distance Map}
 
@@ -456,11 +452,11 @@ the topic-term matrix \(P\lbrack t,w\rbrack\).
 \begin{figure}[h]
 \centerline{\includegraphics[width=\textwidth]{pyldvis.png}}
 \caption{Topic model co-occurrence visualization with dominant keywords'}
-\label{fig:Relative_weight}
+\label{Relative_weight_pyldvis}
 \end{figure}
 
 Top 30 most salient terms are showed at right in the bar chart histogram
-and left figure shows inter topic distance, their size etc. PCA
+and left figure shows inter topic distance, their size etc (see figure~\ref{Relative_weight_pyldvis}). PCA
 dimensionality reduction technique is applied here to embed the LDA
 result into a 2D plain scale. Projected the data in lower-dimensional
 subspace by computing eigenvalues reduced the circle overlapping. Topics
@@ -593,10 +589,7 @@ Education during graduation was English and English was used for
 learning & 83.70\% & 16.30\% \\
 \multicolumn{3}{@{}>{\raggedright\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{1.0000} + 4\tabcolsep}@{}}{%
 \textit{Customized mobile app for Learning and Teaching English}} \\
-Do you think teacher will use the topic model mobile app for teaching &
-92\% & 8\% \\
-Do you think students will use the topic model app for learning? & 80\%
-& 20\% \\
+Do you thz
 Do you think topic model based mobile app-based learning can improve
 English proficiency of students & 86\% & 14\% \\
 Do you think Govt should promote these types of innovation for education
@@ -604,7 +597,8 @@ sector & 98\% & 2\% \\
 \bottomrule
 \end{longtable}
 
-\subsubsection{Qualitative Survey Sentiment}
+  \subsubsection{Qualitative Survey Sentiment}
+  \label{q_sentiment}
 
 \begin{longtable}[]{@{}
   >{\raggedright\arraybackslash}p{(\columnwidth - 12\tabcolsep) * \real{0.1709}}
@@ -659,16 +653,15 @@ positive and enticed participants.
 \begin{subfigure}{0.48\textwidth}
     \includegraphics[width=\textwidth]{app_impv.png}
     \caption{word cloud for the question regarding app improvement}
-    \label{cv}
+    \label{word_cloud_1}
 \end{subfigure}
 \hfill
 \begin{subfigure}{0.48\textwidth}
     \includegraphics[width=\textwidth]{eng_app_impv.png}
     \caption{word cloud for the question regarding English learning app improvement}
-    \label{umass}
+    \label{word_cloud_2}
 \end{subfigure}       
 %\caption{Coherence score to estimate optimal number of Topics}
-\label{cv_umass}
 \end{figure}
 
 The word cloud is generated from the answers provided question ``how the

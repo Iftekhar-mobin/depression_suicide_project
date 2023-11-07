@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.4) (preloaded format=pdflatex 2023.6.3)  6 NOV 2023 21:16
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.4) (preloaded format=pdflatex 2023.6.3)  7 NOV 2023 09:44
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -805,21 +805,6 @@ LaTeX Warning: Unused global option(s):
 
 (sn-article.aux
 
-LaTeX Warning: Label `fig:Relative_weight' multiply defined.
-
-
-LaTeX Warning: Label `cv' multiply defined.
-
-
-LaTeX Warning: Label `sub@cv' multiply defined.
-
-
-LaTeX Warning: Label `umass' multiply defined.
-
-
-LaTeX Warning: Label `sub@umass' multiply defined.
-
-
 LaTeX Warning: Label `cv_umass' multiply defined.
 
 
@@ -848,21 +833,6 @@ LaTeX Warning: Label `umass' multiply defined.
 
 
 LaTeX Warning: Label `sub@umass' multiply defined.
-
-
-LaTeX Warning: Label `cv' multiply defined.
-
-
-LaTeX Warning: Label `sub@cv' multiply defined.
-
-
-LaTeX Warning: Label `umass' multiply defined.
-
-
-LaTeX Warning: Label `sub@umass' multiply defined.
-
-
-LaTeX Warning: Label `cv_umass' multiply defined.
 
 
 LaTeX Warning: Label `cv' multiply defined.
@@ -1080,15 +1050,15 @@ Overfull \vbox (1.44444pt too high) has occurred while \output is active []
 
 
 [8]
-<Figs/cv.png, id=308, 418.4433pt x 315.8199pt>
+<Figs/cv.png, id=313, 418.4433pt x 315.8199pt>
 File: Figs/cv.png Graphic file (type png)
 <use Figs/cv.png>
-Package pdftex.def Info: Figs/cv.png  used on input line 328.
+Package pdftex.def Info: Figs/cv.png  used on input line 326.
 (pdftex.def)             Requested size: 152.36346pt x 114.9962pt.
-<Figs/umass.png, id=309, 419.166pt x 315.8199pt>
+<Figs/umass.png, id=314, 419.166pt x 315.8199pt>
 File: Figs/umass.png Graphic file (type png)
 <use Figs/umass.png>
-Package pdftex.def Info: Figs/umass.png  used on input line 334.
+Package pdftex.def Info: Figs/umass.png  used on input line 331.
 (pdftex.def)             Requested size: 152.36346pt x 114.79863pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
@@ -1098,11 +1068,15 @@ Overfull \vbox (1.44444pt too high) has occurred while \output is active []
 
 
 [9 <./Figs/cv.png> <./Figs/umass.png>]
-<Figs/relative_imp.png, id=324, 1302.8675pt x 622.325pt>
+<Figs/relative_imp.png, id=331, 1302.8675pt x 622.325pt>
 File: Figs/relative_imp.png Graphic file (type png)
 <use Figs/relative_imp.png>
-Package pdftex.def Info: Figs/relative_imp.png  used on input line 413.
-(pdftex.def)             Requested size: 304.72693pt x 145.55319pt.
+Package pdftex.def Info: Figs/relative_imp.png  used on input line 420.
+(pdftex.def)             Requested size: 512.15195pt x 284.52573pt.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
@@ -1110,16 +1084,26 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 Overfull \vbox (1.44444pt too high) has occurred while \output is active []
 
 
-[10 <./Figs/relative_imp.png>]
-<Figs/pyldvis.png, id=331, 808.01875pt x 423.08063pt>
+[10]
+
+LaTeX Warning: Text page 11 contains only floats.
+
+
+Overfull \vbox (2.75215pt too high) has occurred while \output is active []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+Overfull \vbox (1.44444pt too high) has occurred while \output is active []
+
+
+[11 <./Figs/relative_imp.png>]
+<Figs/pyldvis.png, id=342, 808.01875pt x 423.08063pt>
 File: Figs/pyldvis.png Graphic file (type png)
 <use Figs/pyldvis.png>
-Package pdftex.def Info: Figs/pyldvis.png  used on input line 457.
+Package pdftex.def Info: Figs/pyldvis.png  used on input line 453.
 (pdftex.def)             Requested size: 338.58778pt x 177.28593pt.
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
@@ -1127,16 +1111,16 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 Overfull \vbox (1.44444pt too high) has occurred while \output is active []
 
 
-[11]
-<Figs/mobile_app_01.png, id=337, 843.15pt x 494.84875pt>
+[12 <./Figs/pyldvis.png>]
+<Figs/mobile_app_01.png, id=351, 843.15pt x 494.84875pt>
 File: Figs/mobile_app_01.png Graphic file (type png)
 <use Figs/mobile_app_01.png>
-Package pdftex.def Info: Figs/mobile_app_01.png  used on input line 481.
+Package pdftex.def Info: Figs/mobile_app_01.png  used on input line 477.
 (pdftex.def)             Requested size: 338.58778pt x 198.72127pt.
-<Figs/mobile_app_02.png, id=338, 835.12pt x 493.34312pt>
+<Figs/mobile_app_02.png, id=352, 835.12pt x 493.34312pt>
 File: Figs/mobile_app_02.png Graphic file (type png)
 <use Figs/mobile_app_02.png>
-Package pdftex.def Info: Figs/mobile_app_02.png  used on input line 488.
+Package pdftex.def Info: Figs/mobile_app_02.png  used on input line 484.
 (pdftex.def)             Requested size: 338.58778pt x 200.02116pt.
 
 
@@ -1149,40 +1133,26 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 Overfull \vbox (1.44444pt too high) has occurred while \output is active []
 
 
-[12 <./Figs/pyldvis.png>]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
-Overfull \vbox (1.44444pt too high) has occurred while \output is active []
-
-
-[13 <./Figs/mobile_app_01.png> <./Figs/mobile_app_02.png>]
-<Figs/institution_size.png, id=353, 719.18687pt x 254.9525pt>
+[13]
+<Figs/institution_size.png, id=358, 719.18687pt x 254.9525pt>
 File: Figs/institution_size.png Graphic file (type png)
 <use Figs/institution_size.png>
-Package pdftex.def Info: Figs/institution_size.png  used on input line 507.
+Package pdftex.def Info: Figs/institution_size.png  used on input line 503.
 (pdftex.def)             Requested size: 162.52068pt x 57.6147pt.
 
-Underfull \hbox (badness 1852) in paragraph at lines 508--508
+Underfull \hbox (badness 1852) in paragraph at lines 504--504
 []\OT1/cmr/m/n/9 (a) |Par-tic-i-pat-ing insti-tu-tion cat-e-gory
  []
 
-<Figs/english_teaching_class.png, id=354, 579.16376pt x 262.9825pt>
+<Figs/english_teaching_class.png, id=359, 579.16376pt x 262.9825pt>
 File: Figs/english_teaching_class.png Graphic file (type png)
 <use Figs/english_teaching_class.png>
-Package pdftex.def Info: Figs/english_teaching_class.png  used on input line 51
-3.
+Package pdftex.def Info: Figs/english_teaching_class.png  used on input line 50
+9.
 (pdftex.def)             Requested size: 162.52068pt x 73.7951pt.
-<Figs/num_stu.png, id=355, 461.22313pt x 207.77625pt>
-File: Figs/num_stu.png Graphic file (type png)
-<use Figs/num_stu.png>
-Package pdftex.def Info: Figs/num_stu.png  used on input line 526.
-(pdftex.def)             Requested size: 162.52068pt x 73.21417pt.
-<Figs/class_size.png, id=356, 438.63875pt x 207.27437pt>
-File: Figs/class_size.png Graphic file (type png)
-<use Figs/class_size.png>
-Package pdftex.def Info: Figs/class_size.png  used on input line 532.
-(pdftex.def)             Requested size: 162.52068pt x 76.79784pt.
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
@@ -1190,32 +1160,44 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 Overfull \vbox (1.44444pt too high) has occurred while \output is active []
 
 
-[14 <./Figs/institution_size.png> <./Figs/english_teaching_class.png> <./Figs/n
-um_stu.png> <./Figs/class_size.png>]
+[14 <./Figs/mobile_app_01.png> <./Figs/mobile_app_02.png>]
+<Figs/num_stu.png, id=367, 461.22313pt x 207.77625pt>
 File: Figs/num_stu.png Graphic file (type png)
 <use Figs/num_stu.png>
-Package pdftex.def Info: Figs/num_stu.png  used on input line 546.
+Package pdftex.def Info: Figs/num_stu.png  used on input line 522.
 (pdftex.def)             Requested size: 162.52068pt x 73.21417pt.
-<Figs/experience.png, id=367, 495.8525pt x 240.39813pt>
+<Figs/class_size.png, id=368, 438.63875pt x 207.27437pt>
+File: Figs/class_size.png Graphic file (type png)
+<use Figs/class_size.png>
+Package pdftex.def Info: Figs/class_size.png  used on input line 528.
+(pdftex.def)             Requested size: 162.52068pt x 76.79784pt.
+File: Figs/num_stu.png Graphic file (type png)
+<use Figs/num_stu.png>
+Package pdftex.def Info: Figs/num_stu.png  used on input line 542.
+(pdftex.def)             Requested size: 162.52068pt x 73.21417pt.
+<Figs/experience.png, id=369, 495.8525pt x 240.39813pt>
 File: Figs/experience.png Graphic file (type png)
 <use Figs/experience.png>
-Package pdftex.def Info: Figs/experience.png  used on input line 552.
+Package pdftex.def Info: Figs/experience.png  used on input line 548.
 (pdftex.def)             Requested size: 152.36346pt x 73.86604pt.
-<Figs/replace.png, id=368, 482.80376pt x 241.40187pt>
+<Figs/replace.png, id=370, 482.80376pt x 241.40187pt>
 File: Figs/replace.png Graphic file (type png)
 <use Figs/replace.png>
-Package pdftex.def Info: Figs/replace.png  used on input line 557.
+Package pdftex.def Info: Figs/replace.png  used on input line 553.
 (pdftex.def)             Requested size: 148.97945pt x 74.48755pt.
 
-Underfull \hbox (badness 3417) in paragraph at lines 558--558
+Underfull \hbox (badness 3417) in paragraph at lines 554--554
 []\OT1/cmr/m/n/9 (c) |App could help stu-dents in
  []
 
-<Figs/app_motivates.png, id=369, 541.52313pt x 243.91125pt>
+<Figs/app_motivates.png, id=371, 541.52313pt x 243.91125pt>
 File: Figs/app_motivates.png Graphic file (type png)
 <use Figs/app_motivates.png>
-Package pdftex.def Info: Figs/app_motivates.png  used on input line 563.
+Package pdftex.def Info: Figs/app_motivates.png  used on input line 559.
 (pdftex.def)             Requested size: 159.13666pt x 71.67778pt.
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
@@ -1223,51 +1205,42 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 Overfull \vbox (1.44444pt too high) has occurred while \output is active []
 
 
-[15 <./Figs/experience.png> <./Figs/replace.png> <./Figs/app_motivates.png>]
-Overfull \hbox (9.9819pt too wide) in paragraph at lines 619--620
+[15 <./Figs/institution_size.png> <./Figs/english_teaching_class.png> <./Figs/n
+um_stu.png> <./Figs/class_size.png>]
+Overfull \hbox (9.9819pt too wide) in paragraph at lines 613--614
 []\OT1/cmr/bx/n/10 Traditional 
  []
 
 
-Overfull \hbox (9.83327pt too wide) in paragraph at lines 621--622
+Overfull \hbox (9.83327pt too wide) in paragraph at lines 615--616
 []\OT1/cmr/bx/n/10 Answer 
  []
 
 
-Overfull \hbox (9.7519pt too wide) in paragraph at lines 625--626
+Overfull \hbox (9.7519pt too wide) in paragraph at lines 619--620
 []\OT1/cmr/bx/n/10 Answer 
  []
 
 
-Overfull \hbox (10.52885pt too wide) in paragraph at lines 629--630
+Overfull \hbox (10.52885pt too wide) in paragraph at lines 623--624
 []\OT1/cmr/bx/n/10 Answer 
  []
 
 
-Overfull \hbox (2.27628pt too wide) in paragraph at lines 631--632
+Overfull \hbox (2.27628pt too wide) in paragraph at lines 625--626
 []\OT1/cmr/bx/n/10 Standard 
  []
 
 
-Overfull \hbox (2.51671pt too wide) in paragraph at lines 638--638
+Overfull \hbox (2.51671pt too wide) in paragraph at lines 632--632
 []|\OT1/cmr/bx/n/10 Cognitive 
  []
 
 
-Overfull \hbox (18.32909pt too wide) in paragraph at lines 641--641
+Overfull \hbox (18.32909pt too wide) in paragraph at lines 635--635
 []|\OT1/cmr/bx/n/10 Moralization| 
  []
 
-<Figs/app_impv.png, id=379, 679.53876pt x 328.22626pt>
-File: Figs/app_impv.png Graphic file (type png)
-<use Figs/app_impv.png>
-Package pdftex.def Info: Figs/app_impv.png  used on input line 660.
-(pdftex.def)             Requested size: 162.52068pt x 78.49544pt.
-<Figs/eng_app_impv.png, id=380, 730.73pt x 338.76563pt>
-File: Figs/eng_app_impv.png Graphic file (type png)
-<use Figs/eng_app_impv.png>
-Package pdftex.def Info: Figs/eng_app_impv.png  used on input line 666.
-(pdftex.def)             Requested size: 162.52068pt x 75.34021pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
@@ -1275,7 +1248,18 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 Overfull \vbox (1.44444pt too high) has occurred while \output is active []
 
 
-[16]
+[16 <./Figs/experience.png> <./Figs/replace.png> <./Figs/app_motivates.png>]
+<Figs/app_impv.png, id=392, 679.53876pt x 328.22626pt>
+File: Figs/app_impv.png Graphic file (type png)
+<use Figs/app_impv.png>
+Package pdftex.def Info: Figs/app_impv.png  used on input line 654.
+(pdftex.def)             Requested size: 162.52068pt x 78.49544pt.
+<Figs/eng_app_impv.png, id=393, 730.73pt x 338.76563pt>
+File: Figs/eng_app_impv.png Graphic file (type png)
+<use Figs/eng_app_impv.png>
+Package pdftex.def Info: Figs/eng_app_impv.png  used on input line 660.
+(pdftex.def)             Requested size: 162.52068pt x 75.34021pt.
+
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
@@ -1297,6 +1281,13 @@ Overfull \vbox (1.44444pt too high) has occurred while \output is active []
 
 
 [19]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+Overfull \vbox (1.44444pt too high) has occurred while \output is active []
+
+
+[20]
 Underfull \hbox (badness 7851) in paragraph at lines 85--89
 []\OT1/cmr/m/n/10 Rahul Kumar Gupta, Ritu Agar-walla, Bukya Hemanth Naik,
  []
@@ -1308,14 +1299,14 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 Overfull \vbox (1.44444pt too high) has occurred while \output is active []
 
 
-[20]
+[21]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 Overfull \vbox (1.44444pt too high) has occurred while \output is active []
 
 
-[21]
+[22]
 Underfull \hbox (badness 2073) in paragraph at lines 235--243
 \OT1/cmr/m/n/10 and Babatunde Akinkuolie.  Gam-i-fi-ca-tion in mobile-assisted 
 lan-
@@ -1334,14 +1325,14 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 Overfull \vbox (1.44444pt too high) has occurred while \output is active []
 
 
-[22])
+[23])
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 Overfull \vbox (1.44444pt too high) has occurred while \output is active []
 
 
-[23] (sn-article.aux)
+[24] (sn-article.aux)
 
 LaTeX Font Warning: Size substitutions with differences
 (Font)              up to 1.28pt have occurred.
@@ -1350,16 +1341,16 @@ LaTeX Font Warning: Size substitutions with differences
 LaTeX Warning: There were multiply-defined labels.
 
 Package rerunfilecheck Info: File `sn-article.out' has not changed.
-(rerunfilecheck)             Checksum: 57B57BFAD7F6C411639E379A2A69E1D5;6287.
+(rerunfilecheck)             Checksum: 7008CEDC7D8A3D3EAD8D2E6BD5E4EBEF;6297.
  ) 
 Here is how much of TeX's memory you used:
- 18574 strings out of 476331
- 295580 string characters out of 5797581
- 1871660 words of memory out of 5000000
- 38546 multiletter control sequences out of 15000+600000
+ 18582 strings out of 476331
+ 295715 string characters out of 5797581
+ 1868660 words of memory out of 5000000
+ 38553 multiletter control sequences out of 15000+600000
  537169 words of font info for 132 fonts, out of 8000000 for 9000
  1151 hyphenation exceptions out of 8191
- 90i,11n,131p,1983b,779s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 90i,11n,131p,1983b,799s stack positions out of 10000i,1000n,20000p,200000b,200000s
  <C:\Users\iftek\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm
 1000.pk> <C:\Users\iftek\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi60
 0\tcrm0900.pk><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cmextra/cmbs
@@ -1380,9 +1371,9 @@ X/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Program Files/MiKTeX/fonts/type1/
 public/amsfonts/cm/cmr9.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfont
 s/cm/cmsy10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy7.p
 fb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmti10.pfb>
-Output written on sn-article.pdf (23 pages, 2184629 bytes).
+Output written on sn-article.pdf (24 pages, 2186403 bytes).
 PDF statistics:
- 542 PDF objects out of 1000 (max. 8388607)
- 128 named destinations out of 1000 (max. 500000)
+ 553 PDF objects out of 1000 (max. 8388607)
+ 129 named destinations out of 1000 (max. 500000)
  345 words of extra memory for PDF output out of 10000 (max. 10000000)
 
