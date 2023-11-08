@@ -70,6 +70,7 @@
 %%\unnumbered% uncomment this for unnumbered level heads
 
 %% My used library
+\usepackage{enumitem}
 \usepackage[numbers]{natbib}
 \usepackage{notoccite}
 \usepackage{subcaption}
@@ -85,7 +86,7 @@
 
 \begin{document}
 
-\title[Article Title]{An unsupervised approach for English Textbook Content Comprehension for the perspective of Bangladesh}
+\title[Article Title]{English Textbook Content Comprehension with LDA for the perspective of Bangladesh}
 
 %%=============================================================%%
 %% Prefix	-> \pfx{Dr}
@@ -152,24 +153,47 @@ Across all English learning applications via digital media, about 55\% exercise 
 \subsection{Research Overview} 
 To detect underlying themes or topics keywords within a Textbook corpus an unsupervised probabilistic topic modeling technique LDA is used in this research \cite{jelodar_latent_2019} (see section \ref{lda_mdel} for details). Topic modeling of LDA doesn\textquotesingle t directly account for student engagement such as learning tasks in mobile apps \cite{sandberg_mobile_2011}. Hence a prototype app is developed and qualitative survey is conducted to observe the instructor\textquotesingle s sentiment impact similar to research paper in \cite{oz2015investigation}. Qualitative survey research is undertaken to evaluate the effectiveness of unsupervised topic modeling LDA Bangladesh\textquotesingle s National Curriculum Textbook Board (NCTB) provided English Textbook for Higher secondary school education. This study seeks to ascertain if instructors can teach and students can learn English better if a mobile app is introduced which includes NLP\textquotesingle s LDA driven topic modeling applied extracted keywords and analysis. A prototype mobile app is developed to incorporate the topic modeling extracted keywords into the app. This article presents the key findings and insights from the survey, shedding light on the prospective of learners especially instructors. In the survey questions, it was indicated whether the students, teachers/instructors would find it acceptable and appreciated if textbook information were made available through a mobile app and presented in interactive format. To demonstrate the mobile app idea during the interrogation survey session a prototype is also prepared. Participants were asked for suggestions on how to make the app better and about any shortcomings. After collecting feedback, word clouds were used (see \ref{wordcloud}) to analyze the frequency of the participants\textquotesingle{} recommended terms, and the LIWC approach was used to estimate overall sentiment (see \ref{liwc}). 
 
+The following sections are organized as follows. 
+\begin{itemize}
+\item Background literature is studied in section \ref{lit_review} which contains following subsections 
+\begin{enumerate} [label=(\roman*)]
+\item Subsection \ref{Text_content_lda} illustrates LDA for Textbook related articles 
+\item Subsection \ref{dom_lda} explains LDA for dominant keywords determination
+\item Subsection \ref{sent_lda} describes LDA extracted keywords can be used to realize sentiment
+\end{enumerate}
+\item Section \ref{methods} methodology segregated into three parts
+\begin{enumerate} [label=(\roman*)]
+\item Prototype dataset, Data pre-processing technique, models (subsection \ref{data_pre})
+\item Topic modeling, LDA, comparative analysis and coherence determination (subsection \ref{top_mod_feature}) 
+\item Survey response visualization and analysis methods LIWC, Word Cloud (subsection \ref{vis_part})
+\end{enumerate}
+\item Next section \ref{exp_analysis} demonstrated the experiments and contains analysis separated into several subsections. 
+\begin{enumerate} [label=(\roman*)]
+\item Coherence measurements (subsection \ref{coh_measure})
+\item Dominant keywords and topic extraction (subsection \ref{dom_topic}) 
+\item Topics visualization and most frequent terms exploration (subsection \ref{top_term_vis})
+\item Survey results and analysis (subsection \ref{qual_survey})
+\end{enumerate}
+\item Then results discussion, limitations and conclusion are illustrated in section \ref{res_dis}, \ref{limitat} and \ref{conclu} respectively. 
+\end{itemize}
+
   
-\section{Literature Review}
+\section{Literature Review}\label{lit_review}
 
 Topic modeling has been used for semantic search, ontology exploration, classification, dominant keywords searching in many research studies. For curriculum based textbook study it could be an option is not revealed from rigorous search in online repositories, which we addressed in this research study. This research model is infusing Textbook features into LDA based topic modeling to discover a set of topic-words from the provided document for Textbook comprehension and understanding context. Similar approaches and implications are described below:
 
-\subsection{LDA for Textbook Content}
+\subsection{Textbook Content extraction with LDA}\label{Text_content_lda}
+According to Krishna Raj \cite{raj_p_m_sentiment_2022} the human brain has a propensity to forget a number of facts regarding the events in book. The LDA model can able to scan through large quantities of text in the book and extract intriguing key concepts terms. Thereby, a book can be adapted by learners with the help of the LDA model, greatly refine the learning process. Similar approch proposed by  Rani et al. for Hindi books and stories, a topic modeling text summarizing approach proposed in 2021 \cite{rani_extractive_2021}. By incorporating linguistic features into LDA-based topic modeling, the suggested model is can find a set of topic-words from the given material to understand context.  Educational content-based topic modeling for an Intelligent system to develop a tutoring system is proposed in \cite{slater_using_2017} by researcher Stefan Slater in 2017. To understand the linguistic content of mathematical problems, a personalized learning system is suggested that makes use of correlated topic modeling of natural language processing, an approach which can extract important keywords. A variety of significant and useful contents are explored in the context of addressing mathematical difficulties. They demonstrated that topic modeling is a useful method for a personalized learning systems. For key terms detection within articles LDA based topic modeling has been used in many research studies in which dominant keywords reveals future research trends or most prominent topics. Investigation of Julio Guerra et al. in 2013 demonstrated how the LDA model can be utilized for online content linking for any major subject such as: elementary algebra \cite{guerra_when_2013}. It can also be used to simplify context comprehension and content modeling for collections of reference books on the same topic. They concluded that the recommendation provided by LDA topic modeling for online educational systems is promising.
 
-According to Krishna Raj \cite{raj_p_m_sentiment_2022} the human brain has a propensity to forget a number of facts regarding the events in book. The LDA model can able to scan through large quantities of text in the book and extract intriguing key concepts terms. Thereby, a book can be adapted by learners with the help of the LDA model, greatly refine the learning process. Similar approch proposed by  Rani for Hindi books and stories, a topic modeling text summarizing approach proposed in 2021 \cite{rani_extractive_2021}. By incorporating linguistic features into LDA-based topic modeling, the suggested model is can find a set of topic-words from the given material to understand context.  Educational content-based topic modeling for an Intelligent system to develop a tutoring system is proposed in \cite{slater_using_2017} by researcher Stefan Slater in 2017. To understand the linguistic content of mathematical problems, a personalized learning system is suggested that makes use of correlated topic modeling of natural language processing, an approach which can extract important keywords. A variety of significant and useful contents are explored in the context of addressing mathematical difficulties. They demonstrated that topic modeling is a useful method for a personalized learning systems. For key terms detection within articles LDA based topic modeling has been used in many research studies in which dominant keywords reveals future research trends or most prominent topics. Investigation of Julio Guerra in 2013 demonstrated how the LDA model can be utilized for online content linking for any major subject such as: elementary algebra \cite{guerra_when_2013}. It can also be used to simplify context comprehension and content modeling for collections of reference books on the same topic. They concluded that the recommendation provided by LDA topic modeling for online educational systems is promising.
-
-\subsection{LDA for Dominant Keywords Determination}
+\subsection{LDA for Dominant Keywords Determination}\label{dom_lda}
 
 In 2019 Wafa Shafqat \cite{shafqat2019topic} proposed an architecture model for better understanding of crowdfunding comments posted by the investors to understand their motive to classify whether comments are scam or legitimate comments. Deep neural network Language modeling either LSTM or RNN encoded embedding vectors are fed into a LDA based topic modeling model to understand the context of discussion trends. Compared to simple Neural Networks (NNs) and non LDA based approach this techniques performs better understanding crowdfunding comments. The capability of LDA-based topic modeling to detect the reseach trend of Bengali news published in web was analyzed by Kazi Masudul Alam in 2020 \cite{alam_bangla_2020}. Their research demonstrates that using an appropriate corpus and labeled LDA is an effective combination model for predicting news topics efficiently. LDA Labels key terms makes articles easier to read. Another research article of J. Lee published in 2022 conducted experiment on research trends of "COVID-19 and sports \cite{lee_lda_based_2022}. It used LDA and explored latent knowledge connectivity dimension and structures in the articles. Rahul Gupta  uses the application of LDA in 2022 to analyze research patterns of "Applied Intelligence" in 3269 articles published between 1991 to 2021 \cite{gupta_prediction_2022}. In this research BoW and TF-IDF embedding are used for LDA based topic modeling.
 
-\subsection{LDA based Sentiment Analysis}
+\subsection{LDA based Sentiment Analysis}\label{sent_lda}
 
 Sentiment analysis has been a key research area of NLP based research domain, where LDA has been applied to determine significant features and those features contributes to segregate sentiments and provide recommendations. LDA based topic modeling has been used in sentiment analysis task. In 2021 Y. Cho published research study of LDA-based topic modeling for sentiment analysis using topic/document/sentence (TDS) model \cite{farkhod_lda_based_2021}. This article proposed TDS novel approach that combines LDA-based topic modeling for sentiment analysis within documents. H. Wang and et. al examined Chinese people's public perception about Omicron variants on social media Sina Weibo. Social Media's 121,632 omicron related data post were analyzed using LDA-based topic modeling and sentiment analysis \cite{wang_exploring_2022}. From topic analysis they realized omicron\textquotesingle s impact, infection situation, pandemic prevention and control geographically. Hence, it is actually revealed LDA based topic modeling can be used for understanding subtle topics and exploring various facts. Hence, from the above literature review we can infer LDA could help analyze the content of the textbook and identify the main topics covered. This information could then be used to enhance the learning experience.
 
-\section{Methodology}
+\section{Methodology}\label{methods}
 The methodology involves pre-processing textual data, training the LDA model on the pre-processed text, and subsequently interpreting and visualizing the generated topics. Data is collected from NCBI's English Textbook for class 9 of higher secondary school. NLPs Data mining approach is applied to segregate into subsequent lessons \cite{kao_natural_2007, mccarthy_applied_2012}. Then textual data is pre-processed to remove noise, text standardizing, followed by the application of LDA to identify underlying topics, then coherence measurements are applied. Research overview is depicted as follows. 
 
 \begin{figure}[h!]
@@ -180,10 +204,9 @@ The methodology involves pre-processing textual data, training the LDA model on 
 
 LDA algorithm automatically discovers latent topics within the documents based on word co-occurrences. Each topic will be represented by a set of words. Interpret these words to understand the main concepts associated with each topic. Extensive exploratory analysis is conducted to visualize the topic modeling outputs. Analyze the topics generated by the model require manual review and adjustment to ensure the topics make sense.
 
-\subsection{Data Processing and Models}
+\subsection{Data Pre-Processing}\label{data_pre}
 Text is converted to Lowercased and Normalized to ensure consistent pre-processing \cite{kao_natural_2007}.
-  \begin{enumerate}
-  \def\labelenumii{\roman{enumii}.}
+  \begin{enumerate}[label=(\roman*)]
   \item
     \textbf{Data cleaning}: unwanted characters, punctuation and special
     character removed and stop words (such as "and," "the," "is," etc)
@@ -207,10 +230,10 @@ Text is converted to Lowercased and Normalized to ensure consistent pre-processi
     conjunction, symbol etc.
   \end{enumerate}
 
-\subsection{Topic Modeling and Feature Extraction}
+\subsection{Topic Modeling and Feature Extraction}\label{top_mod_feature}
 Different techniques have been developed to perform topic modeling in the unsupervised topic modeling domain of Natural Language Processing (NLP), having their own strengths and limitations \cite{vayansky2020review, abdelrazek2022topic, yi2009comparative}. Apart from LDA, Mallet LDA, Structural Topic Model (STM), Hierarchical Dirichlet Process (HDP), Non-Negative Matrix Factorization (NMF), Latent Semantic Analysis (LSA) etc are also prevailing and can be considered for comparative research study. Prevailing LDA based data mining techniques are applied for feature extraction. 
 
-\subsection{Latent Dirichlet Allocation (LDA)}
+\subsubsection{Latent Dirichlet Allocation (LDA)}
 \label{lda_mdel}
 LDA model \cite{jelodar_latent_2019, gupta_pan_lda_2021, pichardo_lagunas_svd_lda_2015, selvi_classification_2019} considers documents are mixes of topic, and each topic is a distribution over words. The objective is to derive the hidden topic assignments and the topic-word distributions that most effectively describe the observed documents. The goal of LDA is to uncover these latent topics from a collection of documents without needing any prior labeling or categorization of the content. An expression for the joint distribution of the LDA model is described below:  
 \begin{equation}
@@ -222,7 +245,7 @@ distribution representing the document-topic distribution, $P(z_{d,n}\|\theta_d)
 \subsubsection{Comparative analysis of Topic modeling}
 While some variations of LDA, Mallet LDA is considered for large corpus processing and analysis \cite{vayansky2020review, abdelrazek2022topic, Comparison_Topic_Modeling_Algorithms}. It focuses on scalability, If large corpus needs to analyze, Mallet LDA might be more suitable. LDA in general can still be efficiently applied to moderately sized corpora. Analyzing topics within the context of metadata, STM could be a better fit. Hierarchical Dirichlet Process (HDP) can be useful when we cannot guess the number of topics in advance. In \cite{Comparison_Topic_Modeling_Algorithms} LSI, NMF and LDA are compared in terms of coherence and similarity measures for social media dataset and in their analysis NMF is observed most effective measures. However, as a baseline model LDA is often considered one of the most prominent choices. In this study Textbook corpus is divided into lessons which is a mixture of topics and using LDA expecting to determine which word in the lesson belong to Lesson\textquotesingle s topics. LDA produces interpretative results for exploratory topic analysis. The identified topics are represented as distributions over words, making it easy to assign meaningful labels to topics. Provided by most of the libraries and tools, making it easy to implement and can be integrated into existing workflows. Hence, LDA serves as a solid baseline for topic modeling tasks.  
 
-\subsection{Optimal Topics with Coherence}  
+\subsubsection{Optimal Topics with Coherence}  
 Coherence score measure how coherent or interpret the words in that topic and estimates number of topic clusters \cite{mimno2011optimizing}. Coherence score assess the quality of the topics produced by LDA and ensures that the topics generated are statistically significant. Coherence \(C_{topic}\) can be expressed as follows  
 \begin{equation}
 C_{topic}=\sum^N_{i=1} \frac{1}{N(N-1)}\sum^i_{j=1} PMI(w_i,w_j)
@@ -239,7 +262,7 @@ where \(P\left( w_{i},w_{j} \right)\) is joint probability of occurrence of word
 in which \(similarity\left( w_{i},w_{j} \right)\) represent the pairwise similarity between terms based on \(PMI\left( w_{i},w_{j} \right)\) scores. \(c_{v}\) provides a positive coherence score. Higher coherence values (higher than 0.5) indicate that the topics are moderately coherent and representative of meaningful themes within the text data.
 
 
-\subsection{Visualize participants response}
+\subsection{Visualize participants response}\label{vis_part}
 \subsubsection{Linguistic Inquiry and Word Count (LIWC)}
 \label{liwc}
 
@@ -270,15 +293,14 @@ proportional size of the word in the cloud can be expressed as
 \(s_{i} = \frac{f_{i}}{\sum_{j = 1}^{n}f_{j}}\) where normalized
 frequency \(f_{i}\). In section \ref{q_sentiment} figure \ref{word_cloud_1} and \ref{word_cloud_2} we can see the participants responses most frequent terms. 
 
-\section{Experiment and analysis}
+\section{Experiment and analysis}\label{exp_analysis}
 In this research study for the dataset we have collected Bangladesh NCBI provided English Textbook for class 9-10. Here whole book is segregated into Lessons and we wanted to explore the important topics within the content. Similar topic words remain together. Therefore, assumptions are, it helps students to understands the words, sentences and context of the book. Ideal number of topics are determined using coherence score \cite{mimno2011optimizing}.
 
-\subsection{Coherence for LDA model measurements}
+\subsection{Coherence measurements}\label{coh_measure}
 To measure coherence in the context of LDA, following steps are
 followed:
 
-\begin{enumerate}
-\def\labelenumi{\arabic{enumi}.}
+\begin{enumerate}[label=(\roman*)]
 \item
   Cleaned document samples are prepared using python's NLP data mining
   techniques explain in detailed in data reprocessing section. Prepared
@@ -374,7 +396,7 @@ Topics & Dominant Keywords and Weights \\
 %\textbf{Topic 06}: {[}\enquote*{job} 0.064, \enquote*{English} 0.023, \enquote*{learn} 0.021, \enquote*{teacher}
 %0.017, \enquote*{use} 0.016, \enquote*{dream} 0.016, \enquote*{think} 0.016, \enquote*{thing} 0.015,
 %\enquote*{school} 0.014, \enquote*{education} 0.013{]}
-\subsection{Dominant topic and contribution}
+\subsection{Dominant topic determination}\label{dom_topic}
 
 In LDA models, each document is composed of multiple topics. But
 typically, some specific topics are dominant. The following experiment
@@ -385,7 +407,7 @@ appeared in the documents and the weights of each keyword in the same
 chart, words that occur in multiple topics and the ones whose relative
 frequency is more than the weight.
 
-\subsubsection{Count vs Relative Importance measurement}
+\subsubsection{Relative Importance measurement}
 
 Word frequency $n(w_{j},d_{i})$ in each document \(D\) is measured in equation \ref{eq:rela_weight} as below which identifies the most frequent words within each document and across the entire corpus.
 
@@ -407,7 +429,7 @@ we can visualize relative importance of any keywords in terms of frequency and p
 \end{figure}
 
 
-\subsection{Topic-Term Matrix Visualization and Inter-Topic Distance Map}
+\subsection{Topic-Term Matrix Visualization}\label{top_term_vis}
 
 Visualizing the topics and their relationships in a topic model Python
 library PyLDAvis is used provides an interactive web-based interface to
@@ -447,7 +469,7 @@ subspace by computing eigenvalues reduced the circle overlapping. Topics
 that are closer together in the map are more similar in terms of the
 distribution of words.
 
-\subsection{Qualitative survey}
+\subsection{Qualitative survey}\label{qual_survey}
 In the survey questions, it was indicated whether the students, teachers/instructors, and government organizations would find it acceptable and appreciated if textbook information were made available through a mobile app and presented in interactive format. To demonstrate the mobile app idea during the interrogation survey session prototype app Englisher is prepared (see demo in section \ref{Englisher_mobile_app}). Participants were asked for suggestions on how to make the app better and specify shortcomings. Presumably It provides an insight of teacher’s emotion about inclusion of mobile technology in higher secondary English education system. 
 
 \subsubsection{Englisher Mobile App}
@@ -565,19 +587,18 @@ This study proposes the Englisher mobile app and presents it to the participatin
 \midrule
 \endhead
 Do you use digital content for teaching or digital medium for teaching
-and learning & 84\% & 16\% \\
+and learning? & 84\% & 16\% \\
 Have you ever used Internet or Mobile app to teach students or asked
-students to find learning materials from internet or Mobile App & 76\% &
+students to find learning materials from internet or Mobile App? & 76\% &
 24\% \\
 Education during graduation was English and English was used for
 learning & 83.70\% & 16.30\% \\
 \multicolumn{3}{@{}>{\raggedright\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{1.0000} + 4\tabcolsep}@{}}{%
 \textit{Customized mobile app for Learning and Teaching English}} \\
-Do you thz
 Do you think topic model based mobile app-based learning can improve
-English proficiency of students & 86\% & 14\% \\
+English proficiency of students? & 86\% & 14\% \\
 Do you think Govt should promote these types of innovation for education
-sector & 98\% & 2\% \\
+sector? & 98\% & 2\% \\
 \bottomrule
 \end{longtable}
 
@@ -660,7 +681,7 @@ instances as well as audiovisual engagement with the app. Add additional
 vocabulary and involve more experience teachers who have greater
 experience in digital learning and teaching.
 
-\section{Results Discussion and outcomes}
+\section{Results Discussion and outcomes}\label{res_dis}
 
 The results demonstrate that LDA-based topic modeling significantly
 enhances content comprehension by providing concise summaries of the
@@ -693,7 +714,7 @@ class. This approach is also our goal considering NCTB Books. Including
 interactive e-books, dictionary, educational apps, and multimedia
 content.
 
-\section{Limitations}
+\section{Limitations}\label{limitat}
 
 LDA could play a role in understanding the topics covered in an English
 textbook and potentially aiding in content customization and topic
@@ -725,7 +746,7 @@ provide their social website address to the surveyor. Among all the
 participants only 24\% attendees provided their social sites address to
 use them publicly for research purposes.
 
-\section{Conclusion}
+\section{Conclusion}\label{conclu}
 By employing topic modeling in a personalized learning context,
 educators can create more engaging and effective learning experience.
 This approach allows enhancement understanding and retention of the

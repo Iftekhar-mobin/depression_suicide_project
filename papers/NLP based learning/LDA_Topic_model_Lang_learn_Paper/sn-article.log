@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.4) (preloaded format=pdflatex 2023.6.3)  7 NOV 2023 09:44
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.4) (preloaded format=pdflatex 2023.6.3)  8 NOV 2023 16:47
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -640,6 +640,15 @@ LaTeX Info: Redefining \cite on input line 694.
 \c@remark=\count327
 \c@definition=\count328
 
+(C:\Program Files\MiKTeX\tex/latex/enumitem\enumitem.sty
+Package: enumitem 2019/06/20 v3.9 Customized lists
+\labelindent=\skip71
+\enit@outerparindent=\dimen305
+\enit@toks=\toks37
+\enit@inbox=\box69
+\enit@count@id=\count329
+\enitdp@description=\count330
+)
 (C:\Program Files\MiKTeX\tex/latex/notoccite\notoccite.sty
 Package: notoccite 2000/07/20
 )
@@ -651,14 +660,14 @@ Package: caption 2023/03/12 v3.6j Customizing captions (AR)
 
 (C:\Program Files\MiKTeX\tex/latex/caption\caption3.sty
 Package: caption3 2023/03/12 v2.4 caption3 kernel (AR)
-\caption@tempdima=\dimen305
-\captionmargin=\dimen306
-\caption@leftmargin=\dimen307
-\caption@rightmargin=\dimen308
-\caption@width=\dimen309
-\caption@indent=\dimen310
-\caption@parindent=\dimen311
-\caption@hangindent=\dimen312
+\caption@tempdima=\dimen306
+\captionmargin=\dimen307
+\caption@leftmargin=\dimen308
+\caption@rightmargin=\dimen309
+\caption@width=\dimen310
+\caption@indent=\dimen311
+\caption@parindent=\dimen312
+\caption@hangindent=\dimen313
 Package caption Info: Unknown document class (or package),
 (caption)             standard defaults will be used.
 Package caption Info: \@makecaption = \long macro:#1#2->\ifx \FigName \@captype
@@ -670,8 +679,8 @@ Package caption Warning: Unknown document class (or package),
 (caption)                standard defaults will be used.
 See the caption package documentation for explanation.
 
-\c@caption@flags=\count329
-\c@continuedfloat=\count330
+\c@caption@flags=\count331
+\c@continuedfloat=\count332
 Package caption Info: float package is loaded.
 Package caption Info: hyperref package is loaded.
 Package caption Info: listings package is loaded.
@@ -679,9 +688,9 @@ Package caption Info: rotating package is loaded.
 Package caption Info: wrapfig package is loaded.
 )
 Package caption Info: New subtype `subfigure' on input line 239.
-\c@subfigure=\count331
+\c@subfigure=\count333
 Package caption Info: New subtype `subtable' on input line 239.
-\c@subtable=\count332
+\c@subtable=\count334
 ) (C:\Program Files\MiKTeX\tex/latex/adjustbox\adjustbox.sty
 Package: adjustbox 2022/10/17 v1.3a Adjusting TeX boxes (trim, clip, ...)
 
@@ -694,80 +703,80 @@ Package: trimclip 2020/08/19 v1.2 Trim and clip general TeX material
 
 (C:\Program Files\MiKTeX\tex/latex/collectbox\collectbox.sty
 Package: collectbox 2022/10/17 v0.4c Collect macro arguments as boxes
-\collectedbox=\box69
+\collectedbox=\box70
 )
-\tc@llx=\dimen313
-\tc@lly=\dimen314
-\tc@urx=\dimen315
-\tc@ury=\dimen316
+\tc@llx=\dimen314
+\tc@lly=\dimen315
+\tc@urx=\dimen316
+\tc@ury=\dimen317
 Package trimclip Info: Using driver 'tc-pdftex.def'.
 
 (C:\Program Files\MiKTeX\tex/latex/adjustbox\tc-pdftex.def
 File: tc-pdftex.def 2019/01/04 v2.2 Clipping driver for pdftex
 ))
-\adjbox@Width=\dimen317
-\adjbox@Height=\dimen318
-\adjbox@Depth=\dimen319
-\adjbox@Totalheight=\dimen320
-\adjbox@pwidth=\dimen321
-\adjbox@pheight=\dimen322
-\adjbox@pdepth=\dimen323
-\adjbox@ptotalheight=\dimen324
+\adjbox@Width=\dimen318
+\adjbox@Height=\dimen319
+\adjbox@Depth=\dimen320
+\adjbox@Totalheight=\dimen321
+\adjbox@pwidth=\dimen322
+\adjbox@pheight=\dimen323
+\adjbox@pdepth=\dimen324
+\adjbox@ptotalheight=\dimen325
 
 (C:\Program Files\MiKTeX\tex/latex/ifoddpage\ifoddpage.sty
 Package: ifoddpage 2022/10/18 v1.2 Conditionals for odd/even page detection
-\c@checkoddpage=\count333
+\c@checkoddpage=\count335
 )
 (C:\Program Files\MiKTeX\tex/latex/varwidth\varwidth.sty
 Package: varwidth 2009/03/30 ver 0.92;  Variable-width minipages
-\@vwid@box=\box70
-\sift@deathcycles=\count334
-\@vwid@loff=\dimen325
-\@vwid@roff=\dimen326
+\@vwid@box=\box71
+\sift@deathcycles=\count336
+\@vwid@loff=\dimen326
+\@vwid@roff=\dimen327
 ))
 (C:\Program Files\MiKTeX\tex/latex/tools\longtable.sty
 Package: longtable 2021-09-01 v4.17 Multi-page Table package (DPC)
-\LTleft=\skip71
-\LTright=\skip72
-\LTpre=\skip73
-\LTpost=\skip74
-\LTchunksize=\count335
-\LTcapwidth=\dimen327
-\LT@head=\box71
-\LT@firsthead=\box72
-\LT@foot=\box73
-\LT@lastfoot=\box74
-\LT@gbox=\box75
-\LT@cols=\count336
-\LT@rows=\count337
-\c@LT@tables=\count338
-\c@LT@chunks=\count339
-\LT@p@ftn=\toks37
+\LTleft=\skip72
+\LTright=\skip73
+\LTpre=\skip74
+\LTpost=\skip75
+\LTchunksize=\count337
+\LTcapwidth=\dimen328
+\LT@head=\box72
+\LT@firsthead=\box73
+\LT@foot=\box74
+\LT@lastfoot=\box75
+\LT@gbox=\box76
+\LT@cols=\count338
+\LT@rows=\count339
+\c@LT@tables=\count340
+\c@LT@chunks=\count341
+\LT@p@ftn=\toks38
 )
 (C:\Program Files\MiKTeX\tex/latex/tools\array.sty
 Package: array 2022/09/04 v2.5g Tabular extension package (FMi)
-\col@sep=\dimen328
-\ar@mcellbox=\box76
-\extrarowheight=\dimen329
-\NC@list=\toks38
-\extratabsurround=\skip75
-\backup@length=\skip76
-\ar@cellbox=\box77
+\col@sep=\dimen329
+\ar@mcellbox=\box77
+\extrarowheight=\dimen330
+\NC@list=\toks39
+\extratabsurround=\skip76
+\backup@length=\skip77
+\ar@cellbox=\box78
 )
 (C:\Program Files\MiKTeX\tex/latex/csquotes\csquotes.sty
 Package: csquotes 2022-09-14 v5.2n context-sensitive quotations (JAW)
 
 (C:\Program Files\MiKTeX\tex/latex/etoolbox\etoolbox.sty
 Package: etoolbox 2020/10/05 v2.5k e-TeX tools for LaTeX (JAW)
-\etb@tempcnta=\count340
+\etb@tempcnta=\count342
 )
-\csq@reset=\count341
-\csq@gtype=\count342
-\csq@glevel=\count343
-\csq@qlevel=\count344
-\csq@maxlvl=\count345
-\csq@tshold=\count346
-\csq@ltx@everypar=\toks39
+\csq@reset=\count343
+\csq@gtype=\count344
+\csq@glevel=\count345
+\csq@qlevel=\count346
+\csq@maxlvl=\count347
+\csq@tshold=\count348
+\csq@ltx@everypar=\toks40
 
 (C:\Program Files\MiKTeX\tex/latex/csquotes\csquotes.def
 File: csquotes.def 2022-09-14 v5.2n csquotes generic definitions (JAW)
@@ -780,24 +789,24 @@ File: csquotes.cfg
 ))
 (C:\Program Files\MiKTeX\tex/latex/tools\calc.sty
 Package: calc 2017/05/25 v4.3 Infix arithmetic (KKT,FJ)
-\calc@Acount=\count347
-\calc@Bcount=\count348
-\calc@Adimen=\dimen330
-\calc@Bdimen=\dimen331
-\calc@Askip=\skip77
-\calc@Bskip=\skip78
+\calc@Acount=\count349
+\calc@Bcount=\count350
+\calc@Adimen=\dimen331
+\calc@Bdimen=\dimen332
+\calc@Askip=\skip78
+\calc@Bskip=\skip79
 LaTeX Info: Redefining \setlength on input line 80.
 LaTeX Info: Redefining \addtolength on input line 81.
-\calc@Ccount=\count349
-\calc@Cskip=\skip79
+\calc@Ccount=\count351
+\calc@Cskip=\skip80
 )
 Package csquotes Info: Checking for multilingual support...
 Package csquotes Info: ... none found.
 
 (C:\Program Files\MiKTeX\tex/latex/l3backend\l3backend-pdftex.def
 File: l3backend-pdftex.def 2023-03-30 L3 backend support: PDF output (pdfTeX)
-\l__color_backend_stack_int=\count350
-\l__pdf_internal_box=\box78
+\l__color_backend_stack_int=\count352
+\l__pdf_internal_box=\box79
 )
 
 LaTeX Warning: Unused global option(s):
@@ -852,31 +861,31 @@ LaTeX Warning: Label `cv_umass' multiply defined.
 )
 \openout1 = `sn-article.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 86.
-LaTeX Font Info:    ... okay on input line 86.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 86.
-LaTeX Font Info:    ... okay on input line 86.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 86.
-LaTeX Font Info:    ... okay on input line 86.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 86.
-LaTeX Font Info:    ... okay on input line 86.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 86.
-LaTeX Font Info:    ... okay on input line 86.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 86.
-LaTeX Font Info:    ... okay on input line 86.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 86.
-LaTeX Font Info:    ... okay on input line 86.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 86.
-LaTeX Font Info:    ... okay on input line 86.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 86.
-LaTeX Font Info:    ... okay on input line 86.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 87.
+LaTeX Font Info:    ... okay on input line 87.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 87.
+LaTeX Font Info:    ... okay on input line 87.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 87.
+LaTeX Font Info:    ... okay on input line 87.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 87.
+LaTeX Font Info:    ... okay on input line 87.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 87.
+LaTeX Font Info:    ... okay on input line 87.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 87.
+LaTeX Font Info:    ... okay on input line 87.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 87.
+LaTeX Font Info:    ... okay on input line 87.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 87.
+LaTeX Font Info:    ... okay on input line 87.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 87.
+LaTeX Font Info:    ... okay on input line 87.
 \footinsA=\insert252
-\c@footnoteA=\count351
-LaTeX Font Info:    Redeclaring symbol font `AMSa' on input line 86.
+\c@footnoteA=\count353
+LaTeX Font Info:    Redeclaring symbol font `AMSa' on input line 87.
 LaTeX Font Info:    Overwriting symbol font `AMSa' in version `normal'
-(Font)                  U/msa/m/n --> U/msa/m/n on input line 86.
+(Font)                  U/msa/m/n --> U/msa/m/n on input line 87.
 LaTeX Font Info:    Overwriting symbol font `AMSa' in version `bold'
-(Font)                  U/msa/m/n --> U/msa/m/n on input line 86.
+(Font)                  U/msa/m/n --> U/msa/m/n on input line 87.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -915,17 +924,17 @@ LaTeX Font Info:    Overwriting symbol font `AMSa' in version `bold'
 
 (C:\Program Files\MiKTeX\tex/context/base/mkii\supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count352
-\scratchdimen=\dimen332
-\scratchbox=\box79
-\nofMPsegments=\count353
-\nofMParguments=\count354
-\everyMPshowfont=\toks40
-\MPscratchCnt=\count355
-\MPscratchDim=\dimen333
-\MPnumerator=\count356
-\makeMPintoPDFobject=\count357
-\everyMPtoPDFconversion=\toks41
+\scratchcounter=\count354
+\scratchdimen=\dimen333
+\scratchbox=\box80
+\nofMPsegments=\count355
+\nofMParguments=\count356
+\everyMPshowfont=\toks41
+\MPscratchCnt=\count357
+\MPscratchDim=\dimen334
+\MPnumerator=\count358
+\makeMPintoPDFobject=\count359
+\everyMPtoPDFconversion=\toks42
 ) (C:\Program Files\MiKTeX\tex/latex/epstopdf-pkg\epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
@@ -934,8 +943,8 @@ Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
 (C:\Program Files\MiKTeX\tex/latex/00miktex\epstopdf-sys.cfg
 File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
 ))
-\c@lstlisting=\count358
-Package hyperref Info: Link coloring ON on input line 86.
+\c@lstlisting=\count360
+Package hyperref Info: Link coloring ON on input line 87.
  (sn-article.out) (sn-article.out)
 \@outlinefile=\write3
 \openout3 = `sn-article.out'.
@@ -946,49 +955,49 @@ Package caption Info: longtable package is loaded.
 Package: ltcaption 2021/01/08 v1.4c longtable captions (AR)
 )
 Package caption Info: End \AtBeginDocument code.
-LaTeX Font Info:    Calculating math sizes for size <12.045> on input line 162.
+LaTeX Font Info:    Calculating math sizes for size <12.045> on input line 147.
 
 
 
 LaTeX Font Warning: Font shape `OT1/cmr/bx/n' in size <8.43146> not available
-(Font)              size <8> substituted on input line 162.
+(Font)              size <8> substituted on input line 147.
 
 
 LaTeX Font Warning: Font shape `OML/cmm/b/it' in size <8.43146> not available
-(Font)              size <8> substituted on input line 162.
+(Font)              size <8> substituted on input line 147.
 
 
 LaTeX Font Warning: Font shape `OMS/cmsy/b/n' in size <8.43146> not available
-(Font)              size <8> substituted on input line 162.
+(Font)              size <8> substituted on input line 147.
 
 
 LaTeX Font Warning: Font shape `U/rsfs/m/n' in size <8.43146> not available
-(Font)              size <8> substituted on input line 162.
+(Font)              size <8> substituted on input line 147.
 
 
 LaTeX Font Warning: Font shape `OT1/cmr/m/n' in size <8.43146> not available
-(Font)              size <8> substituted on input line 162.
+(Font)              size <8> substituted on input line 147.
 
-LaTeX Font Info:    Calculating math sizes for size <11.04124> on input line 16
-2.
+LaTeX Font Info:    Calculating math sizes for size <11.04124> on input line 14
+7.
 
 LaTeX Font Warning: Font shape `OT1/cmr/bx/n' in size <5.52061> not available
-(Font)              size <6> substituted on input line 162.
+(Font)              size <6> substituted on input line 147.
 
 
 LaTeX Font Warning: Font shape `OML/cmm/b/it' in size <5.52061> not available
-(Font)              size <6> substituted on input line 162.
+(Font)              size <6> substituted on input line 147.
 
 
 LaTeX Font Warning: Font shape `OMS/cmsy/b/n' in size <5.52061> not available
-(Font)              size <6> substituted on input line 162.
+(Font)              size <6> substituted on input line 147.
 
 
 LaTeX Font Warning: Font shape `U/rsfs/m/n' in size <5.52061> not available
-(Font)              size <6> substituted on input line 162.
+(Font)              size <6> substituted on input line 147.
 
-LaTeX Font Info:    Calculating math sizes for size <10.03749> on input line 16
-2.
+LaTeX Font Info:    Calculating math sizes for size <10.03749> on input line 14
+7.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
@@ -1016,26 +1025,30 @@ Overfull \vbox (1.44444pt too high) has occurred while \output is active []
 
 
 [4]
-<Figs/methodology.png, id=245, 2055.68pt x 520.94624pt>
+<Figs/methodology.png, id=267, 2055.68pt x 520.94624pt>
 File: Figs/methodology.png Graphic file (type png)
 <use Figs/methodology.png>
-Package pdftex.def Info: Figs/methodology.png  used on input line 193.
+Package pdftex.def Info: Figs/methodology.png  used on input line 201.
 (pdftex.def)             Requested size: 304.72693pt x 77.21648pt.
 
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 Overfull \vbox (1.44444pt too high) has occurred while \output is active []
 
 
-[5 <./Figs/methodology.png>]
+[5]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 Overfull \vbox (1.44444pt too high) has occurred while \output is active []
 
 
-[6]
+[6 <./Figs/methodology.png>]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
@@ -1050,29 +1063,16 @@ Overfull \vbox (1.44444pt too high) has occurred while \output is active []
 
 
 [8]
-<Figs/cv.png, id=313, 418.4433pt x 315.8199pt>
+<Figs/cv.png, id=338, 418.4433pt x 315.8199pt>
 File: Figs/cv.png Graphic file (type png)
 <use Figs/cv.png>
-Package pdftex.def Info: Figs/cv.png  used on input line 326.
+Package pdftex.def Info: Figs/cv.png  used on input line 332.
 (pdftex.def)             Requested size: 152.36346pt x 114.9962pt.
-<Figs/umass.png, id=314, 419.166pt x 315.8199pt>
+<Figs/umass.png, id=339, 419.166pt x 315.8199pt>
 File: Figs/umass.png Graphic file (type png)
 <use Figs/umass.png>
-Package pdftex.def Info: Figs/umass.png  used on input line 331.
+Package pdftex.def Info: Figs/umass.png  used on input line 337.
 (pdftex.def)             Requested size: 152.36346pt x 114.79863pt.
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
-Overfull \vbox (1.44444pt too high) has occurred while \output is active []
-
-
-[9 <./Figs/cv.png> <./Figs/umass.png>]
-<Figs/relative_imp.png, id=331, 1302.8675pt x 622.325pt>
-File: Figs/relative_imp.png Graphic file (type png)
-<use Figs/relative_imp.png>
-Package pdftex.def Info: Figs/relative_imp.png  used on input line 420.
-(pdftex.def)             Requested size: 512.15195pt x 284.52573pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
@@ -1084,9 +1084,41 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 Overfull \vbox (1.44444pt too high) has occurred while \output is active []
 
 
-[10]
+[9]
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
-LaTeX Warning: Text page 11 contains only floats.
+
+Overfull \vbox (1.44444pt too high) has occurred while \output is active []
+
+
+[10 <./Figs/cv.png> <./Figs/umass.png>]
+<Figs/relative_imp.png, id=361, 1302.8675pt x 622.325pt>
+File: Figs/relative_imp.png Graphic file (type png)
+<use Figs/relative_imp.png>
+Package pdftex.def Info: Figs/relative_imp.png  used on input line 426.
+(pdftex.def)             Requested size: 512.15195pt x 284.52573pt.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+<Figs/pyldvis.png, id=362, 808.01875pt x 423.08063pt>
+File: Figs/pyldvis.png Graphic file (type png)
+<use Figs/pyldvis.png>
+Package pdftex.def Info: Figs/pyldvis.png  used on input line 459.
+(pdftex.def)             Requested size: 338.58778pt x 177.28593pt.
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+Overfull \vbox (1.44444pt too high) has occurred while \output is active []
+
+
+[11]
+
+LaTeX Warning: Text page 12 contains only floats.
 
 
 Overfull \vbox (2.75215pt too high) has occurred while \output is active []
@@ -1098,29 +1130,16 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 Overfull \vbox (1.44444pt too high) has occurred while \output is active []
 
 
-[11 <./Figs/relative_imp.png>]
-<Figs/pyldvis.png, id=342, 808.01875pt x 423.08063pt>
-File: Figs/pyldvis.png Graphic file (type png)
-<use Figs/pyldvis.png>
-Package pdftex.def Info: Figs/pyldvis.png  used on input line 453.
-(pdftex.def)             Requested size: 338.58778pt x 177.28593pt.
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
-Overfull \vbox (1.44444pt too high) has occurred while \output is active []
-
-
-[12 <./Figs/pyldvis.png>]
-<Figs/mobile_app_01.png, id=351, 843.15pt x 494.84875pt>
+[12 <./Figs/relative_imp.png>]
+<Figs/mobile_app_01.png, id=376, 843.15pt x 494.84875pt>
 File: Figs/mobile_app_01.png Graphic file (type png)
 <use Figs/mobile_app_01.png>
-Package pdftex.def Info: Figs/mobile_app_01.png  used on input line 477.
+Package pdftex.def Info: Figs/mobile_app_01.png  used on input line 483.
 (pdftex.def)             Requested size: 338.58778pt x 198.72127pt.
-<Figs/mobile_app_02.png, id=352, 835.12pt x 493.34312pt>
+<Figs/mobile_app_02.png, id=377, 835.12pt x 493.34312pt>
 File: Figs/mobile_app_02.png Graphic file (type png)
 <use Figs/mobile_app_02.png>
-Package pdftex.def Info: Figs/mobile_app_02.png  used on input line 484.
+Package pdftex.def Info: Figs/mobile_app_02.png  used on input line 490.
 (pdftex.def)             Requested size: 338.58778pt x 200.02116pt.
 
 
@@ -1133,27 +1152,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 Overfull \vbox (1.44444pt too high) has occurred while \output is active []
 
 
-[13]
-<Figs/institution_size.png, id=358, 719.18687pt x 254.9525pt>
-File: Figs/institution_size.png Graphic file (type png)
-<use Figs/institution_size.png>
-Package pdftex.def Info: Figs/institution_size.png  used on input line 503.
-(pdftex.def)             Requested size: 162.52068pt x 57.6147pt.
-
-Underfull \hbox (badness 1852) in paragraph at lines 504--504
-[]\OT1/cmr/m/n/9 (a) |Par-tic-i-pat-ing insti-tu-tion cat-e-gory
- []
-
-<Figs/english_teaching_class.png, id=359, 579.16376pt x 262.9825pt>
-File: Figs/english_teaching_class.png Graphic file (type png)
-<use Figs/english_teaching_class.png>
-Package pdftex.def Info: Figs/english_teaching_class.png  used on input line 50
-9.
-(pdftex.def)             Requested size: 162.52068pt x 73.7951pt.
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-
+[13 <./Figs/pyldvis.png>]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
@@ -1161,43 +1160,32 @@ Overfull \vbox (1.44444pt too high) has occurred while \output is active []
 
 
 [14 <./Figs/mobile_app_01.png> <./Figs/mobile_app_02.png>]
-<Figs/num_stu.png, id=367, 461.22313pt x 207.77625pt>
-File: Figs/num_stu.png Graphic file (type png)
-<use Figs/num_stu.png>
-Package pdftex.def Info: Figs/num_stu.png  used on input line 522.
-(pdftex.def)             Requested size: 162.52068pt x 73.21417pt.
-<Figs/class_size.png, id=368, 438.63875pt x 207.27437pt>
-File: Figs/class_size.png Graphic file (type png)
-<use Figs/class_size.png>
-Package pdftex.def Info: Figs/class_size.png  used on input line 528.
-(pdftex.def)             Requested size: 162.52068pt x 76.79784pt.
-File: Figs/num_stu.png Graphic file (type png)
-<use Figs/num_stu.png>
-Package pdftex.def Info: Figs/num_stu.png  used on input line 542.
-(pdftex.def)             Requested size: 162.52068pt x 73.21417pt.
-<Figs/experience.png, id=369, 495.8525pt x 240.39813pt>
-File: Figs/experience.png Graphic file (type png)
-<use Figs/experience.png>
-Package pdftex.def Info: Figs/experience.png  used on input line 548.
-(pdftex.def)             Requested size: 152.36346pt x 73.86604pt.
-<Figs/replace.png, id=370, 482.80376pt x 241.40187pt>
-File: Figs/replace.png Graphic file (type png)
-<use Figs/replace.png>
-Package pdftex.def Info: Figs/replace.png  used on input line 553.
-(pdftex.def)             Requested size: 148.97945pt x 74.48755pt.
+<Figs/institution_size.png, id=391, 719.18687pt x 254.9525pt>
+File: Figs/institution_size.png Graphic file (type png)
+<use Figs/institution_size.png>
+Package pdftex.def Info: Figs/institution_size.png  used on input line 509.
+(pdftex.def)             Requested size: 162.52068pt x 57.6147pt.
 
-Underfull \hbox (badness 3417) in paragraph at lines 554--554
-[]\OT1/cmr/m/n/9 (c) |App could help stu-dents in
+Underfull \hbox (badness 1852) in paragraph at lines 510--510
+[]\OT1/cmr/m/n/9 (a) |Par-tic-i-pat-ing insti-tu-tion cat-e-gory
  []
 
-<Figs/app_motivates.png, id=371, 541.52313pt x 243.91125pt>
-File: Figs/app_motivates.png Graphic file (type png)
-<use Figs/app_motivates.png>
-Package pdftex.def Info: Figs/app_motivates.png  used on input line 559.
-(pdftex.def)             Requested size: 159.13666pt x 71.67778pt.
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
+<Figs/english_teaching_class.png, id=392, 579.16376pt x 262.9825pt>
+File: Figs/english_teaching_class.png Graphic file (type png)
+<use Figs/english_teaching_class.png>
+Package pdftex.def Info: Figs/english_teaching_class.png  used on input line 51
+5.
+(pdftex.def)             Requested size: 162.52068pt x 73.7951pt.
+<Figs/num_stu.png, id=393, 461.22313pt x 207.77625pt>
+File: Figs/num_stu.png Graphic file (type png)
+<use Figs/num_stu.png>
+Package pdftex.def Info: Figs/num_stu.png  used on input line 528.
+(pdftex.def)             Requested size: 162.52068pt x 73.21417pt.
+<Figs/class_size.png, id=394, 438.63875pt x 207.27437pt>
+File: Figs/class_size.png Graphic file (type png)
+<use Figs/class_size.png>
+Package pdftex.def Info: Figs/class_size.png  used on input line 534.
+(pdftex.def)             Requested size: 162.52068pt x 76.79784pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
@@ -1207,40 +1195,30 @@ Overfull \vbox (1.44444pt too high) has occurred while \output is active []
 
 [15 <./Figs/institution_size.png> <./Figs/english_teaching_class.png> <./Figs/n
 um_stu.png> <./Figs/class_size.png>]
-Overfull \hbox (9.9819pt too wide) in paragraph at lines 613--614
-[]\OT1/cmr/bx/n/10 Traditional 
+File: Figs/num_stu.png Graphic file (type png)
+<use Figs/num_stu.png>
+Package pdftex.def Info: Figs/num_stu.png  used on input line 548.
+(pdftex.def)             Requested size: 162.52068pt x 73.21417pt.
+<Figs/experience.png, id=405, 495.8525pt x 240.39813pt>
+File: Figs/experience.png Graphic file (type png)
+<use Figs/experience.png>
+Package pdftex.def Info: Figs/experience.png  used on input line 554.
+(pdftex.def)             Requested size: 152.36346pt x 73.86604pt.
+<Figs/replace.png, id=406, 482.80376pt x 241.40187pt>
+File: Figs/replace.png Graphic file (type png)
+<use Figs/replace.png>
+Package pdftex.def Info: Figs/replace.png  used on input line 559.
+(pdftex.def)             Requested size: 148.97945pt x 74.48755pt.
+
+Underfull \hbox (badness 3417) in paragraph at lines 560--560
+[]\OT1/cmr/m/n/9 (c) |App could help stu-dents in
  []
 
-
-Overfull \hbox (9.83327pt too wide) in paragraph at lines 615--616
-[]\OT1/cmr/bx/n/10 Answer 
- []
-
-
-Overfull \hbox (9.7519pt too wide) in paragraph at lines 619--620
-[]\OT1/cmr/bx/n/10 Answer 
- []
-
-
-Overfull \hbox (10.52885pt too wide) in paragraph at lines 623--624
-[]\OT1/cmr/bx/n/10 Answer 
- []
-
-
-Overfull \hbox (2.27628pt too wide) in paragraph at lines 625--626
-[]\OT1/cmr/bx/n/10 Standard 
- []
-
-
-Overfull \hbox (2.51671pt too wide) in paragraph at lines 632--632
-[]|\OT1/cmr/bx/n/10 Cognitive 
- []
-
-
-Overfull \hbox (18.32909pt too wide) in paragraph at lines 635--635
-[]|\OT1/cmr/bx/n/10 Moralization| 
- []
-
+<Figs/app_motivates.png, id=407, 541.52313pt x 243.91125pt>
+File: Figs/app_motivates.png Graphic file (type png)
+<use Figs/app_motivates.png>
+Package pdftex.def Info: Figs/app_motivates.png  used on input line 565.
+(pdftex.def)             Requested size: 159.13666pt x 71.67778pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
@@ -1249,38 +1227,75 @@ Overfull \vbox (1.44444pt too high) has occurred while \output is active []
 
 
 [16 <./Figs/experience.png> <./Figs/replace.png> <./Figs/app_motivates.png>]
-<Figs/app_impv.png, id=392, 679.53876pt x 328.22626pt>
+Overfull \hbox (9.9819pt too wide) in paragraph at lines 618--619
+[]\OT1/cmr/bx/n/10 Traditional 
+ []
+
+
+Overfull \hbox (9.83327pt too wide) in paragraph at lines 620--621
+[]\OT1/cmr/bx/n/10 Answer 
+ []
+
+
+Overfull \hbox (9.7519pt too wide) in paragraph at lines 624--625
+[]\OT1/cmr/bx/n/10 Answer 
+ []
+
+
+Overfull \hbox (10.52885pt too wide) in paragraph at lines 628--629
+[]\OT1/cmr/bx/n/10 Answer 
+ []
+
+
+Overfull \hbox (2.27628pt too wide) in paragraph at lines 630--631
+[]\OT1/cmr/bx/n/10 Standard 
+ []
+
+
+Overfull \hbox (2.51671pt too wide) in paragraph at lines 637--637
+[]|\OT1/cmr/bx/n/10 Cognitive 
+ []
+
+
+Overfull \hbox (18.32909pt too wide) in paragraph at lines 640--640
+[]|\OT1/cmr/bx/n/10 Moralization| 
+ []
+
+<Figs/app_impv.png, id=417, 679.53876pt x 328.22626pt>
 File: Figs/app_impv.png Graphic file (type png)
 <use Figs/app_impv.png>
-Package pdftex.def Info: Figs/app_impv.png  used on input line 654.
+Package pdftex.def Info: Figs/app_impv.png  used on input line 659.
 (pdftex.def)             Requested size: 162.52068pt x 78.49544pt.
-<Figs/eng_app_impv.png, id=393, 730.73pt x 338.76563pt>
+<Figs/eng_app_impv.png, id=418, 730.73pt x 338.76563pt>
 File: Figs/eng_app_impv.png Graphic file (type png)
 <use Figs/eng_app_impv.png>
-Package pdftex.def Info: Figs/eng_app_impv.png  used on input line 660.
+Package pdftex.def Info: Figs/eng_app_impv.png  used on input line 665.
 (pdftex.def)             Requested size: 162.52068pt x 75.34021pt.
 
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 Overfull \vbox (1.44444pt too high) has occurred while \output is active []
 
 
-[17 <./Figs/app_impv.png> <./Figs/eng_app_impv.png>]
+[17]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 Overfull \vbox (1.44444pt too high) has occurred while \output is active []
 
 
-[18] (doc_ref.tex
+[18 <./Figs/app_impv.png> <./Figs/eng_app_impv.png>]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 Overfull \vbox (1.44444pt too high) has occurred while \output is active []
 
 
-[19]
+[19] (doc_ref.tex
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
@@ -1341,16 +1356,16 @@ LaTeX Font Warning: Size substitutions with differences
 LaTeX Warning: There were multiply-defined labels.
 
 Package rerunfilecheck Info: File `sn-article.out' has not changed.
-(rerunfilecheck)             Checksum: 7008CEDC7D8A3D3EAD8D2E6BD5E4EBEF;6297.
+(rerunfilecheck)             Checksum: 5C87265B8E1DCBF61E27FEC384BFC9AE;6034.
  ) 
 Here is how much of TeX's memory you used:
- 18582 strings out of 476331
- 295715 string characters out of 5797581
- 1868660 words of memory out of 5000000
- 38553 multiletter control sequences out of 15000+600000
+ 18943 strings out of 476331
+ 301829 string characters out of 5797581
+ 1872660 words of memory out of 5000000
+ 38900 multiletter control sequences out of 15000+600000
  537169 words of font info for 132 fonts, out of 8000000 for 9000
  1151 hyphenation exceptions out of 8191
- 90i,11n,131p,1983b,799s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 90i,11n,131p,1988b,787s stack positions out of 10000i,1000n,20000p,200000b,200000s
  <C:\Users\iftek\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm
 1000.pk> <C:\Users\iftek\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi60
 0\tcrm0900.pk><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cmextra/cmbs
@@ -1371,9 +1386,9 @@ X/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Program Files/MiKTeX/fonts/type1/
 public/amsfonts/cm/cmr9.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfont
 s/cm/cmsy10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy7.p
 fb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmti10.pfb>
-Output written on sn-article.pdf (24 pages, 2186403 bytes).
+Output written on sn-article.pdf (24 pages, 2191635 bytes).
 PDF statistics:
- 553 PDF objects out of 1000 (max. 8388607)
- 129 named destinations out of 1000 (max. 500000)
+ 582 PDF objects out of 1000 (max. 8388607)
+ 139 named destinations out of 1000 (max. 500000)
  345 words of extra memory for PDF output out of 10000 (max. 10000000)
 
