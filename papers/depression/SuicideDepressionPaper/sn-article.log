@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.4) (preloaded format=pdflatex 2023.6.7)  15 OCT 2023 17:07
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.4) (preloaded format=pdflatex 2023.6.7)  11 NOV 2023 13:04
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -861,6 +861,9 @@ LaTeX Warning: Label `sub@twitterdist' multiply defined.
 LaTeX Warning: Label `redditdist_twitterdist' multiply defined.
 
 
+LaTeX Warning: Label `chord_inference' multiply defined.
+
+
 Package natbib Warning: Citation `abdelrazek2022topic' multiply defined.
 
 
@@ -1012,26 +1015,6 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
  [1{C:/Users/Teacher/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}
 
 ]
-
-LaTeX Warning: Reference `lit_rev' on page 2 undefined on input line 142.
-
-
-LaTeX Warning: Reference `dtset' on page 2 undefined on input line 142.
-
-
-LaTeX Warning: Reference `methodolo' on page 2 undefined on input line 142.
-
-
-LaTeX Warning: Reference `exp_anal' on page 2 undefined on input line 142.
-
-
-LaTeX Warning: Reference `classification_res' on page 2 undefined on input line
- 142.
-
-
-LaTeX Warning: Reference `conclu' on page 2 undefined on input line 142.
-
-
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
@@ -1039,6 +1022,73 @@ Overfull \vbox (1.44444pt too high) has occurred while \output is active []
 
 
 [2]
+LaTeX Font Info:    Calculating math sizes for size <8.03> on input line 152.
+
+
+LaTeX Font Warning: Font shape `OT1/cmr/m/n' in size <4.015> not available
+(Font)              size <5> substituted on input line 152.
+
+
+LaTeX Font Warning: Font shape `OML/cmm/m/it' in size <4.015> not available
+(Font)              size <5> substituted on input line 152.
+
+
+LaTeX Font Warning: Font shape `OMS/cmsy/m/n' in size <4.015> not available
+(Font)              size <5> substituted on input line 152.
+
+
+LaTeX Font Warning: Font shape `U/rsfs/m/n' in size <4.015> not available
+(Font)              size <5> substituted on input line 152.
+
+
+Underfull \hbox (badness 2073) in paragraph at lines 160--160
+[]|\OT1/cmr/m/n/8 [[]] Zhang et
+ []
+
+
+Underfull \hbox (badness 6741) in paragraph at lines 161--161
+\OT1/cmr/m/n/8 al. 2020 and
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 161--161
+\OT1/cmr/m/n/8 [[]] Mal-ho-tra
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 166--166
+[]|\OT1/cmr/m/n/8 Zogan et al.
+ []
+
+
+Underfull \hbox (badness 1803) in paragraph at lines 168--168
+[]|\OT1/cmr/m/n/8 Burnap et al.
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 173--173
+[]|\OT1/cmr/m/n/8 zheng et al.
+ []
+
+
+Underfull \hbox (badness 1721) in paragraph at lines 173--173
+\OT1/cmr/m/n/8 2020 [[]] and
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 173--173
+\OT1/cmr/m/n/8 Paulo et al.
+ []
+
+
+Overfull \hbox (28.04526pt too wide) in paragraph at lines 152--181
+[] 
+ []
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
@@ -1046,6 +1096,9 @@ Overfull \vbox (1.44444pt too high) has occurred while \output is active []
 
 
 [3]
+Overfull \vbox (2.20726pt too high) has occurred while \output is active []
+
+
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
@@ -1071,7 +1124,7 @@ Overfull \vbox (1.44444pt too high) has occurred while \output is active []
 File: Figs/document_size_length_in_each_class.png Graphic file (type png)
 <use Figs/document_size_length_in_each_class.png>
 Package pdftex.def Info: Figs/document_size_length_in_each_class.png  used on i
-nput line 213.
+nput line 246.
 (pdftex.def)             Requested size: 338.58778pt x 205.18454pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
@@ -1095,27 +1148,24 @@ Overfull \vbox (1.44444pt too high) has occurred while \output is active []
 
 
 [9]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
-Overfull \vbox (1.44444pt too high) has occurred while \output is active []
-
-
-[10]
-<Figs/res_diagram.jpeg, id=350, 377.2494pt x 337.9827pt>
+<Figs/res_diagram.jpeg, id=342, 377.2494pt x 337.9827pt>
 File: Figs/res_diagram.jpeg Graphic file (type jpg)
 <use Figs/res_diagram.jpeg>
-Package pdftex.def Info: Figs/res_diagram.jpeg  used on input line 284.
+Package pdftex.def Info: Figs/res_diagram.jpeg  used on input line 313.
 (pdftex.def)             Requested size: 270.87125pt x 242.69238pt.
-<Figs/reddit_dist.png, id=352, 430.60875pt x 329.73187pt>
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+<Figs/reddit_dist.png, id=344, 430.60875pt x 329.73187pt>
 File: Figs/reddit_dist.png Graphic file (type png)
 <use Figs/reddit_dist.png>
-Package pdftex.def Info: Figs/reddit_dist.png  used on input line 295.
+Package pdftex.def Info: Figs/reddit_dist.png  used on input line 324.
 (pdftex.def)             Requested size: 152.36346pt x 116.67073pt.
-<Figs/twitterdist.png, id=353, 451.6875pt x 329.73187pt>
+<Figs/twitterdist.png, id=345, 451.6875pt x 329.73187pt>
 File: Figs/twitterdist.png Graphic file (type png)
 <use Figs/twitterdist.png>
-Package pdftex.def Info: Figs/twitterdist.png  used on input line 301.
+Package pdftex.def Info: Figs/twitterdist.png  used on input line 330.
 (pdftex.def)             Requested size: 152.36346pt x 111.22687pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
@@ -1124,61 +1174,71 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 Overfull \vbox (1.44444pt too high) has occurred while \output is active []
 
 
-[11 <./Figs/res_diagram.jpeg>]
-<Figs/indicator_word_cloud.png, id=363, 372.1905pt x 229.0959pt>
+[10]
+<Figs/indicator_word_cloud.png, id=359, 372.1905pt x 229.0959pt>
 File: Figs/indicator_word_cloud.png Graphic file (type png)
 <use Figs/indicator_word_cloud.png>
-Package pdftex.def Info: Figs/indicator_word_cloud.png  used on input line 314.
+Package pdftex.def Info: Figs/indicator_word_cloud.png  used on input line 343.
 
 (pdftex.def)             Requested size: 152.36346pt x 93.7831pt.
 
-Underfull \hbox (badness 3386) in paragraph at lines 315--315
+Underfull \hbox (badness 3386) in paragraph at lines 344--344
 []\OT1/cmr/m/n/9 (a) |Indi-ca-tor cat-e-gory word high
  []
 
-<Figs/Ideation_word_cloud.png, id=364, 372.1905pt x 229.0959pt>
+<Figs/Ideation_word_cloud.png, id=360, 372.1905pt x 229.0959pt>
 File: Figs/Ideation_word_cloud.png Graphic file (type png)
 <use Figs/Ideation_word_cloud.png>
-Package pdftex.def Info: Figs/Ideation_word_cloud.png  used on input line 320.
+Package pdftex.def Info: Figs/Ideation_word_cloud.png  used on input line 349.
 (pdftex.def)             Requested size: 152.36346pt x 93.7831pt.
-<Figs/Behavior_word_cloud.png, id=365, 372.1905pt x 229.0959pt>
+<Figs/Behavior_word_cloud.png, id=361, 372.1905pt x 229.0959pt>
 File: Figs/Behavior_word_cloud.png Graphic file (type png)
 <use Figs/Behavior_word_cloud.png>
-Package pdftex.def Info: Figs/Behavior_word_cloud.png  used on input line 326.
+Package pdftex.def Info: Figs/Behavior_word_cloud.png  used on input line 355.
 (pdftex.def)             Requested size: 152.36346pt x 93.7831pt.
-<Figs/Attempt_word_cloud.png, id=366, 372.1905pt x 229.0959pt>
+<Figs/Attempt_word_cloud.png, id=362, 372.1905pt x 229.0959pt>
 File: Figs/Attempt_word_cloud.png Graphic file (type png)
 <use Figs/Attempt_word_cloud.png>
-Package pdftex.def Info: Figs/Attempt_word_cloud.png  used on input line 332.
+Package pdftex.def Info: Figs/Attempt_word_cloud.png  used on input line 361.
 (pdftex.def)             Requested size: 152.36346pt x 93.7831pt.
 
-Underfull \hbox (badness 2469) in paragraph at lines 333--333
+Underfull \hbox (badness 2469) in paragraph at lines 362--362
 \OT1/cmr/m/n/9 impact key-words sui-cide, attempt,
  []
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+Overfull \vbox (1.44444pt too high) has occurred while \output is active []
+
+
+[11 <./Figs/res_diagram.jpeg> <./Figs/reddit_dist.png> <./Figs/twitterdist.png>
+]
 <Figs/cv_indicator.png, id=367, 418.4433pt x 315.8199pt>
 File: Figs/cv_indicator.png Graphic file (type png)
 <use Figs/cv_indicator.png>
-Package pdftex.def Info: Figs/cv_indicator.png  used on input line 351.
+Package pdftex.def Info: Figs/cv_indicator.png  used on input line 380.
 (pdftex.def)             Requested size: 152.36346pt x 114.9962pt.
 <Figs/cv_ideation.png, id=368, 418.4433pt x 315.8199pt>
 File: Figs/cv_ideation.png Graphic file (type png)
 <use Figs/cv_ideation.png>
-Package pdftex.def Info: Figs/cv_ideation.png  used on input line 357.
+Package pdftex.def Info: Figs/cv_ideation.png  used on input line 386.
 (pdftex.def)             Requested size: 152.36346pt x 114.9962pt.
 <Figs/cv_behavior.png, id=369, 418.4433pt x 315.8199pt>
 File: Figs/cv_behavior.png Graphic file (type png)
 <use Figs/cv_behavior.png>
-Package pdftex.def Info: Figs/cv_behavior.png  used on input line 363.
+Package pdftex.def Info: Figs/cv_behavior.png  used on input line 392.
 (pdftex.def)             Requested size: 152.36346pt x 114.9962pt.
 <Figs/cv_attempt.png, id=370, 418.4433pt x 315.8199pt>
 File: Figs/cv_attempt.png Graphic file (type png)
 <use Figs/cv_attempt.png>
-Package pdftex.def Info: Figs/cv_attempt.png  used on input line 369.
+Package pdftex.def Info: Figs/cv_attempt.png  used on input line 398.
 (pdftex.def)             Requested size: 152.36346pt x 114.9962pt.
+
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
@@ -1186,13 +1246,22 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 File: Figs/indicator_weight_relative_imp.png Graphic file (type png)
 <use Figs/indicator_weight_relative_imp.png>
 Package pdftex.def Info: Figs/indicator_weight_relative_imp.png  used on input 
-line 381.
+line 410.
 (pdftex.def)             Requested size: 338.58778pt x 224.8805pt.
-<Figs/ideation_weight_relative_imp.png, id=380, 1144.57613pt x 760.19006pt>
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+Overfull \vbox (1.44444pt too high) has occurred while \output is active []
+
+
+[12 <./Figs/indicator_word_cloud.png> <./Figs/Ideation_word_cloud.png> <./Figs/
+Behavior_word_cloud.png> <./Figs/Attempt_word_cloud.png>]
+<Figs/ideation_weight_relative_imp.png, id=390, 1144.57613pt x 760.19006pt>
 File: Figs/ideation_weight_relative_imp.png Graphic file (type png)
 <use Figs/ideation_weight_relative_imp.png>
 Package pdftex.def Info: Figs/ideation_weight_relative_imp.png  used on input l
-ine 386.
+ine 415.
 (pdftex.def)             Requested size: 338.58778pt x 224.8805pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
@@ -1201,24 +1270,13 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 Overfull \vbox (1.44444pt too high) has occurred while \output is active []
 
 
-[12 <./Figs/reddit_dist.png> <./Figs/twitterdist.png>]
-Overfull \vbox (28.43187pt too high) has occurred while \output is active []
-
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
-Overfull \vbox (1.44444pt too high) has occurred while \output is active []
-
-
-[13 <./Figs/indicator_word_cloud.png> <./Figs/Ideation_word_cloud.png> <./Figs/
-Behavior_word_cloud.png> <./Figs/Attempt_word_cloud.png> <./Figs/indicator_weig
-ht_relative_imp.png>]
-<Figs/behavior_weight_relative_imp.png, id=405, 1144.57613pt x 760.19006pt>
+[13 <./Figs/cv_indicator.png> <./Figs/cv_ideation.png> <./Figs/cv_behavior.png>
+ <./Figs/cv_attempt.png>]
+<Figs/behavior_weight_relative_imp.png, id=409, 1144.57613pt x 760.19006pt>
 File: Figs/behavior_weight_relative_imp.png Graphic file (type png)
 <use Figs/behavior_weight_relative_imp.png>
 Package pdftex.def Info: Figs/behavior_weight_relative_imp.png  used on input l
-ine 391.
+ine 420.
 (pdftex.def)             Requested size: 338.58778pt x 224.8805pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
@@ -1227,18 +1285,18 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 Overfull \vbox (1.44444pt too high) has occurred while \output is active []
 
 
-[14 <./Figs/cv_indicator.png> <./Figs/cv_ideation.png> <./Figs/cv_behavior.png>
- <./Figs/cv_attempt.png> <./Figs/ideation_weight_relative_imp.png>]
+[14 <./Figs/indicator_weight_relative_imp.png> <./Figs/ideation_weight_relative
+_imp.png>]
 <Figs/attempt_weight_relative_imp.png, id=416, 1144.57613pt x 760.19006pt>
 File: Figs/attempt_weight_relative_imp.png Graphic file (type png)
 <use Figs/attempt_weight_relative_imp.png>
 Package pdftex.def Info: Figs/attempt_weight_relative_imp.png  used on input li
-ne 397.
+ne 426.
 (pdftex.def)             Requested size: 338.58778pt x 224.8805pt.
 <Figs/indicator_pyldvis.png, id=417, 866.73813pt x 476.27937pt>
 File: Figs/indicator_pyldvis.png Graphic file (type png)
 <use Figs/indicator_pyldvis.png>
-Package pdftex.def Info: Figs/indicator_pyldvis.png  used on input line 407.
+Package pdftex.def Info: Figs/indicator_pyldvis.png  used on input line 436.
 (pdftex.def)             Requested size: 338.58778pt x 186.05344pt.
 
 
@@ -1247,7 +1305,7 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 <Figs/Ideation_pyldvis.png, id=418, 868.74562pt x 471.26062pt>
 File: Figs/Ideation_pyldvis.png Graphic file (type png)
 <use Figs/Ideation_pyldvis.png>
-Package pdftex.def Info: Figs/Ideation_pyldvis.png  used on input line 413.
+Package pdftex.def Info: Figs/Ideation_pyldvis.png  used on input line 442.
 (pdftex.def)             Requested size: 338.58778pt x 183.67584pt.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
@@ -1255,7 +1313,7 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 <Figs/Behavior_pyldvis.png, id=419, 868.74562pt x 473.77pt>
 File: Figs/Behavior_pyldvis.png Graphic file (type png)
 <use Figs/Behavior_pyldvis.png>
-Package pdftex.def Info: Figs/Behavior_pyldvis.png  used on input line 419.
+Package pdftex.def Info: Figs/Behavior_pyldvis.png  used on input line 448.
 (pdftex.def)             Requested size: 338.58778pt x 184.65388pt.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
@@ -1263,7 +1321,7 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 <Figs/Attempt_pyldvis.png, id=420, 867.74188pt x 473.26813pt>
 File: Figs/Attempt_pyldvis.png Graphic file (type png)
 <use Figs/Attempt_pyldvis.png>
-Package pdftex.def Info: Figs/Attempt_pyldvis.png  used on input line 425.
+Package pdftex.def Info: Figs/Attempt_pyldvis.png  used on input line 454.
 (pdftex.def)             Requested size: 338.58778pt x 184.6677pt.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
@@ -1283,7 +1341,7 @@ File: Figs/bertopic/combined_bertopic_topics_heatmap_frequency.png Graphic file
  (type png)
 <use Figs/bertopic/combined_bertopic_topics_heatmap_frequency.png>
 Package pdftex.def Info: Figs/bertopic/combined_bertopic_topics_heatmap_frequen
-cy.png  used on input line 437.
+cy.png  used on input line 466.
 (pdftex.def)             Requested size: 152.36346pt x 152.36328pt.
 <Figs/bertopic/combined_bertopic_topics_map_frequency.png, id=428, 652.4375pt x
  652.4375pt>
@@ -1291,7 +1349,7 @@ File: Figs/bertopic/combined_bertopic_topics_map_frequency.png Graphic file (ty
 pe png)
 <use Figs/bertopic/combined_bertopic_topics_map_frequency.png>
 Package pdftex.def Info: Figs/bertopic/combined_bertopic_topics_map_frequency.p
-ng  used on input line 443.
+ng  used on input line 472.
 (pdftex.def)             Requested size: 152.36346pt x 152.35715pt.
 
 
@@ -1300,12 +1358,12 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 <Figs/dep_wordcloud.png, id=431, 372.1905pt x 193.6836pt>
 File: Figs/dep_wordcloud.png Graphic file (type png)
 <use Figs/dep_wordcloud.png>
-Package pdftex.def Info: Figs/dep_wordcloud.png  used on input line 457.
+Package pdftex.def Info: Figs/dep_wordcloud.png  used on input line 486.
 (pdftex.def)             Requested size: 152.36346pt x 79.28665pt.
 <Figs/sui_wordcloud.png, id=432, 372.1905pt x 193.6836pt>
 File: Figs/sui_wordcloud.png Graphic file (type png)
 <use Figs/sui_wordcloud.png>
-Package pdftex.def Info: Figs/sui_wordcloud.png  used on input line 463.
+Package pdftex.def Info: Figs/sui_wordcloud.png  used on input line 492.
 (pdftex.def)             Requested size: 152.36346pt x 79.28665pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
@@ -1325,7 +1383,7 @@ Overfull \vbox (1.44444pt too high) has occurred while \output is active []
 <Figs/doc_len.png, id=448, 419.166pt x 351.9549pt>
 File: Figs/doc_len.png Graphic file (type png)
 <use Figs/doc_len.png>
-Package pdftex.def Info: Figs/doc_len.png  used on input line 476.
+Package pdftex.def Info: Figs/doc_len.png  used on input line 505.
 (pdftex.def)             Requested size: 237.01471pt x 184.9402pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
@@ -1347,12 +1405,12 @@ Overfull \vbox (1.44444pt too high) has occurred while \output is active []
 <Figs/dep_chord.png, id=476, 1053.9375pt x 1053.9375pt>
 File: Figs/dep_chord.png Graphic file (type png)
 <use Figs/dep_chord.png>
-Package pdftex.def Info: Figs/dep_chord.png  used on input line 497.
+Package pdftex.def Info: Figs/dep_chord.png  used on input line 526.
 (pdftex.def)             Requested size: 253.94083pt x 253.93115pt.
 <Figs/suicide_chord.png, id=477, 1053.9375pt x 1053.9375pt>
 File: Figs/suicide_chord.png Graphic file (type png)
 <use Figs/suicide_chord.png>
-Package pdftex.def Info: Figs/suicide_chord.png  used on input line 504.
+Package pdftex.def Info: Figs/suicide_chord.png  used on input line 533.
 (pdftex.def)             Requested size: 253.94083pt x 253.93115pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
@@ -1362,36 +1420,17 @@ Overfull \vbox (1.44444pt too high) has occurred while \output is active []
 
 
 [20 <./Figs/dep_chord.png>]
-LaTeX Font Info:    Calculating math sizes for size <8.03> on input line 514.
-
-
-LaTeX Font Warning: Font shape `OT1/cmr/m/n' in size <4.015> not available
-(Font)              size <5> substituted on input line 514.
-
-
-LaTeX Font Warning: Font shape `OML/cmm/m/it' in size <4.015> not available
-(Font)              size <5> substituted on input line 514.
-
-
-LaTeX Font Warning: Font shape `OMS/cmsy/m/n' in size <4.015> not available
-(Font)              size <5> substituted on input line 514.
-
-
-LaTeX Font Warning: Font shape `U/rsfs/m/n' in size <4.015> not available
-(Font)              size <5> substituted on input line 514.
-
-
-Underfull \hbox (badness 2253) in paragraph at lines 542--543
+Underfull \hbox (badness 2253) in paragraph at lines 571--572
 []|\OT1/cmr/bx/n/8 Hyper-Parameters [Some Spec-i-fied and rest are
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 550--551
+Underfull \hbox (badness 10000) in paragraph at lines 579--580
 []|\OT1/cmr/m/n/8 estimators=50, learn-ing rate=1.0, boost-ing algo-
  []
 
 
-Overfull \hbox (17.06075pt too wide) in paragraph at lines 540--555
+Overfull \hbox (17.06075pt too wide) in paragraph at lines 569--584
 [] 
  []
 
@@ -1405,17 +1444,17 @@ Overfull \vbox (1.44444pt too high) has occurred while \output is active []
 [21 <./Figs/suicide_chord.png>]
 
 Package hyperref Warning: Difference (2) between bookmark levels is greater 
-(hyperref)                than one, level fixed on input line 584.
+(hyperref)                than one, level fixed on input line 613.
 
 <Figs/grid_svm.png, id=498, 411.939pt x 328.8285pt>
 File: Figs/grid_svm.png Graphic file (type png)
 <use Figs/grid_svm.png>
-Package pdftex.def Info: Figs/grid_svm.png  used on input line 590.
+Package pdftex.def Info: Figs/grid_svm.png  used on input line 619.
 (pdftex.def)             Requested size: 152.36346pt x 121.61948pt.
 <Figs/glove_vec.png, id=499, 411.939pt x 328.8285pt>
 File: Figs/glove_vec.png Graphic file (type png)
 <use Figs/glove_vec.png>
-Package pdftex.def Info: Figs/glove_vec.png  used on input line 596.
+Package pdftex.def Info: Figs/glove_vec.png  used on input line 625.
 (pdftex.def)             Requested size: 152.36346pt x 121.61948pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
@@ -1511,9 +1550,6 @@ LaTeX Font Warning: Size substitutions with differences
 (Font)              up to 1.28pt have occurred.
 
 
-LaTeX Warning: There were undefined references.
-
-
 LaTeX Warning: There were multiply-defined labels.
 
 
@@ -1522,20 +1558,24 @@ Package rerunfilecheck Warning: File `sn-article.out' has changed.
 (rerunfilecheck)                or use package `bookmark'.
 
 Package rerunfilecheck Info: Checksums for `sn-article.out':
-(rerunfilecheck)             Before: FB7FAD0778294E9A3BE98D98BF8ADC9A;5664
-(rerunfilecheck)             After:  2C89FB0FE168E41F00D478A883039559;5505.
+(rerunfilecheck)             Before: E74B87E75056133603E00345C2259AC1;5195
+(rerunfilecheck)             After:  F5453330AA3434862ABF9E5D13FAEA81;4976.
  ) 
 Here is how much of TeX's memory you used:
- 19027 strings out of 476331
- 305741 string characters out of 5797575
- 1866660 words of memory out of 5000000
- 38953 multiletter control sequences out of 15000+600000
+ 19022 strings out of 476331
+ 305672 string characters out of 5797575
+ 1868660 words of memory out of 5000000
+ 38950 multiletter control sequences out of 15000+600000
  536962 words of font info for 131 fonts, out of 8000000 for 9000
  1151 hyphenation exceptions out of 8191
  90i,13n,131p,2326b,822s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-pdfTeX warning (dest): name{subsection.2.3} has been referenced but does not ex
-ist, replaced by a fixed one
+pdfTeX warning (dest): name{subsubsection.4.2.4} has been referenced but does n
+ot exist, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{subsubsection.4.2.3} has been referenced but does n
+ot exist, replaced by a fixed one
 
  <C:\Users\Teacher\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm
 1000.pk><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cmextra/cmbsy8.pfb
@@ -1557,9 +1597,9 @@ nts/cm/cmsy10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy6
 .pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Prog
 ram Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Program Files/MiK
 TeX/fonts/type1/public/amsfonts/cm/cmti10.pfb>
-Output written on sn-article.pdf (29 pages, 3144808 bytes).
+Output written on sn-article.pdf (29 pages, 3148468 bytes).
 PDF statistics:
- 676 PDF objects out of 1000 (max. 8388607)
- 163 named destinations out of 1000 (max. 500000)
- 386 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 675 PDF objects out of 1000 (max. 8388607)
+ 161 named destinations out of 1000 (max. 500000)
+ 370 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -143,16 +143,49 @@ Following sections depicted the state of the art in section \ref{lit_rev}, then 
 
 \section{Literature Review}
 \label{lit_rev}
-Extensive research has been conducted before about depression and suicide. In \cite{shen2020detecting} 4,882 medical students were surveyed on the basis of demographic and clinical records via WeChat app. Survey is conducted on specific demographics of population. Statistical machine learning methodologies are applied to determine suicide attempt risk, features and intensities within collected samples. In 2020 Chancellor et. al demonstrated literature review of the mental health status prediction using social media data \cite{chancellor2020methods}. More than 75 studies of social media's Text data analysis for depression or suicide were taken into consideration between 2013 to 2018. It provides a detailed overview of data collection sources, data annotation methods, pre-processing and feature selection, model selection followed by accuracy estimation, cross validation and models’ benchmarks for mental illness. In 2022 Zhang et. al claimed that 399 scientific research papers were reviewed and mental illness related research is increasing gradually \cite{zhang2022natural}. There were other review papers on these two issues in which similar topics are analyzed such as Castilla et. al in 2020 \cite{castillo2020suicide} and Malhotra et. al 2022 \cite{malhotra2022deep}. All of these review based research studies analyzed mostly social media's Text data, and discussed NLP tools and techniques for depression and suicide analysis. 
+Extensive research has been conducted with NLP techniques before about depression and suicide using social media's dataset. In those research studies Feature exploration played a substantial role for analysis, enabling the researchers to accurately understand patterns. In NLP features are converted to corresponding vectors referred as embedding. Typical word embedding approaches TF-IDF, Word2Vec, CNN–BiLSTM \cite{aldhyani2022detecting, chancellor2020methods, wang2020depression, malhotra2022deep}. 
+
+\begin{table}[h!]
+\begin{center}
+\begin{flushleft}
+\caption{Literatures}\label{chord_inference}%
+\begin{tabular}{|p{2cm}|p{10cm}|}
+\toprule
+\textbf{Paper} & \textbf{Remarks} \\
+\midrule
+\cite{shen2020detecting} Shen et al. 2020 & 4,882 medical students were surveyed on the basis of demographic and clinical records via WeChat app. Survey is conducted on specific demographics of population. Statistical machine learning methodologies are applied to determine suicide attempt risk, features and intensities within collected samples.  \\
+
+\cite{chancellor2020methods} Chancellor et al. 2020 & Demonstrated literature review of the mental health status prediction using social media data. More than 75 studies of social media's Text data analysis for depression or suicide were taken into consideration between 2013 to 2018. It provides a detailed overview of data collection sources, data annotation methods, pre-processing and feature selection, model selection followed by accuracy estimation, cross validation and models’ benchmarks for mental illness. \\
+
+\cite{zhang2022natural}  Zhang et al. 2022 & 399 scientific research papers were reviewed \\
+\cite{castillo2020suicide} Castilla et al. 2020  and \cite{malhotra2022deep} Malhotra et al. 2022  & review based research studies analyzed mostly social media's Text data, and discussed NLP tools and techniques for depression and suicide analysis. \\ 
+\multicolumn{2}{c}{Feature analysis}\\
+ \cite{pennebaker2001linguistic, tadesse2019detection} & LIWC, LDA, LSA, n-gram analysis etc are used as features analysis tools in previous research in \cite{pennebaker2001linguistic, tadesse2019detection}. Using LIWC features, XGBoost ML together surpasses the accuracy of CNN–BiLSTM in \cite{aldhyani2022detecting} \\
+Shen et al. 2017 \cite{shen2017depression} & prepared a feature rich dictionary comprised of social media's profile snippet, visual emotion, topic, and domain-specific features. Then that dictionary features are used to train machine learning models to detect the depression on Twitter. \\
+ 
+Zogan et al. 2021 \cite{zogan2021depressionnet}   & used machine text Summarization based feature extraction strategy followed by classification for depression detection.\\
+ 
+Burnap et al. 2015  \cite{burnap2015machine} & built a set of classifiers using lexical, and psychological features extracted from Twitter posts. Then baseline classifiers are updated by building an ensemble classifier using the Random Forest algorithm and a Maximum Probability voting classifier which showed improved accuracy. As classifiers most dominant machine learning approaches are  XGBoost, SVM, Random Forest, and sometimes machine learning regression models performs well. Since, source of dataset varies and various methodology followed in several researches, LDA, n-gram based TF-IDF, Word2Vec reveals as most frequent statistical methods for NLP. \\
+
+\multicolumn{2}{c}{Multi-modal features} \\
+\cite{ye2021multi} & Visual impact on individuals to detect depression \\
+\cite{castillo2020suicide, chancellor2020methods} & Multimodal data samples along with social website post such as: Instagram images are taken into consideration \\
+zheng et al. 2020 \cite{zheng2020development} and Paulo et al. 2020 and Mann et al. 2020 \cite{mann2020see} & Along with status of the social website post, Electronic Health Record (EHR) has also been taken into consideration \\
+Lang He et al. 2022 \cite{he2022deep} & conducted research of Audio visual features  aiming how facial expression and voice can be used as an input features to determine mental illness effectively in 2021 \\
 
 
 
-\subsection{Feature analysis}
-Feature exploration has substantial impact on exploratory analysis, enabling the researchers to accurately understand data patterns. In NLP research features are converted to corresponding vectors referred as embedding. Typical word embedding approaches TF-IDF, Word2Vec, CNN–BiLSTM \cite{aldhyani2022detecting, chancellor2020methods, wang2020depression, malhotra2022deep}. LIWC, LDA, LSA, n-gram analysis etc are used as features analysis tools in previous research in \cite{pennebaker2001linguistic, tadesse2019detection}. Using LIWC features, XGBoost ML together surpasses the accuracy of CNN–BiLSTM in \cite{aldhyani2022detecting}. In 2017 Shen et. al \cite{shen2017depression} prepared a feature rich dictionary comprised of social media's profile snippet, visual emotion, topic, and domain-specific features. Then that dictionary features are used to train machine learning models to detect the depression on Twitter. Others \cite{zogan2021depressionnet} used machine text Summarization based feature extraction strategy followed by classification for depression detection. In 2015 burnap \cite{burnap2015machine} built a set of classifiers using lexical, and psychological features extracted from Twitter posts. Then baseline classifiers are updated by building an ensemble classifier using the Random Forest algorithm and a Maximum Probability voting classifier which showed improved accuracy. As classifiers most dominant machine learning approaches are  XGBoost, SVM, Random Forest, and sometimes machine learning regression models performs well. Since, source of dataset varies and various methodology followed in several researches, LDA, n-gram based TF-IDF, Word2Vec reveals as most frequent statistical methods for NLP. 
-\subsubsection{Multi-modal features}
-Visual impact on individuals to detect depression also has been studied in some papers \cite{ye2021multi}. Multimodal data samples are used along with social website post such as: Instagram images are taken into consideration \cite{castillo2020suicide, chancellor2020methods}. Along with status of the social website post, Electronic Health Record (EHR) has also been taken into consideration by zheng et. al in \cite{zheng2020development} and Paulo et. al in \cite{mann2020see} in 2020. Lang He et. al conducted research of Audio visual features \cite{he2022deep} aiming how facial expression and voice can be used as an input features to determine mental illness effectively in 2021.  It is observed that Text based expression depicts mental illness more clearly compared to other features and is dominant among researchers to detect mental issues effectively. In this study we will be focusing on the text based features only for mental illness and suicidal pattern detection. 
-\subsection{Instrument for measuring Severity}
+\bottomrule
+\end{tabular}
+%\footnotetext{Inference from chord diagrams}
+\end{flushleft}
+\end{center}
+\end{table}
+It is observed that Text based expression depicts mental illness more clearly compared to other features and is dominant among researchers to detect mental issues effectively. In this study we will be focusing on the text based features only for mental illness and suicidal pattern detection. 
+  
+\subsection{Instrument for measuring emotional Severity} 
 From the very beginning questionnaire based suicidal/depression intensity measurements tool were available. These scale are applied for setting the questionnaire during the interrogation. This process provides weights to answers replied by individuals. Most renowned scales are CES-D, PHQ-9, DSM-5, DASS-21 \cite{radloff1977ces, havigerova2019text}, Beck's Depression Inventory BSS \cite{beck2000weisman}, Columbia Suicide Severity Rating Scale (C-SSRS) \cite{posner2011columbia, joiner1997modified} etc. Most of these scales are based on predefined specific number of multiple choice questions having specific weights. \cite{havigerova2019text, beck1961inventory, kroenke2001phq, tolentino2018dsm, kliem2017german, eke2010hamilton}. According to the answer feedback from the patients severity and symptoms are decided based on cumulative weight. Furthermore, statistical models are applied to investigate patterns \cite{shen2020detecting, shen2017depression}.  Till date many researchers are using questionnaire based measurement scales to determine suicidal symptoms \cite{li2022association}. In \cite{vuorilehto2006suicidal} research study conducted in Vantaa, Finland, for the age group of 20 to 69 years with 1119 primary-care patients using (PRIME-MD) questionnaire. Suicidal behavior was conducted, suicidal ideation was assessed using the Scale for Suicidal Ideation (SSI), and suicide attempts were then assessed using medical records. In 2014, Vuorilehto \cite{vuorilehto2014method} examined how several assessment techniques, such as the SSI, BDI, and HAM-D, perform when predicting the incidence of suicidal thoughts in patients with depressive disorder at Vantaa Primary Care. About 153 patient were investigated for about six months to determine suicidal attempt. The study investigates whether variations in assessment tools and methodologies raise any difference to estimate suicidal ideation rates. In \cite{gaur2019knowledge} Gaur et.al. collected 2181 redditors post from Reddit social media sites. Then assisted by professional psychiatrists practitioners extracted only 500 redditors post related to suicide. Then suicidal ideation, behavior, attempt labels are marked using tool called Columbia-Suicide Severity Rating Scale (C-SSRS) \cite{posner2011columbia}. 
+
 
 \subsubsection{Comparative Analysis of scales}
 For suicide detection, mental health professionals typically use specialized assessments like the Columbia-Suicide Severity Rating Scale (C-SSRS) in which specific questions are asked related to suicidal ideation and behavior. These assessments are designed to evaluate an individual's risk of suicide and provide a framework for intervention and support.
@@ -235,13 +268,9 @@ Social media dataset are Text data which needs data pre-processing, cleaning, fe
 \item Features are passed through a process in which features are converted to corresponding IDs and sentences which contain a series of IDs represented as vector. The embedding is another term that is frequently used in relation to vector text analysis. 
 \end{enumerate}
 
-\subsection{Unsupervised modeling}
-%Unsupervised modeling of text data refers to the techniques to analyze and extract meaningful patterns or structures from text without using labeled data. 
-From the pre-processed dataset tokenized corpus data is prepared. 
-\subsubsection{N-gram} 
-N-grams are generated (unigrams, Bi-grams, trigrams, etc.). To observe the most common n-grams. Word Clouds are prepared (\ref{redditdist_twitterdist_wordcloud}) where the size of each n-gram is proportional to its frequency identify patterns of co-occurring terms. 
+From the pre-processed dataset tokenized corpus data is prepared. N-grams are generated (unigrams, Bi-grams, trigrams, etc.). To observe the most common n-grams. Word Clouds are prepared (\ref{redditdist_twitterdist_wordcloud}) where the size of each n-gram is proportional to its frequency identify patterns of co-occurring terms. 
 
-\subsubsection{Latent Dirichlet Allocation (LDA)}
+\subsection{Latent Dirichlet Allocation (LDA)}
 \label{lda_mdel}
 LDA topic modeling \cite{jelodar_latent_2019, gupta_pan_lda_2021, pichardo_lagunas_svd_lda_2015, selvi_classification_2019} is used in this research scope that considers documents are mixed of topic based on distribution of words. The objective is to explore the hidden topic and the topic-word distributions, presumably describe the sample documents. An expression of the LDA model is described below:  
 \begin{equation}
