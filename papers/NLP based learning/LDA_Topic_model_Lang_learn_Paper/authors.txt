@@ -1,0 +1,8 @@
+\author*[1]{\fnm{Md Iftekharul} \sur{Mobin}}\email{iftekhar.mobin@aiub.edu}
+
+\author[2]{\fnm{S.M. Hasan} \sur{Mahmud}}\email{hasan.swe@aiub.edu}
+
+\author[3]{\fnm{Debajyoti} \sur{Karmaker}}\email{d.karmaker@aiub.edu}
+
+\author[4]{\fnm{Ariful} \sur{Islam}}\email{ariful.islam@aiub.edu}
+\affil[1,2,3,4]{\orgdiv{Computer Science and Engineering}, \orgname{American International University-Bangladesh(AIUB)}, \orgaddress{\street{408/1, Kuratoli}, \city{Dhaka}, \postcode{1229}, \state{Dhaka}, \country{Bangladesh}}}

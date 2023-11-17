@@ -1,8 +1,0 @@
-@misc{Suicidal_Depression_online,
-  title={Suicidal Depression: Understanding It and Finding Help},
-  howpublished = {\url{https://www.healthline.com/health/depression}}
-  author={Valencia Higuera, John Bassham, Ericka Goodwin},
-  year={2023},
-  publisher={healthline}
-  note = {Accessed: 2023-06-12}
-}
