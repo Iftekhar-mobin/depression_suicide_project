@@ -152,32 +152,61 @@ Extensive research has been conducted with NLP techniques before about depressio
 \begin{table}[h!]
 \begin{center}
 \begin{flushleft}
-\caption{Literatures}\label{chord_inference}%
-\begin{tabular}{|p{2cm}|p{10cm}|}
+\caption{Literature Reviews}\label{chord_inference}%
+\begin{tabular}{|p{2cm}|p{2cm}|p{8cm}|}
 \toprule
-\textbf{Paper} & \textbf{Remarks} \\
+\textbf{Paper} & \textbf{Datasets} & \textbf{Remarks} \\
 \midrule
-\cite{shen2020detecting} Shen et al. 2020 & 4,882 medical students were surveyed on the basis of demographic and clinical records via WeChat app. Survey is conducted on specific demographics of population. Statistical machine learning methodologies are applied to determine suicide attempt risk, features and intensities within collected samples.  \\
+Shen et al. 2020 \cite{shen2020detecting} & 
+WeChat app &
+\begin{itemize}
+\item 4,882 medical students were surveyed
+\item Statistical machine learning methodologies are applied
+\item determine suicide attempt risk, features and intensities
+\end{itemize} 
+\\
+Zhang et al. 2022, \cite{zhang2022natural}, Malhotra et al. 2022 \cite{malhotra2022deep}, Chancellor et al. 2020 \cite{chancellor2020methods} and Castilla et al. 2020 \cite{castillo2020suicide}  & Social media datasets
+30\% twitter, 25\% Reddit, 9\% Weibo, 4\% facebook and others
+&
+\begin{itemize}
+\item Conducted a systematic literature review (SLR)
+\item 399 scientific research papers were reviewed in  \cite{zhang2022natural}, 96 were in \cite{malhotra2022deep}, 75 in \cite{chancellor2020methods} from 2013 to 2028 and 16 in  \cite{castillo2020suicide} 
+\item Discussed about NLP techniques for mental illness detection statistically (LIWC, LDA, LSA, Word2Vec, NMF, PCI etc \cite{zhang2022natural, castillo2020suicide, tadesse2019detection, pennebaker2001linguistic}), deep learning based (CNN, LSTM, GRU \cite{zhang2022natural}), Transformer Based (BERT, XLNET, GPT, BERT variants etc \cite{zhang2022natural})
+\item Segregated and showed dominant features, machine learning-based models, challenges and future directions
+\end{itemize}
+\\ 
+Aldhyani et al. 2022 \cite{aldhyani2022detecting} and Tadesse et al. 2019 \cite{tadesse2019detection}&
+Reddit datasets &
+\begin{itemize}
+\item TF-IDF, Word2Vec, for text representation, LIWC, LDA, LSA, n-gram analysis etc are used as features analysis tools \cite{aldhyani2022detecting, tadesse2019detection}
+\item LIWC-22, XGBoost machine learning models together surpasses CNN–BiLSTM \cite{aldhyani2022detecting}
+\end{itemize}
+\\
 
-\cite{chancellor2020methods} Chancellor et al. 2020 & Demonstrated literature review of the mental health status prediction using social media data. More than 75 studies of social media's Text data analysis for depression or suicide were taken into consideration between 2013 to 2018. It provides a detailed overview of data collection sources, data annotation methods, pre-processing and feature selection, model selection followed by accuracy estimation, cross validation and models’ benchmarks for mental illness. \\
+Zogan et al. 2021 \cite{zogan2021depressionnet}, Shen et al. 2017 \cite{shen2017depression} and Burnap et al. 2015  \cite{burnap2015machine}
+& Twitter 
+& 
+\begin{itemize}
+\item Prepared a feature rich dictionary comprised of social media's profile snippet \cite{shen2017depression}
+\item Summarization based feature extraction strategy followed by classification for depression detection.\cite{zogan2021depressionnet}
+\item built a set of classifiers using lexical, and psychological features. Ensemble classifier using the Random Forest algorithm and a Maximum Probability voting classifier improved accuracy  \cite{burnap2015machine}
+\end{itemize} 
+\\
+Ye et al. 2021 \cite{ye2021multi} zheng et al. 2020 \cite{zheng2020development} and Mann et al. 2020 \cite{mann2020see} & 
+\begin{itemize}
+\item Instagram images \cite{mann2020see, ye2021multi}
+\item EHR \cite{zheng2020development, mann2020see}
+\item Audio visual facial expression \cite{he2022deep}
+\end{itemize}
+& \begin{itemize}
+\item Audio and video features are extracted using LSTM model and Random Forest classifier is used to determine depression class \cite{he2022deep}. 
+\item Severity of the depression symptoms is estimated using deep learning models induced features pictures and captions posted on Instagram \cite{mann2020see}
+\item Electronic health records (EHRs) for 1-year time period is considered  and feed into Deep learning classification model to segregate risk label \cite{zheng2020development}
+\end{itemize}
 
-\cite{zhang2022natural}  Zhang et al. 2022 & 399 scientific research papers were reviewed \\
-\cite{castillo2020suicide} Castilla et al. 2020  and \cite{malhotra2022deep} Malhotra et al. 2022  & review based research studies analyzed mostly social media's Text data, and discussed NLP tools and techniques for depression and suicide analysis. \\ 
-\multicolumn{2}{c}{Feature analysis}\\
- \cite{pennebaker2001linguistic, tadesse2019detection} & LIWC, LDA, LSA, n-gram analysis etc are used as features analysis tools in previous research in \cite{pennebaker2001linguistic, tadesse2019detection}. Using LIWC features, XGBoost ML together surpasses the accuracy of CNN–BiLSTM in \cite{aldhyani2022detecting} \\
-Shen et al. 2017 \cite{shen2017depression} & prepared a feature rich dictionary comprised of social media's profile snippet, visual emotion, topic, and domain-specific features. Then that dictionary features are used to train machine learning models to detect the depression on Twitter. \\
- 
-Zogan et al. 2021 \cite{zogan2021depressionnet}   & used machine text Summarization based feature extraction strategy followed by classification for depression detection.\\
- 
-Burnap et al. 2015  \cite{burnap2015machine} & built a set of classifiers using lexical, and psychological features extracted from Twitter posts. Then baseline classifiers are updated by building an ensemble classifier using the Random Forest algorithm and a Maximum Probability voting classifier which showed improved accuracy. As classifiers most dominant machine learning approaches are  XGBoost, SVM, Random Forest, and sometimes machine learning regression models performs well. Since, source of dataset varies and various methodology followed in several researches, LDA, n-gram based TF-IDF, Word2Vec reveals as most frequent statistical methods for NLP. \\
-
-\multicolumn{2}{c}{Multi-modal features} \\
-\cite{ye2021multi} & Visual impact on individuals to detect depression \\
-\cite{castillo2020suicide, chancellor2020methods} & Multimodal data samples along with social website post such as: Instagram images are taken into consideration \\
-zheng et al. 2020 \cite{zheng2020development} and Paulo et al. 2020 and Mann et al. 2020 \cite{mann2020see} & Along with status of the social website post, Electronic Health Record (EHR) has also been taken into consideration \\
-Lang He et al. 2022 \cite{he2022deep} & conducted research of Audio visual features  aiming how facial expression and voice can be used as an input features to determine mental illness effectively in 2021 \\
-
-
+ \\
+%
+%Since, source of dataset varies and various methodology followed in several researches, LDA, n-gram based TF-IDF, Word2Vec reveals as most frequent statistical methods for NLP. 
 
 \bottomrule
 \end{tabular}
@@ -274,37 +303,37 @@ Social media dataset are Text data which needs data pre-processing, cleaning, fe
 
 From the pre-processed dataset tokenized corpus data is prepared. N-grams are generated (unigrams, Bi-grams, trigrams, etc.). To observe the most common n-grams. Word Clouds are prepared (\ref{redditdist_twitterdist_wordcloud}) where the size of each n-gram is proportional to its frequency identify patterns of co-occurring terms. 
 
-\subsection{Latent Dirichlet Allocation (LDA)}
-\label{lda_mdel}
-LDA topic modeling \cite{jelodar_latent_2019, gupta_pan_lda_2021, pichardo_lagunas_svd_lda_2015, selvi_classification_2019} is used in this research scope that considers documents are mixed of topic based on distribution of words. The objective is to explore the hidden topic and the topic-word distributions, presumably describe the sample documents. An expression of the LDA model is described below:  
-\begin{equation}
-P(\theta_d,z,w\|\alpha,\beta)=P(\theta_d\|\alpha)\prod^N_{n=1}P(z_{d,n}\|\theta_d)P(w_{d,n}\|z_{d,n},\beta)
-\end{equation}
-Where $w_{d,n}$ the $n_{th}$ word in document $d$, $z_{d,n}$ the topic assigned to the $n_{th}$ word in document $d$, $\alpha,\beta$ are the Dirichlet LDA model parameters. controls per-document topic distribution, and per topic word distribution. $\theta_d$ represent the topic distribution. $P(\theta_d \| \alpha)$ Dirichlet 
-distribution representing the document-topic distribution, $P(z_{d,n}\|\theta_d)$ is the word topic assignment for the $n_{th}$ word in document $d$, $P(w_{d,n}\|z_{d,n},\beta)$ is the distribution representing the observed word given a topic. 
+%\subsection{Latent Dirichlet Allocation (LDA)}
+%\label{lda_mdel}
+%LDA topic modeling \cite{jelodar_latent_2019, gupta_pan_lda_2021, pichardo_lagunas_svd_lda_2015, selvi_classification_2019} is used in this research scope that considers documents are mixed of topic based on distribution of words. The objective is to explore the hidden topic and the topic-word distributions, presumably describe the sample documents. An expression of the LDA model is described below:  
+%\begin{equation}
+%P(\theta_d,z,w\|\alpha,\beta)=P(\theta_d\|\alpha)\prod^N_{n=1}P(z_{d,n}\|\theta_d)P(w_{d,n}\|z_{d,n},\beta)
+%\end{equation}
+%Where $w_{d,n}$ the $n_{th}$ word in document $d$, $z_{d,n}$ the topic assigned to the $n_{th}$ word in document $d$, $\alpha,\beta$ are the Dirichlet LDA model parameters. controls per-document topic distribution, and per topic word distribution. $\theta_d$ represent the topic distribution. $P(\theta_d \| \alpha)$ Dirichlet 
+%distribution representing the document-topic distribution, $P(z_{d,n}\|\theta_d)$ is the word topic assignment for the $n_{th}$ word in document $d$, $P(w_{d,n}\|z_{d,n},\beta)$ is the distribution representing the observed word given a topic. 
+%
+%
+%Different techniques have been developed to perform topic modeling in the unsupervised topic modeling domain of Natural Language Processing (NLP), having their own strengths and limitations \cite{vayansky2020review, abdelrazek2022topic, yi2009comparative}. Apart from LDA, Mallet LDA, Structural Topic Model (STM), Hierarchical Dirichlet Process (HDP), Non-Negative Matrix Factorization (NMF), Latent Semantic Analysis (LSA) etc are also prevailing and can be considered for comparative research study.
+%
+%\subsubsection{Topic models comparative analysis}
+%While some variations of LDA, Mallet LDA is considered for large corpus processing and analysis \cite{vayansky2020review, abdelrazek2022topic, Comparison_Topic_Modeling_Algorithms}. It focuses on scalability, If large corpus needs to analyze, Mallet LDA might be more suitable. LDA in general can still be efficiently applied to moderately sized corpora. Analyzing topics within the context of metadata, STM could be a better fit. Hierarchical Dirichlet Process (HDP) can be useful when we cannot guess the number of topics in advance. As a baseline model LDA is often considered one of the most prominent choices. In \cite{Comparison_Topic_Modeling_Algorithms} LSI, NMF and LDA are compared in terms of coherence and similarity measures for social media dataset and in their analysis LDA is observed most effective measures. In this study Reddit corpus LDA applied to determine dominant topics and explore correlations or co-occurrences. LDA off-the-selves python libraries produces interpretative results for exploratory topic analysis. The identified topics are represented as distributions over words, making it easy to assign meaningful labels to topics. Hence, LDA serves as a baseline for topic modeling in this research. However, how many topics are ideal it is needed to determine (see section \ref{coherence_equations}) that represents topic modeling quality.
+%
+%\subsubsection{LDA model coherence}
+%\label{coherence_equations}
+%Coherence score estimates optimal number of topics. In this research scope coherence is measured to determine how coherent topic terms are \cite{mimno2011optimizing}. Using this score quality of the topics produced by LDA is assessed and ensures that the topics generated are statistically significant. Coherence \(C_{topic}\) can be expressed as follows  
+%\begin{equation}
+%C_{topic}=\sum^N_{i=1} \frac{1}{N(N-1)}\sum^i_{j=1} PMI(w_i,w_j)
+%\end{equation}
+%Where, \(PMI\left( w_{i},w_{j} \right)\) represent pointwise mutual information statistical association between two words occurring together. PMI score indicates that the two words are more closely related within a topic. \(PMI\left( w_{i},w_{j} \right)\) represents  
+%\begin{equation}
+%\(PMI\left( w_{i},w_{j} \right) = \log\frac{P\left( w_{i},w_{j} \right)}{P\left( w_{i} \right)P\left( w_{j} \right)}\)
+%\end{equation}
+%where \(P\left( w_{i},w_{j} \right)\) is joint probability of occurrence of words \(w_{i}\) and \(w_{j}\).  
 
-
-Different techniques have been developed to perform topic modeling in the unsupervised topic modeling domain of Natural Language Processing (NLP), having their own strengths and limitations \cite{vayansky2020review, abdelrazek2022topic, yi2009comparative}. Apart from LDA, Mallet LDA, Structural Topic Model (STM), Hierarchical Dirichlet Process (HDP), Non-Negative Matrix Factorization (NMF), Latent Semantic Analysis (LSA) etc are also prevailing and can be considered for comparative research study.
-
-\subsubsection{Topic models comparative analysis}
-While some variations of LDA, Mallet LDA is considered for large corpus processing and analysis \cite{vayansky2020review, abdelrazek2022topic, Comparison_Topic_Modeling_Algorithms}. It focuses on scalability, If large corpus needs to analyze, Mallet LDA might be more suitable. LDA in general can still be efficiently applied to moderately sized corpora. Analyzing topics within the context of metadata, STM could be a better fit. Hierarchical Dirichlet Process (HDP) can be useful when we cannot guess the number of topics in advance. As a baseline model LDA is often considered one of the most prominent choices. In \cite{Comparison_Topic_Modeling_Algorithms} LSI, NMF and LDA are compared in terms of coherence and similarity measures for social media dataset and in their analysis LDA is observed most effective measures. In this study Reddit corpus LDA applied to determine dominant topics and explore correlations or co-occurrences. LDA off-the-selves python libraries produces interpretative results for exploratory topic analysis. The identified topics are represented as distributions over words, making it easy to assign meaningful labels to topics. Hence, LDA serves as a baseline for topic modeling in this research. However, how many topics are ideal it is needed to determine (see section \ref{coherence_equations}) that represents topic modeling quality.
-
-\subsubsection{LDA model coherence}
-\label{coherence_equations}
-Coherence score estimates optimal number of topics. In this research scope coherence is measured to determine how coherent topic terms are \cite{mimno2011optimizing}. Using this score quality of the topics produced by LDA is assessed and ensures that the topics generated are statistically significant. Coherence \(C_{topic}\) can be expressed as follows  
-\begin{equation}
-C_{topic}=\sum^N_{i=1} \frac{1}{N(N-1)}\sum^i_{j=1} PMI(w_i,w_j)
-\end{equation}
-Where, \(PMI\left( w_{i},w_{j} \right)\) represent pointwise mutual information statistical association between two words occurring together. PMI score indicates that the two words are more closely related within a topic. \(PMI\left( w_{i},w_{j} \right)\) represents  
-\begin{equation}
-\(PMI\left( w_{i},w_{j} \right) = \log\frac{P\left( w_{i},w_{j} \right)}{P\left( w_{i} \right)P\left( w_{j} \right)}\)
-\end{equation}
-where \(P\left( w_{i},w_{j} \right)\) is joint probability of occurrence of words \(w_{i}\) and \(w_{j}\).  
-
-\subsection{Supervised Modeling}
-Various off-the-selves Machine learning and Deep Learning models are used for supervised classification of suicide and depression in several studies \cite{castillo2020suicide, chancellor2020methods, zhang2022natural}. 
-There is conception that Deep learning models performs better than standard machine learning approaches. However, traditional machine learning models can outperform deep learning methods when extracted or filtered features are fitted into the training process. In this research cleaned features are feed into machine learning models for classification. 
-\subsubsection{Classification}
+%\subsection{Supervised Modeling}
+%Various off-the-selves Machine learning and Deep Learning models are used for supervised classification of suicide and depression in several studies \cite{castillo2020suicide, chancellor2020methods, zhang2022natural}. 
+%There is conception that Deep learning models performs better than standard machine learning approaches. However, traditional machine learning models can outperform deep learning methods when extracted or filtered features are fitted into the training process. In this research cleaned features are feed into machine learning models for classification. 
+%\subsubsection{Classification}
 In this research pre-processed dataset converted to vector using cutting edge vectorizers. Feature vector is feed into machine learning classifier which is trained to determine suicide intensity label in depression post. Various vectorization methods are present \cite{aldhyani2022detecting, wang2020depression, shetty2020predicting}. TF-IDF and Word2Vec vectorizers are applied here. Following approach is applied in this study for supervised classification
 \begin{enumerate} [label=(\roman*)]
 \item Pre-processed and useful features are used from Reddit's 500 post CSSR dataset for classifier Training
@@ -319,7 +348,7 @@ Research methodology is portrayed in figure~\ref{fig:res_diagram}
 \label{fig:res_diagram}
 \end{figure}
 
-\section{Exploratory analysis of features}
+\section{Exploratory analysis Results}
 \label{exp_anal}
 After pre-processing document samples contains only noise free features. Document length frequency and features distribution is depicted in Figure \ref{redditdist_twitterdist_together}. From the frequency distribution we can see some of the document sizes are very large. Hence, larger sentences are chopped and one sentence become multiple sentences of features keeping the label same. 
 \begin{figure}[H]
@@ -562,7 +591,7 @@ spend happy moments & Friend family make feel better \\
 Tri-grams or above did not reveals much meaning information, and therefore excluded for further experimental consideration. 
 
 
-\section{Classification Results}
+\subsection{Classification Results}
 \label{classification_res}
 How much depression can trigger suicidal thoughts is an interesting question. In this study classifier is trained on the suicidal intensity dataset. Then trained classifier is applied on the Depression/Suicide class dataset to investigate suicidal intensity in depression. Machine learning classification algorithms used for the experiments are mentioned in the Table \ref{Table_classification_alg}. The hyper-parameters settings for the classifiers are mostly sklearns' default settings. Classifiers are applied for the TFIDF vectorizer embedding (see results in figure~\ref{SVMTFIDF}) and also for Word2vec pretrained vectorizer model. Gridsearch technique of sklearn library is used in Two steps. From the selected classifiers to determine the best classifiers default parameters are applied and SVM showed most promising results. Then, to achieve highest accuracy hyper-parameters are feed into grid search. Using various set of parameters, from the experiments results we found almost 60\% accuracy for SVM model. From various set of values gridsearch for SVM SVC we found degree=2, gamma=0.7, kernel=rbf showed the highest accuracy. 
 %
