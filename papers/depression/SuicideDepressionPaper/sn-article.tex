@@ -194,12 +194,12 @@ Zogan et al. 2021 \cite{zogan2021depressionnet}, Shen et al. 2017 \cite{shen2017
 \\
 Ye et al. 2021 \cite{ye2021multi} zheng et al. 2020 \cite{zheng2020development} and Mann et al. 2020 \cite{mann2020see} & 
 \begin{itemize}
-\item Instagram images \cite{mann2020see, ye2021multi}
-\item EHR \cite{zheng2020development, mann2020see}
-\item Audio visual facial expression \cite{he2022deep}
+\item Instagram images \cite{mann2020see}
+\item EHR \cite{zheng2020development}
+\item Audio visual facial expression \cite{he2022deep, ye2021multi}
 \end{itemize}
 & \begin{itemize}
-\item Audio and video features are extracted using LSTM model and Random Forest classifier is used to determine depression class \cite{he2022deep}. 
+\item Audio and video features are extracted using LSTM model and Random Forest classifier is used to determine depression class \cite{he2022deep}. 160 Chinese respondents' emotions are examined in \cite{ye2021multi}. To determine various emotional changes Low-level audio characteristics is extracted using Deep Spectrum features and word vector features, induced by deep learning based multi-modal fusion approach. 
 \item Severity of the depression symptoms is estimated using deep learning models induced features pictures and captions posted on Instagram \cite{mann2020see}
 \item Electronic health records (EHRs) for 1-year time period is considered  and feed into Deep learning classification model to segregate risk label \cite{zheng2020development}
 \end{itemize}
@@ -301,7 +301,11 @@ Social media dataset are Text data which needs data pre-processing, cleaning, fe
 \item Features are passed through a process in which features are converted to corresponding IDs and sentences which contain a series of IDs represented as vector. The embedding is another term that is frequently used in relation to vector text analysis. 
 \end{enumerate}
 
+\subsection{Research Design}
 From the pre-processed dataset tokenized corpus data is prepared. N-grams are generated (unigrams, Bi-grams, trigrams, etc.). To observe the most common n-grams. Word Clouds are prepared (\ref{redditdist_twitterdist_wordcloud}) where the size of each n-gram is proportional to its frequency identify patterns of co-occurring terms. 
+
+The methodology expresses that there are two distinct analysis are followed. Unsupervised analysis included LDA, BERTopic and coherence estimation and supervised analysis involves vectorization followed by classification for depression and suicide detection. 
+
 
 %\subsection{Latent Dirichlet Allocation (LDA)}
 %\label{lda_mdel}
