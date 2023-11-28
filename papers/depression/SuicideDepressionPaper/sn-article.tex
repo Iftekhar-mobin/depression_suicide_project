@@ -304,7 +304,19 @@ Social media dataset are Text data which needs data pre-processing, cleaning, fe
 \subsection{Research Design}
 From the pre-processed dataset tokenized corpus data is prepared. N-grams are generated (unigrams, Bi-grams, trigrams, etc.). To observe the most common n-grams. Word Clouds are prepared (\ref{redditdist_twitterdist_wordcloud}) where the size of each n-gram is proportional to its frequency identify patterns of co-occurring terms. 
 
-The methodology expresses that there are two distinct analysis are followed. Unsupervised analysis included LDA, BERTopic and coherence estimation and supervised analysis involves vectorization followed by classification for depression and suicide detection. 
+The methodology expresses that there are two distinct analysis (supervised and unsupervised) approaches are followed. 
+Unsupervised analysis included 
+\begin{itemize}
+\item Coherence estimation for optimal topic determination in suicide category
+\item LDA for suicide categories dominant keywords determination
+\item pyLDAvis and BERTopic for suicide categories topic similarities visualization
+\end{itemize}
+Supervised analysis involves vectorization followed by classification for depression and suicide detection. 
+\begin{itemize}
+\item Pre-processed CSSR dataset converted to vector using TF-IDF and Word2Vec vectorizers \cite{aldhyani2022detecting, wang2020depression, shetty2020predicting}. 
+\item Feature vector is feed into various machine learning classifier which is trained to determine suicide intensity label in depression post.  
+\end{itemize}
+
 
 
 %\subsection{Latent Dirichlet Allocation (LDA)}
@@ -338,12 +350,7 @@ The methodology expresses that there are two distinct analysis are followed. Uns
 %Various off-the-selves Machine learning and Deep Learning models are used for supervised classification of suicide and depression in several studies \cite{castillo2020suicide, chancellor2020methods, zhang2022natural}. 
 %There is conception that Deep learning models performs better than standard machine learning approaches. However, traditional machine learning models can outperform deep learning methods when extracted or filtered features are fitted into the training process. In this research cleaned features are feed into machine learning models for classification. 
 %\subsubsection{Classification}
-In this research pre-processed dataset converted to vector using cutting edge vectorizers. Feature vector is feed into machine learning classifier which is trained to determine suicide intensity label in depression post. Various vectorization methods are present \cite{aldhyani2022detecting, wang2020depression, shetty2020predicting}. TF-IDF and Word2Vec vectorizers are applied here. Following approach is applied in this study for supervised classification
-\begin{enumerate} [label=(\roman*)]
-\item Pre-processed and useful features are used from Reddit's 500 post CSSR dataset for classifier Training
-\item Used count vectorizer and TFIDF transformer to generate vectors for the dataset
-\item Trained classifier to determine the categories of various suicidal intensities
-\end{enumerate}
+
 Research methodology is portrayed in figure~\ref{fig:res_diagram} 
 \begin{figure}[h!]
 \centering
@@ -404,36 +411,37 @@ Uni-gram Word cloud is showed in figure \ref{redditdist_twitterdist_wordcloud} t
 \end{figure}
 Visualizing the word cloud it is revealed there are correlation between Ideation and Indicator, Behavior and Attempt categories.  
 
-\subsubsection{Coherence estimation for LDA model}
-To calculate the coherence score gensim library provides range of options such as \(u_{mass},c_{v},c_{uci},c_{npmi}\). \(u_{mass}\) and \(c_{v}\)These two methods are most popular. For given topic with words \(\{ w_{1},w_{2},w_{3},\ldots..,w_{n}\}\) a fixed context window size is provided (default size 10 words) then coherence score is calculated using an equation \(\sum_{j = 1}^{i}{PMI}\left( w_{i},w_{j} \right)\) which provides negative coherence score. \(c_{v}\) can be expressed as  
-\begin{equation}
-\(c_{v} = \frac{1}{N(N - 1)}\sum_{j = 1}^{i}{similarity\left( w_{i},w_{j} \right)}\)
-\end{equation}
-in which \(similarity\left( w_{i},w_{j} \right)\) represent the pairwise similarity between terms based on \(PMI\left( w_{i},w_{j} \right)\) scores. \(c_{v}\) provides a positive coherence score. Higher coherence values (higher than 0.5) indicate that the topics are moderately coherent and representative of meaningful themes within the text data.
+\subsubsection{Optimal topic determination}
+%\subsubsection{Coherence estimation for LDA model}
+%To calculate the coherence score gensim library provides range of options such as \(u_{mass},c_{v},c_{uci},c_{npmi}\). \(u_{mass}\) and \(c_{v}\)These two methods are most popular. For given topic with words \(\{ w_{1},w_{2},w_{3},\ldots..,w_{n}\}\) a fixed context window size is provided (default size 10 words) then coherence score is calculated using an equation \(\sum_{j = 1}^{i}{PMI}\left( w_{i},w_{j} \right)\) which provides negative coherence score. \(c_{v}\) can be expressed as  
+%\begin{equation}
+%\(c_{v} = \frac{1}{N(N - 1)}\sum_{j = 1}^{i}{similarity\left( w_{i},w_{j} \right)}\)
+%\end{equation}
+%in which \(similarity\left( w_{i},w_{j} \right)\) represent the pairwise similarity between terms based on \(PMI\left( w_{i},w_{j} \right)\) scores. \(c_{v}\) provides a positive coherence score. Higher coherence values (higher than 0.5) indicate that the topics are moderately coherent and representative of meaningful themes within the text data.
 
 \begin{figure}[h!]
 \centering
 \begin{subfigure}{0.45\textwidth}
     \includegraphics[width=\textwidth]{cv_indicator.png}
-    \caption{Indicator category word cloud}
+    \caption{Indicator category optimal number of topic}
     \label{redditdist}
 \end{subfigure}
 \hfill
 \begin{subfigure}{0.45\textwidth}
     \includegraphics[width=\textwidth]{cv_ideation.png}
-    \caption{Ideation category word cloud}
+    \caption{Ideation category optimal number of topic}
     \label{twitterdist}
 \end{subfigure}      
 \centering
 \begin{subfigure}{0.45\textwidth}
     \includegraphics[width=\textwidth]{cv_behavior.png}
-    \caption{Behavior category word cloud}
+    \caption{Behavior category optimal number of topic}
     \label{redditdist}
 \end{subfigure}
 \hfill
 \begin{subfigure}{0.45\textwidth}
     \includegraphics[width=\textwidth]{cv_attempt.png}
-    \caption{Attempt category word cloud}
+    \caption{Attempt category optimal number of topic}
     \label{twitterdist}
 \end{subfigure}   
 %\caption{Train Reddit C-SSRS dataset word cloud distribution}
@@ -534,7 +542,7 @@ Frequency based comparison between two categories is conducted for depression an
 %\label{features_vis_pro_exp}
 \end{figure}
 
-\subsubsection{Uni-gram Token distribution visualization}
+\subsubsection{Feature distribution visualization}
 In Test dataset samples a large number of documents are having low features. In figure~\ref{fig_Test_Dataset_token_frequency} the frequency of tokens in each class is depicted. Short sentence does not carry enough features which reveals does not carry enough information to be classified confidently by classifier algorithms. We started reducing the numbers of samples based on document length in Test dataset. By reducing the samples based on numbers of tokens present in a document (see Figure \ref{fig_Test_Dataset_token_frequency}). Documents length versus category frequency information is showed in this chart. This charts explains if we filter out the shorter comments suicide post become dominant class and depression post become outnumbered. 
 %
 \begin{figure}[H]
@@ -554,7 +562,7 @@ The length of document and term frequency within the corpus is visualized in Fig
 
 It is also interesting that there are many words have high frequency such as depression or depressed but belongs to suicide class. One important fact is revealed here is that we can see although suicide, suicidal these words has high frequency in Suicide class but depression, depressed also occurred in parallel with high frequency. However, it does not reveals any direct clues in terms of hypothetical relationships between the two category. It is difficult find pattern in which we can determine the depression and suicidal thought.  
 
-\subsubsection{Bi-gram features relation exploration}
+\subsubsection{Features relation exploration}
 Bi-gram is analyzed for depression and suicide both categories. There are some Bi-grams which showed very high frequency. We called this special Bi-grams since. Special Bi-grams in the suicidal and depression both categories appeared highly frequent matter. Special Bi-grams are \enquote{mental health}, \enquote{feel like}, \enquote{make feel}, \enquote{high school}, \enquote{best friend}, \enquote{really want}, \enquote{suicide thought}, \enquote{friend family} showed high occurrences in the test dataset. Frequently occurred Bi-grams and its pattern in the corpus is explored. We want to analyze how these words have impact with its neighboring words depicted in Figure \ref{dep_chord} and \ref{suicide_chord}. To explore the impact of special bi-grams on the samples, special bi-gram terms containing samples are filtered from dataset. After that using lebel encoder Bi-grams are encoded as integers and then chord diagram is generated. We can observe meaningful relationship within the samples between the Bi-gram features.  
 
 
@@ -595,7 +603,7 @@ spend happy moments & Friend family make feel better \\
 Tri-grams or above did not reveals much meaning information, and therefore excluded for further experimental consideration. 
 
 
-\subsection{Classification Results}
+\subsubsection{Exploring Suicidal Intensities}
 \label{classification_res}
 How much depression can trigger suicidal thoughts is an interesting question. In this study classifier is trained on the suicidal intensity dataset. Then trained classifier is applied on the Depression/Suicide class dataset to investigate suicidal intensity in depression. Machine learning classification algorithms used for the experiments are mentioned in the Table \ref{Table_classification_alg}. The hyper-parameters settings for the classifiers are mostly sklearns' default settings. Classifiers are applied for the TFIDF vectorizer embedding (see results in figure~\ref{SVMTFIDF}) and also for Word2vec pretrained vectorizer model. Gridsearch technique of sklearn library is used in Two steps. From the selected classifiers to determine the best classifiers default parameters are applied and SVM showed most promising results. Then, to achieve highest accuracy hyper-parameters are feed into grid search. Using various set of parameters, from the experiments results we found almost 60\% accuracy for SVM model. From various set of values gridsearch for SVM SVC we found degree=2, gamma=0.7, kernel=rbf showed the highest accuracy. 
 %
@@ -647,7 +655,7 @@ Naive Bayes (GaussianNB) & smoothing=$1^{-9}$\\
 %\end{table}
 
 
-\subsubsection{Suicidal Intensities visualization}
+%\subsubsection{Suicidal Intensities visualization}
 From the results we can see that suicidal ideation between depression and suicidal categories number of samples are very similar (figure~\ref{Suicidal_int_vis}). Within depression more number of samples are showed suicidal indicator category compared to suicide which is an interesting result. Suicidal behavior and attempt is comparatively high within the suicidal category than depression. Hence, figure~\ref{SVMTFIDF} result seems to be pretty obvious, except for suicidal ideation category. Also for the suicidal indicator symptoms are higher within the depression category. 
 
 \begin{figure}[H]
