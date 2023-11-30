@@ -141,7 +141,29 @@ Suicide is a major cause of death globally. In india, USA and many other countri
 Clinical depression severity estimation methods rely on interview based interrogation session where patient confront with psychologist. During the interrogation session patient are reluctant about expressing their thoughts. It is common phenomenon that emotionally distressed individual hides their feelings to others. More-often patients prefer not to disclose their emotions, often reluctant to seek help from psychotherapists, or doctor. It is difficult to anticipate a patient's psychiatric status from traditional interview-based diagnostic. Also, It is hard to quantify the level of depression during suicidal attempt. It may varies based on various factors like society, religion, family bonding, emotional maturity and many others factors. Due to lack of confidence, fear of death, religious obligations, and societal stigma against this act, even severe depressed person may not consider making an attempt at suicide. But they seek empathy consciously or unconsciously in the social sites like twitter, reddit and facebook \cite{chen2018}. Shen et.al in \cite{shen2017depression} and Xu et al. \cite{xu2016contribution}, depicted how online users debate topics connected to depression in social networks and what is their language patterns. Choudhury et al. in 2013 \cite{de2013predicting} showed that there is possibility of detecting and diagnosing depression via social media. In 2013 park et. al \cite{park2013perception} interviewed some Twitter users to investigate the depressed behaviors in social media users. From the social media activities emotion detection like depression or suicidal tendency is not only possible but promising result can be obtained. Severity level of depression can be determined. Through data visualization we can explore various facts and clues among this two emotions. 
 
 \subsection{Research Overview}\label{overview}
-Our research focus on detection of suicidal tendency within a depressed person’s post. Find out important features, explore different facts and hidden underlying information of depression and suicide. This study uses Reddit's social media datasets for exploratory data analysis to estimate the degree of suicidal thoughts within depressed person's post. The objective is to determine if a depressed individual has a suicidal tendency, determine the degree of the intensity or the opposite. This study presents an unsupervised feature analysis using the LDA topic model of the Reddit C-SSRS dataset followed by supervised classification to quantize significance. Latent suicidal intents, cross-topic co-occurrence patterns, and dominant high-impact keywords of suicide are revealed from unsupervised LDA modeling. Furthermore, Supervised machine learning classifier models are applied to determine the severity of suicide tendencies. To get the best results, cutting edge tex embedding vectorization techniques and machine learning estimators are applied. Statistical measurements depicts the degree of suicide intensity within depressed label post. 
+Our research focus on detection of suicidal tendency within a depressed person’s post. Find out important features, explore different facts and hidden underlying information of depression and suicide. This study uses Reddit's social media datasets for exploratory data analysis to estimate the degree of suicidal thoughts within depressed person's post. The objective is to determine if a depressed individual has a suicidal tendency, determine the degree of the intensity or the opposite. This study presents an unsupervised feature analysis using the LDA topic model of the Reddit C-SSRS dataset followed by supervised classification to quantize significance. Latent suicidal intents, cross-topic co-occurrence patterns, and dominant high-impact keywords of suicide are revealed from unsupervised LDA modeling. Furthermore, Supervised machine learning classifier models are applied to determine the severity of suicide tendencies. To get the best results, cutting edge tex embedding vectorization techniques and machine learning estimators are applied. Statistical measurements depicts the degree of suicide intensity within depressed label post. An overview of whole research work is depicted in figure \ref{whole_diagram}
+\begin{figure}[h!]
+\centering
+\includegraphics[width=\textwidth]{diagram_relation.pdf}
+\caption{Research work overview}
+\label{whole_diagram}
+\end{figure}
+
+\subsubsection{Research Contribution}
+Mental health research related to suicide and depression is analyzed in a broad spectrum in this study. Both clinical aspects and psychological footprint is analyzed by investigating the social sites of Text comments. Prevention of suicide mental health challenges we tried to analyze how depression and suicide are interconnected. The following contributions can be specified:
+%
+\begin{enumerate}
+\item Epidemiology: Investigate risk factors associated with the development of mental health issues.
+\item Early Intervention:
+- Examine the effectiveness of early detection and intervention in preventing the escalation of mental health issues.
+- Investigate school-based programs aimed at identifying and supporting at-risk youth.
+\item 
+Treatment Modalities: Analyze the effectiveness of text based approach for suicide and depression analysis
+\item 
+Technology and Mental Health:
+- Explore the role of digital mental health interventions, such as how social media footprint can be used to determine mental health status 
+- Evaluate the potential of artificial intelligence in predicting and preventing mental health crises.
+\end{enumerate}
 
 Following sections depicted the state of the art in section \ref{lit_rev}, then provides details overview of the dataset in section \ref{dtset}, section \ref{methodolo} explains the methodology of this research, followed by exploratory analysis demonstrated in section \ref{exp_anal} and classification results in section \ref{classification_res} and lastly section \ref{conclu} infers the conclusion. 
 
@@ -286,7 +308,7 @@ From figure~\ref{reddit_cssrs_doc_len_freq} it is observed that number of sample
 Categorical features are mixed together shuffled and then grouped into fixed sized tokens. Random Shuffling is applied with various seed. It is considered as sample document for specific category. This process continues until we found desired number of samples. Then synthetic samples are combined with other samples to prepare train classifier dataset. 
 
 \subsection{Testing/Validation Dataset} 
-For testing dataset is collected from kaggle. It is an opesource dataset publicly available in kaggle collected from reddit website by a pushshift API contained suicide and depression category. The dataset contains posts of \enquote{SuicideWatch} and \enquote{depression} subreddits. \enquote{SuicideWatch} and \enquote{depression} posts were collected from roughly 2008 to 2021. The datasets comprised of 232,074 post annotated for binary classification as suicidal or non-suicidal Depression in \cite{aldhyani2022detecting} for detecting suicidal ideation. In this research trained classifier is applied to detect class on this two category. Main objective is to determine the suicide categories (indicator, ideation, behavior, attempt, supportive) within this dataset. 
+For testing dataset is collected from kaggle. It is an open source dataset publicly available in kaggle collected from reddit website by a pushshift API contained suicide and depression category. The dataset contains posts of \enquote{SuicideWatch} and \enquote{depression} subreddits. \enquote{SuicideWatch} and \enquote{depression} posts were collected from roughly 2008 to 2021. The datasets comprised of 232,074 post annotated for binary classification as suicidal or non-suicidal Depression in \cite{aldhyani2022detecting} for detecting suicidal ideation. In this research trained classifier is applied to detect class on this two category. Main objective is to determine the suicide categories (indicator, ideation, behavior, attempt, supportive) within this dataset. 
 
 
 \section{Methodology}\label{methodolo}
@@ -413,7 +435,8 @@ Visualizing the word cloud it is revealed there are correlation between Ideation
 
 \subsubsection{Optimal topic determination}
 %\subsubsection{Coherence estimation for LDA model}
-%To calculate the coherence score gensim library provides range of options such as \(u_{mass},c_{v},c_{uci},c_{npmi}\). \(u_{mass}\) and \(c_{v}\)These two methods are most popular. For given topic with words \(\{ w_{1},w_{2},w_{3},\ldots..,w_{n}\}\) a fixed context window size is provided (default size 10 words) then coherence score is calculated using an equation \(\sum_{j = 1}^{i}{PMI}\left( w_{i},w_{j} \right)\) which provides negative coherence score. \(c_{v}\) can be expressed as  
+To estimate optimal number of topic the coherence score needs to be determined. Gensim library provides range of options to determine coherence score. such as \(u_{mass},c_{v},c_{uci},c_{npmi}\). \(u_{mass}\) and \(c_{v}\)These two methods are most popular. For given topic with words \(\{ w_{1},w_{2},w_{3},\ldots..,w_{n}\}\) a fixed context window size is provided (default size 10 words). 
+% then coherence score is calculated using an equation \(\sum_{j = 1}^{i}{PMI}\left( w_{i},w_{j} \right)\) which provides negative coherence score. \(c_{v}\) can be expressed as  
 %\begin{equation}
 %\(c_{v} = \frac{1}{N(N - 1)}\sum_{j = 1}^{i}{similarity\left( w_{i},w_{j} \right)}\)
 %\end{equation}
