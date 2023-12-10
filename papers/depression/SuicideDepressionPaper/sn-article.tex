@@ -7,21 +7,15 @@
 %% separately and not embedded in the \TeX\ document itself.       %%
 %%                                                                 %%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
 %%\documentclass[referee,sn-basic]{sn-jnl}% referee option is meant for double line spacing
-
 %%=======================================================%%
 %% to print line numbers in the margin use lineno option %%
 %%=======================================================%%
-
 %%\documentclass[lineno,sn-basic]{sn-jnl}% Basic Springer Nature Reference Style/Chemistry Reference Style
-
 %%======================================================%%
 %% to compile with pdflatex/xelatex use pdflatex option %%
 %%======================================================%%
-
 %%\documentclass[pdflatex,sn-basic]{sn-jnl}% Basic Springer Nature Reference Style/Chemistry Reference Style
-
 %%\documentclass[sn-basic]{sn-jnl}% Basic Springer Nature Reference Style/Chemistry Reference Style
 \documentclass[sn-mathphys,Numbered]{sn-jnl}% Math and Physical Sciences Reference Style
 %%\documentclass[sn-aps]{sn-jnl}% American Physical Society (APS) Reference Style
@@ -31,11 +25,9 @@
 %%\documentclass[sn-standardnature]{sn-jnl}% Standard Nature Portfolio Reference Style
 %%\documentclass[default]{sn-jnl}% Default
 %%\documentclass[default,iicol]{sn-jnl}% Default with double column layout
-
 %%%% Standard Packages
 %%<additional latex packages if required can be included here>
 %%%%
-
 %%%%%=============================================================================%%%%
 %%%%  Remarks: This template is provided to aid authors with the preparation
 %%%%  of original research articles intended for submission to journals published 
@@ -48,9 +40,7 @@
 %%%%  of the journal take precedence. A detailed User Manual is available in the 
 %%%%  template package for technical guidance.
 %%%%%=============================================================================%%%%
-
 \jyear{2021}%
-
 %% as per the requirement new theorem styles can be included as shown below
 \theoremstyle{thmstyleone}%
 \newtheorem{theorem}{Theorem}%  meant for continuous numbers
@@ -58,17 +48,13 @@
 %% optional argument [theorem] produces theorem numbering sequence instead of independent numbers for Proposition
 \newtheorem{proposition}[theorem]{Proposition}% 
 %%\newtheorem{proposition}{Proposition}% to get separate numbers for theorem and proposition etc.
-
 \theoremstyle{thmstyletwo}%
 \newtheorem{example}{Example}%
 \newtheorem{remark}{Remark}%
-
 \theoremstyle{thmstylethree}%
 \newtheorem{definition}{Definition}%
-
 \raggedbottom
 %%\unnumbered% uncomment this for unnumbered level heads
-
 %% My used library
 \usepackage{csquotes}
 \usepackage{subcaption}
@@ -78,48 +64,35 @@
 \usepackage{float}
 \usepackage{longtable,booktabs,array}
 \graphicspath{{Figs}{Figs/}}
-
 \begin{document}
-
-\title[Article Title]{Exploratory analysis of suicidal intensity within depression, dissect social media post}
-
+\title[Article Title]{Exploratory analysis of the degree of suicidal ideation in depression investigation of social media post}
 %%=============================================================%%
-%% Prefix	-> \pfx{Dr}
-%% GivenName	-> \fnm{Joergen W.}
-%% Particle	-> \spfx{van der} -> surname prefix
-%% FamilyName	-> \sur{Ploeg}
-%% Suffix	-> \sfx{IV}
-%% NatureName	-> \tanm{Poet Laureate} -> Title after name
-%% Degrees	-> \dgr{MSc, PhD}
+%% Prefix       -> \pfx{Dr}
+%% GivenName    -> \fnm{Joergen W.}
+%% Particle     -> \spfx{van der} -> surname prefix
+%% FamilyName   -> \sur{Ploeg}
+%% Suffix       -> \sfx{IV}
+%% NatureName   -> \tanm{Poet Laureate} -> Title after name
+%% Degrees      -> \dgr{MSc, PhD}
 %% \author*[1,2]{\pfx{Dr} \fnm{Joergen W.} \spfx{van der} \sur{Ploeg} \sfx{IV} \tanm{Poet Laureate} 
 %%                 \dgr{MSc, PhD}}\email{iauthor@gmail.com}
 %%=============================================================%%
-
 \author*[1,2]{\fnm{Md Iftekharul} \sur{Mobin}}\email{iftekhar.mobin@gmail.com}
-
 \author[2,3]{\fnm{Second} \sur{Author}}\email{iiauthor@gmail.com}
 \equalcont{These authors contributed equally to this work.}
-
 \author[1,2]{\fnm{Third} \sur{Author}}\email{iiiauthor@gmail.com}
 \equalcont{These authors contributed equally to this work.}
-
 \affil*[1]{\orgdiv{Department}, \orgname{Organization}, \orgaddress{\street{Street}, \city{City}, \postcode{100190}, \state{State}, \country{Country}}}
-
 \affil[2]{\orgdiv{Department}, \orgname{Organization}, \orgaddress{\street{Street}, \city{City}, \postcode{10587}, \state{State}, \country{Country}}}
-
 \affil[3]{\orgdiv{Department}, \orgname{Organization}, \orgaddress{\street{Street}, \city{City}, \postcode{610101}, \state{State}, \country{Country}}}
-
 %%==================================%%
 %% sample for unstructured abstract %%
 %%==================================%%
-
 \abstract{
-Depression and suicide this two phenomenon are closely connected with each other. Depression triggers suicidal risk. Though, To what extent of depression level triggers suicidal risk is a scrutiny. Traditional interview-based clinical diagnostic approach is not effective to anticipate a depressed person's Psychiatric status. Since patients often prefer not to disclose their emotions, reluctant to seek help from psychotherapists, or doctor. Social media's footprint often seen people discussing things which are not disclosed publicly, emotionally distressed often disclose themselves, seek empathy and reveals physiological states. Hence it has become a valuable source of research for depression and suicidal behaviors. This study uses social media datasets for exploratory data analysis to estimate the degree of suicidal thoughts within depressed person's post. The objective is to determine if a depressed individual has a suicidal tendency, determine the degree of the intensity or the opposite. This study presents an unsupervised feature analysis using the topic model approach followed by supervised classification to quantize significance. Latent suicidal intents, cross-topic co-occurrence patterns, and dominant high-impact keywords of suicide are revealed from unsupervised LDA modeling. Furthermore, Supervised machine learning classifier models are applied to determine the severity of suicide tendencies. To get the best results, cutting edge tex embedding vectorization techniques and machine learning estimators are applied. Statistical measurements depicts the degree of suicide intensity within depressed label post. From the analysis it is revealed that suicidal tendency within depression people post is extremely high. Depressed person's post showed 60\% similarities in various categories of suicidal intensity.}
-
+Depression and suicide are inter-connected. Depressive condition influences the chance of suicide risk. Though, to what extent of depression level triggers suicidal attempt is a scrutiny. Traditional interview-based clinical diagnostic approach is not effective to anticipate a depressed person's psychiatric status. Since patients often prefer not to disclose their emotions, reluctant to seek help from psychotherapists, or doctor. Social media's footprint often seen people discussing things which are not disclosed publicly, emotionally distressed often disclose themselves, seek empathy and reveals physiological states. Hence it has become a valuable source of research for depression and suicidal behaviors. This study uses social media datasets for exploratory data analysis to estimate the degree of suicidal thoughts within depressed person's post. The objective is to determine if a depressed individual has a suicidal tendency, determine the degree of the intensity or the opposite. This study presents an unsupervised feature analysis using the topic model approach followed by supervised classification to quantize significance. Latent suicidal intents, cross-topic co-occurrence patterns, and dominant high-impact keywords of suicide are revealed from unsupervised Latent Dirichlet Allocation (LDA) modeling. Furthermore, Supervised machine learning classifier models are applied to determine the severity of suicide tendencies. To get the best results, cutting edge text embedding vectorization techniques and machine learning estimators are applied. Statistical measurements depicts the degree of suicide intensity within depressed label post. From the analysis it is revealed that suicidal tendency within depression people post is extremely high. Depressed person's post showed 60\% similarities in various categories of suicidal intensity.}
 %%================================%%
 %% Sample for structured abstract %%
 %%================================%%
-
 % \abstract{\textbf{Purpose:} The abstract serves both as a general introduction to the topic and as a brief, non-technical summary of the main results and their implications. The abstract must not include subheadings (unless expressly permitted in the journal's Instructions to Authors), equations or citations. As a guide the abstract should not exceed 200 words. Most journals do not set a hard limit however authors are advised to check the author instructions for the journal they are submitting to.
 % 
 % \textbf{Methods:} The abstract serves both as a general introduction to the topic and as a brief, non-technical summary of the main results and their implications. The abstract must not include subheadings (unless expressly permitted in the journal's Instructions to Authors), equations or citations. As a guide the abstract should not exceed 200 words. Most journals do not set a hard limit however authors are advised to check the author instructions for the journal they are submitting to.
@@ -127,43 +100,33 @@ Depression and suicide this two phenomenon are closely connected with each other
 % \textbf{Results:} The abstract serves both as a general introduction to the topic and as a brief, non-technical summary of the main results and their implications. The abstract must not include subheadings (unless expressly permitted in the journal's Instructions to Authors), equations or citations. As a guide the abstract should not exceed 200 words. Most journals do not set a hard limit however authors are advised to check the author instructions for the journal they are submitting to.
 % 
 % \textbf{Conclusion:} The abstract serves both as a general introduction to the topic and as a brief, non-technical summary of the main results and their implications. The abstract must not include subheadings (unless expressly permitted in the journal's Instructions to Authors), equations or citations. As a guide the abstract should not exceed 200 words. Most journals do not set a hard limit however authors are advised to check the author instructions for the journal they are submitting to.}
-
-\keywords{Suicide and Depression, NLP, Unsupervised LDA model, exploratory analysis, feature extraction}
-
+\keywords{Suicide and Depression, NLP, Unsupervised LDA model, exploratory analysis, feature extraction.}
 %%\pacs[JEL Classification]{D8, H51}
 %%\pacs[MSC Classification]{35A01, 65L10, 65L12, 65L20, 65L70}
-
 \maketitle
-
 \section{Introduction}\label{sec1}
-Suicide is a major cause of death globally. In india, USA and many other countries large number of population dies because of suicide \cite{havigerova2019text, singh2022startling}. Only In USA approximately 46,000 people committed suicide in 2020 \cite{singh2022startling}. Several studies showed that depression patients are very prone to suicidal attempt \cite{vuorilehto2006suicidal, mcgirr2007examination, hawton2013risk}. According to \cite{singh2022startling} more over 50\% of people who opted suicide also fit the criteria for severe depression, around 4\% of those who diagnosed as depressed, have records of suicidal attempts. 
-
-Clinical depression severity estimation methods rely on interview based interrogation session where patient confront with psychologist. During the interrogation session patient are reluctant about expressing their thoughts. It is common phenomenon that emotionally distressed individual hides their feelings to others. More-often patients prefer not to disclose their emotions, often reluctant to seek help from psychotherapists, or doctor. It is difficult to anticipate a patient's psychiatric status from traditional interview-based diagnostic. Also, It is hard to quantify the level of depression during suicidal attempt. It may varies based on various factors like society, religion, family bonding, emotional maturity and many others factors. Due to lack of confidence, fear of death, religious obligations, and societal stigma against this act, even severe depressed person may not consider making an attempt at suicide. But they seek empathy consciously or unconsciously in the social sites like twitter, reddit and facebook \cite{chen2018}. Shen et.al in \cite{shen2017depression} and Xu et al. \cite{xu2016contribution}, depicted how online users debate topics connected to depression in social networks and what is their language patterns. Choudhury et al. in 2013 \cite{de2013predicting} showed that there is possibility of detecting and diagnosing depression via social media. In 2013 park et. al \cite{park2013perception} interviewed some Twitter users to investigate the depressed behaviors in social media users. From the social media activities emotion detection like depression or suicidal tendency is not only possible but promising result can be obtained. Severity level of depression can be determined. Through data visualization we can explore various facts and clues among this two emotions. 
-
+Suicide is a major cause of death globally. In india, USA and many other countries large number of population dies because of suicide \cite{havigerova2019text, singh2022startling}. Only in USA approximately 46,000 people committed suicide in 2020 \cite{singh2022startling}. Several studies showed that depression patients are very prone to suicidal attempt \cite{vuorilehto2006suicidal, mcgirr2007examination, hawton2013risk}. According to \cite{singh2022startling} more over 50\% of people who opted suicide also fit the criteria for severe depression, around 4\% of those who diagnosed as depressed, have records of suicidal attempts. 
+Clinical depression severity estimation methods rely on interview based interrogation session where patient confront with psychologist. During the interrogation session patient are reluctant about expressing their thoughts. It is common phenomenon that emotionally distressed individual hides their feelings to others. More-often patients prefer not to disclose their emotions, often reluctant to seek help from psychotherapists, or doctor. It is difficult to anticipate a patient's psychiatric status from traditional interview-based diagnostic. Also, It is hard to quantify the level of depression during suicidal attempt. It may varies based on various factors like society, religion, family bonding, emotional maturity and many others factors. Due to lack of confidence, fear of death, religious obligations, and societal stigma against this act, even severe depressed person may not consider making an attempt at suicide. But they seek empathy consciously or unconsciously in the social sites like Twitter, Reddit and Facebook \cite{chen2018}. Shen et.al in \cite{shen2017depression} and Xu et al. \cite{xu2016contribution}, depicted how online users debate topics connected to depression in social networks and what is their language patterns. Choudhury et al. in 2013 \cite{de2013predicting} showed that there is possibility of detecting and diagnosing depression via social media. In 2013 park et. al \cite{park2013perception} interviewed some Twitter users to investigate the depressed behaviors in social media users. From the social media activities emotion detection like depression or suicidal tendency is not only possible but promising result can be obtained. Severity level of depression can be determined. Through data visualization we can explore various facts and clues among this two emotions. 
 \subsection{Research Overview}\label{overview}
-Our research focus on detection of suicidal tendency within a depressed person’s post. Find out important features, explore different facts and hidden underlying information of depression and suicide. This study uses Reddit's social media datasets for exploratory data analysis to estimate the degree of suicidal thoughts within depressed person's post. The objective is to determine if a depressed individual has a suicidal tendency, determine the degree of the intensity or the opposite. This study presents an unsupervised feature analysis using the LDA topic model of the Reddit C-SSRS dataset followed by supervised classification to quantize significance. Latent suicidal intents, cross-topic co-occurrence patterns, and dominant high-impact keywords of suicide are revealed from unsupervised LDA modeling. Furthermore, Supervised machine learning classifier models are applied to determine the severity of suicide tendencies. To get the best results, cutting edge tex embedding vectorization techniques and machine learning estimators are applied. Statistical measurements depicts the degree of suicide intensity within depressed label post. An overview of whole research work is depicted in figure \ref{whole_diagram}
+Our research focus on detection of suicidal tendency within a depressed person’s post. Find out important features, explore different facts and hidden underlying information of depression and suicide. This study uses Reddit's social media datasets for exploratory data analysis to estimate the degree of suicidal thoughts within depressed person's post. The objective is to determine if a depressed individual has a suicidal tendency, determine the degree of the intensity or the opposite. This study presents an unsupervised feature analysis using the LDA topic model of the Reddit C-SSRS dataset followed by supervised classification to quantize significance. Latent suicidal intents, cross-topic co-occurrence patterns, and dominant high-impact keywords of suicide are revealed from unsupervised LDA modeling. Furthermore, Supervised machine learning classifier models are applied to determine the severity of suicide tendencies. To get the best results, cutting edge text embedding vectorization techniques and machine learning estimators are applied. Statistical measurements depicts the degree of suicide intensity within depressed label post. An overview of whole research work is depicted in figure \ref{whole_diagram}
 \begin{figure}[h!]
 \centering
 \includegraphics[width=\textwidth]{diagram_relation.pdf}
-\caption{Research work overview}
+\caption{Exploratory analysis overview}
 \label{whole_diagram}
 \end{figure}
-
 \subsubsection{Research Contribution}
 Mental health research related to suicide and depression is analyzed in a broad spectrum in this study. Both clinical aspects and psychological footprint is analyzed by investigating the social sites of Text comments. Prevention of suicide mental health challenges we tried to analyze how depression and suicide are interconnected. The following contributions can be specified:
 %
 \begin{enumerate}
-\item Suicidal tendencies in the social media posts made by depressed individuals and investigation of intensties is a holistic approach. Examined the risk factors connected to depression in relation to suicide. In contrast to other studies, this one examined a professionally approved dataset. Due to the fact that this method validates the trained model using high-quality datasets in comparison to previous baseline studies this approach is more acceptable. 
-\item  Visualized the pattern of features associated with annonymous topics and observe the relationships of dominant terms, facts of suicide and depression. Estimated the suicidal categories and intensities in depression. 
+\item Suicidal tendencies in the social media posts made by depressed individuals and investigation of intensities is a holistic approach. Examined the risk factors connected to depression in relation to suicide. In contrast to other studies, this one examined a professionally approved dataset. Due to the fact that this method validates the trained model using high-quality datasets in comparison to previous baseline studies this approach is more acceptable. 
+\item  Visualized the pattern of features associated with anonymous topics and observe the relationships of dominant terms, facts of suicide and depression. Estimated the suicidal categories and intensities in depression. 
 \item Evaluate the potential of artificial intelligence in predicting and preventing mental health crises.
 \end{enumerate}
-
 Following sections depicted the state of the art in section \ref{lit_rev}, then provides details overview of the dataset in section \ref{dtset}, section \ref{methodolo} explains the methodology of this research, followed by exploratory analysis demonstrated in section \ref{exp_anal} and classification results in section \ref{classification_res} and lastly section \ref{conclu} infers the conclusion. 
-
 \section{Literature Review}
 \label{lit_rev}
 Extensive research has been conducted with NLP techniques before about depression and suicide using social media's dataset. In those research studies Feature exploration played a substantial role for analysis, enabling the researchers to accurately understand patterns. In NLP features are converted to corresponding vectors referred as embedding. Typical word embedding approaches TF-IDF, Word2Vec, CNN–BiLSTM \cite{aldhyani2022detecting, chancellor2020methods, wang2020depression, malhotra2022deep}. 
-
 \begin{table}[h!]
 \begin{center}
 \begin{flushleft}
@@ -181,7 +144,7 @@ WeChat app &
 \end{itemize} 
 \\
 Zhang et al. 2022, \cite{zhang2022natural}, Malhotra et al. 2022 \cite{malhotra2022deep}, Chancellor et al. 2020 \cite{chancellor2020methods} and Castilla et al. 2020 \cite{castillo2020suicide}  & Social media datasets
-30\% twitter, 25\% Reddit, 9\% Weibo, 4\% facebook and others
+30\% Twitter, 25\% Reddit, 9\% Weibo, 4\% Facebook and others
 &
 \begin{itemize}
 \item Conducted a systematic literature review (SLR)
@@ -197,7 +160,6 @@ Reddit datasets &
 \item LIWC-22, XGBoost machine learning models together surpasses CNN–BiLSTM \cite{aldhyani2022detecting}
 \end{itemize}
 \\
-
 Zogan et al. 2021 \cite{zogan2021depressionnet}, Shen et al. 2017 \cite{shen2017depression} and Burnap et al. 2015  \cite{burnap2015machine}
 & Twitter 
 & 
@@ -218,11 +180,9 @@ Ye et al. 2021 \cite{ye2021multi} zheng et al. 2020 \cite{zheng2020development} 
 \item Severity of the depression symptoms is estimated using deep learning models induced features pictures and captions posted on Instagram \cite{mann2020see}
 \item Electronic health records (EHRs) for 1-year time period is considered  and feed into Deep learning classification model to segregate risk label \cite{zheng2020development}
 \end{itemize}
-
  \\
 %
 %Since, source of dataset varies and various methodology followed in several researches, LDA, n-gram based TF-IDF, Word2Vec reveals as most frequent statistical methods for NLP. 
-
 \bottomrule
 \end{tabular}
 %\footnotetext{Inference from chord diagrams}
@@ -232,16 +192,12 @@ Ye et al. 2021 \cite{ye2021multi} zheng et al. 2020 \cite{zheng2020development} 
 It is observed that Text based expression depicts mental illness more clearly compared to other features and is dominant among researchers to detect mental issues effectively. In this study we will be focusing on the text based features only for mental illness and suicidal pattern detection. 
   
 \subsection{Instrument for measuring emotional Severity} 
-From the very beginning questionnaire based suicidal/depression intensity measurements tool were available. These scale are applied for setting the questionnaire during the interrogation. This process provides weights to answers replied by individuals. Most renowned scales are CES-D, PHQ-9, DSM-5, DASS-21 \cite{radloff1977ces, havigerova2019text}, Beck's Depression Inventory BSS \cite{beck2000weisman}, Columbia Suicide Severity Rating Scale (C-SSRS) \cite{posner2011columbia, joiner1997modified} etc. Most of these scales are based on predefined specific number of multiple choice questions having specific weights. \cite{havigerova2019text, beck1961inventory, kroenke2001phq, tolentino2018dsm, kliem2017german, eke2010hamilton}. According to the answer feedback from the patients severity and symptoms are decided based on cumulative weight. Furthermore, statistical models are applied to investigate patterns \cite{shen2020detecting, shen2017depression}.  Till date many researchers are using questionnaire based measurement scales to determine suicidal symptoms \cite{li2022association}. In \cite{vuorilehto2006suicidal} research study conducted in Vantaa, Finland, for the age group of 20 to 69 years with 1119 primary-care patients using (PRIME-MD) questionnaire. Suicidal behavior was conducted, suicidal ideation was assessed using the Scale for Suicidal Ideation (SSI), and suicide attempts were then assessed using medical records. In 2014, Vuorilehto \cite{vuorilehto2014method} examined how several assessment techniques, such as the SSI, BDI, and HAM-D, perform when predicting the incidence of suicidal thoughts in patients with depressive disorder at Vantaa Primary Care. About 153 patient were investigated for about six months to determine suicidal attempt. The study investigates whether variations in assessment tools and methodologies raise any difference to estimate suicidal ideation rates. In \cite{gaur2019knowledge} Gaur et.al. collected 2181 redditors post from Reddit social media sites. Then assisted by professional psychiatrists practitioners extracted only 500 redditors post related to suicide. Then suicidal ideation, behavior, attempt labels are marked using tool called Columbia-Suicide Severity Rating Scale (C-SSRS) \cite{posner2011columbia}. 
-
-
+From the very beginning questionnaire based suicidal/depression intensity measurements tool were available. These scale are applied for setting the questionnaire during the interrogation. This process provides weights to answers replied by individuals. Most renowned scales are CES-D, PHQ-9, DSM-5, DASS-21 \cite{radloff1977ces, havigerova2019text}, Beck's Depression Inventory BSS \cite{beck2000weisman}, Columbia Suicide Severity Rating Scale (C-SSRS) \cite{posner2011columbia, joiner1997modified} etc. Most of these scales are based on predefined specific number of multiple choice questions having specific weights. \cite{havigerova2019text, beck1961inventory, kroenke2001phq, tolentino2018dsm, kliem2017german, eke2010hamilton}. According to the answer feedback from the patients severity and symptoms are decided based on cumulative weight. Furthermore, statistical models are applied to investigate patterns \cite{shen2020detecting, shen2017depression}.  Till date many researchers are using questionnaire based measurement scales to determine suicidal symptoms \cite{li2022association}. In \cite{vuorilehto2006suicidal} research study conducted in Vantaa, Finland, for the age group of 20 to 69 years with 1119 primary-care patients using (PRIME-MD) questionnaire. Suicidal behavior was conducted, suicidal ideation was assessed using the Scale for Suicidal Ideation (SSI), and suicide attempts were then assessed using medical records. In 2014, Vuorilehto \cite{vuorilehto2014method} examined how several assessment techniques, such as the SSI, BDI, and HAM-D, perform when predicting the incidence of suicidal thoughts in patients with depressive disorder at Vantaa Primary Care. About 153 patient were investigated for about six months to determine suicidal attempt. The study investigates whether variations in assessment tools and methodologies raise any difference to estimate suicidal ideation rates. In \cite{gaur2019knowledge} Gaur et.al. collected 2181 Redditors post from Reddit social media sites. Then assisted by professional psychiatrists practitioners extracted only 500 Redditors post related to suicide. Then suicidal ideation, behavior, attempt labels are marked using tool called Columbia-Suicide Severity Rating Scale (C-SSRS) \cite{posner2011columbia}. 
 \subsubsection{Comparative Analysis of scales}
 For suicide detection, mental health professionals typically use specialized assessments like the Columbia-Suicide Severity Rating Scale (C-SSRS) in which specific questions are asked related to suicidal ideation and behavior. These assessments are designed to evaluate an individual's risk of suicide and provide a framework for intervention and support.
-
 \begin{itemize}
 \item
 \textbf{C-SSRS} consists of a series of questions that aim to gather information about an individual's current and past experiences with suicidal ideation (thoughts), behaviors, and rescue factors etc.
-
 \begin{enumerate}[label=(\roman*)]
 \item  
 \textbf{Suicidal Ideation}
@@ -267,46 +223,38 @@ If the individual has previously attempted suicide, this section assesses the me
 \item 
 \textbf{PHQ-9} having 9 different criteria having question regarding energy, sleepiness, enthusiasm etc and 5 different criteria is mentioned mild, moderate, minimal severe and severe depression. 
 \item 
-\textbf{SSI} scale clinical assessment tool used to measure the severity of suicidal ideation \cite{shen2020detecting}. It includes questions about the frequency, duration, controllability, deterrents, and reasons for the suicidal thoughts. It also focuses on the intensity of the suicidal thoughts, measuring how strong and compelling they are to the patients. It measures differentiate between the individual's desire to die versus their desire to continue living.
+\textbf{SSI} scale clinical assessment tool used to measure the severity of suicidal ideation \cite{shen2020detecting}. It includes questions about the frequency, duration, control ability, and reasons for the suicidal thoughts. It also focuses on the intensity of the suicidal thoughts, measuring how strong and compelling they are to the patients. It measures differentiate between the individual's desire to die versus their desire to continue living.
 \end{itemize}
-
 SSI, BDI, HEM-D, C-SSRS these standards scale have been successfully validated and used for many years in real-world situations, without a doubt. However, these scale might not completely encompass introvert patient behaviors and symptoms like current social media. In this study we will be focusing on the text based dataset collected from the social media sites only for mental illness and suicidal pattern detection. This study conducted exploratory analysis, depicted various latent topics, correlation between the facts and dominant key factors that represent suicide and depression resulting observe the underlying relation between this two emotions from Text dataset. 
-
 \section{Dataset}
 \label{dtset}
-Social media's Text datasets have emerged as one of the acceptable option for assessing depression and suicide emotion among Natural Language Processing (NLP) research experts. Text based samples are mostly collected from Twitter, Reddit \cite{tadesse2019detection}, facebook, weibo etc websites donated by various institutions or researchers \cite{rissola2020dataset}. In 2021 the Computational Linguistics and Clinical Psychology CLPsych 2021 workshop organized a Task challenge for detecting suicidal risk \cite{macavaney2021community}. It facilitated participants with authentic dataset for predicting suicide risk from social media Twitter. The dataset for the task includes information who attempted suicide or succeeded along with some control who have not. After collecting dataset from social sites, proper annotation is crucial for training machine learning classifier models. In\cite{lopez2022exploring} research study used Twitter post collection API for collecting Tweets and collected Tweets of size 2509 were obtained, of which 216 post were found relevant by 3 Expert psychologists. Furthermore, LIWC (Linguistic Inquiry and Word Count) \cite{pennebaker2001linguistic} linguistic feature analysis dictionary the degree of positive and negative emotions Tweets were evaluated and results are statistically presented. 
-
+Social media's Text datasets have emerged as one of the acceptable option for assessing depression and suicide emotion among Natural Language Processing (NLP) research experts. Text based samples are mostly collected from Twitter, Reddit \cite{tadesse2019detection}, Facebook, weibo etc websites donated by various institutions or researchers \cite{rissola2020dataset}. In 2021 the Computational Linguistics and Clinical Psychology CLPsych 2021 workshop organized a Task challenge for detecting suicidal risk \cite{macavaney2021community}. It facilitated participants with authentic dataset for predicting suicide risk from social media Twitter. The dataset for the task includes information who attempted suicide or succeeded along with some control who have not. After collecting dataset from social sites, proper annotation is crucial for training machine learning classifier models. In\cite{lopez2022exploring} research study used Twitter post collection API for collecting Tweets and collected Tweets of size 2509 were obtained, of which 216 post were found relevant by 3 Expert psychologists. Furthermore, LIWC (Linguistic Inquiry and Word Count) \cite{pennebaker2001linguistic} linguistic feature analysis dictionary the degree of positive and negative emotions Tweets were evaluated and results are statistically presented. 
 \subsection{Training dataset}
-Twitter, Reddit, Facebook, Instagram, Weibo, and other online social media platforms were used to collect data for NLP research study on depression and suicide \cite{wang2020depression, malhotra2022deep}. This research study incorporates the dataset prepared by professionals published in \cite{gaur2019knowledge} as a training dataset. The dataset was created by shing and Gaur et. al. in 2018 \cite{shing2018expert} and 2019 \cite{gaur2019knowledge} and is comprise of 500 posts that were filtered and extracted from 2181 Reddit posts. The dataset is then annotated by a professional practitioner psychiatrist, and divided into five categories using the criteria stated in the Columbian Suicide Severity Rating Scale (C-SSRS) \cite{gaur2019knowledge}. This dataset introduced 5 label classification of suicidal intensities which was no risk, low risk, moderate risk, and high risk categories before. 
-
+Twitter, Reddit, Facebook, Instagram, Weibo, and other online social media platforms were used to collect data for NLP research study on depression and suicide \cite{wang2020depression, malhotra2022deep}. This research study incorporates the dataset prepared by professionals published in \cite{gaur2019knowledge} as a training dataset. The dataset was created by Shing and Gaur et. al. in 2018 \cite{shing2018expert} and 2019 \cite{gaur2019knowledge} and is comprise of 500 posts that were filtered and extracted from 2181 Reddit posts. The dataset is then annotated by a professional practitioner psychiatrist, and divided into five categories using the criteria stated in the Columbian Suicide Severity Rating Scale (C-SSRS) \cite{gaur2019knowledge}. This dataset introduced 5 label classification of suicidal intensities which was no risk, low risk, moderate risk, and high risk categories before. 
 \begin{enumerate}[label=(\roman*)]
-\item Indicator - Indicates suicidal symptoms in the post
-\item Ideation - Having suicidal Ideas 
-\item Behavior - Having some suicidal symptoms Behavior
-\item Attempt - Suicidal attempt in the post
-\item Supportive - Someone shows empathy and condolence for a suicidal post
+\item Indicator – Indicates suicidal symptoms in the post
+\item Ideation – Having suicidal Ideas 
+\item Behavior – Having some suicidal symptoms Behavior
+\item Attempt – Suicidal attempt in the post
+\item Supportive – Someone shows empathy and condolence for a suicidal post
 \end{enumerate}
 %
-Training dataset's \cite{gaur2019knowledge} samples based on document lengths in various categories are depicted in figure~\ref{reddit_cssrs_doc_len_freq}. Supportive category is not taken into account in the analysis section since supporting group does not belong to examined specimen individual. 
+Training dataset's \cite{gaur2019knowledge} samples based on document lengths in various categories are depicted in figure~\ref{Reddit_cssrs_doc_len_freq}. Supportive category is not taken into account in the analysis section since supporting group does not belong to examined specimen individual. 
 %
 \begin{figure}[H]
 \centering
 \includegraphics[width=\textwidth]{document_size_length_in_each_class.png}
 \caption{Document size length in each class of suicidal category and samples frequency}
-\label{reddit_cssrs_doc_len_freq}
+\label{Reddit_cssrs_doc_len_freq}
 \end{figure}
 %
 \subsubsection{Dataset Imbalance Handling}
-From figure~\ref{reddit_cssrs_doc_len_freq} it is observed that number of samples in the attempt category is very low compared to other categories. To increase the dataset size balancing samples of each class, synthetic dataset is prepared. Text Data augmentation \cite{bayer2022survey} is applied.
+From figure~\ref{Reddit_cssrs_doc_len_freq} it is observed that number of samples in the attempt category is very low compared to other categories. To increase the dataset size balancing samples of each class, synthetic dataset is prepared. Text Data augmentation \cite{bayer2022survey} is applied.
 Categorical features are mixed together shuffled and then grouped into fixed sized tokens. Random Shuffling is applied with various seed. It is considered as sample document for specific category. This process continues until we found desired number of samples. Then synthetic samples are combined with other samples to prepare train classifier dataset. 
-
 \subsection{Testing/Validation Dataset} 
-For testing dataset is collected from kaggle. It is an open source dataset publicly available in kaggle collected from reddit website by a pushshift API contained suicide and depression category. The dataset contains posts of \enquote{SuicideWatch} and \enquote{depression} subreddits. \enquote{SuicideWatch} and \enquote{depression} posts were collected from roughly 2008 to 2021. The datasets comprised of 232,074 post annotated for binary classification as suicidal or non-suicidal Depression in \cite{aldhyani2022detecting} for detecting suicidal ideation. In this research trained classifier is applied to detect class on this two category. Main objective is to determine the suicide categories (indicator, ideation, behavior, attempt, supportive) within this dataset. 
-
-
+For testing dataset is collected from Kaggle. It is an open source dataset publicly available in Kaggle collected from Reddit website by a pushshift API contained suicide and depression category. The dataset contains posts of \enquote{SuicideWatch} and \enquote{depression} subReddits. \enquote{SuicideWatch} and \enquote{depression} posts were collected from roughly 2008 to 2021. The datasets comprised of 232,074 post annotated for binary classification as suicidal or non-suicidal Depression in \cite{aldhyani2022detecting} for detecting suicidal ideation. In this research trained classifier is applied to detect class on this two category. Main objective is to determine the suicide categories (indicator, ideation, behavior, attempt, supportive) within this dataset. 
 \section{Methodology}\label{methodolo}
 In this research supervised and unsupervised both type of data modeling is conducted. Unsupervised LDA modeling explores the key features, depict coherent terms related to specific suicide category. Supervised model is applied to train machine learning classifier to determine suicidal severity categories. Trained classifier, detects the suicidal risk within given post which contains depression post. Thereby analyzing result statistically suicidal tendency significance in depression post can be observed. This whole process is depicted in Figure \ref{fig:res_diagram}. Exploratory analysis started with dataset pre-processing. Most common techniques of NLP for data pre-processing is applied mentioned in the section \ref{data_preprocessing}. 
-
 \subsection{Data Pre-processing}\label{data_preprocessing}
 Social media dataset are Text data which needs data pre-processing, cleaning, feature extraction and data mining related NLP tasks.
 \begin{enumerate}[label=(\roman*)]
@@ -315,10 +263,8 @@ Social media dataset are Text data which needs data pre-processing, cleaning, fe
 \item Sentences are divided into equal-length fragments, and null word padding is applied to keep sample documents length same. Thereby corpus is prepared for further analysis.
 \item Features are passed through a process in which features are converted to corresponding IDs and sentences which contain a series of IDs represented as vector. The embedding is another term that is frequently used in relation to vector text analysis. 
 \end{enumerate}
-
 \subsection{Research Design}
-From the pre-processed dataset tokenized corpus data is prepared. N-grams are generated (unigrams, Bi-grams, trigrams, etc.). To observe the most common n-grams. Word Clouds are prepared (\ref{redditdist_twitterdist_wordcloud}) where the size of each n-gram is proportional to its frequency identify patterns of co-occurring terms. 
-
+From the pre-processed dataset tokenized corpus data is prepared. N-grams are generated (unigrams, Bi-grams, trigrams, etc.). To observe the most common n-grams. Word Clouds are prepared (\ref{Redditdist_Twitterdist_wordcloud}) where the size of each n-gram is proportional to its frequency identify patterns of co-occurring terms. 
 The methodology expresses that there are two distinct analysis (supervised and unsupervised) approaches are followed. 
 Unsupervised analysis included 
 \begin{itemize}
@@ -331,9 +277,6 @@ Supervised analysis involves vectorization followed by classification for depres
 \item Pre-processed CSSR dataset converted to vector using TF-IDF and Word2Vec vectorizers \cite{aldhyani2022detecting, wang2020depression, shetty2020predicting}. 
 \item Feature vector is feed into various machine learning classifier which is trained to determine suicide intensity label in depression post.  
 \end{itemize}
-
-
-
 %\subsection{Latent Dirichlet Allocation (LDA)}
 %\label{lda_mdel}
 %LDA topic modeling \cite{jelodar_latent_2019, gupta_pan_lda_2021, pichardo_lagunas_svd_lda_2015, selvi_classification_2019} is used in this research scope that considers documents are mixed of topic based on distribution of words. The objective is to explore the hidden topic and the topic-word distributions, presumably describe the sample documents. An expression of the LDA model is described below:  
@@ -360,12 +303,10 @@ Supervised analysis involves vectorization followed by classification for depres
 %\(PMI\left( w_{i},w_{j} \right) = \log\frac{P\left( w_{i},w_{j} \right)}{P\left( w_{i} \right)P\left( w_{j} \right)}\)
 %\end{equation}
 %where \(P\left( w_{i},w_{j} \right)\) is joint probability of occurrence of words \(w_{i}\) and \(w_{j}\).  
-
 %\subsection{Supervised Modeling}
 %Various off-the-selves Machine learning and Deep Learning models are used for supervised classification of suicide and depression in several studies \cite{castillo2020suicide, chancellor2020methods, zhang2022natural}. 
 %There is conception that Deep learning models performs better than standard machine learning approaches. However, traditional machine learning models can outperform deep learning methods when extracted or filtered features are fitted into the training process. In this research cleaned features are feed into machine learning models for classification. 
 %\subsubsection{Classification}
-
 Research methodology is portrayed in figure~\ref{fig:res_diagram} 
 \begin{figure}[h!]
 \centering
@@ -373,59 +314,56 @@ Research methodology is portrayed in figure~\ref{fig:res_diagram}
 \caption{Research Methodology overview}
 \label{fig:res_diagram}
 \end{figure}
-
 \section{Exploratory analysis Results}
 \label{exp_anal}
-After pre-processing document samples contains only noise free features. Document length frequency and features distribution is depicted in Figure \ref{redditdist_twitterdist_together}. From the frequency distribution we can see some of the document sizes are very large. Hence, larger sentences are chopped and one sentence become multiple sentences of features keeping the label same. 
+After pre-processing document samples contains only noise free features. Document length frequency and features distribution is depicted in Figure \ref{Redditdist_Twitterdist_together}. From the frequency distribution we can see some of the document sizes are very large. Hence, larger sentences are chopped and one sentence become multiple sentences of features keeping the label same. 
 \begin{figure}[H]
 \centering
 \begin{subfigure}{0.45\textwidth}
-    \includegraphics[width=\textwidth]{reddit_dist.png}
+    \includegraphics[width=\textwidth]{Reddit_dist.png}
     \caption{Training dataset distribution}
-    \label{redditdist}
+    \label{Redditdist}
 \end{subfigure}
 \hfill
 \begin{subfigure}{0.45\textwidth}
-    \includegraphics[width=\textwidth]{twitterdist.png}
+    \includegraphics[width=\textwidth]{Twitterdist.png}
     \caption{Testing dataset distribution}
-    \label{twitterdist}
+    \label{Twitterdist}
 \end{subfigure}       
 \caption{Train and Test dataset distribution}
-\label{redditdist_twitterdist_together}
+\label{Redditdist_Twitterdist_together}
 \end{figure}
-
 \subsection{Training dataset exploration}
-Uni-gram Word cloud is showed in figure \ref{redditdist_twitterdist_wordcloud} to depict each category and influence of dominant keywords based on frequency.  
+Uni-gram Word cloud is showed in figure \ref{Redditdist_Twitterdist_wordcloud} to depict each category and influence of dominant keywords based on frequency.  
 \begin{figure}[h!]
 \centering
 \begin{subfigure}{0.45\textwidth}
     \includegraphics[width=\textwidth]{indicator_word_cloud.png}
     \caption{Indicator category word high impact words are anxiety, disease, disorder, nervous etc}
-    \label{redditdist}
+    \label{Redditdist}
 \end{subfigure}
 \hfill
 \begin{subfigure}{0.45\textwidth}
     \includegraphics[width=\textwidth]{Ideation_word_cloud.png}
     \caption{Ideation category word cloud high impact words are dementia, affective disorder, stress, bipolar personality}
-    \label{twitterdist}
+    \label{Twitterdist}
 \end{subfigure}      
 \centering
 \begin{subfigure}{0.45\textwidth}
     \includegraphics[width=\textwidth]{Behavior_word_cloud.png}
     \caption{Behavior category word cloud high impact words are self-harm, suicidal, intentional etc.}
-    \label{redditdist}
+    \label{Redditdist}
 \end{subfigure}
 \hfill
 \begin{subfigure}{0.45\textwidth}
     \includegraphics[width=\textwidth]{Attempt_word_cloud.png}
     \caption{Attempt category word cloud high impact keywords suicide, attempt, inflicted injury etc.}
-    \label{twitterdist}
+    \label{Twitterdist}
 \end{subfigure}   
 \caption{Train Reddit C-SSRS dataset word cloud distribution represents that there are overlapping features between Indicator with Ideation and Behavior with Attempt categories}
-\label{redditdist_twitterdist_wordcloud}
+\label{Redditdist_Twitterdist_wordcloud}
 \end{figure}
 Visualizing the word cloud it is revealed there are correlation between Ideation and Indicator, Behavior and Attempt categories.  
-
 \subsubsection{Optimal topic determination}
 %\subsubsection{Coherence estimation for LDA model}
 To estimate optimal number of topic the coherence score needs to be determined. Gensim library provides range of options to determine coherence score. such as \(u_{mass},c_{v},c_{uci},c_{npmi}\). \(u_{mass}\) and \(c_{v}\)These two methods are most popular. For given topic with words \(\{ w_{1},w_{2},w_{3},\ldots..,w_{n}\}\) a fixed context window size is provided (default size 10 words). 
@@ -434,37 +372,34 @@ To estimate optimal number of topic the coherence score needs to be determined. 
 %\(c_{v} = \frac{1}{N(N - 1)}\sum_{j = 1}^{i}{similarity\left( w_{i},w_{j} \right)}\)
 %\end{equation}
 %in which \(similarity\left( w_{i},w_{j} \right)\) represent the pairwise similarity between terms based on \(PMI\left( w_{i},w_{j} \right)\) scores. \(c_{v}\) provides a positive coherence score. Higher coherence values (higher than 0.5) indicate that the topics are moderately coherent and representative of meaningful themes within the text data.
-
 \begin{figure}[h!]
 \centering
 \begin{subfigure}{0.45\textwidth}
     \includegraphics[width=\textwidth]{cv_indicator.png}
     \caption{Indicator category optimal number of topic}
-    \label{redditdist}
+    \label{Redditdist}
 \end{subfigure}
 \hfill
 \begin{subfigure}{0.45\textwidth}
     \includegraphics[width=\textwidth]{cv_ideation.png}
     \caption{Ideation category optimal number of topic}
-    \label{twitterdist}
+    \label{Twitterdist}
 \end{subfigure}      
 \centering
 \begin{subfigure}{0.45\textwidth}
     \includegraphics[width=\textwidth]{cv_behavior.png}
     \caption{Behavior category optimal number of topic}
-    \label{redditdist}
+    \label{Redditdist}
 \end{subfigure}
 \hfill
 \begin{subfigure}{0.45\textwidth}
     \includegraphics[width=\textwidth]{cv_attempt.png}
     \caption{Attempt category optimal number of topic}
-    \label{twitterdist}
+    \label{Twitterdist}
 \end{subfigure}   
 %\caption{Train Reddit C-SSRS dataset word cloud distribution}
-\label{redditdist_twitterdist}
+\label{Redditdist_Twitterdist}
 \end{figure}
-
-
 \subsubsection{Keywords importance visualization using LDA}
 LDA driven results of various categories are visualized in this study to observe the latent topic using relative importance measurements depicted in figure \ref{indicator_weight_relative_imp}, \ref{ideation_weight_relative_imp}, \ref{behavior_weight_relative_imp}, and \ref{attempt_weight_relative_imp} and pyldvis library in figure~\ref{indicator_pyldvis}, \ref{Ideation_pyldvis}, \ref{Behavior_pyldvis} and \ref{Attempt_pyldvis}.
 \begin{figure}[H]
@@ -488,57 +423,46 @@ LDA driven results of various categories are visualized in this study to observe
     \caption{Attempt category frequency vs LDA based relative Importance}
     \label{attempt_weight_relative_imp}
 \end{figure}   
-
-
  
-
 \begin{figure}[h!]
 \centering
     \includegraphics[width=\textwidth]{indicator_pyldvis.png}
     \caption{Indicator categories LDA's salient terms and topic visualization}
     \label{indicator_pyldvis}
 \end{figure}
-
 \begin{figure}[h!]
     \includegraphics[width=\textwidth]{Ideation_pyldvis.png}
     \caption{Ideation categories LDA's salient terms and topic visualization}
     \label{Ideation_pyldvis}
 \end{figure}
-
 \begin{figure}[h!]
     \includegraphics[width=\textwidth]{Behavior_pyldvis.png}
     \caption{Behavior categories LDA's salient terms and topic visualization}
     \label{Behavior_pyldvis}
 \end{figure}
-
 \begin{figure}[h!]
     \includegraphics[width=\textwidth]{Attempt_pyldvis.png}
     \caption{Attempt categories LDA's salient terms and topic visualization}
     \label{Attempt_pyldvis}
 \end{figure}
-
-
 \subsubsection{Combined topic modeling using BERTopic}
 In this research scope BERTopic topic modeling applied which leverages deep learning pretrained BERT and c-TFIDF to create dense clusters of topics. Here BERTopic applied for the combined samples. Hence we can observe topics' distinctive feature characteristics, how distinctive indicator, Ideation, Behavior and Attempt categories features are.
-
 \begin{figure}[h!]
 \centering
 \begin{subfigure}{0.45\textwidth}
     \includegraphics[width=\textwidth]{bertopic/combined_bertopic_topics_heatmap_frequency.png}
 %    \caption{Ideation category word cloud}
-    \label{redditdist}
+    \label{Redditdist}
 \end{subfigure}
 \hfill
 \begin{subfigure}{0.45\textwidth}
     \includegraphics[width=\textwidth]{bertopic/combined_bertopic_topics_map_frequency.png}
 %    \caption{Attempt category word cloud}
-    \label{twitterdist}
+    \label{Twitterdist}
 \end{subfigure}   
 \caption{Inter distance topic similarities}
-\label{redditdist_twitterdist}
+\label{Redditdist_Twitterdist}
 \end{figure}
-
-
 \subsection{Test dataset exploration}
 Frequency based comparison between two categories is conducted for depression and suicide for Test dataset in Figure \ref{dep_wordcloud_test} and \ref{sui_wordcloud_test} using Uni-gram based wordcloud. From this figure we can see that top ranked words those are occurring frequently tend to have slang and abusive terms compared to suicidal category. 
 \begin{figure}[H]
@@ -557,7 +481,6 @@ Frequency based comparison between two categories is conducted for depression an
 %\caption{Dataset features visualization and properties exploration}
 %\label{features_vis_pro_exp}
 \end{figure}
-
 \subsubsection{Feature distribution visualization}
 In Test dataset samples a large number of documents are having low features. In figure~\ref{fig_Test_Dataset_token_frequency} the frequency of tokens in each class is depicted. Short sentence does not carry enough features which reveals does not carry enough information to be classified confidently by classifier algorithms. We started reducing the numbers of samples based on document length in Test dataset. By reducing the samples based on numbers of tokens present in a document (see Figure \ref{fig_Test_Dataset_token_frequency}). Documents length versus category frequency information is showed in this chart. This charts explains if we filter out the shorter comments suicide post become dominant class and depression post become outnumbered. 
 %
@@ -568,34 +491,28 @@ In Test dataset samples a large number of documents are having low features. In 
 \label{fig_Test_Dataset_token_frequency}
 \end{figure}
 %
-The length of document and term frequency within the corpus is visualized in Figure \ref{redditdist_twitterdist}. From the distribution we can see that some of the document length are excessive long and contains more than 1000 tokens (within Train and Test both Dataset). Depression class document length are usually shorter in length. Depression document length are tend to be smaller than suicide document length. The difference showed an exponential pattern as length of document increases. Test dataset Reddit data distribution among depression and suicide class distribution ratio was equal. Filtering the class from figure \ref{fig_Test_Dataset_token_frequency} an interesting fact is revealed that depressed people does not want to comment very long. From figure~\ref{fig_Test_Dataset_token_frequency},  figure~\ref{dep_wordcloud_test} and \ref{sui_wordcloud_test} the following comments can be inferred
+The length of document and term frequency within the corpus is visualized in Figure \ref{Redditdist_Twitterdist}. From the distribution we can see that some of the document length are excessive long and contains more than 1000 tokens (within Train and Test both Dataset). Depression class document length are usually shorter in length. Depression document length are tend to be smaller than suicide document length. The difference showed an exponential pattern as length of document increases. Test dataset Reddit data distribution among depression and suicide class distribution ratio was equal. Filtering the class from figure \ref{fig_Test_Dataset_token_frequency} an interesting fact is revealed that depressed people does not want to comment very long. From figure~\ref{fig_Test_Dataset_token_frequency},  figure~\ref{dep_wordcloud_test} and \ref{sui_wordcloud_test} the following comments can be inferred
 \begin{enumerate}
-\item short statements likely to be more depression category
+\item Short statements likely to be more depression category
 \item Depressive statements tend to have slang and abusive words
 \item Suicidal thinking people’s post having very high frequency of “kill” “die” these type of words or phrases.
 \item Rather suicidal depressed people want to share their thoughts with others using longer post.
 \end{enumerate}
-
 It is also interesting that there are many words have high frequency such as depression or depressed but belongs to suicide class. One important fact is revealed here is that we can see although suicide, suicidal these words has high frequency in Suicide class but depression, depressed also occurred in parallel with high frequency. However, it does not reveals any direct clues in terms of hypothetical relationships between the two category. It is difficult find pattern in which we can determine the depression and suicidal thought.  
-
 \subsubsection{Features relation exploration}
 Bi-gram is analyzed for depression and suicide both categories. There are some Bi-grams which showed very high frequency. We called this special Bi-grams since. Special Bi-grams in the suicidal and depression both categories appeared highly frequent matter. Special Bi-grams are \enquote{mental health}, \enquote{feel like}, \enquote{make feel}, \enquote{high school}, \enquote{best friend}, \enquote{really want}, \enquote{suicide thought}, \enquote{friend family} showed high occurrences in the test dataset. Frequently occurred Bi-grams and its pattern in the corpus is explored. We want to analyze how these words have impact with its neighboring words depicted in Figure \ref{dep_chord} and \ref{suicide_chord}. To explore the impact of special bi-grams on the samples, special bi-gram terms containing samples are filtered from dataset. After that using lebel encoder Bi-grams are encoded as integers and then chord diagram is generated. We can observe meaningful relationship within the samples between the Bi-gram features.  
-
-
 \begin{figure}[H]
 \centering
     \includegraphics[width=0.75\textwidth]{dep_chord.png}
     \caption{Depression Chord diagram}
     \label{dep_chord}
 \end{figure}
-
 \begin{figure}[H]
 \centering
     \includegraphics[width=0.75\textwidth]{suicide_chord.png}
     \caption{Depression Chord diagram}
     \label{suicide_chord}
 \end{figure}        
-
 From figure~\ref{dep_chord} and \ref{suicide_chord} two chord diagram interesting observation can be inferred (see Table \ref{chord_inference}). 
 \begin{table}[h]
 \begin{center}
@@ -615,10 +532,7 @@ spend happy moments & Friend family make feel better \\
 \end{flushleft}
 \end{center}
 \end{table}
-
 Tri-grams or above did not reveals much meaning information, and therefore excluded for further experimental consideration. 
-
-
 \subsubsection{Exploring Suicidal Intensities}
 \label{classification_res}
 How much depression can trigger suicidal thoughts is an interesting question. In this study classifier is trained on the suicidal intensity dataset. Then trained classifier is applied on the Depression/Suicide class dataset to investigate suicidal intensity in depression. Machine learning classification algorithms used for the experiments are mentioned in the Table \ref{Table_classification_alg}. The hyper-parameters settings for the classifiers are mostly sklearns' default settings. Classifiers are applied for the TFIDF vectorizer embedding (see results in figure~\ref{SVMTFIDF}) and also for Word2vec pretrained vectorizer model. Gridsearch technique of sklearn library is used in Two steps. From the selected classifiers to determine the best classifiers default parameters are applied and SVM showed most promising results. Then, to achieve highest accuracy hyper-parameters are feed into grid search. Using various set of parameters, from the experiments results we found almost 60\% accuracy for SVM model. From various set of values gridsearch for SVM SVC we found degree=2, gamma=0.7, kernel=rbf showed the highest accuracy. 
@@ -645,7 +559,6 @@ Naive Bayes (GaussianNB) & smoothing=$1^{-9}$\\
 \end{flushleft}
 \end{center}
 \end{table}
-
 %\begin{table}[h!]
 %\begin{center}
 %\begin{minipage}{174pt}
@@ -669,11 +582,8 @@ Naive Bayes (GaussianNB) & smoothing=$1^{-9}$\\
 %\end{minipage}
 %\end{center}
 %\end{table}
-
-
 %\subsubsection{Suicidal Intensities visualization}
 From the results we can see that suicidal ideation between depression and suicidal categories number of samples are very similar (figure~\ref{Suicidal_int_vis}). Within depression more number of samples are showed suicidal indicator category compared to suicide which is an interesting result. Suicidal behavior and attempt is comparatively high within the suicidal category than depression. Hence, figure~\ref{SVMTFIDF} result seems to be pretty obvious, except for suicidal ideation category. Also for the suicidal indicator symptoms are higher within the depression category. 
-
 \begin{figure}[H]
 \centering
 \begin{subfigure}{0.45\textwidth}
@@ -692,7 +602,6 @@ From the results we can see that suicidal ideation between depression and suicid
 \end{figure}
 %z
 For the word2vec vector embedding scenario supportive and indicator categories results are almost similar in depression or suicide both classes. There is slight difference is shown for suicidal ideation and within suicide class, suicidal ideation is slight higher. Except the behavior and attempt category for the rest categories depression and suicide showed almost similar number of samples. 
-
 %\begin{figure}[H]
 %\centering
 %\begin{subfigure}{0.45\textwidth}
@@ -712,8 +621,7 @@ For the word2vec vector embedding scenario supportive and indicator categories r
 %\end{figure}
 \section{Conclusion} 
 \label{conclu}
-Suicidal risk estimation task and classification samples to determine suicidal risk within social websites and blogs, techniques are discussed before. It is difficult to determine exactly since depression and suicide categorical variables are independent factor. The underlying correlation is difficult to formulate. However, to what extent depression level posses suicidal risk is not yet discussed before which is addressed in this study. This research explores various suicidal intensities in Reddit social media's depression post. Suicidal behavior and attempt showed higher number of samples within the suicide category compared to depression category. All these results seems logical and validates our experimental outcomes. Specially suicidal ideation, indicator showed similar patterns, expressing that depressed persons' comments has suicidal ideation and suicidal indicating symptoms. Results are susceptible to chosen classifier, chosen dataset, pretrained models vectors or embedding provided to the classifier. 
-
+Suicidal risk estimation using social websites and blogs post are discussed before. But it is difficult to determine exact correlation because various complex and intertwined psychological factors are also involved. The underlying correlation is difficult to formulate. However, to what extent depression level posses suicidal risk is not yet discussed before which is addressed in this study. This research explores various suicidal intensities in Reddit social media's depression post. Suicidal behavior and attempt showed higher number of samples within the suicide category compared to depression category. All these results seems logical and validates our experimental outcomes. Specially suicidal ideation, indicator showed similar patterns, expressing that depressed persons' comments has suicidal ideation and suicidal indicating symptoms. It is revealed that depression post has approximately 60\% similarities with suicidal post. The results are susceptible to chosen classifier, chosen dataset, pretrained models vectors and embedding provided to the classifier. 
 %\section{This is an example for first level head---section head}\label{sec3}
 %
 %\subsection{This is an example for second level head---subsection head}\label{subsec2}
@@ -760,18 +668,12 @@ Suicidal risk estimation task and classification samples to determine suicidal r
 %The footnote appears just below the table itself (refer Tables~\ref{tab1} and \ref{tab2}). 
 %For the corresponding footnotemark use \verb+\footnotemark[...]+
 %
-
-
 \noindent
 The input format for the above table is as follows:
-
-
-
 %%=============================================%%
 %% For presentation purpose, we have included  %%
 %% \bigskip command. please ignore this.       %%
 %%=============================================%%
-
 %%=============================================%%
 %%% For presentation purpose, we have included  %%
 %%% \bigskip command. please ignore this.       %%
@@ -807,7 +709,7 @@ The input format for the above table is as follows:
 %\begin{tabular*}{\textheight}{@{\extracolsep{\fill}}lcccccc@{\extracolsep{\fill}}}
 %\toprule%
 %& \multicolumn{3}{@{}c@{}}{Element 1\footnotemark[1]}& \multicolumn{3}{@{}c@{}}{Element\footnotemark[2]} \\\cmidrule{2-4}\cmidrule{5-7}%
-%Projectile & Energy	& $\sigma_{calc}$ & $\sigma_{expt}$ & Energy & $\sigma_{calc}$ & $\sigma_{expt}$ \\
+%Projectile & Energy    & $\sigma_{calc}$ & $\sigma_{expt}$ & Energy & $\sigma_{calc}$ & $\sigma_{expt}$ \\
 %\midrule
 %Element 3 & 990 A & 1168 & $1547\pm12$ & 780 A & 1166 & $1239\pm100$ \\
 %Element 4 & 500 A & 961  & $922\pm10$  & 900 A & 1268 & $1092\pm40$ \\
@@ -1070,7 +972,7 @@ The input format for the above table is as follows:
 %
 %\section{Conclusion}\label{sec13}
 %
-%From the analysis we found there are strong correlation within the features among this two categories depression and suicide post. The most frequent words of two categories has similarities. After using the exploratory analysis using scatterplot we saw many words which seems to be a written post word from depressed person appears within suicide category. During analysis one interesting result is observed that depression persons post is relatively shorter and full of abusive words. Simple Term frequency based vectorization technique could not effectively estimates the depression impact. Surprisingly, after analysis with TFIDF and countvectorization methods we found that there is 99\% chance that the person who is depressed also has suicial tendency. Here, gridsearch technique is used to determine the best classification estimator. Since, vectorizer is not trained with the reddit dataset. Hence, we are assuming that after getting the result the vectors are not god enough to classify right way. Also, another reason is we compelled the classifier to classify the samples in suicidal risk categories. Hence, it does not have a choice rather than label the sample to suicidal risk category.  
+%From the analysis we found there are strong correlation within the features among this two categories depression and suicide post. The most frequent words of two categories has similarities. After using the exploratory analysis using scatterplot we saw many words which seems to be a written post word from depressed person appears within suicide category. During analysis one interesting result is observed that depression persons post is relatively shorter and full of abusive words. Simple Term frequency based vectorization technique could not effectively estimates the depression impact. Surprisingly, after analysis with TFIDF and countvectorization methods we found that there is 99\% chance that the person who is depressed also has suicial tendency. Here, gridsearch technique is used to determine the best classification estimator. Since, vectorizer is not trained with the Reddit dataset. Hence, we are assuming that after getting the result the vectors are not god enough to classify right way. Also, another reason is we compelled the classifier to classify the samples in suicidal risk categories. Hence, it does not have a choice rather than label the sample to suicidal risk category.  
 %
 %\backmatter
 %
@@ -1139,7 +1041,7 @@ The input format for the above table is as follows:
 %%%=============================================%%
 %
 %%%=============================================================%%
-%%% Sample for another appendix section			       %%
+%%% Sample for another appendix section                        %%
 %%%=============================================================%%
 %
 %%% \section{Example of another appendix section}\label{secA2}%
@@ -1155,14 +1057,11 @@ The input format for the above table is as follows:
 %%% by copying the reference list from your .bbl file, paste it into the main manuscript .tex %%
 %%% file, and delete the associated \verb+\bibliography+ commands.                            %%
 %%%===========================================================================================%%
-
 %\bibliography{sn-bibliography}% common bib file
 %% if required, the content of .bbl file can be included here once bbl is generated
 %%\input sn-article.bbl
-
 %% Default %%
 \input doc_ref.tex
 %%\bibliographystyle{alpha} % We choose the "plain" reference style
 %\bibliography{sn-bibliography} % Entries are in the refs.bib file
-
 \end{document}
