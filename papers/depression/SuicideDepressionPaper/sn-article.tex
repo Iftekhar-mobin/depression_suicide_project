@@ -65,7 +65,7 @@
 \usepackage{longtable,booktabs,array}
 \graphicspath{{Figs}{Figs/}}
 \begin{document}
-\title[Article Title]{Exploratory analysis of the degree of suicidal ideation in depression investigation of social media post}
+\title[Article Title]{Exploratory analysis of suicidal tendency in depression investigation social media post}
 %%=============================================================%%
 %% Prefix       -> \pfx{Dr}
 %% GivenName    -> \fnm{Joergen W.}
@@ -77,19 +77,21 @@
 %% \author*[1,2]{\pfx{Dr} \fnm{Joergen W.} \spfx{van der} \sur{Ploeg} \sfx{IV} \tanm{Poet Laureate} 
 %%                 \dgr{MSc, PhD}}\email{iauthor@gmail.com}
 %%=============================================================%%
-\author*[1,2]{\fnm{Md Iftekharul} \sur{Mobin}}\email{iftekhar.mobin@gmail.com}
-\author[2,3]{\fnm{Second} \sur{Author}}\email{iiauthor@gmail.com}
-\equalcont{These authors contributed equally to this work.}
-\author[1,2]{\fnm{Third} \sur{Author}}\email{iiiauthor@gmail.com}
-\equalcont{These authors contributed equally to this work.}
-\affil*[1]{\orgdiv{Department}, \orgname{Organization}, \orgaddress{\street{Street}, \city{City}, \postcode{100190}, \state{State}, \country{Country}}}
-\affil[2]{\orgdiv{Department}, \orgname{Organization}, \orgaddress{\street{Street}, \city{City}, \postcode{10587}, \state{State}, \country{Country}}}
-\affil[3]{\orgdiv{Department}, \orgname{Organization}, \orgaddress{\street{Street}, \city{City}, \postcode{610101}, \state{State}, \country{Country}}}
+%\author*[1,2]{\fnm{Md Iftekharul} \sur{Mobin}}\email{iftekhar.mobin@gmail.com}
+%\author[2,3]{\fnm{Second} \sur{Author}}\email{iiauthor@gmail.com}
+%\equalcont{These authors contributed equally to this work.}
+%\author[1,2]{\fnm{Third} \sur{Author}}\email{iiiauthor@gmail.com}
+%\equalcont{These authors contributed equally to this work.}
+%\affil*[1]{\orgdiv{Department}, \orgname{Organization}, \orgaddress{\street{Street}, \city{City}, \postcode{100190}, \state{State}, \country{Country}}}
+%\affil[2]{\orgdiv{Department}, \orgname{Organization}, \orgaddress{\street{Street}, \city{City}, \postcode{10587}, \state{State}, \country{Country}}}
+%\affil[3]{\orgdiv{Department}, \orgname{Organization}, \orgaddress{\street{Street}, \city{City}, \postcode{610101}, \state{State}, \country{Country}}}
 %%==================================%%
 %% sample for unstructured abstract %%
 %%==================================%%
+
 \abstract{
 Depression and suicide are inter-connected. Depressive condition influences the chance of suicide risk. Though, to what extent of depression level triggers suicidal attempt is a scrutiny. Traditional interview-based clinical diagnostic approach is not effective to anticipate a depressed person's psychiatric status. Since patients often prefer not to disclose their emotions, reluctant to seek help from psychotherapists, or doctor. Social media's footprint often seen people discussing things which are not disclosed publicly, emotionally distressed often disclose themselves, seek empathy and reveals physiological states. Hence it has become a valuable source of research for depression and suicidal behaviors. This study uses social media datasets for exploratory data analysis to estimate the degree of suicidal thoughts within depressed person's post. The objective is to determine if a depressed individual has a suicidal tendency, determine the degree of the intensity or the opposite. This study presents an unsupervised feature analysis using the topic model approach followed by supervised classification to quantize significance. Latent suicidal intents, cross-topic co-occurrence patterns, and dominant high-impact keywords of suicide are revealed from unsupervised Latent Dirichlet Allocation (LDA) modeling. Furthermore, Supervised machine learning classifier models are applied to determine the severity of suicide tendencies. To get the best results, cutting edge text embedding vectorization techniques and machine learning estimators are applied. Statistical measurements depicts the degree of suicide intensity within depressed label post. From the analysis it is revealed that suicidal tendency within depression people post is extremely high. Depressed person's post showed 60\% similarities in various categories of suicidal intensity.}
+
 %%================================%%
 %% Sample for structured abstract %%
 %%================================%%
@@ -190,7 +192,6 @@ Ye et al. 2021 \cite{ye2021multi} zheng et al. 2020 \cite{zheng2020development} 
 \end{center}
 \end{table}
 It is observed that Text based expression depicts mental illness more clearly compared to other features and is dominant among researchers to detect mental issues effectively. In this study we will be focusing on the text based features only for mental illness and suicidal pattern detection. 
-  
 \subsection{Instrument for measuring emotional Severity} 
 From the very beginning questionnaire based suicidal/depression intensity measurements tool were available. These scale are applied for setting the questionnaire during the interrogation. This process provides weights to answers replied by individuals. Most renowned scales are CES-D, PHQ-9, DSM-5, DASS-21 \cite{radloff1977ces, havigerova2019text}, Beck's Depression Inventory BSS \cite{beck2000weisman}, Columbia Suicide Severity Rating Scale (C-SSRS) \cite{posner2011columbia, joiner1997modified} etc. Most of these scales are based on predefined specific number of multiple choice questions having specific weights. \cite{havigerova2019text, beck1961inventory, kroenke2001phq, tolentino2018dsm, kliem2017german, eke2010hamilton}. According to the answer feedback from the patients severity and symptoms are decided based on cumulative weight. Furthermore, statistical models are applied to investigate patterns \cite{shen2020detecting, shen2017depression}.  Till date many researchers are using questionnaire based measurement scales to determine suicidal symptoms \cite{li2022association}. In \cite{vuorilehto2006suicidal} research study conducted in Vantaa, Finland, for the age group of 20 to 69 years with 1119 primary-care patients using (PRIME-MD) questionnaire. Suicidal behavior was conducted, suicidal ideation was assessed using the Scale for Suicidal Ideation (SSI), and suicide attempts were then assessed using medical records. In 2014, Vuorilehto \cite{vuorilehto2014method} examined how several assessment techniques, such as the SSI, BDI, and HAM-D, perform when predicting the incidence of suicidal thoughts in patients with depressive disorder at Vantaa Primary Care. About 153 patient were investigated for about six months to determine suicidal attempt. The study investigates whether variations in assessment tools and methodologies raise any difference to estimate suicidal ideation rates. In \cite{gaur2019knowledge} Gaur et.al. collected 2181 Redditors post from Reddit social media sites. Then assisted by professional psychiatrists practitioners extracted only 500 Redditors post related to suicide. Then suicidal ideation, behavior, attempt labels are marked using tool called Columbia-Suicide Severity Rating Scale (C-SSRS) \cite{posner2011columbia}. 
 \subsubsection{Comparative Analysis of scales}
