@@ -254,6 +254,7 @@ From figure~\ref{Reddit_cssrs_doc_len_freq} it is observed that number of sample
 Categorical features are mixed together shuffled and then grouped into fixed sized tokens. Random Shuffling is applied with various seed. It is considered as sample document for specific category. This process continues until we found desired number of samples. Then synthetic samples are combined with other samples to prepare train classifier dataset. 
 \subsection{Testing/Validation Dataset} 
 For testing dataset is collected from Kaggle. It is an open source dataset publicly available in Kaggle collected from Reddit website by a pushshift API contained suicide and depression category. The dataset contains posts of \enquote{SuicideWatch} and \enquote{depression} subReddits. \enquote{SuicideWatch} and \enquote{depression} posts were collected from roughly 2008 to 2021. The datasets comprised of 232,074 post annotated for binary classification as suicidal or non-suicidal Depression in \cite{aldhyani2022detecting} for detecting suicidal ideation. In this research trained classifier is applied to detect class on this two category. Main objective is to determine the suicide categories (indicator, ideation, behavior, attempt, supportive) within this dataset. 
+
 \section{Methodology}\label{methodolo}
 In this research supervised and unsupervised both type of data modeling is conducted. Unsupervised LDA modeling explores the key features, depict coherent terms related to specific suicide category. Supervised model is applied to train machine learning classifier to determine suicidal severity categories. Trained classifier, detects the suicidal risk within given post which contains depression post. Thereby analyzing result statistically suicidal tendency significance in depression post can be observed. This whole process is depicted in Figure \ref{fig:res_diagram}. Exploratory analysis started with dataset pre-processing. Most common techniques of NLP for data pre-processing is applied mentioned in the section \ref{data_preprocessing}. 
 \subsection{Data Pre-processing}\label{data_preprocessing}
@@ -278,43 +279,32 @@ Supervised analysis involves vectorization followed by classification for depres
 \item Pre-processed CSSR dataset converted to vector using TF-IDF and Word2Vec vectorizers \cite{aldhyani2022detecting, wang2020depression, shetty2020predicting}. 
 \item Feature vector is feed into various machine learning classifier which is trained to determine suicide intensity label in depression post.  
 \end{itemize}
-%\subsection{Latent Dirichlet Allocation (LDA)}
-%\label{lda_mdel}
-%LDA topic modeling \cite{jelodar_latent_2019, gupta_pan_lda_2021, pichardo_lagunas_svd_lda_2015, selvi_classification_2019} is used in this research scope that considers documents are mixed of topic based on distribution of words. The objective is to explore the hidden topic and the topic-word distributions, presumably describe the sample documents. An expression of the LDA model is described below:  
-%\begin{equation}
-%P(\theta_d,z,w\|\alpha,\beta)=P(\theta_d\|\alpha)\prod^N_{n=1}P(z_{d,n}\|\theta_d)P(w_{d,n}\|z_{d,n},\beta)
-%\end{equation}
-%Where $w_{d,n}$ the $n_{th}$ word in document $d$, $z_{d,n}$ the topic assigned to the $n_{th}$ word in document $d$, $\alpha,\beta$ are the Dirichlet LDA model parameters. controls per-document topic distribution, and per topic word distribution. $\theta_d$ represent the topic distribution. $P(\theta_d \| \alpha)$ Dirichlet 
-%distribution representing the document-topic distribution, $P(z_{d,n}\|\theta_d)$ is the word topic assignment for the $n_{th}$ word in document $d$, $P(w_{d,n}\|z_{d,n},\beta)$ is the distribution representing the observed word given a topic. 
+
+\subsubsection{Unsupervised modeling with LDA}
+\label{lda_mdel}
+Latent Dirichlet Allocation (LDA) topic modeling \cite{jelodar_latent_2019, gupta_pan_lda_2021, pichardo_lagunas_svd_lda_2015, selvi_classification_2019} is used in this research scope that considers documents are mixed of topic based on distribution of words. The objective is to explore the hidden topic and the topic-word distributions, presumably describe the sample documents. An expression of the LDA model is described below:  
+\begin{equation}
+P(\theta_d,z,w\|\alpha,\beta)=P(\theta_d\|\alpha)\prod^N_{n=1}P(z_{d,n}\|\theta_d)P(w_{d,n}\|z_{d,n},\beta)
+\end{equation}
+Where $w_{d,n}$ the $n_{th}$ word in document $d$, $z_{d,n}$ the topic assigned to the $n_{th}$ word in document $d$, $\alpha,\beta$ are the Dirichlet LDA model parameters. controls per-document topic distribution, and per topic word distribution. $\theta_d$ represent the topic distribution. $P(\theta_d \| \alpha)$ Dirichlet 
+distribution representing the document-topic distribution, $P(z_{d,n}\|\theta_d)$ is the word topic assignment for the $n_{th}$ word in document $d$, $P(w_{d,n}\|z_{d,n},\beta)$ is the distribution representing the observed word given a topic. 
+
+While some variations of LDA, Mallet LDA is considered for large corpus processing and analysis \cite{vayansky2020review, abdelrazek2022topic, Comparison_Topic_Modeling_Algorithms}. It focuses on scalability, If large corpus needs to analyze, Mallet LDA might be more suitable. LDA in general can still be efficiently applied to moderately sized corpora. Analyzing topics within the context of metadata, STM could be a better fit. Hierarchical Dirichlet Process (HDP) can be useful when we cannot guess the number of topics in advance. As a baseline model LDA is often considered one of the most prominent choices. In \cite{Comparison_Topic_Modeling_Algorithms} LSI, NMF and LDA are compared in terms of coherence and similarity measures for social media dataset and in their analysis LDA is observed most effective measures. In this study LDA applied to determine dominant topics and explore correlations or co-occurrences. LDA off-the-selves python libraries produces interpretative results for exploratory topic analysis. The identified topics are represented as distributions over words, making it easy to assign meaningful labels to topics. Hence, LDA serves as a baseline for topic modeling in this research. However, how many topics are ideal it is needed to determine (see section \ref{Coherence_LDA_model}) that represents topic modeling quality.
+
+\subsubsection{Supervised Modeling with classifiers}
+Various off-the-selves Machine learning and Deep Learning models are used for supervised classification of suicide and depression in several studies \cite{castillo2020suicide, zhang2022natural}. There is conception that Deep learning models performs better than standard machine learning approaches. However, traditional machine learning models can outperform deep learning methods when extracted or filtered features are fitted into the training process \cite{castillo2020suicide, chancellor2020methods}. In this research cleaned features are feed into various machine learning models mentioned in Table \ref{tab1_classifiers} for classification. 
 %
 %
 %Different techniques have been developed to perform topic modeling in the unsupervised topic modeling domain of Natural Language Processing (NLP), having their own strengths and limitations \cite{vayansky2020review, abdelrazek2022topic, yi2009comparative}. Apart from LDA, Mallet LDA, Structural Topic Model (STM), Hierarchical Dirichlet Process (HDP), Non-Negative Matrix Factorization (NMF), Latent Semantic Analysis (LSA) etc are also prevailing and can be considered for comparative research study.
-%
-%\subsubsection{Topic models comparative analysis}
-%While some variations of LDA, Mallet LDA is considered for large corpus processing and analysis \cite{vayansky2020review, abdelrazek2022topic, Comparison_Topic_Modeling_Algorithms}. It focuses on scalability, If large corpus needs to analyze, Mallet LDA might be more suitable. LDA in general can still be efficiently applied to moderately sized corpora. Analyzing topics within the context of metadata, STM could be a better fit. Hierarchical Dirichlet Process (HDP) can be useful when we cannot guess the number of topics in advance. As a baseline model LDA is often considered one of the most prominent choices. In \cite{Comparison_Topic_Modeling_Algorithms} LSI, NMF and LDA are compared in terms of coherence and similarity measures for social media dataset and in their analysis LDA is observed most effective measures. In this study Reddit corpus LDA applied to determine dominant topics and explore correlations or co-occurrences. LDA off-the-selves python libraries produces interpretative results for exploratory topic analysis. The identified topics are represented as distributions over words, making it easy to assign meaningful labels to topics. Hence, LDA serves as a baseline for topic modeling in this research. However, how many topics are ideal it is needed to determine (see section \ref{coherence_equations}) that represents topic modeling quality.
-%
-%\subsubsection{LDA model coherence}
-%\label{coherence_equations}
-%Coherence score estimates optimal number of topics. In this research scope coherence is measured to determine how coherent topic terms are \cite{mimno2011optimizing}. Using this score quality of the topics produced by LDA is assessed and ensures that the topics generated are statistically significant. Coherence \(C_{topic}\) can be expressed as follows  
-%\begin{equation}
-%C_{topic}=\sum^N_{i=1} \frac{1}{N(N-1)}\sum^i_{j=1} PMI(w_i,w_j)
-%\end{equation}
-%Where, \(PMI\left( w_{i},w_{j} \right)\) represent pointwise mutual information statistical association between two words occurring together. PMI score indicates that the two words are more closely related within a topic. \(PMI\left( w_{i},w_{j} \right)\) represents  
-%\begin{equation}
-%\(PMI\left( w_{i},w_{j} \right) = \log\frac{P\left( w_{i},w_{j} \right)}{P\left( w_{i} \right)P\left( w_{j} \right)}\)
-%\end{equation}
-%where \(P\left( w_{i},w_{j} \right)\) is joint probability of occurrence of words \(w_{i}\) and \(w_{j}\).  
-%\subsection{Supervised Modeling}
-%Various off-the-selves Machine learning and Deep Learning models are used for supervised classification of suicide and depression in several studies \cite{castillo2020suicide, chancellor2020methods, zhang2022natural}. 
-%There is conception that Deep learning models performs better than standard machine learning approaches. However, traditional machine learning models can outperform deep learning methods when extracted or filtered features are fitted into the training process. In this research cleaned features are feed into machine learning models for classification. 
-%\subsubsection{Classification}
-Research methodology is portrayed in figure~\ref{fig:res_diagram} 
+Research methodology is portrayed in figure~\ref{fig:res_diagram}.
 \begin{figure}[h!]
 \centering
 \includegraphics[width=0.8\textwidth]{res_diagram.jpeg}
 \caption{Research Methodology overview}
 \label{fig:res_diagram}
 \end{figure}
+
+
 \section{Exploratory analysis Results}
 \label{exp_anal}
 After pre-processing document samples contains only noise free features. Document length frequency and features distribution is depicted in Figure \ref{Redditdist_Twitterdist_together}. From the frequency distribution we can see some of the document sizes are very large. Hence, larger sentences are chopped and one sentence become multiple sentences of features keeping the label same. 
@@ -366,13 +356,27 @@ Uni-gram Word cloud is showed in figure \ref{Redditdist_Twitterdist_wordcloud} t
 \end{figure}
 Visualizing the word cloud it is revealed there are correlation between Ideation and Indicator, Behavior and Attempt categories.  
 \subsubsection{Optimal topic determination}
-%\subsubsection{Coherence estimation for LDA model}
-To estimate optimal number of topic the coherence score needs to be determined. Gensim library provides range of options to determine coherence score. such as \(u_{mass},c_{v},c_{uci},c_{npmi}\). \(u_{mass}\) and \(c_{v}\)These two methods are most popular. For given topic with words \(\{ w_{1},w_{2},w_{3},\ldots..,w_{n}\}\) a fixed context window size is provided (default size 10 words). 
-% then coherence score is calculated using an equation \(\sum_{j = 1}^{i}{PMI}\left( w_{i},w_{j} \right)\) which provides negative coherence score. \(c_{v}\) can be expressed as  
-%\begin{equation}
-%\(c_{v} = \frac{1}{N(N - 1)}\sum_{j = 1}^{i}{similarity\left( w_{i},w_{j} \right)}\)
-%\end{equation}
-%in which \(similarity\left( w_{i},w_{j} \right)\) represent the pairwise similarity between terms based on \(PMI\left( w_{i},w_{j} \right)\) scores. \(c_{v}\) provides a positive coherence score. Higher coherence values (higher than 0.5) indicate that the topics are moderately coherent and representative of meaningful themes within the text data.
+\label{Coherence_LDA_model}
+
+Coherence score is a process to estimate the optimal number of topics. Coherence score estimates optimal number of topics. In this research scope coherence is measured to determine how coherent topic terms are \cite{mimno2011optimizing}. Using this score quality of the topics produced by LDA is assessed and ensures that the topics generated are statistically significant. Coherence \(C_{topic}\) can be expressed as follows  
+\begin{equation}
+C_{topic}=\sum^N_{i=1} \frac{1}{N(N-1)}\sum^i_{j=1} PMI(w_i,w_j)
+\end{equation}
+Where, \(PMI\left( w_{i},w_{j} \right)\) represent pointwise mutual information statistical association between two words occurring together. PMI score indicates that the two words are more closely related within a topic. \(PMI\left( w_{i},w_{j} \right)\) represents  
+\begin{equation}
+\(PMI\left( w_{i},w_{j} \right) = \log\frac{P\left( w_{i},w_{j} \right)}{P\left( w_{i} \right)P\left( w_{j} \right)}\)
+\end{equation}
+where \(P\left( w_{i},w_{j} \right)\) is joint probability of occurrence of words \(w_{i}\) and \(w_{j}\).  
+Gensim library provides range of options to determine coherence score. To estimate optimal number of topic the coherence score needs to be determined. \(u_{mass},c_{v},c_{uci},c_{npmi}\). \(u_{mass}\) and \(c_{v}\)These two methods are most popular. For given topic with words \(\{ w_{1},w_{2},w_{3},\ldots..,w_{n}\}\) a fixed context window size is provided (default size 10 words). \(c_{v}\) can be expressed as  
+\begin{equation}
+\(c_{v} = \frac{1}{N(N - 1)}\sum_{j = 1}^{i}{similarity\left( w_{i},w_{j} \right)}\)
+\end{equation}
+in which \(similarity\left( w_{i},w_{j} \right)\) represent the pairwise similarity between terms based on \(PMI\left( w_{i},w_{j} \right)\) scores. \(c_{v}\) provides a positive coherence score. Higher coherence values (higher than 0.5) indicate that the topics are moderately coherent and representative of meaningful themes within the text data. 
+
+
+%Coherence score can be calculated using an equation \(\sum_{j = 1}^{i}{PMI}\left( w_{i},w_{j} \right)\) which provides negative coherence score. 
+
+% 
 \begin{figure}[h!]
 \centering
 \begin{subfigure}{0.45\textwidth}
@@ -560,30 +564,30 @@ Naive Bayes (GaussianNB) & smoothing=$1^{-9}$\\
 \end{flushleft}
 \end{center}
 \end{table}
-%\begin{table}[h!]
-%\begin{center}
-%\begin{minipage}{174pt}
-%\caption{Classifiers accuracy of models}\label{tab1}%
-%\begin{tabular}{@{}lllll@{}}
-%\toprule
-%Classifier & Precision & Recall & Accuracy & F1 \\
-%\midrule
-%Nearest Neighbors & 0.926 & 0.924 & 92.3896 & 0.924\\
-%RBF SVM & 0.942 & 0.924 & 92.3896 & 0.927\\
-%Decision Tree & 0.901 & 0.848 & 84.7793 & 0.856\\
-%Random Forest & 0.513 & 0.282 & 28.1583 & 0.167\\
-%Neural Net & 0.942 & 0.927 & 92.6941 & 0.929\\
-%AdaBoost & 0.905 & 0.898 & 89.8021 & 0.899\\
-%Gaussian Process & 0.940 & 0.921 & 92.0852 & 0.924\\
-%Naive Bayes & 0.923 & 0.918 & 91.7808 & 0.919\\
-%QDA & 0.931 & 0.909 & 90.8676 & 0.912\\
-%\botrule
-%\end{tabular}
-%\footnotetext{}
-%\end{minipage}
-%\end{center}
-%\end{table}
-%\subsubsection{Suicidal Intensities visualization}
+\begin{table}[h!]
+\begin{center}
+\begin{minipage}{174pt}
+\caption{Classifiers accuracy of models}\label{tab1_classifiers}%
+\begin{tabular}{@{}lllll@{}}
+\toprule
+Classifier & Precision & Recall & Accuracy & F1 \\
+\midrule
+Nearest Neighbors & 0.926 & 0.924 & 92.3896 & 0.924\\
+RBF SVM & 0.942 & 0.924 & 92.3896 & 0.927\\
+Decision Tree & 0.901 & 0.848 & 84.7793 & 0.856\\
+Random Forest & 0.513 & 0.282 & 28.1583 & 0.167\\
+Neural Net & 0.942 & 0.927 & 92.6941 & 0.929\\
+AdaBoost & 0.905 & 0.898 & 89.8021 & 0.899\\
+Gaussian Process & 0.940 & 0.921 & 92.0852 & 0.924\\
+Naive Bayes & 0.923 & 0.918 & 91.7808 & 0.919\\
+QDA & 0.931 & 0.909 & 90.8676 & 0.912\\
+\botrule
+\end{tabular}
+\footnotetext{}
+\end{minipage}
+\end{center}
+\end{table}
+\subsubsection{Suicidal Intensities visualization}
 From the results we can see that suicidal ideation between depression and suicidal categories number of samples are very similar (figure~\ref{Suicidal_int_vis}). Within depression more number of samples are showed suicidal indicator category compared to suicide which is an interesting result. Suicidal behavior and attempt is comparatively high within the suicidal category than depression. Hence, figure~\ref{SVMTFIDF} result seems to be pretty obvious, except for suicidal ideation category. Also for the suicidal indicator symptoms are higher within the depression category. 
 \begin{figure}[H]
 \centering
@@ -623,445 +627,7 @@ For the word2vec vector embedding scenario supportive and indicator categories r
 \section{Conclusion} 
 \label{conclu}
 Suicidal risk estimation using social websites and blogs post are discussed before. But it is difficult to determine exact correlation because various complex and intertwined psychological factors are also involved. The underlying correlation is difficult to formulate. However, to what extent depression level posses suicidal risk is not yet discussed before which is addressed in this study. This research explores various suicidal intensities in Reddit social media's depression post. Suicidal behavior and attempt showed higher number of samples within the suicide category compared to depression category. All these results seems logical and validates our experimental outcomes. Specially suicidal ideation, indicator showed similar patterns, expressing that depressed persons' comments has suicidal ideation and suicidal indicating symptoms. It is revealed that depression post has approximately 60\% similarities with suicidal post. The results are susceptible to chosen classifier, chosen dataset, pretrained models vectors and embedding provided to the classifier. 
-%\section{This is an example for first level head---section head}\label{sec3}
-%
-%\subsection{This is an example for second level head---subsection head}\label{subsec2}
-%
-%\subsubsection{This is an example for third level head---subsubsection head}\label{subsubsec2}
-%
-%Sample body text. Sample body text. Sample body text. Sample body text. Sample body text. Sample body text. Sample body text. Sample body text. 
-%
-%\section{Equations}\label{sec4}
-%
-%Equations in \LaTeX\ can either be inline or on-a-line by itself (``display equations''). For
-%inline equations use the \verb+$...$+ commands. E.g.: The equation
-%$H\psi = E \psi$ is written via the command \verb+$H \psi = E \psi$+.
-%
-%For display equations (with auto generated equation numbers)
-%one can use the equation or align environments:
-%\begin{equation}
-%\|\tilde{X}(k)\|^2 \leq\frac{\sum\limits_{i=1}^{p}\left\|\tilde{Y}_i(k)\right\|^2+\sum\limits_{j=1}^{q}\left\|\tilde{Z}_j(k)\right\|^2 }{p+q}.\label{eq1}
-%\end{equation}
-%where,
-%\begin{align}
-%D_\mu &=  \partial_\mu - ig \frac{\lambda^a}{2} A^a_\mu \nonumber \\
-%F^a_{\mu\nu} &= \partial_\mu A^a_\nu - \partial_\nu A^a_\mu + g f^{abc} A^b_\mu A^a_\nu \label{eq2}
-%\end{align}
-%Notice the use of \verb+\nonumber+ in the align environment at the end
-%of each line, except the last, so as not to produce equation numbers on
-%lines where no equation numbers are required. The \verb+\label{}+ command
-%should only be used at the last line of an align environment where
-%\verb+\nonumber+ is not used.
-%\begin{equation}
-%Y_\infty = \left( \frac{m}{\textrm{GeV}} \right)^{-3}
-%    \left[ 1 + \frac{3 \ln(m/\textrm{GeV})}{15}
-%    + \frac{\ln(c_2/5)}{15} \right]
-%\end{equation}
-%The class file also supports the use of \verb+\mathbb{}+, \verb+\mathscr{}+ and
-%\verb+\mathcal{}+ commands. As such \verb+\mathbb{R}+, \verb+\mathscr{R}+
-%and \verb+\mathcal{R}+ produces $\mathbb{R}$, $\mathscr{R}$ and $\mathcal{R}$
-%respectively (refer Subsubsection~\ref{subsubsec2}).
-%
-%\section{Tables}\label{sec5}
-%
-%Tables can be inserted via the normal table and tabular environment. To put
-%footnotes inside tables you should use \verb+\footnotetext[]{...}+ tag.
-%The footnote appears just below the table itself (refer Tables~\ref{tab1} and \ref{tab2}). 
-%For the corresponding footnotemark use \verb+\footnotemark[...]+
-%
 \noindent
-The input format for the above table is as follows:
-%%=============================================%%
-%% For presentation purpose, we have included  %%
-%% \bigskip command. please ignore this.       %%
-%%=============================================%%
-%%=============================================%%
-%%% For presentation purpose, we have included  %%
-%%% \bigskip command. please ignore this.       %%
-%%%=============================================%%
-%
-%\begin{table}[h]
-%\begin{center}
-%\begin{minipage}{\textwidth}
-%\caption{Example of a lengthy table which is set to full textwidth}\label{tab2}
-%\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}lcccccc@{\extracolsep{\fill}}}
-%\toprule%
-%& \multicolumn{3}{@{}c@{}}{Element 1\footnotemark[1]} & \multicolumn{3}{@{}c@{}}{Element 2\footnotemark[2]} \\\cmidrule{2-4}\cmidrule{5-7}%
-%Project & Energy & $\sigma_{calc}$ & $\sigma_{expt}$ & Energy & $\sigma_{calc}$ & $\sigma_{expt}$ \\
-%\midrule
-%Element 3  & 990 A & 1168 & $1547\pm12$ & 780 A & 1166 & $1239\pm100$\\
-%Element 4  & 500 A & 961  & $922\pm10$  & 900 A & 1268 & $1092\pm40$\\
-%\botrule
-%\end{tabular*}
-%\footnotetext{Note: This is an example of table footnote. This is an example of table footnote this is an example of table footnote this is an example of~table footnote this is an example of table footnote.}
-%\footnotetext[1]{Example for a first table footnote.}
-%\footnotetext[2]{Example for a second table footnote.}
-%\end{minipage}
-%\end{center}
-%\end{table}
-%
-%In case of double column layout, tables which do not fit in single column width should be set to full text width. For this, you need to use \verb+\begin{table*}+ \verb+...+ \verb+\end{table*}+ instead of \verb+\begin{table}+ \verb+...+ \verb+\end{table}+ environment. Lengthy tables which do not fit in textwidth should be set as rotated table. For this, you need to use \verb+\begin{sidewaystable}+ \verb+...+ \verb+\end{sidewaystable}+ instead of \verb+\begin{table*}+ \verb+...+ \verb+\end{table*}+ environment. This environment puts tables rotated to single column width. For tables rotated to double column width, use \verb+\begin{sidewaystable*}+ \verb+...+ \verb+\end{sidewaystable*}+.
-%
-%\begin{sidewaystable}
-%\sidewaystablefn%
-%\begin{center}
-%\begin{minipage}{\textheight}
-%\caption{Tables which are too long to fit, should be written using the ``sidewaystable'' environment as shown here}\label{tab3}
-%\begin{tabular*}{\textheight}{@{\extracolsep{\fill}}lcccccc@{\extracolsep{\fill}}}
-%\toprule%
-%& \multicolumn{3}{@{}c@{}}{Element 1\footnotemark[1]}& \multicolumn{3}{@{}c@{}}{Element\footnotemark[2]} \\\cmidrule{2-4}\cmidrule{5-7}%
-%Projectile & Energy    & $\sigma_{calc}$ & $\sigma_{expt}$ & Energy & $\sigma_{calc}$ & $\sigma_{expt}$ \\
-%\midrule
-%Element 3 & 990 A & 1168 & $1547\pm12$ & 780 A & 1166 & $1239\pm100$ \\
-%Element 4 & 500 A & 961  & $922\pm10$  & 900 A & 1268 & $1092\pm40$ \\
-%Element 5 & 990 A & 1168 & $1547\pm12$ & 780 A & 1166 & $1239\pm100$ \\
-%Element 6 & 500 A & 961  & $922\pm10$  & 900 A & 1268 & $1092\pm40$ \\
-%\botrule
-%\end{tabular*}
-%\footnotetext{Note: This is an example of table footnote this is an example of table footnote this is an example of table footnote this is an example of~table footnote this is an example of table footnote.}
-%\footnotetext[1]{This is an example of table footnote.}
-%\end{minipage}
-%\end{center}
-%\end{sidewaystable}
-%
-%\section{Figures}\label{sec6}
-%
-%As per the \LaTeX\ standards you need to use eps images for \LaTeX\ compilation and \verb+pdf/jpg/png+ images for \verb+PDFLaTeX+ compilation. This is one of the major difference between \LaTeX\ and \verb+PDFLaTeX+. Each image should be from a single input .eps/vector image file. Avoid using subfigures. The command for inserting images for \LaTeX\ and \verb+PDFLaTeX+ can be generalized. The package used to insert images in \verb+LaTeX/PDFLaTeX+ is the graphicx package. Figures can be inserted via the normal figure environment as shown in the below example:
-%
-%%%=============================================%%
-%%% For presentation purpose, we have included  %%
-%%% \bigskip command. please ignore this.       %%
-%%%=============================================%%
-%\bigskip
-%\begin{verbatim}
-%\begin{figure}[<placement-specifier>]
-%\centering
-%\includegraphics{<eps-file>}
-%\caption{<figure-caption>}\label{<figure-label>}
-%\end{figure}
-%\end{verbatim}
-%\bigskip
-%%%=============================================%%
-%%% For presentation purpose, we have included  %%
-%%% \bigskip command. please ignore this.       %%
-%%%=============================================%%
-%
-%\begin{figure}[h]%
-%\centering
-%\includegraphics[width=0.9\textwidth]{fig.eps}
-%\caption{This is a widefig. This is an example of long caption this is an example of long caption  this is an example of long caption this is an example of long caption}\label{fig1}
-%\end{figure}
-%
-%In case of double column layout, the above format puts figure captions/images to single column width. To get spanned images, we need to provide \verb+\begin{figure*}+ \verb+...+ \verb+\end{figure*}+.
-%
-%For sample purpose, we have included the width of images in the optional argument of \verb+\includegraphics+ tag. Please ignore this. 
-%
-%\section{Algorithms, Program codes and Listings}\label{sec7}
-%
-%Packages \verb+algorithm+, \verb+algorithmicx+ and \verb+algpseudocode+ are used for setting algorithms in \LaTeX\ using the format:
-%
-%%%=============================================%%
-%%% For presentation purpose, we have included  %%
-%%% \bigskip command. please ignore this.       %%
-%%%=============================================%%
-%\bigskip
-%\begin{verbatim}
-%\begin{algorithm}
-%\caption{<alg-caption>}\label{<alg-label>}
-%\begin{algorithmic}[1]
-%. . .
-%\end{algorithmic}
-%\end{algorithm}
-%\end{verbatim}
-%\bigskip
-%%%=============================================%%
-%%% For presentation purpose, we have included  %%
-%%% \bigskip command. please ignore this.       %%
-%%%=============================================%%
-%
-%You may refer above listed package documentations for more details before setting \verb+algorithm+ environment. For program codes, the ``program'' package is required and the command to be used is \verb+\begin{program}+ \verb+...+ \verb+\end{program}+. A fast exponentiation procedure:
-%
-%\begin{program}
-%\BEGIN \\ %
-%  \FOR i:=1 \TO 10 \STEP 1 \DO
-%     |expt|(2,i); \\ |newline|() \OD %
-%\rcomment{Comments will be set flush to the right margin}
-%\WHERE
-%\PROC |expt|(x,n) \BODY
-%          z:=1;
-%          \DO \IF n=0 \THEN \EXIT \FI;
-%             \DO \IF |odd|(n) \THEN \EXIT \FI;
-%\COMMENT{This is a comment statement};
-%                n:=n/2; x:=x*x \OD;
-%             \{ n>0 \};
-%             n:=n-1; z:=z*x \OD;
-%          |print|(z) \ENDPROC
-%\END
-%\end{program}
-%
-%
-%\begin{algorithm}
-%\caption{Calculate $y = x^n$}\label{algo1}
-%\begin{algorithmic}[1]
-%\Require $n \geq 0 \vee x \neq 0$
-%\Ensure $y = x^n$ 
-%\State $y \Leftarrow 1$
-%\If{$n < 0$}\label{algln2}
-%        \State $X \Leftarrow 1 / x$
-%        \State $N \Leftarrow -n$
-%\Else
-%        \State $X \Leftarrow x$
-%        \State $N \Leftarrow n$
-%\EndIf
-%\While{$N \neq 0$}
-%        \If{$N$ is even}
-%            \State $X \Leftarrow X \times X$
-%            \State $N \Leftarrow N / 2$
-%        \Else[$N$ is odd]
-%            \State $y \Leftarrow y \times X$
-%            \State $N \Leftarrow N - 1$
-%        \EndIf
-%\EndWhile
-%\end{algorithmic}
-%\end{algorithm}
-%\bigskip
-%%%=============================================%%
-%%% For presentation purpose, we have included  %%
-%%% \bigskip command. please ignore this.       %%
-%%%=============================================%%
-%
-%Similarly, for \verb+listings+, use the \verb+listings+ package. \verb+\begin{lstlisting}+ \verb+...+ \verb+\end{lstlisting}+ is used to set environments similar to \verb+verbatim+ environment. Refer to the \verb+lstlisting+ package documentation for more details.
-%
-%%%=============================================%%
-%%% For presentation purpose, we have included  %%
-%%% \bigskip command. please ignore this.       %%
-%%%=============================================%%
-%\bigskip
-%\begin{minipage}{\hsize}%
-%\lstset{frame=single,framexleftmargin=-1pt,framexrightmargin=-17pt,framesep=12pt,linewidth=0.98\textwidth,language=pascal}% Set your language (you can change the language for each code-block optionally)
-%%%% Start your code-block
-%\begin{lstlisting}
-%for i:=maxint to 0 do
-%begin
-%{ do nothing }
-%end;
-%Write('Case insensitive ');
-%Write('Pascal keywords.');
-%\end{lstlisting}
-%\end{minipage}
-%
-%\section{Cross referencing}\label{sec8}
-%
-%Environments such as figure, table, equation and align can have a label
-%declared via the \verb+\label{#label}+ command. For figures and table
-%environments use the \verb+\label{}+ command inside or just
-%below the \verb+\caption{}+ command. You can then use the
-%\verb+\ref{#label}+ command to cross-reference them. As an example, consider
-%the label declared for Figure~\ref{fig1} which is
-%\verb+\label{fig1}+. To cross-reference it, use the command 
-%\verb+Figure \ref{fig1}+, for which it comes up as
-%``Figure~\ref{fig1}''. 
-%
-%To reference line numbers in an algorithm, consider the label declared for the line number 2 of Algorithm~\ref{algo1} is \verb+\label{algln2}+. To cross-reference it, use the command \verb+\ref{algln2}+ for which it comes up as line~\ref{algln2} of Algorithm~\ref{algo1}.
-%
-%\subsection{Details on reference citations}\label{subsec7}
-%
-%Standard \LaTeX\ permits only numerical citations. To support both numerical and author-year citations this template uses \verb+natbib+ \LaTeX\ package. For style guidance please refer to the template user manual.
-%
-%Here is an example for \verb+\cite{...}+: \cite{bib1}. Another example for \verb+\citep{...}+: \citep{bib2}. For author-year citation mode, \verb+\cite{...}+ prints Jones et al. (1990) and \verb+\citep{...}+ prints (Jones et al., 1990).
-%
-%All cited bib entries are printed at the end of this article: \cite{bib3}, \cite{bib4}, \cite{bib5}, \cite{bib6}, \cite{bib7}, \cite{bib8}, \cite{bib9}, \cite{bib10}, \cite{bib11} and \cite{bib12}.
-%
-%\section{Examples for theorem like environments}\label{sec10}
-%
-%For theorem like environments, we require \verb+amsthm+ package. There are three types of predefined theorem styles exists---\verb+thmstyleone+, \verb+thmstyletwo+ and \verb+thmstylethree+ 
-%
-%%%=============================================%%
-%%% For presentation purpose, we have included  %%
-%%% \bigskip command. please ignore this.       %%
-%%%=============================================%%
-%\bigskip
-%\begin{tabular}{|l|p{19pc}|}
-%\hline
-%\verb+thmstyleone+ & Numbered, theorem head in bold font and theorem text in italic style \\\hline
-%\verb+thmstyletwo+ & Numbered, theorem head in roman font and theorem text in italic style \\\hline
-%\verb+thmstylethree+ & Numbered, theorem head in bold font and theorem text in roman style \\\hline
-%\end{tabular}
-%\bigskip
-%%%=============================================%%
-%%% For presentation purpose, we have included  %%
-%%% \bigskip command. please ignore this.       %%
-%%%=============================================%%
-%
-%For mathematics journals, theorem styles can be included as shown in the following examples:
-%
-%\begin{theorem}[Theorem subhead]\label{thm1}
-%Example theorem text. Example theorem text. Example theorem text. Example theorem text. Example theorem text. 
-%Example theorem text. Example theorem text. Example theorem text. Example theorem text. Example theorem text. 
-%Example theorem text. 
-%\end{theorem}
-%
-%Sample body text. Sample body text. Sample body text. Sample body text. Sample body text. Sample body text. Sample body text. Sample body text.
-%
-%\begin{proposition}
-%Example proposition text. Example proposition text. Example proposition text. Example proposition text. Example proposition text. 
-%Example proposition text. Example proposition text. Example proposition text. Example proposition text. Example proposition text. 
-%\end{proposition}
-%
-%Sample body text. Sample body text. Sample body text. Sample body text. Sample body text. Sample body text. Sample body text. Sample body text.
-%
-%\begin{example}
-%Phasellus adipiscing semper elit. Proin fermentum massa
-%ac quam. Sed diam turpis, molestie vitae, placerat a, molestie nec, leo. Maecenas lacinia. Nam ipsum ligula, eleifend
-%at, accumsan nec, suscipit a, ipsum. Morbi blandit ligula feugiat magna. Nunc eleifend consequat lorem. 
-%\end{example}
-%
-%Sample body text. Sample body text. Sample body text. Sample body text. Sample body text. Sample body text. Sample body text. Sample body text.
-%
-%\begin{remark}
-%Phasellus adipiscing semper elit. Proin fermentum massa
-%ac quam. Sed diam turpis, molestie vitae, placerat a, molestie nec, leo. Maecenas lacinia. Nam ipsum ligula, eleifend
-%at, accumsan nec, suscipit a, ipsum. Morbi blandit ligula feugiat magna. Nunc eleifend consequat lorem. 
-%\end{remark}
-%
-%Sample body text. Sample body text. Sample body text. Sample body text. Sample body text. Sample body text. Sample body text. Sample body text.
-%
-%\begin{definition}[Definition sub head]
-%Example definition text. Example definition text. Example definition text. Example definition text. Example definition text. Example definition text. Example definition text. Example definition text. 
-%\end{definition}
-%
-%Additionally a predefined ``proof'' environment is available: \verb+\begin{proof}+ \verb+...+ \verb+\end{proof}+. This prints a ``Proof'' head in italic font style and the ``body text'' in roman font style with an open square at the end of each proof environment. 
-%
-%\begin{proof}
-%Example for proof text. Example for proof text. Example for proof text. Example for proof text. Example for proof text. Example for proof text. Example for proof text. Example for proof text. Example for proof text. Example for proof text. 
-%\end{proof}
-%
-%Sample body text. Sample body text. Sample body text. Sample body text. Sample body text. Sample body text. Sample body text. Sample body text.
-%
-%\begin{proof}[Proof of Theorem~{\upshape\ref{thm1}}]
-%Example for proof text. Example for proof text. Example for proof text. Example for proof text. Example for proof text. Example for proof text. Example for proof text. Example for proof text. Example for proof text. Example for proof text. 
-%\end{proof}
-%
-%\noindent
-%For a quote environment, use \verb+\begin{quote}...\end{quote}+
-%\begin{quote}
-%Quoted text example. Aliquam porttitor quam a lacus. Praesent vel arcu ut tortor cursus volutpat. In vitae pede quis diam bibendum placerat. Fusce elementum
-%convallis neque. Sed dolor orci, scelerisque ac, dapibus nec, ultricies ut, mi. Duis nec dui quis leo sagittis commodo.
-%\end{quote}
-%
-%Sample body text. Sample body text. Sample body text. Sample body text. Sample body text (refer Figure~\ref{fig1}). Sample body text. Sample body text. Sample body text (refer Table~\ref{tab3}). 
-%
-%\section{Methods}\label{sec11}
-%
-%Topical subheadings are allowed. Authors must ensure that their Methods section includes adequate experimental and characterization data necessary for others in the field to reproduce their work. Authors are encouraged to include RIIDs where appropriate. 
-%
-%\textbf{Ethical approval declarations} (only required where applicable) Any article reporting experiment/s carried out on (i)~live vertebrate (or higher invertebrates), (ii)~humans or (iii)~human samples must include an unambiguous statement within the methods section that meets the following requirements: 
-%
-%\begin{enumerate}[1.]
-%\item Approval: a statement which confirms that all experimental protocols were approved by a named institutional and/or licensing committee. Please identify the approving body in the methods section
-%
-%\item Accordance: a statement explicitly saying that the methods were carried out in accordance with the relevant guidelines and regulations
-%
-%\item Informed consent (for experiments involving humans or human tissue samples): include a statement confirming that informed consent was obtained from all participants and/or their legal guardian/s
-%\end{enumerate}
-%
-%If your manuscript includes potentially identifying patient/participant information, or if it describes human transplantation research, or if it reports results of a clinical trial then  additional information will be required. Please visit (\url{https://www.nature.com/nature-research/editorial-policies}) for Nature Portfolio journals, (\url{https://www.springer.com/gp/authors-editors/journal-author/journal-author-helpdesk/publishing-ethics/14214}) for Springer Nature journals, or (\url{https://www.biomedcentral.com/getpublished/editorial-policies\#ethics+and+consent}) for BMC.
-%
-%\section{Discussion}\label{sec12}
-%
-%Discussions should be brief and focused. In some disciplines use of Discussion or `Conclusion' is interchangeable. It is not mandatory to use both. Some journals prefer a section `Results and Discussion' followed by a section `Conclusion'. Please refer to Journal-level guidance for any specific requirements. 
-%
-%\section{Conclusion}\label{sec13}
-%
-%From the analysis we found there are strong correlation within the features among this two categories depression and suicide post. The most frequent words of two categories has similarities. After using the exploratory analysis using scatterplot we saw many words which seems to be a written post word from depressed person appears within suicide category. During analysis one interesting result is observed that depression persons post is relatively shorter and full of abusive words. Simple Term frequency based vectorization technique could not effectively estimates the depression impact. Surprisingly, after analysis with TFIDF and countvectorization methods we found that there is 99\% chance that the person who is depressed also has suicial tendency. Here, gridsearch technique is used to determine the best classification estimator. Since, vectorizer is not trained with the Reddit dataset. Hence, we are assuming that after getting the result the vectors are not god enough to classify right way. Also, another reason is we compelled the classifier to classify the samples in suicidal risk categories. Hence, it does not have a choice rather than label the sample to suicidal risk category.  
-%
-%\backmatter
-%
-%\bmhead{Supplementary information}
-%
-%If your article has accompanying supplementary file/s please state so here. 
-%
-%Authors reporting data from electrophoretic gels and blots should supply the full unprocessed scans for key as part of their Supplementary information. This may be requested by the editorial team/s if it is missing.
-%
-%Please refer to Journal-level guidance for any specific requirements.
-%
-%\bmhead{Acknowledgments}
-%
-%Acknowledgments are not compulsory. Where included they should be brief. Grant or contribution numbers may be acknowledged.
-%
-%Please refer to Journal-level guidance for any specific requirements.
-%
-%\section*{Declarations}
-%
-%Some journals require declarations to be submitted in a standardised format. Please check the Instructions for Authors of the journal to which you are submitting to see if you need to complete this section. If yes, your manuscript must contain the following sections under the heading `Declarations':
-%
-%\begin{itemize}
-%\item Funding
-%\item Conflict of interest/Competing interests (check journal-specific guidelines for which heading to use)
-%\item Ethics approval 
-%\item Consent to participate
-%\item Consent for publication
-%\item Availability of data and materials
-%\item Code availability 
-%\item Authors' contributions
-%\end{itemize}
-%
-%\noindent
-%If any of the sections are not relevant to your manuscript, please include the heading and write `Not applicable' for that section. 
-%
-%%%===================================================%%
-%%% For presentation purpose, we have included        %%
-%%% \bigskip command. please ignore this.             %%
-%%%===================================================%%
-%\bigskip
-%\begin{flushleft}%
-%Editorial Policies for:
-%
-%\bigskip\noindent
-%Springer journals and proceedings: \url{https://www.springer.com/gp/editorial-policies}
-%
-%\bigskip\noindent
-%Nature Portfolio journals: \url{https://www.nature.com/nature-research/editorial-policies}
-%
-%\bigskip\noindent
-%\textit{Scientific Reports}: \url{https://www.nature.com/srep/journal-policies/editorial-policies}
-%
-%\bigskip\noindent
-%BMC journals: \url{https://www.biomedcentral.com/getpublished/editorial-policies}
-%\end{flushleft}
-%
-%\begin{appendices}
-%
-%\section{Section title of first appendix}\label{secA1}
-%
-%An appendix contains supplementary information that is not an essential part of the text itself but which may be helpful in providing a more comprehensive understanding of the research problem or it is information that is too cumbersome to be included in the body of the paper.
-%
-%%%=============================================%%
-%%% For submissions to Nature Portfolio Journals %%
-%%% please use the heading ``Extended Data''.   %%
-%%%=============================================%%
-%
-%%%=============================================================%%
-%%% Sample for another appendix section                        %%
-%%%=============================================================%%
-%
-%%% \section{Example of another appendix section}\label{secA2}%
-%%% Appendices may be used for helpful, supporting or essential material that would otherwise 
-%%% clutter, break up or be distracting to the text. Appendices can consist of sections, figures, 
-%%% tables and equations etc.
-%
-%\end{appendices}
-%
-%%%===========================================================================================%%
-%%% If you are submitting to one of the Nature Portfolio journals, using the eJP submission   %%
-%%% system, please include the references within the manuscript file itself. You may do this  %%
-%%% by copying the reference list from your .bbl file, paste it into the main manuscript .tex %%
-%%% file, and delete the associated \verb+\bibliography+ commands.                            %%
-%%%===========================================================================================%%
-%\bibliography{sn-bibliography}% common bib file
-%% if required, the content of .bbl file can be included here once bbl is generated
-%%\input sn-article.bbl
-%% Default %%
 \input doc_ref.tex
 %%\bibliographystyle{alpha} % We choose the "plain" reference style
 %\bibliography{sn-bibliography} % Entries are in the refs.bib file
