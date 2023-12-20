@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.4) (preloaded format=pdflatex 2023.6.7)  18 NOV 2023 11:40
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.4) (preloaded format=pdflatex 2023.6.3)  19 DEC 2023 19:55
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -817,7 +817,13 @@ LaTeX Warning: Label `cv_umass' multiply defined.
 LaTeX Warning: Label `cv' multiply defined.
 
 
+LaTeX Warning: Label `sub@cv' multiply defined.
+
+
 LaTeX Warning: Label `umass' multiply defined.
+
+
+LaTeX Warning: Label `sub@umass' multiply defined.
 
 
 LaTeX Warning: Label `cv_umass' multiply defined.
@@ -826,13 +832,25 @@ LaTeX Warning: Label `cv_umass' multiply defined.
 LaTeX Warning: Label `cv' multiply defined.
 
 
+LaTeX Warning: Label `sub@cv' multiply defined.
+
+
 LaTeX Warning: Label `umass' multiply defined.
+
+
+LaTeX Warning: Label `sub@umass' multiply defined.
 
 
 LaTeX Warning: Label `cv' multiply defined.
 
 
+LaTeX Warning: Label `sub@cv' multiply defined.
+
+
 LaTeX Warning: Label `umass' multiply defined.
+
+
+LaTeX Warning: Label `sub@umass' multiply defined.
 
 
 LaTeX Warning: Label `cv_umass' multiply defined.
@@ -935,11 +953,11 @@ Package: ltcaption 2021/01/08 v1.4c longtable captions (AR)
 )
 Package caption Info: End \AtBeginDocument code.
 LaTeX Font Info:    Calculating math sizes for size <10.03749> on input line 13
-9.
+8.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [1{C:/Users/Teacher/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}
+ [1{C:/Users/iftek/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}
 
 ]
 Underfull \vbox (badness 10000) has occurred while \output is active []
@@ -963,10 +981,10 @@ Overfull \vbox (1.44444pt too high) has occurred while \output is active []
 
 
 [4]
-<methodology.png, id=251, 2055.68pt x 520.94624pt>
+<methodology.png, id=250, 2055.68pt x 520.94624pt>
 File: methodology.png Graphic file (type png)
 <use methodology.png>
-Package pdftex.def Info: methodology.png  used on input line 175.
+Package pdftex.def Info: methodology.png  used on input line 160.
 (pdftex.def)             Requested size: 304.72693pt x 77.21648pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
@@ -997,15 +1015,15 @@ Overfull \vbox (1.44444pt too high) has occurred while \output is active []
 
 
 [8]
-<cv.png, id=320, 418.4433pt x 315.8199pt>
+<cv.png, id=319, 418.4433pt x 315.8199pt>
 File: cv.png Graphic file (type png)
 <use cv.png>
-Package pdftex.def Info: cv.png  used on input line 306.
+Package pdftex.def Info: cv.png  used on input line 197.
 (pdftex.def)             Requested size: 152.36346pt x 114.9962pt.
-<umass.png, id=321, 419.166pt x 315.8199pt>
+<umass.png, id=320, 419.166pt x 315.8199pt>
 File: umass.png Graphic file (type png)
 <use umass.png>
-Package pdftex.def Info: umass.png  used on input line 311.
+Package pdftex.def Info: umass.png  used on input line 200.
 (pdftex.def)             Requested size: 152.36346pt x 114.79863pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
@@ -1015,10 +1033,10 @@ Overfull \vbox (1.44444pt too high) has occurred while \output is active []
 
 
 [9 <./cv.png> <./umass.png>]
-<relative_imp.png, id=338, 1302.8675pt x 622.325pt>
+<relative_imp.png, id=336, 1302.8675pt x 622.325pt>
 File: relative_imp.png Graphic file (type png)
 <use relative_imp.png>
-Package pdftex.def Info: relative_imp.png  used on input line 401.
+Package pdftex.def Info: relative_imp.png  used on input line 252.
 (pdftex.def)             Requested size: 338.58778pt x 161.72472pt.
 
 
@@ -1032,10 +1050,10 @@ Overfull \vbox (1.44444pt too high) has occurred while \output is active []
 
 
 [10]
-<pyldvis.png, id=345, 808.01875pt x 423.08063pt>
+<pyldvis.png, id=344, 808.01875pt x 423.08063pt>
 File: pyldvis.png Graphic file (type png)
 <use pyldvis.png>
-Package pdftex.def Info: pyldvis.png  used on input line 434.
+Package pdftex.def Info: pyldvis.png  used on input line 269.
 (pdftex.def)             Requested size: 338.58778pt x 177.28593pt.
 
 
@@ -1049,15 +1067,15 @@ Overfull \vbox (1.44444pt too high) has occurred while \output is active []
 
 
 [11 <./relative_imp.png>]
-<mobile_app_01.png, id=353, 843.15pt x 494.84875pt>
+<mobile_app_01.png, id=352, 843.15pt x 494.84875pt>
 File: mobile_app_01.png Graphic file (type png)
 <use mobile_app_01.png>
-Package pdftex.def Info: mobile_app_01.png  used on input line 458.
+Package pdftex.def Info: mobile_app_01.png  used on input line 286.
 (pdftex.def)             Requested size: 338.58778pt x 198.72127pt.
-<mobile_app_02.png, id=354, 835.12pt x 493.34312pt>
+<mobile_app_02.png, id=353, 835.12pt x 493.34312pt>
 File: mobile_app_02.png Graphic file (type png)
 <use mobile_app_02.png>
-Package pdftex.def Info: mobile_app_02.png  used on input line 465.
+Package pdftex.def Info: mobile_app_02.png  used on input line 293.
 (pdftex.def)             Requested size: 338.58778pt x 200.02116pt.
 
 
@@ -1078,31 +1096,34 @@ Overfull \vbox (1.44444pt too high) has occurred while \output is active []
 
 
 [13 <./mobile_app_01.png> <./mobile_app_02.png>]
-<institution_size.png, id=368, 719.18687pt x 254.9525pt>
+<institution_size.png, id=367, 719.18687pt x 254.9525pt>
 File: institution_size.png Graphic file (type png)
 <use institution_size.png>
-Package pdftex.def Info: institution_size.png  used on input line 484.
+Package pdftex.def Info: institution_size.png  used on input line 311.
 (pdftex.def)             Requested size: 162.52068pt x 57.6147pt.
 
-Underfull \hbox (badness 1852) in paragraph at lines 485--485
+Underfull \hbox (badness 1852) in paragraph at lines 312--312
 []\OT1/cmr/m/n/9 (a) |Par-tic-i-pat-ing insti-tu-tion cat-e-gory
  []
 
-<english_teaching_class.png, id=369, 579.16376pt x 262.9825pt>
+<english_teaching_class.png, id=368, 579.16376pt x 262.9825pt>
 File: english_teaching_class.png Graphic file (type png)
 <use english_teaching_class.png>
-Package pdftex.def Info: english_teaching_class.png  used on input line 490.
+Package pdftex.def Info: english_teaching_class.png  used on input line 317.
 (pdftex.def)             Requested size: 162.52068pt x 73.7951pt.
-<num_stu.png, id=370, 461.22313pt x 207.77625pt>
+<num_stu.png, id=369, 461.22313pt x 207.77625pt>
 File: num_stu.png Graphic file (type png)
 <use num_stu.png>
-Package pdftex.def Info: num_stu.png  used on input line 503.
+Package pdftex.def Info: num_stu.png  used on input line 330.
 (pdftex.def)             Requested size: 162.52068pt x 73.21417pt.
-<class_size.png, id=371, 438.63875pt x 207.27437pt>
+<class_size.png, id=370, 438.63875pt x 207.27437pt>
 File: class_size.png Graphic file (type png)
 <use class_size.png>
-Package pdftex.def Info: class_size.png  used on input line 509.
+Package pdftex.def Info: class_size.png  used on input line 336.
 (pdftex.def)             Requested size: 162.52068pt x 76.79784pt.
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
@@ -1110,31 +1131,30 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 Overfull \vbox (1.44444pt too high) has occurred while \output is active []
 
 
-[14 <./institution_size.png> <./english_teaching_class.png> <./num_stu.png> <./
-class_size.png>]
+[14 <./institution_size.png> <./english_teaching_class.png>]
 File: num_stu.png Graphic file (type png)
 <use num_stu.png>
-Package pdftex.def Info: num_stu.png  used on input line 523.
+Package pdftex.def Info: num_stu.png  used on input line 350.
 (pdftex.def)             Requested size: 162.52068pt x 73.21417pt.
-<experience.png, id=382, 495.8525pt x 240.39813pt>
+<experience.png, id=378, 495.8525pt x 240.39813pt>
 File: experience.png Graphic file (type png)
 <use experience.png>
-Package pdftex.def Info: experience.png  used on input line 529.
+Package pdftex.def Info: experience.png  used on input line 356.
 (pdftex.def)             Requested size: 152.36346pt x 73.86604pt.
-<replace.png, id=383, 482.80376pt x 241.40187pt>
+<replace.png, id=379, 482.80376pt x 241.40187pt>
 File: replace.png Graphic file (type png)
 <use replace.png>
-Package pdftex.def Info: replace.png  used on input line 534.
+Package pdftex.def Info: replace.png  used on input line 361.
 (pdftex.def)             Requested size: 148.97945pt x 74.48755pt.
 
-Underfull \hbox (badness 3417) in paragraph at lines 535--535
+Underfull \hbox (badness 3417) in paragraph at lines 362--362
 []\OT1/cmr/m/n/9 (c) |App could help stu-dents in
  []
 
-<app_motivates.png, id=384, 541.52313pt x 243.91125pt>
+<app_motivates.png, id=380, 541.52313pt x 243.91125pt>
 File: app_motivates.png Graphic file (type png)
 <use app_motivates.png>
-Package pdftex.def Info: app_motivates.png  used on input line 540.
+Package pdftex.def Info: app_motivates.png  used on input line 367.
 (pdftex.def)             Requested size: 159.13666pt x 71.67778pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
@@ -1143,50 +1163,51 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 Overfull \vbox (1.44444pt too high) has occurred while \output is active []
 
 
-[15 <./experience.png> <./replace.png> <./app_motivates.png>]
-Overfull \hbox (9.9819pt too wide) in paragraph at lines 593--594
+[15 <./num_stu.png> <./class_size.png> <./experience.png> <./replace.png> <./ap
+p_motivates.png>]
+Overfull \hbox (9.9819pt too wide) in paragraph at lines 420--421
 []\OT1/cmr/bx/n/10 Traditional 
  []
 
 
-Overfull \hbox (9.83327pt too wide) in paragraph at lines 595--596
+Overfull \hbox (9.83327pt too wide) in paragraph at lines 422--423
 []\OT1/cmr/bx/n/10 Answer 
  []
 
 
-Overfull \hbox (9.7519pt too wide) in paragraph at lines 599--600
+Overfull \hbox (9.7519pt too wide) in paragraph at lines 426--427
 []\OT1/cmr/bx/n/10 Answer 
  []
 
 
-Overfull \hbox (10.52885pt too wide) in paragraph at lines 603--604
+Overfull \hbox (10.52885pt too wide) in paragraph at lines 430--431
 []\OT1/cmr/bx/n/10 Answer 
  []
 
 
-Overfull \hbox (2.27628pt too wide) in paragraph at lines 605--606
+Overfull \hbox (2.27628pt too wide) in paragraph at lines 432--433
 []\OT1/cmr/bx/n/10 Standard 
  []
 
 
-Overfull \hbox (2.51671pt too wide) in paragraph at lines 612--612
+Overfull \hbox (2.51671pt too wide) in paragraph at lines 439--439
 []|\OT1/cmr/bx/n/10 Cognitive 
  []
 
 
-Overfull \hbox (18.32909pt too wide) in paragraph at lines 615--615
+Overfull \hbox (18.32909pt too wide) in paragraph at lines 442--442
 []|\OT1/cmr/bx/n/10 Moralization| 
  []
 
-<app_impv.png, id=394, 679.53876pt x 328.22626pt>
+<app_impv.png, id=393, 679.53876pt x 328.22626pt>
 File: app_impv.png Graphic file (type png)
 <use app_impv.png>
-Package pdftex.def Info: app_impv.png  used on input line 634.
+Package pdftex.def Info: app_impv.png  used on input line 452.
 (pdftex.def)             Requested size: 162.52068pt x 78.49544pt.
-<eng_app_impv.png, id=395, 730.73pt x 338.76563pt>
+<eng_app_impv.png, id=394, 730.73pt x 338.76563pt>
 File: eng_app_impv.png Graphic file (type png)
 <use eng_app_impv.png>
-Package pdftex.def Info: eng_app_impv.png  used on input line 640.
+Package pdftex.def Info: eng_app_impv.png  used on input line 458.
 (pdftex.def)             Requested size: 162.52068pt x 75.34021pt.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
@@ -1276,35 +1297,34 @@ Package rerunfilecheck Info: File `sn-article.out' has not changed.
 (rerunfilecheck)             Checksum: 5C87265B8E1DCBF61E27FEC384BFC9AE;6034.
  ) 
 Here is how much of TeX's memory you used:
- 18806 strings out of 476331
- 298776 string characters out of 5797575
- 1871660 words of memory out of 5000000
- 38787 multiletter control sequences out of 15000+600000
- 528250 words of font info for 96 fonts, out of 8000000 for 9000
+ 18803 strings out of 476331
+ 298768 string characters out of 5797581
+ 1872660 words of memory out of 5000000
+ 38785 multiletter control sequences out of 15000+600000
+ 527913 words of font info for 95 fonts, out of 8000000 for 9000
  1151 hyphenation exceptions out of 8191
- 90i,11n,131p,2034b,787s stack positions out of 10000i,1000n,20000p,200000b,200000s
- <C:\Users\Teacher\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tc
-rm1000.pk> <C:\Users\Teacher\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/d
-pi600\tcrm0900.pk><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx1
-0.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Pr
-ogram Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx8.pfb><C:/Program Files/M
-iKTeX/fonts/type1/public/amsfonts/cm/cmbx9.pfb><C:/Program Files/MiKTeX/fonts/t
-ype1/public/amsfonts/cm/cmex10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/
-amsfonts/cmextra/cmex7.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts
-/cm/cmmi10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi5.pf
-b><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Program
- Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi9.pfb><C:/Program Files/MiKTeX
-/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Program Files/MiKTeX/fonts/type1/
-public/amsfonts/cm/cmr17.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfon
-ts/cm/cmr5.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmr7.pfb
-><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Program F
-iles/MiKTeX/fonts/type1/public/amsfonts/cm/cmr9.pfb><C:/Program Files/MiKTeX/fo
-nts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files/MiKTeX/fonts/type1/pu
-blic/amsfonts/cm/cmsy7.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts
-/cm/cmti10.pfb>
-Output written on sn-article.pdf (23 pages, 2170675 bytes).
+ 90i,11n,131p,3173b,785s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ <C:\Users\iftek\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm
+1000.pk><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/
+Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Program File
+s/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx8.pfb><C:/Program Files/MiKTeX/font
+s/type1/public/amsfonts/cm/cmbx9.pfb><C:/Program Files/MiKTeX/fonts/type1/publi
+c/amsfonts/cm/cmex10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/c
+mextra/cmex7.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10
+.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi5.pfb><C:/Prog
+ram Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Program Files/MiK
+TeX/fonts/type1/public/amsfonts/cm/cmmi9.pfb><C:/Program Files/MiKTeX/fonts/typ
+e1/public/amsfonts/cm/cmr10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/ams
+fonts/cm/cmr17.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmr5
+.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Progr
+am Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Program Files/MiKTe
+X/fonts/type1/public/amsfonts/cm/cmr9.pfb><C:/Program Files/MiKTeX/fonts/type1/
+public/amsfonts/cm/cmsy10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfo
+nts/cm/cmsy7.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmti10
+.pfb>
+Output written on sn-article.pdf (23 pages, 2170459 bytes).
 PDF statistics:
- 549 PDF objects out of 1000 (max. 8388607)
+ 544 PDF objects out of 1000 (max. 8388607)
  128 named destinations out of 1000 (max. 500000)
  345 words of extra memory for PDF output out of 10000 (max. 10000000)
 
