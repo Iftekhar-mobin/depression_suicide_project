@@ -1,0 +1,90 @@
+Ref.,Dataset Used,Accuracy,How accuracy Measured
+ [1] ,"Rotated MNIST
+Rotated CIFAR","Test accuracies (%) � std on Rotated MNIST (k = 4): IFCA 95.25�.40 and Rotated CIFAR (k = 2):  81.51 � 1.37
+","Cluster models 
+Calculating the difference between the predicted labels and the ground truth labels"
+ [2],"MNIST
+HAR, 
+CIFAR-10 
+SHL","Accuracy at (k =5)
+MNIST dataset is 97.73%
+HAR (93.54%)
+CIFAR-10 (91.01%)
+SHL (90.27%) ",Comparing the predicted output of a model with the actual ground truth values
+  [3],MNIST,"95% on MNIST and 
+91% on FEMNIST
+",Predicted labels of the global model with the true labels of the data samples.
+ [4],"EMNIST
+CIFAR-10",Test accuracy 71.9 % of centers for the mixture of 4 distributions with original and 90? -rotated letter images.,"Trained models on their respective data distributions
+Comparing predictions with actual labels"
+"
+ [6]","MNIST 
+FEMNIST 
+","Using FedAvg, they need 50 rounds to converge, Using FL+HC trains 80% clients and achieved 99% test set accuracy
+","Applying FL+HC & mini batch SGD,  
+Using agglomerative hierarchical clustering algorithm, 
+Return a number of cluster similar to one another."
+ [7],"MNIST
+CIFAR 100
+Fashion-MNIST ","MNIST- 99.1%
+CIFAR 100 � 73.5%
+Fashion-MNIST- 89.5%
+Reduce communication cost up to 50%","The CA-FL improved non-IID settings by clustering the users based on the similarity of their training sets
+CA-FL used a communication-efficient aggregation algorithm to reduce the communication overhead"
+ [8],"FEMNIST
+MNIST ",The clustering algorithm will converge very fast and didn�t take more than 10 iterations to converge,"Used hierarchical clustering to cluster the clients based on the similarity of their local model updates
+Parallel training on specialized models in independent cluster."
+ [9],"MINIST 
+FEMNIST 
+","+10 .6% on FEMNIST compared to FedAvg ,
++3 .5% on FashionMNIST compared to FedProx
++8 .4% on MNIST compared to FeSEM.","The FCFL improved n non-IID settings by clustering the clients based on the similar local data distributions
+achieved more accuracy than tradition FL"
+ [10],Covid19 dataset,"F1- 0.9365, 
+recall- 0.9366, 
+loss-0.2758, 
+precision- 0.9362, 
+accuracy-0.9187. ",Genetic CFL  involves grouping edge devices based on hypertuned parameters and modifying the parameters cluster-wise genetically
+ [11] ,"Fashion-MNIST 
+CIFAR-10.",Fashion-MNIST (84.3%) and CIFAR-10 (50.4%),"Cluster models 
+Used ARI"
+"(Luo, Y., Liu..,2021) [12]",Handover data set,algorithm improves prediction accuracy in wireless network handovers by 43%,Not Mention
+ [13] ,"MNIST
+CIFAR-10.",Global model accuracy higher under strong social effects in FL datasets.,The global model is measured in the experiments conducted on the MNIST and CIFAR-10 datasets.
+[14] ,"MNIST
+CIFAR-10,",Client selection scheme using gradient clustering for federated learning accuracy improvement.,Based on convergence rate and performance on benchmark datasets like MNIST and CIFAR-10.
+"Zhang et al.,(2021) [15]","MNIST
+FEMNIST","MNIST dataset, the accuracy of the FedLab Cluster algorithm was improved by 6.5% and 6.9%. 
+FEMNIST dataset, accuracy was improved by 15% and 28.6% ",Comparing performance with a baseline algorithm
+[16] ,"MNIST
+CIFAR 10
+FEMNIST","MNIST – 90.83
+CIFAR – 85.90
+FEMNIST – 80.50
+","FEMNIST 2400 iterations.
+MNIST, CIFAR for 280 and 2400 iterations
+"
+ [17] ,"MNIST 
+CIFAR 10
+FEMNIST
+Shakespeare","MNIST – 92.83
+CIFAR – 88.90
+FEMNIST – 84.50
+Shakespeare- 47.50","FEMNIST and Shakespeare for 1000 and 2400 iterations.
+Rotated MNIST, Inverted MNIST and Rotated CIFAR10 for 250, 280 and 2400 iterations"
+ [18] ,"MNIST 
+CIFAR 
+FEMNIST 
+Shakespeare","MNIST – 92.83
+CIFAR – 88.90
+FEMNIST – 84.50
+Shakespeare- 47.50","FEMNIST and Shakespeare for 1000 and 2400 iterations.
+Rotated MNIST, Inverted MNIST and Rotated CIFAR10 for 250, 280 and 2400 iterations"
+ [19] ,"MNIST 
+CIFAR
+","MNIST – 92.83
+CIFAR – 88.90
+","MNIST, CIFAR10 for 250,280 iterations"
+ [22],FEMNIST,"When c=15, test accuracy is 81.8%",Evaluating the test accuracies achieved by specialized machine learning models for different client groups
+ [23],"MNIST
+Fashion MNIST",The data accuracy 95.5%,"MNIST is 80% ± 10%for vanilla FL, it reaches and average of 82% ± 9%"

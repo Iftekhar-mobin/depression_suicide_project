@@ -1,0 +1,99 @@
+Ref,Algorithm,Description,Strength,Weakness
+ [1] ,Iterative Federated Clustering Algorithm (IFCA), It is an iterative clustering algorithm that estimates cluster identities and improves the clustering of worker machines. It uses two variations: gradient averaging and model averaging.,"Near-optimal statistical error rate
+High success probability
+Efficient implementation without expensive computations 
+Faster convergence","SGD is a relatively weak assumption
+ Parameters need to be satisfied for the algorithm"
+ [2],"Fed-RAC (Federated learning with Resource Aware Clustering)
+","It includes steps such as gathering information about participants' devices and networking resources, performing resource aware clustering using Dunn Indices."," Efficient training and communication
+Participants assignment optimization
+ Deriving expressions for error and intra-heterogeneity","Lack of efficient clustering techniques
+Discarding stragglers reduces generalization
+Slower aggregation process "
+  [3],Stochastic Clustered Federated Learning algorithm( StoCFL),"The StoCFL model could train better-generalized models by clustering federated clients with different unknown distributions. It can handle a variety of FL systems, such as those that vary in size and complexity."," Effectively addresses Non-IID issues
+ Handle an arbitrary proportion of client participation
+ Effective use of cosine similarity"," Not work well with non-IID data distributions
+Does not address the issue of data heterogeneity among clients"
+ [4],FedSoft,Algorithm outperform existing FL implementations in both global cluster models for future users and personalized local models for participating clients.," Estimates importance weights for each client
+ Aggregation weights based on importance weights","Computational complexity
+ Limited consideration for the impact of different distributions"
+ [5],Byzantine-Robust Iterative Federated Clustering Algorithm, Uses coordinate-wise trimmed mean and coordinate-wise median aggregation methods to make the framework robust against adversarial attacks. ," Optimize the models learned by each cluster in the presence of Byzantine machines.
+ Strongly convex loss functions.",Scalability and computational efficiency.
+ [6],Agglomerative hierarchical clustering algorithm,"separate clusters of clients based on the similarity of their local updates to the global joint model, once the clusters are formed, specialized models are trained independently and in parallel on these clusters","Address the challenge posed by non iid data distribution and competing objectives of clients
+Suggest good hyperparameters to promote superior performing specialized models","High communication overhead
+Communication costs
+when there is a concept shift in the data distribution across clients, this assumption may be not hold true"
+ [7],Communication -aware CFL algorithm,CACFL takes into account the statistical heterogeneity of the data and the communication constraints to balance the ability of the clients to learn a proper model and the accuracy in aggregating these models into a global inference rule,"Based on multi-source adaptation methods which allows for balancing performance measures of individual cluster models
+Accuracy of aggregating models into a global inference","Marginal distribution of each cluster may not be always available
+Additional complexity and computational overhead
+More evaluation is needed for large scale and real time dataset"
+ [8],Multi-center aggregation algorithm ,"The algorithm worked by Clustering clients, Optimal matching, Optimization problem, iterative procedure.","addresses the statistical heterogeneity and cluster clients based on their models' parameters
+earns multiple global models from data, allowing for better personalization in decision-making",If the number of clusters is too much small or too much large 
+ [9],A flexible clustered federated learning (CFL) framework named FlexCFL,"Achieves challenges by grouping clients based on similarities in optimization directions, implementing an efficient newcomer device could start mechanism, and flexibly migrating clients to handle client-level data distribution shift","Encounter challenges of non iid, imbalance and distributed shifted training data 
+Less communication rounds","Not scalable
+Computational complexity
+Need more computational resource"
+ [10],"Generic CFL
+",The algorithm groups edge devices based on hypertuned parameters and modifies the parameters cluster-wise genetically,"Optimize hyperparameters
+Address privacy concern","Not applicable for scalability
+Real time application scenario "
+ [11] ,Causal Adjustment for Feedback Loops (CAFL),CAFL algorithm breaks feedback loops in recommender systems by estimating causal effects and adjusting user behaviour data to remove system influence.,"Any recommendation algorithm 
+Easy to implement large datasets
+Provably effective in breaking feedback loops","User behavior can be computationally expensive.
+Causal effect estimation imperfectly can cause bias in adjusted data."
+"(Luo, Y., Liu..,2021) [12]",LSTM,"LSTM is a powerful algorithm for machine translation, speech recognition, and time series forecasting.","Long-term dependencies than traditional RNNs
+Less susceptible to the vanishing gradient problem","Computationally expensive
+Requires more memory
+Prone to overfitting"
+ [13] ,Stochastic coded federated learning (SCFL),It is mitigates the straggler effect by using coded computing techniques. It effectively reduces straggler effect and improves convergence speed in federated learning.,"Achieve faster convergence
+Enhanced privacy protection
+Reduced communication overhead","More complex implementation
+Requires more computation
+Not suitable for all datasets
+"
+[14] ,"Cluster-based clients selection
+
+Auction-based clients selection","Cluster-based clients selection algorithm selects subset of clients for federated learning task based on similarity.
+Auction-based clients selection algorithm selects through high bids.","Balances the energy consumption of clients
+Mitigates the impact of data heterogeneity on model convergence
+Selects the most efficient clients for FL
+Adaptive Resource Allocation","Communication Imbalance 
+May not fully utilize the resources
+More complex to implement
+Clients' strategic bidding may manipulate selection chances."
+"Zhang et al.,(2021) [15]",FedLabCluster,FedLab Cluster is a federated learning algorithm that clusters clients based on their data sample labels to improve accuracy and robustness in non-IID data.,"A centralized server that manages the overall experiment
+Cloud-based platform simplifies large-scale federated learning experiments deployment.","Communication overhead
+It does not provide any built-in security features
+It is not as scalable as some other federated learning frameworks"
+"(Joel et al.,2022)[16]","HACCS: Heterogeneity-Aware Clustered Client Selection for Accelerated Federated Learning
+",HACCS is a method or technique designed to enhance federated learning by taking into consideration the heterogeneity of clients (devices or servers) that participate in the training process. enhancement for broader application in federated learning.,"Innovative Approach
+Performance Improvement 
+Heterogeneity Consideration","Evaluation Rigor
+Limited Generalizability
+Scalability
+Overhead
+Lack of Comparison"
+ [17],An Improved Algorithm for Clustered Federated Learning,"Reducing the amount of data transmitted. Federated Learning can suffer from slower convergence.
+","comprehensive experimentation
+clear problem definition
+Relevance to real-world applications.","To enhance communication efficiency, convergence speed, or scalability.
+Investigating ways to strengthen privacy and security 
+"
+"(Pu Tian et al.,2022)[18]",WSCC: A Weight-Similarity-Based Client Clustering Approach for Non-IID Federated Learning,"The ""WSCC"" paper proposes a client clustering technique for non-IID federated learning, grouping similar clients based on weight similarity to enhance convergence and accommodate varying data distributions.","Improved Convergence
+Heterogeneity Handling
+Reduced Communication
+Privacy Benefits","Cluster Formation Sensitivity
+Centralized Cluster Selection
+Cluster Imbalance
+Complexity and Scalability"
+ [19],Personalized Federated Learning for Heterogeneous Clients,Personalized federated learning framework called PerFed-CKT that enables clients to use heterogeneous.,"Personalization
+Clustered Knowledge Transfer
+Heterogeneity Handling
+Adaptation to Diversity","Scalability
+Complexity
+Cluster Quality
+Resource Allocation"
+ [23],Optimizing federated learning in vehicular networks,Optimizing federated learning in vehicular networks using clustered approaches for improved efficiency.,"innovative methods
+comprehensive experimentation
+clear problem definition
+Relevance to real-world applications.","Assumptions that limit applicability, lack of comparison to existing methods, or insufficient validation"
