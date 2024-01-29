@@ -1,12 +1,5 @@
 \begin{thebibliography}{1}
 
-\bibitem{chang2021applying}
-I-Cheng Chang, Tai-Kuei Yu, Yu-Jie Chang, and Tai-Yi Yu.
-\newblock Applying text mining, clustering analysis, and latent dirichlet
-  allocation techniques for topic classification of environmental education
-  journals.
-\newblock {\em Sustainability}, 13(19):10856, 2021.
-
 \bibitem{chen2020detecting}
 Xieling Chen, Di~Zou, Gary Cheng, and Haoran Xie.
 \newblock Detecting latent topics and trends in educational technologies over
@@ -14,50 +7,17 @@ Xieling Chen, Di~Zou, Gary Cheng, and Haoran Xie.
   of computers \& education.
 \newblock {\em Computers \& Education}, 151:103855, 2020.
 
-\bibitem{gencoglu2023machine}
-Bilge Gencoglu, Michelle Helms-Lorenz, Ridwan Maulana, Ellen~PWA Jansen, and
-  Oguzhan Gencoglu.
-\newblock Machine and expert judgments of student perceptions of teaching
-  behavior in secondary education: Added value of topic modeling with big data.
-\newblock {\em Computers \& Education}, 193:104682, 2023.
-
-\bibitem{hamzah2020discovering}
-Almed Hamzah, Ahmad Hidayatullah, and Andhika Persada.
-\newblock Discovering trends of mobile learning research using topic modelling
-  approach.
-\newblock 2020.
-
 \bibitem{hossain2022complexities}
 Md~Sabbir Hossain and Md~Nazmul Haque.
 \newblock Complexities in teaching english in higher secondary level: A study
   of four colleges in bogura district, bangladesh.
 \newblock {\em Journal of Language}, 4(1):34--48, 2022.
 
-\bibitem{molavi2020extracting}
-Mohammadreza Molavi, Mohammadreza Tavakoli, and G{\'a}bor Kismih{\'o}k.
-\newblock Extracting topics from open educational resources.
-\newblock In {\em Addressing Global Challenges and Quality Education: 15th
-  European Conference on Technology Enhanced Learning, EC-TEL 2020, Heidelberg,
-  Germany, September 14--18, 2020, Proceedings 15}, pages 455--460. Springer,
-  2020.
-
-\bibitem{mujahid2021sentiment}
-Muhammad Mujahid, Ernesto Lee, Furqan Rustam, Patrick~Bernard Washington,
-  Saleem Ullah, Aijaz~Ahmad Reshi, and Imran Ashraf.
-\newblock Sentiment analysis and topic modeling on tweets about online
-  education during covid-19.
-\newblock {\em Applied Sciences}, 11(18):8438, 2021.
-
-\bibitem{korean2021research}
-Eun~Hee Park.
-\newblock Research trends in college english education in korea-a topic
-  analysis using lda topic modeling.
-\newblock {\em Korean Journal of General Education}, 15(5):169--183, 2021.
-
-\bibitem{sakhovskiy2020topic}
-Andrey Sakhovskiy, Elena Tutubalina, Valery Solovyev, and Marina Solnyshkina.
-\newblock Topic modeling as a method of educational text structuring.
-\newblock In {\em 2020 13th International Conference on Developments in
-  eSystems Engineering (DeSE)}, pages 399--405. IEEE, 2020.
+\bibitem{suicide_watch_dataset}
+Nikhileswar Komati.
+\newblock Suicide watch dataset.
+\newblock url:
+  {https://www.kaggle.com/datasets/nikhileswarkomati/suicide-watch}, 2021.
+\newblock Accessed: 29th Jan, 2024.
 
 \end{thebibliography}
