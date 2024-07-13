@@ -1,0 +1,69 @@
+Ref.,What Problem Solved,Future Work
+ [1] ,"Cluster identity estimation
+Gradient descent optimization","Exploring different loss functions
+Examining convergence rates in various scenarios
+Studying the impact of initialization"
+ [2],"Improving the performance of lightweight models
+Minimize the error caused by participants' heterogeneity.","Communication delays
+Limited computational resources"
+  [3], Non-IID issues in federated learning," Incorporating different architectures
+Knowledge transfer techniques
+Implementing a dynamic join-leave mechanism"
+ [4],"Slow model training 
+Improving the accuracy of cluster models
+Producing accurate local models","Analyzing convergence properties
+Comparing with other algorithms 
+Improving accuracy of local models"
+ [5]," A distributed system
+ Robust estimation in a clustering setting 
+Estimating parameter values in a clustering model
+Improving error rate "," Proving the accuracy of the j-th cluster estimate
+ Analyzing the impact of Byzantine machines in distributed learning
+Improving the error rate in a theorem"
+"
+ [6]","The distance metric and linkage hyperparameters are tuned
+ improve the performance of the clustering algorithm","Identify malicious clients
+The effect of the noisy client updates on the ability of FL+HC to find good clustering of clients.
+The effect of compression methods"
+ [7],"CACFL is effective massively distributed data
+Handle heterogeneity and communication overhead","Privacy preservation will be observed further
+The clustering step can be computationally expensive"
+ [8],"Global models trained from data as the cluster centers
+Optimal matching between users and centers
+produce accurate specialized models by cluster","Studying the performance of multi-Center FL in different settings
+investigating the use of other clustering algorithms"
+ [9],"Handle client-level data distribution shift.
+Improve the accuracy of FL in non-IID settings.
+scalable and used with large datasets
+","Studying the security and privacy implications of FlexCFL
+Investigating the use of federated learning for other machine learning tasks"
+ [10],"A novel hybrid algorithm named genetic clustered FL
+Groups edge devices based on the hypertuned parameters
+modifies the parameters cluster wise genetically","Use genetic CFL model on scalable and real-time datasets.
+time-sensitive techniques will also be used"
+ [11] ,"Local data across different devices are not independent
+Identically distributed (non-IID).","Investigating the performance of CAFL on Real-world scenarios.
+
+Impact of different hyperparameters on the performance of CAFL."
+"(Luo, Y., Liu..,2021) [12]","Handover prediction accuracy is degraded by non-independent data.
+Distributed data in the resource management of wireless networks","Proposed algorithm's performance on other tasks.
+Datasets to evaluate its generalizability.
+Algorithm in other domains beyond wireless networks."
+ [13] ,Privacy leakage in federated learning.,Not Given
+[14] ,Data heterogeneity and energy consumption imbalance in mobile edge computing systems.,"Clustering algorithm performance evaluation
+Scalability of proposed method for large datasets and complex models"
+"Zhang et al.,(2021) [15]","Impact of Non-Independent and Identically Distributed (Non-IID) data on the prediction accuracy
+Performance of federated learning","Optimization and refinement of the algorithm.
+FedLab Cluster algorithm on other datasets and compare its performance with others FLA"
+([16] ,"HACCS addresses efficient client selection for faster and more effective federated learning, considering device heterogeneity through clustering.","Optimizing cluster formation, adaptive heterogeneity management, and scalability"
+ [17] ,"1. Reducing the amount of data transmitted
+2. Federated Learning can suffer from slower convergence.
+","1. To enhance communication efficiency, convergence speed, or scalability. 
+2. Investigating ways to strengthen privacy and security 
+"
+ [18] ,"The ""WSCC"" paper addresses non-IID data challenges in federated learning by clustering clients based on weight similarity for improved convergence.","Future work may focus on enhancing cluster initialization, addressing cluster imbalance, and extending the approach to different data distributions."
+ [19] ,Personalized federated learning framework called PerFed-CKT that enables clients to use heterogeneous.,"Exploring different clustering techniques for determining co-distillation weights, conducting experiments "
+ [20],Source-dominated microphone clusters in acoustic sensor networks,Enhancing additional ASN-deployable tasks (wake word detection or event classification)
+ [21],Analyzing the behavior of a federated learning system and bounding the similarity between updates from different client,Investigate the utility of weight-updates for distribution similarity estimation
+ [22] ,Minimizing the training time and achieving satisfying performance for each client with an optimal fit model for its local data distribution,Finding the optimal threshold values for splitting the clusters
+ [23],Optimizing federated learning in vehicular networks using clustered approaches for improved efficiency.,Explore adaptive clustering and dynamic participation for improved efficiency and scalability.

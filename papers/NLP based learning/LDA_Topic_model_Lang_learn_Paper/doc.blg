@@ -1,0 +1,109 @@
+This is BibTeX, Version 0.99d
+Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
+The top-level auxiliary file: doc.aux
+Reallocating 'name_of_file' (item size: 1) to 6 items.
+The style file: plain.bst
+Reallocating 'name_of_file' (item size: 1) to 18 items.
+Database file #1: Language_learning.bib
+Warning--I didn't find a database entry for "chen2018"
+Warning--I didn't find a database entry for "report_schools_2018"
+Warning--I didn't find a database entry for "statistics_bangladesh_2017"
+Warning--I didn't find a database entry for "noauthor_bangladesh_2021"
+Warning--I didn't find a database entry for "habib_english_2018"
+Warning--I didn't find a database entry for "qiang2020short"
+Warning--I didn't find a database entry for "bethard_topic_2009"
+Warning--I didn't find a database entry for "ali_transportation_2019"
+Warning--I didn't find a database entry for "slater_using_2017"
+Warning--I didn't find a database entry for "guerra_when_2013"
+Warning--I didn't find a database entry for "jelodar_latent_2019"
+Warning--I didn't find a database entry for "gupta_pan_lda_2021"
+Warning--I didn't find a database entry for "pichardo_lagunas_svd_lda_2015"
+Warning--I didn't find a database entry for "selvi_classification_2019"
+Warning--I didn't find a database entry for "pichardo_lagunas_svd_lda_2015_1"
+Warning--I didn't find a database entry for "blei2003latent"
+Warning--I didn't find a database entry for "klimova_evaluation_2018"
+Warning--I didn't find a database entry for "hao_evaluative_2019"
+Warning--I didn't find a database entry for "polakova_mobile_2019"
+Warning--I didn't find a database entry for "xu_scoping_2020"
+Warning--I didn't find a database entry for "shortt_gamification_2023"
+Warning--I didn't find a database entry for "bernacki_mobile_2020"
+Warning--I didn't find a database entry for "metruk_use_2021"
+Warning--I didn't find a database entry for "isamiddinovna_mobile_2019"
+Warning--I didn't find a database entry for "rafiq_sustaining_2021"
+Warning--I didn't find a database entry for "chen_evaluating_2016"
+Warning--I didn't find a database entry for "sandberg_mobile_2011"
+Warning--I didn't find a database entry for "oz2015investigation"
+Warning--I didn't find a database entry for "vayansky2020review"
+Warning--I didn't find a database entry for "abdelrazek2022topic"
+Warning--I didn't find a database entry for "yi2009comparative"
+Warning--I didn't find a database entry for "Comparison_Topic_Modeling_Algorithms"
+Warning--I didn't find a database entry for "raj_p_m_sentiment_2022"
+Warning--I didn't find a database entry for "rani_extractive_2021"
+Warning--I didn't find a database entry for "shafqat2019topic"
+Warning--I didn't find a database entry for "alam_bangla_2020"
+Warning--I didn't find a database entry for "lee_lda_based_2022"
+Warning--I didn't find a database entry for "gupta_prediction_2022"
+Warning--I didn't find a database entry for "farkhod_lda_based_2021"
+Warning--I didn't find a database entry for "wang_exploring_2022"
+Warning--I didn't find a database entry for "kao_natural_2007"
+Warning--I didn't find a database entry for "mccarthy_applied_2012"
+Warning--I didn't find a database entry for "mimno2011optimizing"
+Warning--I didn't find a database entry for "tausczik2010psychological"
+Warning--I didn't find a database entry for "liwc22_welcome_nodate"
+Warning--I didn't find a database entry for "gaur2019knowledge"
+Warning--I didn't find a database entry for "aldhyani2022detecting"
+Warning--I didn't find a database entry for "castillo2020suicide"
+Warning--I didn't find a database entry for "chancellor2020methods"
+Warning--I didn't find a database entry for "zhang2022natural"
+Warning--I didn't find a database entry for "wang2020depression"
+Warning--I didn't find a database entry for "malhotra2022deep"
+Warning--I didn't find a database entry for "shetty2020predicting"
+Warning--I didn't find a database entry for "pennebaker2001linguistic"
+Warning--I didn't find a database entry for "tadesse2019detection"
+Warning--I didn't find a database entry for "harvesting_social_media"
+Warning--I didn't find a database entry for "zogan2021depressionnet"
+Warning--I didn't find a database entry for "burnap2015machine"
+Warning--I didn't find a database entry for "martinengo2019suicide"
+Warning--I didn't find a database entry for "suicidaldepression_online"
+You've used 0 entries,
+            2118 wiz_defined-function locations,
+            558 strings with 5238 characters,
+and the built_in function-call counts, 18 in all, are:
+= -- 0
+> -- 0
+< -- 0
++ -- 0
+- -- 0
+* -- 2
+:= -- 7
+add.period$ -- 0
+call.type$ -- 0
+change.case$ -- 0
+chr.to.int$ -- 0
+cite$ -- 0
+duplicate$ -- 0
+empty$ -- 1
+format.name$ -- 0
+if$ -- 1
+int.to.chr$ -- 0
+int.to.str$ -- 0
+missing$ -- 0
+newline$ -- 3
+num.names$ -- 0
+pop$ -- 0
+preamble$ -- 1
+purify$ -- 0
+quote$ -- 0
+skip$ -- 1
+stack$ -- 0
+substring$ -- 0
+swap$ -- 0
+text.length$ -- 0
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 0
+warning$ -- 0
+while$ -- 0
+width$ -- 0
+write$ -- 2
+(There were 60 warnings)
